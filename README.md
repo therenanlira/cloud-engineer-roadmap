@@ -109,6 +109,7 @@ Objetivo: Na Fase 1 vamos estudar a base da infraestrutura, administração de s
 
 	- **MongoDB**
 		- [Vídeo - Curso de MongoDB para iniciantes (Nataniel Paiva Oficial)](https://youtube.com/playlist?list=PLxuFqIk29JL0DMM0Z-S9_XEHAexXvhYyb)
+		- [Doc - MongoDB Documentation (Oficial)](https://university.mongodb.com)
 
 ---
 5.  **Version Control**
@@ -131,11 +132,12 @@ Objetivo: Na Fase 1 vamos estudar a base da infraestrutura, administração de s
 		- [Vídeo - Python - Curso Flask (Filipe Morelli Developer)](https://youtube.com/playlist?list=PLWhiA_CuQkbBhvPojHOPY81BmDt2eSfgI)
 		- [Vídeo - Automação WEB Selenium com Python (Didática Tech)](https://youtube.com/playlist?list=PLyqOvdQmGdTS1NP14Bo7OADsfy9woYGIk)
 		- [Vídeo - Automatize Tarefas Maçantes com Python (Geofisicando)](https://youtube.com/playlist?list=PLLCFxfe9wkl-5oz4YIOxMzbBGP1FaGm3T)
+		- [Livro - Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+		- [Artigo - Dockerizando micro serviços em Python (Rafael Cirolini)](https://cirolini.medium.com/dockerizando-microservi%C3%A7os-em-python-bcaedd6da3c4)
+		- [Opcional: Artigo - Introdução e Tutorial ao Flask Python (harve.com.br)](https://harve.com.br/blog/programacao-python-blog/introducao-e-tutorial-ao-flask-python/)
 		- [Opcional: Vídeo - Flask MongoDB Todo App (Code With Prince)](https://youtube.com/playlist?list=PLU7aW4OZeUzwN0TsZLZUuzhc0f7OVVBcT)
 		- [Opcional: Podcast - Automação com Python (Hipster.Talks)](https://youtu.be/s_b79fuuIY4)
-		- [Livro - Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
-		- [Artigo - Dockerizando micro serviços em Python (Rafael Cirolini)](https://cirolini.medium.com/dockerizando-microservi%C3%A7os-em-python-bcaedd6da3c4)  
-    
+
 	- **Golang**
 		- [Vídeo - Aprenda Go (Aprenda Go)](https://youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg)
 
