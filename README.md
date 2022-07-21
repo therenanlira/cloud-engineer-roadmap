@@ -13,7 +13,7 @@ Está disponível vários materiais em vídeos, artigos, documentação, livros 
 
 *Todos os créditos dos materiais aos autores que contribuem para a comunidade com o compartilhamento de conhecimento!*
 
-Por serem materiais gratuitos, podem conter venda de cursos e outros. Caso sinta goste do conteúdo, não hesite em comprar e ajudar a galera.
+Por serem materiais gratuitos, podem conter venda de cursos e outros. Caso goste do conteúdo, não hesite em comprar e ajudar a galera.
 
 ## **Ok, cadê o Roadmap?**
 
@@ -37,7 +37,7 @@ Objetivo: Na Fase 1 vamos estudar a base da infraestrutura, administração de s
 1. **System Administration**
 
     - **Linux Server:**
-        - [Curso - Linux Fundamentals (4Linux)](http://confluence.viavarejo.com.br/-%20https:/4linux.com.br/cursos/treinamento/linux-fundamentals/)
+        	- [Curso - Linux Fundamentals (4Linux)](http://confluence.viavarejo.com.br/-%20https:/4linux.com.br/cursos/treinamento/linux-fundamentals/)
 		- [Curso - Linux Essentials (4Linux)](https://4linux.com.br/cursos/treinamento/linux-essentials/)
 		- [Vídeo - Curso de terminal linux (Daniel Berg)](https://youtu.be/VRR3V42EdSg)
 		- [Vídeo - Curso básico de programação em Bash (debxp)](https://youtu.be/ZM--I3NJ2jY)
