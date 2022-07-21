@@ -13,7 +13,7 @@ Está disponível vários materiais em vídeos, artigos, documentação, livros 
 
 *Todos os créditos dos materiais aos autores que contribuem para a comunidade com o compartilhamento de conhecimento!*
 
-Por serem materiais gratuitos, pode conter venda de cursos e outros. Se sentir a vontade e gostar do conteúdo, não hesite em comprar e ajudar a galera.
+Por serem materiais gratuitos, podem conter venda de cursos e outros. Caso sinta goste do conteúdo, não hesite em comprar e ajudar a galera.
 
 ## **Ok, cadê o Roadmap?**
 
@@ -72,7 +72,7 @@ Objetivo: Na Fase 1 vamos estudar a base da infraestrutura, administração de s
 
     - **Web server**
 		- [Vídeo - NGINX (O Servidor Web pensado em Performance e Escala) (Código Fonte TV)](https://youtu.be/YXLI5Rbu_Ek)
-        - [Vídeo - NGINX, um poderoso serviço HTTP/HTTPS e Proxy reverso (aiedonline)](https://youtu.be/JAFFkDKvZlo)
+        	- [Vídeo - NGINX, um poderoso serviço HTTP/HTTPS e Proxy reverso (aiedonline)](https://youtu.be/JAFFkDKvZlo)
 		- [Doc - Nginx Documentation (Oficial)](https://nginx.org/en/docs/)
 		- [Vídeo - Instalando Servidor WEB IIS (ProfessorRamos)](https://youtu.be/SD4TXosi9LI)
 		- [Vídeo - Servidor WEB IIS - Configurando Registro DNS (ProfessorRamos)](https://youtu.be/M8Hb5x72BPI)
