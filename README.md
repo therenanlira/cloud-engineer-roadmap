@@ -11,7 +11,7 @@ O Roadmap é separado em três fases. Cada fase agrupa tópicos próximos tecnic
 
 Está disponível vários materiais em vídeos, artigos, documentação, livros e podcast. A maioria são materiais gratuitos que possuem conteúdo básico e intermediário mas, alguns, também traz conteúdo avançado. 
 
-*Todos os créditos do materiais aos autores que contribuem para a comunidade com o compartilhamento de conhecimento!*
+*Todos os créditos dos materiais aos autores que contribuem para a comunidade com o compartilhamento de conhecimento!*
 
 Por serem materiais gratuitos, pode conter venda de cursos e outros. Se sentir a vontade e gostar do conteúdo, não hesite em comprar e ajudar a galera.
 
