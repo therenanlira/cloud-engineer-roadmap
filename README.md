@@ -1,40 +1,57 @@
-# **Cloud Infrastructure Engineer Roadmap**
+# Cloud Infrastructure Engineer Roadmap
 
-## **TL;DR**
+## TL;DR
 
-Uma trilha de estudo de Infraestrutura em Nuvem com a maior parte do conteúdo em Português. Porém, termos e nomenclaturas poderão ser apresentadas em Inglês, o que não é um impedimento para quem não domina o idioma.
+Uma trilha de estudo de Engenheiro de Infraestrutura em Nuvem com conteúdos em Português. Termos e nomenclaturas poderão aparecer em Inglês, o que não é um impedimento para quem não domina o idioma.
 
 Os materiais estão em vários formatos, como vídeos, artigos, documentação, livros e podcast. Todos os materiais são gratuitos, mas alguns complementos podem ser pagos.
+Como o intuito é trazer materiais de estudo livres em Português, alguns cobrem apenas os fundamentos.
 
 *Todos os créditos dos materiais aos autores que contribuem para a comunidade com o compartilhamento de conhecimento!*
 
-## **Roadmap**
+## Roadmap (trilha)
 
-A trilha é organizada por contexto, como [Fundamentos](https://example.com) e [Administração de Sistemas](https://example.com). Os tópicos são tecnologias ou ferramentas relacionadas ao contexto, como `Cloud Native Computing Foundations` é um tópico de [Fundamentos](https://example.com) e `Monitoramento de processos` é um tópico de [Administração de Sistemas].
+A trilha é organizada por tópicos, como [Administração de Sistemas](https://example.com) e [Servidores](https://example.com). Os subtópicos são tecnologias ou ferramentas, como `Containers` é um subtópico de [Cloud Infrastructure](https://example.com) e `Provisionamento de infraestrutura` é um subtópico de [Infraestrutura como Código](https://example.com).
 Os contextos são independentes, caso queira pular direto para um contexto específico, veja os tópicos relacionados.
 
 Clique na imagem para ampliar:
 
+---
+
 ![alt text](https://raw.githubusercontent.com/therenanlira/roadmap-sre-devops/main/cloud-eng-roadmap.png)
 
-## **Materiais**
+---
+
+## Introdução
+
+### Ambiente
 
 A maioria dos ambientes de estudos usam distribuições Linux/Unix.
 Use o Sistema Operacional que preferir e o adapte para tirar melhor proveito dos treinamentos.
-No Windows é possivel usar o WSL e no MacOS é possível alterar o Shell padrão para o Bash, se preferir:
+No Windows é possivel usar o WSL e no MacOS, que já usa Kernel Unix, é possível alterar o Shell padrão para o Bash.
 
-- [Aprenda a usar o WSL (Diolinux)](https://www.youtube.com/watch?v=o1_E4PBl30s):
+- [Aprenda a usar o WSL (Diolinux)](https://www.youtube.com/watch?v=o1_E4PBl30s)
 - [Altere o Shell padrão no Terminal do Mac](https://support.apple.com/pt-br/guide/terminal/trml113/mac)
 
 Se Linux é uma novidade, o treinamento da FIAP [Linux Fundamentals](https://eucapacito.com.br/curso-ec/linux-fundamentos/) pode ajudar.
 
-### **Fundamentos**
+## Materiais de estudo
 
-<details>
-<summary>Cloud Native Computing Foundation</summary>
-<p>
+Antes de começar, sugiro um estudo rápido sobre a cultura DevOps e a cultura Agile, e também sobre a Cloud Native Computing Foundation (CNCF).
 
-- Um resumo do que é a CNCF feito pelo ChatGPT:
+<details><summary>Cultura DevOps</summary><p>
+
+> A cultura DevOps é uma abordagem colaborativa e cultural que busca unir as equipes de desenvolvimento de software (Dev) e operações de TI (Ops) em um processo integrado e contínuo, visando acelerar a entrega de software, melhorar a qualidade dos produtos e aumentar a eficiência operacional.
+> O termo "DevOps" combina as palavras "desenvolvimento" e "operações" para destacar a importância da colaboração entre essas duas áreas.
+> Práticas e princípios-chave da cultura DevOps incluem a automação de processos, o uso de ferramentas de integração contínua e entrega contínua (CI/CD), a adoção de monitoramento e feedback contínuos, a implementação de testes automatizados e a busca por melhorias contínuas em todo o processo de desenvolvimento e implantação.
+
+- Treinamento: [[FIAP] DevOps & Agile Culture](https://eucapacito.com.br/curso-ec/devops-agile-culture)
+
+*OBS: os capítulos 1 e 2 apresentam a cultura DevOps, os capítulos seguintes apresentam a cultura Agile, que pode ser pulado caso queira focar apenas no tópico DevOps.*
+
+</details>
+
+<details><summary>Cloud Native Computing Foundation (CNCF)</summary><p>
 
 > A Cloud Native Computing Foundation (CNCF) é uma organização sem fins lucrativos que tem como objetivo impulsionar a adoção e o desenvolvimento de tecnologias nativas da nuvem. Fundada em 2015 pela Linux Foundation, a CNCF fornece uma plataforma neutra para colaboração, padronização e promoção de soluções de código aberto voltadas para ambientes de nuvem.
 > A CNCF é conhecida principalmente por seu projeto de orquestração de contêineres chamado Kubernetes, que se tornou um padrão de fato na indústria para gerenciar aplicativos em escala na nuvem. Além disso, a CNCF abriga uma variedade de outros projetos de código aberto relacionados, incluindo o Prometheus para monitoramento, o Envoy para proxy de serviços e o Fluentd para coleta e análise de logs, entre muitos outros.
@@ -42,74 +59,29 @@ Se Linux é uma novidade, o treinamento da FIAP [Linux Fundamentals](https://euc
 - Oficial: [Cloud Native Computing Foundation](https://www.cncf.io/)
 - Vídeo: [[IBM] O que é o Cloud Native](https://youtu.be/fp9_ubiKqFU)
 
-</p>
-</details>
-
-<details>
-<summary>Cultura DevOps</summary>
-<p>
-
-- Um resumo do que é a CNCF feito pelo ChatGPT:
-
-> A cultura DevOps é uma abordagem colaborativa e cultural que busca unir as equipes de desenvolvimento de software (Dev) e operações de TI (Ops) em um processo integrado e contínuo, visando acelerar a entrega de software, melhorar a qualidade dos produtos e aumentar a eficiência operacional.
-> O termo "DevOps" combina as palavras "desenvolvimento" e "operações" para destacar a importância da colaboração entre essas duas áreas.
-> Práticas e princípios-chave da cultura DevOps incluem a automação de processos, o uso de ferramentas de integração contínua e entrega contínua (CI/CD), a adoção de monitoramento e feedback contínuos, a implementação de testes automatizados e a busca por melhorias contínuas em todo o processo de desenvolvimento e implantação.
-
-- Treinamento: [[FIAP] DevOps & Agile Culture](https://eucapacito.com.br/curso-ec/devops-agile-culture)
-  - OBS: nos capítulos 1 e 2 é apresentado a cultura DevOps, nos capítulos 3 à 5 é apresentado a cultura Agile, que pode ser pulado, caso queira focar apenas no assunto DevOps.
-
 </details>
 
 ### Administração de Sistemas
 
-<details>
-<summary>Monitoramento de processos</summary>
-<p>
+<details><summary>Monitoramento de processos</summary><p>
 
-- Um resumo do que é monitoramento de processos feito pelo ChatGPT:
+Um resumo do que é monitoramento de processos feito pelo ChatGPT:
 
 > O monitoramento de processos é essencial para entender o desempenho do sistema, identificar gargalos, solucionar problemas e otimizar o uso de recursos. Ele desempenha um papel importante na administração de servidores, ambientes de produção e infraestrutura de TI em geral.
 
 As principais ferramentas para monitoramento são `ps`, `top`, `htop`, e `kill`.
 
-- Vídeo: [[LinuxTips] Gerenciamento de Processos Linux - ps, top, htop, kill](https://youtube.com/playlist?list=PLf-O3X2-mxDlx6sRx2WB-xv3Q9YHJ23ZN)
+- Vídeo: [[LINUXtips] Gerenciamento de Processos Linux - ps, top, htop, kill](https://youtube.com/playlist?list=PLf-O3X2-mxDlx6sRx2WB-xv3Q9YHJ23ZN)
 
-</p>
 </details>
 
-<details>
-<summary>Ferramentas de rede</summary>
-<p>
+<details><summary>Manipulação de texto</summary><p>
 
-- Um resumo do que são as ferramentas de rede feito pelo ChatGPT:
-
-> As ferramentas de rede são conjuntos de utilitários e comandos disponíveis para gerenciar e diagnosticar redes em sistemas operacionais baseados em Linux. Essas ferramentas permitem aos administradores e usuários monitorar, configurar, solucionar problemas e interagir com redes de computadores.
-
-Essas ferramentas mais utilizadas, para um maior entendimento em como elas funcionam, use o comando [`man`](https://www.linuxforce.com.br/comandos-linux/comandos-linux-comando-man/) ou o comando [`tldr`](https://github.com/tldr-pages/tldr).
-
-- `traceroute` - Rastreia a rota feita por pacotes em uma rede IP.
-- `ping` - Envia pacotes de solicitação de eco para um host para testar a conexão com a Internet.
-- `mtr` - Combina a funcionalidade de traceroute e ping em uma única ferramenta de diagnóstico.
-- `nmap` - Verifica hosts em busca de portas abertas.
-- `netstat` - Exibe conexões de rede, tabelas de roteamento, estatísticas de interface, conexões de mascarada e associações multicast.
-- `ufw` e `firewalld` - Ferramenta de gerenciamento de Firewall.
-- `iptables` e `nftables` - Ferramenta de gerenciamento de Firewall.
-- `tcpdump` - Despeja o tráfego em uma rede.
-- `dig` - Utilitário de pesquisa de DNS.
-- `scp` - Cópia segura.
-
-</p>
-</details>
-
-<details>
-<summary>Manipulação de texto</summary>
-<p>
-
-- Um resumo do que é a manipulação de texto feito pelo ChatGPT:
+Um resumo do que é a manipulação de texto feito pelo ChatGPT:
 
 > A manipulação de texto em Linux refere-se à capacidade de processar e transformar dados de texto usando uma variedade de comandos e utilitários disponíveis no sistema operacional Linux. Essas ferramentas permitem realizar tarefas como busca, filtragem, substituição, formatação e processamento de arquivos de texto de maneira eficiente e automatizada.
 
-Essas ferramentas mais utilizadas, para um maior entendimento em como elas funcionam, use o comando [`man`](https://www.linuxforce.com.br/comandos-linux/comandos-linux-comando-man/) ou o comando [`tldr`](https://github.com/tldr-pages/tldr).
+Para um maior entendimento em como elas funcionam, use o comando [`man`](https://www.linuxforce.com.br/comandos-linux/comandos-linux-comando-man/) ou o comando [`tldr`](https://github.com/tldr-pages/tldr).
 
 - `awk` - Uma linguagem de programação projetada para processamento de texto e normalmente usada como uma ferramenta de extração e relatórios de dados.
 - `sed` - Um editor de fluxo para filtrar e transformar texto.
@@ -124,7 +96,27 @@ Essas ferramentas mais utilizadas, para um maior entendimento em como elas funci
 - `nl` - Um utilitário de linha de comando para numerar linhas de arquivos.
 - `wc` - Um utilitário de linha de comando para imprimir contagens de novas linhas, palavras e bytes para arquivos.
 
-</p>
+</details>
+
+<details><summary>Ferramentas de rede</summary><p>
+
+Um resumo do que são as ferramentas de rede feito pelo ChatGPT:
+
+> As ferramentas de rede são conjuntos de utilitários e comandos disponíveis para gerenciar e diagnosticar redes em sistemas operacionais baseados em Linux. Essas ferramentas permitem aos administradores e usuários monitorar, configurar, solucionar problemas e interagir com redes de computadores.
+
+Para um maior entendimento em como elas funcionam, use o comando [`man`](https://www.linuxforce.com.br/comandos-linux/comandos-linux-comando-man/) ou o comando [`tldr`](https://github.com/tldr-pages/tldr).
+
+- `traceroute` - Rastreia a rota feita por pacotes em uma rede IP.
+- `ping` - Envia pacotes de solicitação de eco para um host para testar a conexão com a Internet.
+- `mtr` - Combina a funcionalidade de traceroute e ping em uma única ferramenta de diagnóstico.
+- `nmap` - Verifica hosts em busca de portas abertas.
+- `netstat` - Exibe conexões de rede, tabelas de roteamento, estatísticas de interface, conexões de mascarada e associações multicast.
+- `ufw` e `firewalld` - Ferramenta de gerenciamento de Firewall.
+- `iptables` e `nftables` - Ferramenta de gerenciamento de Firewall.
+- `tcpdump` - Despeja o tráfego em uma rede.
+- `dig` - Utilitário de pesquisa de DNS.
+- `scp` - Cópia segura.
+
 </details>
 
 <details>
@@ -138,18 +130,15 @@ Essas ferramentas mais utilizadas, para um maior entendimento em como elas funci
 Desenvolver scripts bash requer um editor de texto. Pode ser usada a IDE [`VS Code`](https://code.visualstudio.com/) ou um editor de texto para o Shell, como o [`VIM`](https://www.vim.org/) ou [`NANO`](https://www.nano-editor.org/)
 
 - Vídeo: [[debxp] Curso Básico de Bash](https://youtube.com/playlist?list=PLXoSGejyuQGpf4X-NdGjvSlEFZhn2f2H7)
-- Vídeo: [[LinuxTips] Agendar um Job de Primeira no Crontab](https://youtu.be/jVM8Y97dLik)
+- Vídeo: [[LINUXtips] Agendar um Job de Primeira no Crontab](https://youtu.be/jVM8Y97dLik)
 
-</p>
 </details>
 
 ### Servidores
 
-<details>
-<summary>Protocólos</summary>
-<p>
+<details><summary>Protocolos</summary><p>
 
-- Um resumo do que são os protocólos feito pelo ChatGPT:
+Um resumo do que são os protocolos feito pelo ChatGPT:
 
 > Os protocolos de rede são conjuntos de regras e formatos padronizados que governam a comunicação entre dispositivos em uma rede de computadores. Cada protocolo define como os dados devem ser transmitidos, organizados e interpretados entre os dispositivos.
 
@@ -167,229 +156,261 @@ Desenvolver scripts bash requer um editor de texto. Pode ser usada a IDE [`VS Co
 
 - SSH (Secure Shell): É um protocolo que permite a conexão segura a dispositivos remotos em uma rede. Ele fornece autenticação e criptografia para proteger as comunicações, sendo amplamente utilizado para acesso remoto a servidores e transferência segura de arquivos.
 
-</p>
 </details>
 
-<details>
-<summary>Servidores</summary>
-<p>
+<details><summary>Servidor Web</summary><p>
 
-- Um resumo do que são servidores feito pelo ChatGPT:
+Um resumo do que é o Servidor Web Nginx feito pelo ChatGPT:
 
-> Servidor, no contexto de tecnologia, refere-se a um software ou hardware que oferece serviços ou recursos para outros dispositivos ou aplicativos em uma rede. Esses servidores são projetados para atender a solicitações, processar dados e fornecer funcionalidades específicas.
-> Cada um desses servidores desempenha um papel específico em diferentes cenários de aplicativos e infraestrutura de TI. O Nginx é amplamente utilizado como servidor web e proxy reverso, o Redis é conhecido por sua velocidade e flexibilidade como banco de dados em memória, e o Kafka é uma plataforma de streaming de alto desempenho para lidar com fluxos contínuos de dados em tempo real.
-
-- Nginx é um servidor web de alto desempenho, conhecido por sua escalabilidade e eficiência. Ele é usado para hospedar sites estáticos ou dinâmicos, além de servir como proxy reverso para balanceamento de carga, cache e manipulação de solicitações HTTP. O Nginx também pode ser usado como servidor de arquivos estáticos ou como proxy para servidores de aplicativos.
-
-- Redis é um banco de dados em memória de código aberto, que também pode ser visto como um servidor de armazenamento de chave-valor. Ele é projetado para fornecer alta velocidade e baixa latência, sendo amplamente utilizado como um cache distribuído, armazenamento de sessão, fila de mensagens e muito mais. O Redis também suporta estruturas de dados avançadas, como listas, conjuntos, hashes e sorted sets.
-
-- Kafka é uma plataforma de streaming distribuída, projetada para lidar com o processamento em tempo real de fluxos de dados. Ele funciona como um sistema de mensagens de alto desempenho e armazena fluxos de eventos em tópicos. O Kafka é usado para casos de uso de streaming, como ingestão de dados, processamento de eventos em tempo real, integração de sistemas e criação de pipelines de dados.
+> Nginx é um servidor web de alto desempenho, conhecido por sua escalabilidade e eficiência. Ele é usado para hospedar sites estáticos ou dinâmicos, além de servir como proxy reverso para balanceamento de carga, cache e manipulação de solicitações HTTP. O Nginx também pode ser usado como servidor de arquivos estáticos ou como proxy para servidores de aplicativos.
 
 - Oficial: [Nginx Documentation](https://nginx.org/en/docs/)
-- Vídeo: [[CofOps] Forma fácil e correta de instalar o Nginx no Ubuntu 20.04](https://youtube.com/watch?v=hn17w828I-w)
+- Vídeo: [[CoffOps] Forma fácil e correta de instalar o Nginx no Ubuntu 20.04](https://youtube.com/watch?v=hn17w828I-w)
+
+</details>
+
+<details><summary>Banco de Dados</summary><p>
+
+Um resumo do que é Banco de Dados Redis feito pelo ChatGPT:
+
+> Redis é um banco de dados em memória de código aberto, que também pode ser visto como um servidor de armazenamento de chave-valor. Ele é projetado para fornecer alta velocidade e baixa latência, sendo amplamente utilizado como um cache distribuído, armazenamento de sessão, fila de mensagens e muito mais. O Redis também suporta estruturas de dados avançadas, como listas, conjuntos, hashes e sorted sets.
+
 - Vídeo: [[Filipe Morelli Developer] Curso de Redis](https://youtube.com/playlist?list=PLWhiA_CuQkbA_nmwPvjxVUr4XucYUrYXi)
+
+</details>
+
+<details><summary>Transmissão</summary><p>
+
+Um resumo do que é o Kafka feito pelo ChatGPT:
+
+> Kafka é uma plataforma de streaming (transmissão) distribuída, projetada para lidar com o processamento em tempo real de fluxos de dados. Ele funciona como um sistema de mensagens de alto desempenho e armazena fluxos de eventos em tópicos. O Kafka é usado para casos de uso de streaming e enfileiramento, como ingestão de dados, processamento de eventos em tempo real, integração de sistemas e criação de pipelines de dados.
+
 - Vídeo: [[Escola de Inteligência Artificial] Apache Kafka](https://youtube.com/playlist?list=PLzWDDw1w8cTRsUM3cLMxImrQRv8jrOTP0)  
 
-</p>
 </details>
 
-### Containers
+### Infraestrutura em Nuvem
 
-<details>
-<summary>Docker</summary>
-<p>
+<details><summary>Cloud Providers</summary><p>
 
-</p>
+Um resumo do que é Cloud Providers feito pelo ChatGPT:
+
+> Cloud Providers, ou provedores de nuvem, são empresas que oferecem serviços de computação em nuvem para indivíduos e organizações. Eles fornecem infraestrutura, recursos de computação, armazenamento, serviços de rede e uma variedade de outros serviços na forma de plataformas baseadas em nuvem.
+
+Escolha um provedor de nuvem e foque os estudos neste. O importante nesse passo é aprender os fundamentos, a base.
+
+- Treinamento: [[Microsoft] Azure AZ-900](https://learn.microsoft.com/pt-br/certifications/azure-fundamentals/)
+- Treinamento: [[Amazon] AWS Cloud Practitioner](https://aws.amazon.com/pt/training/learn-about/cloud-practitioner/?la=sec&sec=role)
+- Treinamento: [[Google] Cloud Engineer Learning Path](https://www.cloudskillsboost.google/journeys/11)
+
 </details>
 
-<details>
-<summary>Kubernetes</summary>
-<p>
+<details><summary>Orquestração de contêineres</summary><p>
 
-</p>
-</details>
+Um resumo do que é o Docker e Kubernetes feito pelo ChatGPT:
 
-### Cloud Infrastructure
+> Docker é uma plataforma de código aberto que permite a criação, distribuição e execução de aplicativos em contêineres. Contêineres são ambientes isolados que empacotam um aplicativo e suas dependências, garantindo que ele funcione de maneira consistente em qualquer ambiente, desde o desenvolvimento até a produção.
+> Kubernetes é uma plataforma de código aberto para orquestração e gerenciamento de contêineres. Ele fornece um ambiente robusto e escalável para implantar, dimensionar e gerenciar aplicativos em contêineres de maneira eficiente.
+> Já a orquestração de contêineres é o processo de gerenciar, coordenar e automatizar a implantação, escalabilidade e operações de contêineres em um ambiente distribuído. Alguns exemplos populares de sistemas de orquestração de contêineres incluem o Kubernetes e Apache Mesos.
 
-<details>
-<summary>Azure</summary>
-<p>
+- Oficial: [docker.com](https://www.docker.com)
+- Vídeo: [[LINUXtips] Descomplicando Docker](https://youtube.com/playlist?list=PLf-O3X2-mxDn1VpyU2q3fuI6YYeIWp5rR)
 
-</p>
-</details>
+- Oficial: [kubernetes.io](https://kubernetes.io)
+- Vídeo: [[Prof. Gustavo Leitão] Kubernetes](https://youtube.com/playlist?list=PLyScRVRVdr6X9ulCNbVAsaggKBabNjELi)
+- Vídeo: [[LINUXtips] Multirão Kubernetes](https://youtube.com/playlist?list=PLf-O3X2-mxDli3suNEnRquFyKYdrFLm3t)
 
-<details>
-<summary>GCP</summary>
-<p>
-
-</p>
-</details>
-
-<details>
-<summary>AWS</summary>
-<p>
-
-</p>
 </details>
 
 ### Infraestrutura como Código
 
-<details>
-<summary>Git</summary>
-<p>
+<details><summary>Provisionamento de Infraestrutura</summary><p>
 
-- Um resumo do que é Git feito pelo ChatGPT:
+Um resumo do que é Provisionamento de Infraestrutura feito pelo ChatGPT:
 
+> O provisionamento de infraestrutura com Ansible é um processo de automação que permite configurar e provisionar recursos de infraestrutura, como servidores, redes e serviços, de forma rápida, consistente e repetível. O Ansible é uma ferramenta de automação de TI que permite definir e executar tarefas em hosts remotos usando um conjunto declarativo de instruções.
+
+- Oficial: [ansible.com](https://www.ansible.com)
+- Vídeo: [[LINUXtips] O Ansible gerenciando seus servidores](https://youtu.be/lqmuUuzA39Q)
+- Artigo: [[Álvaro Bacelar] Simplificando o AWX](https://medium.com/@alvarobacelar/simplificando-o-awx-1-6-156237ed7a22)
+
+</details>
+
+<details><summary>Gerenciamento de configurações</summary><p>
+
+Um resumo do que é Gerenciamento de Configurações feito pelo ChatGPT:
+
+> O gerenciamento de configurações com Terraform é uma abordagem para provisionar e gerenciar recursos de infraestrutura usando o Terraform, uma ferramenta de infraestrutura como código (IaC). O Terraform permite definir e controlar de maneira declarativa a infraestrutura necessária para suportar um aplicativo ou serviço, independentemente do provedor de nuvem ou ambiente de implantação.
+
+- Oficial [terraform.io](https://www.terraform.io)
+- Vídeo: [[LINUXtips] Descomplicando o Terraform](https://www.youtube.com/live/4FellihAcV8)
+- Vídeo: [[LINUXtips] Lucas de Souza - Terraform além do básico](https://www.youtube.com/live/P3aY4_vxzWQ)
+
+</details>
+
+<details><summary>Versionamento de código</summary><p>
+
+- Um resumo do que é Versionamento de código e Git feito pelo ChatGPT:
+
+> O versionamento de código é o processo de controlar e gerenciar as alterações feitas em um projeto de software ao longo do tempo. Ele envolve o uso de sistemas de controle de versão para registrar, acompanhar e organizar as diferentes versões do código-fonte.
 > Git é um sistema de controle de versão distribuído amplamente utilizado para rastrear alterações em projetos de desenvolvimento de software. Ele permite que várias pessoas trabalhem em um projeto simultaneamente, gerenciando diferentes versões dos arquivos e facilitando a colaboração entre os membros da equipe.
 
 - Vídeo: [[Bonieky Lacerda] Curso Completo de GIT](https://youtu.be/OuOb1_qADBQ)
-
-</p>
-</details>
-
-<details>
-<summary>GitOps</summary>
-<p>
-
-</p>
-</details>
-
-<details>
-<summary>Ansible</summary>
-<p>
-
-</p>
-</details>
-
-<details>
-<summary>Terraform</summary>
-<p>
-
-</p>
+- Vídeo: [[LINUXtips] Descomplicando o ArgoCD e o GitOps!](https://youtu.be/TDvA2vAQCF8)
 </details>
 
 ### Esteira contínua
 
-<details>
-<summary>GitHub Actions</summary>
-<p>
+<details><summary>Integração continua</summary><p>
 
-</p>
+Um resumo do que é Integração contínua com GitHub Actions feito pelo ChatGPT:
+
+> A Integração Contínua (CI, do inglês Continuous Integration) é uma prática de desenvolvimento de software que envolve a integração frequente e automatizada de código fonte em um repositório compartilhado. Isso é feito por meio de uma esteira contínua (ou pipeline) que executa uma série de etapas automatizadas para verificar a qualidade do código e detectar problemas o mais cedo possível.
+> O GitHub Actions é uma ferramenta de automação fornecida pelo GitHub que permite criar e personalizar pipelines de integração contínua diretamente em seu repositório. Com o GitHub Actions, você pode definir fluxos de trabalho (workflows) que serão acionados automaticamente em resposta a eventos específicos, como push de código, criação de pull requests ou programação regular.
+
+- Vídeo: [[dogcode] Github Actions do Zero e na Prática](https://youtu.be/MIVx1qniNKY)
+
 </details>
 
-<details>
-<summary>Spinnaker</summary>
-<p>
+<details><summary>Entrega continua</summary><p>
 
-</p>
+Um resumo do que é Entrega continua com Spinnaker feito pelo ChatGPT:
+
+> A Entrega Contínua (CD, do inglês Continuous Delivery) é uma abordagem de desenvolvimento de software que visa entregar as mudanças de código de forma confiável e automatizada para o ambiente de produção. Ela envolve a automação do processo de construção, teste e implantação, permitindo que as equipes entreguem alterações com mais rapidez e frequência.
+> O Spinnaker é uma plataforma de orquestração de entrega contínua de código aberto que ajuda a automatizar o fluxo de trabalho de entrega de software. Ele oferece recursos avançados para implantar aplicativos em diferentes ambientes, como nuvens públicas, privadas e híbridas.
+
+- Documentação: [[Spinnaker] Tutorial](https://spinnaker.io/docs/guides/tutorials/)
+- Treinamento: [[Google] Como implementar implantações canário com Spinnaker e Istio](https://cloud.google.com/architecture/implementing-canary-deployments?hl=pt-br)
+
 </details>
 
-<details>
-<summary>Nexus</summary>
-<p>
+<details><summary>Repositório de imagens</summary><p>
 
-</p>
+Um resumo do que é um repositório de imagens feito pelo ChatGPT:
+
+> Um repositório de imagens é um serviço ou plataforma que permite armazenar, organizar e distribuir imagens de contêineres. Essas imagens são usadas para criar e implantar contêineres em ambientes de nuvem, como Kubernetes ou Docker.
+
+- Vídeo: [[Jonathan Baraldi] Aprenda a instalar o Harbor](https://youtu.be/8oxx2n4QQgM)
+
 </details>
 
-<details>
-<summary>Harbor</summary>
-<p>
+<details><summary>Repositório de artefatos</summary><p>
 
-</p>
+Um resumo do que é um repositório de artefatos feito pelo ChatGPT:
+
+> Um repositório de artefatos é uma ferramenta ou plataforma que permite armazenar, gerenciar e distribuir artefatos de software. Esses artefatos podem incluir pacotes de código-fonte, bibliotecas, componentes, imagens de contêineres, scripts de implantação e outros artefatos relacionados ao desenvolvimento de software.
+> O Nexus Repository Manager, comumente referido como Nexus, é um exemplo popular de repositório de artefatos. Ele é amplamente utilizado na comunidade de desenvolvimento de software para gerenciar e organizar artefatos em um ambiente centralizado. O Nexus oferece recursos poderosos para facilitar a colaboração, a rastreabilidade e a distribuição de artefatos.
+
+- Vídeo: [[Codigo Natural] Repositório de artefatos: Aonde guardamos nossos softwares que criamos?](https://youtu.be/xlI0f9XNWzE)
+
 </details>
 
 ### Automação
 
-<details>
-<summary>Python</summary>
-<p>
+<details><summary>Linguagem de programação</summary><p>
 
 - Um resumo do que é Python feito pelo ChatGPT:
 
-> Python é uma linguagem de programação interpretada, de alto nível e de propósito geral. Foi criada por Guido van Rossum e lançada pela primeira vez em 1991. Python é conhecida por sua simplicidade, clareza de código e facilidade de leitura, o que a torna uma ótima opção tanto para iniciantes quanto para desenvolvedores experientes.
+> Uma linguagem de programação é uma forma de comunicação entre humanos e computadores. No contexto da infraestrutura em nuvem, as linguagens de programação desempenham um papel fundamental na automação, provisionamento e gerenciamento de recursos em plataformas de nuvem. Aqui estão algumas aplicações das linguagens de programação na área de infraestrutura em nuvem:
+
+Escolha uma linguagem e foque os estudos nesta. O importante nesse passo é aprender a lógica de programação e os fundamentos, e entender como aplicar desenvolvimento de scripts e aplicações para automatizar tarefas em Infraestrutura.
 
 - Treinamento: [[Diego Mariano] Introdução à linguagem Python](https://www.udemy.com/course/intro_python/)
-- Livro: [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 - Podcast: [[Hipster Talks] Automação com Python](https://youtu.be/s_b79fuuIY4)
-
-</p>
-</details>
-
-<details>
-<summary>Go</summary>
-<p>
-
-- Um resumo do que é Go feito pelo ChatGPT:
-
-> Golang, também conhecida como Go, é uma linguagem de programação moderna, de código aberto, desenvolvida pelo Google. Ela foi projetada para ser eficiente, simples, segura e de fácil leitura. Go foi lançada em 2009 e ganhou popularidade devido à sua eficiência no desenvolvimento de sistemas escaláveis e concorrentes.
-
 - Vídeo: [[Aprenda Go] Aprenda Go](https://youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg)
 
-</p>
 </details>
 
-<details>
-<summary>Rundeck</summary>
-<p>
+<details><summary>Gerenciamento de automações</summary><p>
 
-- Um resumo do que é Rundeck feito pelo ChatGPT:
+- Um resumo do que é o Rundeck (um gerenciador de automações) feito pelo ChatGPT:
 
 > Rundeck é uma plataforma de automação de operações e agendamento de tarefas desenvolvida para simplificar e gerenciar fluxos de trabalho complexos em ambientes de TI. Ela fornece uma interface amigável para automatizar e orquestrar tarefas em uma variedade de sistemas, como servidores, nuvens, bancos de dados, aplicativos e muito mais.
 
-- Vídeo: [[LinuxTips] Infra Ágil - Rundeck](https://youtu.be/kE3wxQSMaio)
+- Vídeo: [[LINUXtips] Infra Ágil - Rundeck](https://youtu.be/kE3wxQSMaio)
 
-</p>
 </details>
 
 ### Observabilidade
 
-<details>
-<summary>Prometheus</summary>
-<p>
+<details><summary>Logs</summary><p>
 
-</p>
+Um resumo do que são Logs feito pelo ChatGPT:
+
+> Logs são registros estruturados de eventos que ocorrem em um sistema. Eles fornecem uma visão detalhada de eventos, erros, exceções e outras informações relevantes sobre o funcionamento de um sistema. Os logs geralmente são textuais e contêm informações como data/hora, nível de log, mensagem descritiva e contexto. Eles são usados para solucionar problemas, investigar falhas, rastrear eventos e fornecer auditoria.
+
+Uma das ferramentas mais utilizadas para Logs é o Elasticsearch. Este treinamento do Waldemar Neto abrange várias ferramentas, o que é um ótimo ponto de partida.
+
+- Vídeo: [[Waldemar Neto] Kubernetes: Configurando cluster no Minikube do zero com Elasticsearch + Kibana + APM + Node js](https://youtu.be/CqLB-tBYB2Q)
+
 </details>
 
-<details>
-<summary>Grafana</summary>
-<p>
+<details><summary>Métricas</summary><p>
 
-</p>
+Um resumo do que é Métricas feito pelo ChatGPT:
+
+> Métricas são medidas quantitativas do desempenho e do comportamento de um sistema. Elas são coletadas em intervalos regulares e fornecem informações numéricas sobre o uso de recursos, a taxa de transferência, o tempo de resposta e outros aspectos importantes de um sistema. As métricas são usadas para monitorar a saúde do sistema, identificar tendências, detectar anomalias e tomar decisões baseadas em dados.
+
+O Prometheus é o mais utilizado quando se fala de métricas para Infraestrutura em contêineres, como Kubernetes.
+
+- Vídeo: [[LINUXtips] Aprenda a monitorar seu cluster Kubernetes](https://youtu.be/BXjLHhMiTmU)
+
 </details>
 
-<details>
-<summary>Elastic</summary>
-<p>
+<details><summary>Tracing</summary><p>
 
-</p>
-</details>
+Um resumo do que é Tracing feito pelo ChatGPT:
 
-<details>
-<summary>Dynatrace</summary>
-<p>
+> O tracing envolve a captura e o registro de informações sobre o fluxo de uma solicitação ou transação ao longo de um sistema distribuído. Ele rastreia o caminho percorrido por uma solicitação à medida que atravessa diferentes componentes e serviços. O tracing permite identificar gargalos de desempenho, analisar latências, entender a sequência de eventos e otimizar o tempo de resposta de uma solicitação complexa.
 
-</p>
+Nesse subtópico, temos duas ferramentas, o Dynatrace e o Datadog.
+
+O Dynatrace tem uma área de treinamento chamada Dynatrace University, que está apenas em inglês e requer um contrato corporativo. Para este, temos um treinamento da FNC Solutions e a página oficial documentação.
+
+Já o Datadog tem uma área de treinamento livre, mas também apenas em inglês. Em português temos o vídeo do Douglas Mugnos que traz uma introdução sobre esta ferramenta.
+
+- Documentação: [Welcome to Dynatrace Documentation](https://www.dynatrace.com/support/help)
+- Treinamento: [Dynatrace University](https://www.dynatrace.com/dynatrace-university/)
+- Vídeo: [[FNC Solutions] Dynatrace](https://youtube.com/playlist?list=PLP6PnrFnAWF5xvF4Cyz_0eSStFprk96Ez)
+- Treinamento: [Datadog Learning Paths](https://learn.datadoghq.com/pages/learning-paths)
+- Vídeo [[Douglas Mugnos] Saiba o que é e como usar o Datadog](https://youtu.be/4HVPWzhNE8k)
+
 </details>
 
 ### Cloud Design Patterns
 
-<details>
-<summary>Alta disponibilidade</summary>
-<p>
+<details><summary>Alta disponibilidade</summary><p>
 
-</p>
+Um resumo do que é Cloud Design Patterns e a Alta Disponibilidade feito pelo ChatGPT:
+
+> Cloud Design Patterns são padrões arquiteturais que foram projetados para ajudar a criar aplicativos e sistemas escaláveis, resilientes e seguros em ambientes de nuvem.
+> Padrão de Disponibilidade Geográfica: Envolve a implantação de aplicativos em várias regiões geográficas para fornecer alta disponibilidade e tolerância a falhas.
+> Padrão de Balanceamento de Carga: Distribui o tráfego de entrada entre vários recursos computacionais para melhorar a disponibilidade e a capacidade de resposta.
+> Padrão de Escala Automática: Permite que os recursos do sistema sejam dimensionados automaticamente com base na demanda, garantindo a disponibilidade e o desempenho adequados.
+> Padrão de Cluster de Servidores: Agrupa servidores em um cluster para fornecer alta disponibilidade e equilíbrio de carga
+
 </details>
 
-<details>
-<summary>Resiliência</summary>
-<p>
+<details><summary>Resiliência</summary><p>
 
-</p>
+Um resumo do que é Cloud Design Patterns e a Resiliência feito pelo ChatGPT:
+
+> Cloud Design Patterns são padrões arquiteturais que foram projetados para ajudar a criar aplicativos e sistemas escaláveis, resilientes e seguros em ambientes de nuvem.
+> Padrão de Failover: Fornece uma estratégia para mudar automaticamente para um sistema de backup ou alternativo em caso de falha do sistema principal.
+> Padrão de Replicação de Dados: Replica dados em várias localizações para garantir a disponibilidade contínua e a recuperação de falhas.
+> Padrão de Monitoramento e Auto-recuperação: Monitora constantemente o estado do sistema e toma medidas automáticas para recuperar-se de falhas ou degradação de desempenho.
+> Padrão de Particionamento de Dados: Divide grandes conjuntos de dados em partições menores para melhorar o desempenho e a tolerância a falhas.
+
 </details>
 
-<details>
-<summary>Segurança</summary>
-<p>
+<details><summary>Segurança</summary><p>
 
-</p>
+Um resumo do que é Cloud Design Patterns e a Resiliência feito pelo ChatGPT:
+
+> Cloud Design Patterns são padrões arquiteturais que foram projetados para ajudar a criar aplicativos e sistemas escaláveis, resilientes e seguros em ambientes de nuvem.
+> Padrão de Perímetro de Segurança: Estabelece uma camada de proteção em torno do sistema para filtrar e controlar o acesso de entrada e saída.
+> Padrão de Autenticação e Autorização: Implementa mecanismos de autenticação e autorização para controlar o acesso aos recursos do sistema.
+> Padrão de Comunicação Segura: Usa protocolos de comunicação seguros, como SSL/TLS, para proteger a transferência de dados entre os componentes do sistema.
+> Padrão de Armazenamento Seguro: Aplica medidas de segurança para proteger os dados armazenados, como criptografia de dados em repouso.
+
 </details>
