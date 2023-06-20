@@ -11,8 +11,7 @@ Como o intuito é trazer materiais de estudo livres em Português, alguns cobrem
 
 ## Roadmap (trilha)
 
-A trilha é organizada por tópicos, como [Administração de Sistemas](https://example.com) e [Servidores](https://example.com). Os subtópicos são tecnologias ou ferramentas, como `Containers` é um subtópico de [Cloud Infrastructure](https://example.com) e `Provisionamento de infraestrutura` é um subtópico de [Infraestrutura como Código](https://example.com).
-Os contextos são independentes, caso queira pular direto para um contexto específico, veja os tópicos relacionados.
+A trilha é organizada por tópicos, como [Administração de Sistemas](https://github.com/therenanlira/cloud-engineer-roadmap#administra%C3%A7%C3%A3o-de-sistemas) e [Servidores](https://github.com/therenanlira/cloud-engineer-roadmap#servidores)). Os subtópicos são tecnologias ou ferramentas, como `Orquestração de contêineres` é um subtópico de [Infraestrutura em Nuvem](https://github.com/therenanlira/cloud-engineer-roadmap#infraestrutura-em-nuvem) e `Provisionamento de Infraestrutura` é um subtópico de [Infraestrutura como Código](https://github.com/therenanlira/cloud-engineer-roadmap#infraestrutura-como-c%C3%B3digo).
 
 Clique na imagem para ampliar:
 
@@ -28,7 +27,7 @@ Clique na imagem para ampliar:
 
 A maioria dos ambientes de estudos usam distribuições Linux/Unix.
 Use o Sistema Operacional que preferir e o adapte para tirar melhor proveito dos treinamentos.
-No Windows é possivel usar o WSL e no MacOS, que já usa Kernel Unix, é possível alterar o Shell padrão para o Bash.
+No Windows é possivel usar o WSL e no MacOS é possível alterar o Shell padrão para o Bash.
 
 - [Aprenda a usar o WSL (Diolinux)](https://www.youtube.com/watch?v=o1_E4PBl30s)
 - [Altere o Shell padrão no Terminal do Mac](https://support.apple.com/pt-br/guide/terminal/trml113/mac)
