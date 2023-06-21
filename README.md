@@ -198,9 +198,12 @@ Um resumo do que é Cloud Providers feito pelo ChatGPT:
 
 Escolha um provedor de nuvem e foque os estudos neste. O importante nesse passo é aprender os fundamentos, a base.
 
-- Treinamento: [[Microsoft] Azure AZ-900](https://learn.microsoft.com/pt-br/certifications/azure-fundamentals/)
-- Treinamento: [[Amazon] AWS Cloud Practitioner](https://aws.amazon.com/pt/training/learn-about/cloud-practitioner/?la=sec&sec=role)
-- Treinamento: [[Google] Cloud Engineer Learning Path](https://www.cloudskillsboost.google/journeys/11)
+- Oficial: [[Microsoft] Azure AZ-900](https://learn.microsoft.com/pt-br/certifications/azure-fundamentals/)
+- Vídeo: [[Canal da Cloud] AZ900 Treinamento Oficial | Microsoft Azure Fundamentals](https://youtube.com/playlist?list=PLz3hnOImntANgM1EyWSGkY4v-7dhWURWt)
+- Oficial: [[Amazon] AWS Cloud Practitioner](https://aws.amazon.com/pt/training/learn-about/cloud-practitioner/?la=sec&sec=role)
+- Vídeo: [[Zappts] Treinamento AWS Cloud Practitioner](https://youtube.com/playlist?list=PLAOaeiAO8J5mjnEwpSUteXZ9y7cT-K42H)
+- Oficial: [[Google] Cloud Engineer Learning Path](https://www.cloudskillsboost.google/journeys/11)
+- Vídeo: [[CNS Analytical] Curso Google Cloud Platform](https://youtube.com/playlist?list=PLsyobOqUhktig0DG3mGEesf6wwERmIu91)
 
 </details>
 
@@ -362,16 +365,16 @@ Um resumo do que é Tracing feito pelo ChatGPT:
 
 > O tracing envolve a captura e o registro de informações sobre o fluxo de uma solicitação ou transação ao longo de um sistema distribuído. Ele rastreia o caminho percorrido por uma solicitação à medida que atravessa diferentes componentes e serviços. O tracing permite identificar gargalos de desempenho, analisar latências, entender a sequência de eventos e otimizar o tempo de resposta de uma solicitação complexa.
 
-Nesse subtópico, temos duas ferramentas, o Dynatrace e o Datadog.
+Nesse subtópico, temos duas ferramentas muito utilizadas, o Dynatrace e o Datadog.
 
 O Dynatrace tem uma área de treinamento chamada Dynatrace University, que está apenas em inglês e requer um contrato corporativo. Para este, temos um treinamento da FNC Solutions e a página oficial documentação.
 
 Já o Datadog tem uma área de treinamento livre, mas também apenas em inglês. Em português temos o vídeo do Douglas Mugnos que traz uma introdução sobre esta ferramenta.
 
 - Documentação: [Welcome to Dynatrace Documentation](https://www.dynatrace.com/support/help)
-- Treinamento: [Dynatrace University](https://www.dynatrace.com/dynatrace-university/)
+- Oficial: [Dynatrace University](https://www.dynatrace.com/dynatrace-university/)
 - Vídeo: [[FNC Solutions] Dynatrace](https://youtube.com/playlist?list=PLP6PnrFnAWF5xvF4Cyz_0eSStFprk96Ez)
-- Treinamento: [Datadog Learning Paths](https://learn.datadoghq.com/pages/learning-paths)
+- Oficial: [Datadog Learning Paths](https://learn.datadoghq.com/pages/learning-paths)
 - Vídeo [[Douglas Mugnos] Saiba o que é e como usar o Datadog](https://youtu.be/4HVPWzhNE8k)
 
 </details>
