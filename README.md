@@ -27,10 +27,11 @@ Clique na imagem para ampliar:
 
 A maioria dos ambientes de estudos usam distribuições Linux/Unix.
 Use o Sistema Operacional que preferir e o adapte para tirar melhor proveito dos treinamentos.
-No Windows é possivel usar o WSL e no MacOS é possível alterar o Shell padrão para o Bash.
+No Windows é possivel usar o WSL. No MacOS é possível alterar o Shell padrão para o Bash ou melhorar o zsh com o oh-my-zsh.
 
 - [Aprenda a usar o WSL (Diolinux)](https://www.youtube.com/watch?v=o1_E4PBl30s)
 - [Altere o Shell padrão no Terminal do Mac](https://support.apple.com/pt-br/guide/terminal/trml113/mac)
+- [Oh-my-zsh em macOS Terminal](https://medium.com/@uideveloper/tutorial-descomplicado-para-instalar-oh-my-zsh-no-terminal-do-macos-e-dobrar-a-sua-produtividade-68cd6341f5e)
 
 Se Linux é uma novidade, o treinamento da FIAP [Linux Fundamentals](https://eucapacito.com.br/curso-ec/linux-fundamentos/) pode ajudar.
 
