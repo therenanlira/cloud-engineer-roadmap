@@ -199,8 +199,8 @@ Um resumo do que é Cloud Providers feito pelo ChatGPT:
 
 Escolha um provedor de nuvem e foque os estudos neste. O importante nesse passo é aprender os fundamentos, a base.
 
-- Oficial: [[Microsoft] Azure AZ-900](https://learn.microsoft.com/pt-br/certifications/azure-fundamentals/)
-- Vídeo: [[Canal da Cloud] AZ900 Treinamento Oficial | Microsoft Azure Fundamentals](https://youtube.com/playlist?list=PLz3hnOImntANgM1EyWSGkY4v-7dhWURWt)
+- Oficial: [[Microsoft] Azure AZ-104](https://learn.microsoft.com/pt-br/certifications/exams/az-104/)
+- Vídeo: [[Canal da Cloud] AZ104 Treinamento Oficial | Microsoft Azure Administrator](https://youtube.com/playlist?list=PLz3hnOImntAOs0mRF2OaG-XQHStBoMtaL)
 - Oficial: [[Amazon] AWS Cloud Practitioner](https://aws.amazon.com/pt/training/learn-about/cloud-practitioner/?la=sec&sec=role)
 - Vídeo: [[Zappts] Treinamento AWS Cloud Practitioner](https://youtube.com/playlist?list=PLAOaeiAO8J5mjnEwpSUteXZ9y7cT-K42H)
 - Oficial: [[Google] Cloud Engineer Learning Path](https://www.cloudskillsboost.google/journeys/11)
