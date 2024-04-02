@@ -1,8 +1,8 @@
-# Cloud Infrastructure Engineer Roadmap
+# Cloud Engineer Roadmap
 
 ## TL;DR
 
-Uma trilha de estudo de Engenheiro de Infraestrutura em Nuvem com conteúdos em Português. Termos e nomenclaturas poderão aparecer em Inglês, o que não é um impedimento para quem não domina o idioma.
+Uma trilha de estudo de Cloud Computing Engineer (Engenheiro de Computação em Nuvem) com conteúdos em Português. Termos e nomenclaturas poderão aparecer em Inglês, o que não é um impedimento para quem não domina o idioma.
 
 Os materiais estão em vários formatos, como vídeos, artigos, documentação, livros e podcast. Todos os materiais são gratuitos, mas alguns complementos podem ser pagos.
 Como o intuito é trazer materiais de estudo livres em Português, alguns cobrem apenas os fundamentos.
