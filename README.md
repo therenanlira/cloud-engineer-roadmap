@@ -231,11 +231,12 @@ Um resumo do que é o Docker e Kubernetes feito pelo ChatGPT:
 
 Um resumo do que é Provisionamento de Infraestrutura feito pelo ChatGPT:
 
-> O provisionamento de infraestrutura com Ansible é um processo de automação que permite configurar e provisionar recursos de infraestrutura, como servidores, redes e serviços, de forma rápida, consistente e repetível. O Ansible é uma ferramenta de automação de TI que permite definir e executar tarefas em hosts remotos usando um conjunto declarativo de instruções.
+> Provisionamento de Infraestrutura como Código (IaC) é a prática de gerenciar recursos de infraestrutura usando código, e o Terraform é uma ferramenta popular para implementar essa abordagem, permitindo a criação, modificação e exclusão de recursos de forma consistente e repetível. Esta metodologia oferece benefícios como velocidade na implantação e consistência na configuração, promovendo também uma colaboração eficiente entre equipes de desenvolvimento e operações.
 
-- Oficial: [ansible.com](https://www.ansible.com)
-- Vídeo: [[LINUXtips] O Ansible gerenciando seus servidores](https://youtu.be/lqmuUuzA39Q)
-- Artigo: [[Álvaro Bacelar] Simplificando o AWX](https://medium.com/@alvarobacelar/simplificando-o-awx-1-6-156237ed7a22)
+
+- Oficial [terraform.io](https://www.terraform.io)
+- Vídeo: [[LINUXtips] Descomplicando o Terraform](https://www.youtube.com/live/4FellihAcV8)
+- Vídeo: [[LINUXtips] Lucas de Souza - Terraform além do básico](https://www.youtube.com/live/P3aY4_vxzWQ)
 
 </details>
 
@@ -243,11 +244,11 @@ Um resumo do que é Provisionamento de Infraestrutura feito pelo ChatGPT:
 
 Um resumo do que é Gerenciamento de Configurações feito pelo ChatGPT:
 
-> O gerenciamento de configurações com Terraform é uma abordagem para provisionar e gerenciar recursos de infraestrutura usando o Terraform, uma ferramenta de infraestrutura como código (IaC). O Terraform permite definir e controlar de maneira declarativa a infraestrutura necessária para suportar um aplicativo ou serviço, independentemente do provedor de nuvem ou ambiente de implantação.
+> Gerenciamento de configuração com Ansible é uma prática que automatiza o processo de configuração e administração de sistemas de TI usando scripts chamados "playbooks", os quais descrevem o estado desejado do sistema. O Ansible permite a implantação rápida e consistente de configurações em servidores e dispositivos de rede, simplificando a manutenção e promovendo a conformidade.
 
-- Oficial [terraform.io](https://www.terraform.io)
-- Vídeo: [[LINUXtips] Descomplicando o Terraform](https://www.youtube.com/live/4FellihAcV8)
-- Vídeo: [[LINUXtips] Lucas de Souza - Terraform além do básico](https://www.youtube.com/live/P3aY4_vxzWQ)
+- Oficial: [ansible.com](https://www.ansible.com)
+- Vídeo: [[LINUXtips] O Ansible gerenciando seus servidores](https://youtu.be/lqmuUuzA39Q)
+- Artigo: [[Álvaro Bacelar] Simplificando o AWX](https://medium.com/@alvarobacelar/simplificando-o-awx-1-6-156237ed7a22)
 
 </details>
 
