@@ -83,7 +83,7 @@ Descubra a senha:
 kubectl get secret grafana -n observability -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
 
-- Acesse <http://localhost:3000> no navegador.
+- Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 - Usuário: `admin`
 - Senha: (a que você acabou de recuperar).
 
@@ -114,7 +114,7 @@ Abra outra aba no terminal e execute:
 kubectl port-forward svc/jaeger -n observability 16686:16686
 ```
 
-1. Acesse <http://localhost:16686>.
+1. Acesse [http://localhost:16686](http://localhost:16686).
 1. Na barra lateral esquerda (Search), selecione o serviço frontend (que é o nosso Hot R.O.D.) e clique em Find Traces.
 1. Clique em um dos traces gerados para ver a "árvore" de requisições, identificando exatamente quantos milissegundos o banco de dados ou a API demoraram para responder.
 

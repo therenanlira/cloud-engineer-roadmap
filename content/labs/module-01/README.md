@@ -26,7 +26,7 @@ chmod +x deploy.sh
 
 O script de deploy irá subir o servidor na porta 8080. Abra o seu navegador e acesse:
 
-<http://localhost:8080/status.txt>
+[http://localhost:8080/status.txt](http://localhost:8080/status.txt)
 
 Você verá o relatório de "Online" ou "Offline" dos sites configurados no script.
 
