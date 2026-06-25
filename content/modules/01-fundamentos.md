@@ -39,7 +39,7 @@ Essas ferramentas são essenciais para testar conexões, mapear portas, configur
 * `ufw` / `firewalld` - Interfaces amigáveis para gerenciamento de Firewall no Linux (Ubuntu/Debian e CentOS/RHEL, respectivamente).
 * `iptables` e `nftables` - Ferramenta de baixo nível para filtragem de pacotes e regras de firewall do próprio kernel Linux.
 
-> **Dica:** Use os comandos [`man`](content/guidesman-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](content/guidesman-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
+> **Dica:** Use os comandos [`man`](content/guides/man-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](content/guides/man-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
 
 **Laboratórios:**
 

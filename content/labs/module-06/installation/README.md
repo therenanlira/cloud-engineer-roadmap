@@ -74,4 +74,4 @@ Como o Helm cria um serviço, basta redirecionar a porta para acessar no seu nav
 kubectl port-forward svc/backstage 7000:80 -n backstage
 ```
 
-> Acesse <http://localhost:7000>
+> Acesse [http://localhost:7000](http://localhost:7000).

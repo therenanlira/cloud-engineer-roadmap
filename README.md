@@ -4,7 +4,7 @@ Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) com c
 
 Este projeto nasceu com o propósito de ser um **guia prático e acessível para a comunidade brasileira**. Sabendo que o ecossistema de DevOps pode parecer intimidador para iniciantes devido à quantidade de ferramentas complexas, o objetivo é facilitar esse caminho, provando que é possível aprender de forma prática, sequencial e, acima de tudo, gratuita.
 
-Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **content/labs**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
+Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **desafios**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
 
 Se você está começando na área, saiba que a consistência é a sua maior aliada. Não tente aprender tudo de uma vez, vá no seu ritmo. Se necessário, revise e busque outros materiais. Quando menos esperar, você estará dominando ferramentas que antes pareciam muito difíceis.
 
@@ -54,7 +54,7 @@ A maioria dos ambientes de estudo utiliza distribuições Linux/Unix. Use o Sist
 
 ### Preparação do Ambiente
 
-Para fazer os laboratórios e content/labs, prepare o seu ambiente.
+Para fazer os laboratórios e desafios, prepare o seu ambiente.
 
 > Caso ainda não tenha familiaridade com o terminal, faça o primeiro treinamento de Linux Fundamentals e depois volte aqui.
 
@@ -101,7 +101,7 @@ Essas ferramentas são essenciais para testar conexões, mapear portas, configur
 * `ufw` / `firewalld` - Interfaces amigáveis para gerenciamento de Firewall no Linux (Ubuntu/Debian e CentOS/RHEL, respectivamente).
 * `iptables` e `nftables` - Ferramenta de baixo nível para filtragem de pacotes e regras de firewall do próprio kernel Linux.
 
-> **Dica:** Use os comandos [`man`](content/guidesman-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](content/guidesman-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
+> **Dica:** Use os comandos [`man`](content/guides/man-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](content/guides/man-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
 
 **Laboratórios:**
 
@@ -352,7 +352,7 @@ Kubernetes é a plataforma padrão de mercado para orquestrar microsserviços em
 ArgoCD é a ferramenta de GitOps mais popular. GitOps é o modelo de implantação contínua baseado no Git como única fonte de verdade. Com esse modelo, as mudanças em infraestrutura, como em Kubernetes, ocorrem via Git.
 Por exemplo, mesmo que seja feita uma alteração manual no Kubernetes, o que chamamos de *drift* (desvio de configuração em comparação com o código da infraestrutra), as ferramentas de GitOps forçam a correção.
 
-> Para os estudos e content/labs, **não crie um cluster na nuvem** (como EKS). Utilize ferramentas como **Minikube**. Elas rodam um cluster Kubernetes completo localmente na sua máquina, permitindo que você estude e erre de graça.
+> Para os estudos e desafios, **não crie um cluster na nuvem** (como EKS). Utilize ferramentas como **Minikube**. Elas rodam um cluster Kubernetes completo localmente na sua máquina, permitindo que você estude e erre de graça.
 
 **Trilha de Estudo:**
 
@@ -367,7 +367,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 
 **Objetivo**: Juntar os seus conhecimentos de Kubernetes, ArgoCD e GitOps e aplicá-los num ambiente controlado (local), sem custos.
 
-**Cenário**: O Nginx que criamos no Módulo 1 cresceu e agora precisa de alta disponibilidade. A sua missão é usar o **Minikube** (ferramenta usada para criar e testar os content/labs) para rodar um cluster local, instalar o **ArgoCD** nele e fazer com que o ArgoCD leia um repositório no GitHub para fazer o deploy automático do seu site Nginx com 3 réplicas!
+**Cenário**: O Nginx que criamos no Módulo 1 cresceu e agora precisa de alta disponibilidade. A sua missão é usar o **Minikube** (ferramenta usada para criar e testar os desafios) para rodar um cluster local, instalar o **ArgoCD** nele e fazer com que o ArgoCD leia um repositório no GitHub para fazer o deploy automático do seu site Nginx com 3 réplicas!
 
 **Passo a passo do desafio:**
 
@@ -475,7 +475,7 @@ Siga os passos de [Instalação do Backstage](content/labs/module-06/installatio
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
-> **Novidades:** Mais treinametos e content/labs para Backstage estão sendo construídos. Fique atento às novidades.
+> **Novidades:** Mais treinametos e desafios para Backstage estão sendo construídos. Fique atento às novidades.
 
 ---
 

@@ -8,7 +8,7 @@ Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) com c
 
 Este projeto nasceu com o propósito de ser um **guia prático e acessível para a comunidade brasileira**. Sabendo que o ecossistema de DevOps pode parecer intimidador para iniciantes devido à quantidade de ferramentas complexas, o objetivo é facilitar esse caminho, provando que é possível aprender de forma prática, sequencial e, acima de tudo, gratuita.
 
-Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **content/labs**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
+Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **desafios**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
 
 Se você está começando na área, saiba que a consistência é a sua maior aliada. Não tente aprender tudo de uma vez, vá no seu ritmo. Se necessário, revise e busque outros materiais. Quando menos esperar, você estará dominando ferramentas que antes pareciam muito difíceis.
 

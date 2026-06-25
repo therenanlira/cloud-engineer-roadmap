@@ -25,6 +25,6 @@ Siga os passos de [Instalação do Backstage](content/labs/module-06/installatio
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
-#### Novos content/labs
+#### Novos desafios
 
-Mais content/labs para Backstage estão sendo construídos. Fique atento às novidades.
+Mais desafios para Backstage estão sendo construídos. Fique atento às novidades.
