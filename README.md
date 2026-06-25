@@ -2,6 +2,12 @@
 
 Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) com conteúdos **gratuitos** e em **português**.
 
+[![Cloud Engineer Roadmap](.//assets/img/cloud-eng-roadmap.png)](.//assets/img/cloud-eng-roadmap.png)
+
+---
+
+## Sobre o projeto
+
 Este projeto nasceu com o propósito de ser um **guia prático e acessível para a comunidade brasileira**. Sabendo que o ecossistema de DevOps pode parecer intimidador para iniciantes devido à quantidade de ferramentas complexas, o objetivo é facilitar esse caminho, provando que é possível aprender de forma prática, sequencial e, acima de tudo, gratuita.
 
 Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **desafios**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
@@ -10,13 +16,11 @@ Se você está começando na área, saiba que a consistência é a sua maior ali
 
 > *Não tenho nenhuma afiliação com os criadores sugeridos neste roadmap. Todos os créditos pelos materiais pertencem aos seus respectivos autores que contribuem para a comunidade.*
 
-## Roadmap (Trilha)
+---
+
+## Roadmap (Trilha de estudos)
 
 O roadmap é dividido em uma sequência de módulos para você evoluir o seu conhecimento.
-
-Clique na imagem para ampliar:
-
-[![Cloud Engineer Roadmap](.//assets/img/cloud-eng-roadmap.png)](.//assets/img/cloud-eng-roadmap.png)
 
 * [1. Fundamentos](#1-fundamentos)
 * [2. Cloud](#2-cloud)
@@ -24,6 +28,8 @@ Clique na imagem para ampliar:
 * [4. Orquestração](#4-orquestração)
 * [5. Observabilidade](#5-observabilidade)
 * [6. Plataforma](#6-plataforma-platform-engineering)
+
+---
 
 ## Introdução
 
@@ -61,6 +67,8 @@ Para fazer os laboratórios e desafios, prepare o seu ambiente.
 1. Acesse [Girus LinuxTips](https://girus.io/#instalacao)
 1. Siga os passos de instalação
 1. Siga as instruções do terminal
+
+---
 
 ## 1. Fundamentos
 

@@ -6,6 +6,12 @@ layout: default
 
 Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) com conteúdos **gratuitos** e em **português**.
 
+[![Cloud Engineer Roadmap](.//assets/img/cloud-eng-roadmap.png)](.//assets/img/cloud-eng-roadmap.png)
+
+---
+
+## Sobre o projeto
+
 Este projeto nasceu com o propósito de ser um **guia prático e acessível para a comunidade brasileira**. Sabendo que o ecossistema de DevOps pode parecer intimidador para iniciantes devido à quantidade de ferramentas complexas, o objetivo é facilitar esse caminho, provando que é possível aprender de forma prática, sequencial e, acima de tudo, gratuita.
 
 Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **desafios**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
@@ -14,13 +20,14 @@ Se você está começando na área, saiba que a consistência é a sua maior ali
 
 > *Não tenho nenhuma afiliação com os criadores sugeridos neste roadmap. Todos os créditos pelos materiais pertencem aos seus respectivos autores que contribuem para a comunidade.*
 
+---
+
 ## Roadmap (Trilha)
 
 O roadmap é dividido em uma sequência de módulos para você evoluir o seu conhecimento.
 
 Clique na imagem para ampliar:
 
-[![Cloud Engineer Roadmap](.//assets/img/cloud-eng-roadmap.png)](.//assets/img/cloud-eng-roadmap.png)
 
 * [Acesse o Módulo 0. Introdução](./content/modules00-introducao.md)
 * [Acesse o Módulo 1. Fundamentos](./content/modules01-fundamentos.md)
