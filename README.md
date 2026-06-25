@@ -8,7 +8,7 @@ Os materiais estão em formatos de vídeos, cursos, documentações, além de **
 
 Se você está começando na área, saiba que a consistência é a sua maior aliada. Não tente aprender tudo de uma vez, vá no seu ritmo. Se necessário, revise e busque outros materiais. Quando menos esperar, você estará dominando ferramentas que antes pareciam muito difíceis.
 
-> *Eu não tenho ligação com nenhum criador sugerido neste roadmap. Todos os créditos dos materiais pertencem aos seus respectivos autores que contribuem para a comunidade!*
+> *Não tenho nenhuma afiliação com os criadores sugeridos neste roadmap. Todos os créditos pelos materiais pertencem aos seus respectivos autores que contribuem para a comunidade.*
 
 ## Navegação Rápida
 
