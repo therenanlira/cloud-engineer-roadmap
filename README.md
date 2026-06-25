@@ -473,9 +473,9 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 
 Siga os passos de [Instalação do Backstage](content/labs/module-06/installation/README.md) para ter a sua própria instância de Backstage localmente. Este guia de instalação é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/).
 
-> **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
+1. > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
-> **Novidades:** Mais treinametos e desafios para Backstage estão sendo construídos. Fique atento às novidades.
+1. > **Novidades:** Mais treinametos e desafios para Backstage estão sendo construídos. Fique atento às novidades.
 
 ---
 
