@@ -1,0 +1,39 @@
+# Arquivo: .github/workflows/ci-terraform.yml
+name: Terraform CI (Validação)
+
+# Define QUANDO o pipeline vai rodar
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Define O QUE o pipeline vai fazer
+jobs:
+  validate-infrastructure:
+    name: Validar Terraform
+    runs-on: ubuntu-latest # A máquina virtual onde os testes vão rodar
+
+    steps:
+      # Passo 1: Baixa o código do seu repositório para a máquina virtual
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # Passo 2: Instala e configura o Terraform na máquina
+      - name: Configurar Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      # Passo 3: Inicializa o Terraform (baixa os plugins do provider)
+      - name: Terraform Init
+        run: terraform init
+
+      # Passo 4: Verifica se o código está formatado corretamente
+      # O parâmetro -check faz o pipeline falhar se a formatação estiver errada
+      - name: Validar formatação (Fmt)
+        run: terraform fmt -check
+
+      # Passo 5: Valida a sintaxe do código (verifica se não tem erros na escrita)
+      - name: Validar sintaxe (Validate)
+        run: terraform validate
