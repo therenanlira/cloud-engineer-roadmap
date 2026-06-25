@@ -53,4 +53,4 @@ for i, (title, content) in enumerate(modules):
         draw.line([400, y_pos+80, 400, y_pos+110], fill=colors[i], width=3)
     y_pos += 110
 
-img.save("../images/cloud-eng-roadmap.png")
+img.save("..//assets/img/cloud-eng-roadmap.png")

@@ -39,7 +39,7 @@ Essas ferramentas são essenciais para testar conexões, mapear portas, configur
 * `ufw` / `firewalld` - Interfaces amigáveis para gerenciamento de Firewall no Linux (Ubuntu/Debian e CentOS/RHEL, respectivamente).
 * `iptables` e `nftables` - Ferramenta de baixo nível para filtragem de pacotes e regras de firewall do próprio kernel Linux.
 
-> **Dica:** Use os comandos [`man`](guias/man-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](guias/man-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
+> **Dica:** Use os comandos [`man`](content/guidesman-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](content/guidesman-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
 
 **Laboratórios:**
 
@@ -131,6 +131,6 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 * **Validação:** Abra o seu navegador e acesse <http://localhost:8080/status.txt> (ou use o comando `curl localhost:8080/status.txt` no terminal) para ver o relatório de conectividade gerado pelo seu script.
 * **Bash**: Crie um único script chamado `deploy.sh` que executa o `monitor.py`, faz o `docker build` e o `docker run` de forma sequencial.
 
-**Solução:** A solução para este desafio está [aqui](desafios/module-01/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](content/labs/module-01/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.

@@ -58,6 +58,6 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 3. **Integração:** Configure os *Data Sources* no Grafana para conectar as três fontes de dados em um único painel centralizado.
 4. **Instrumentação e Tracing:** Faça o deploy da aplicação de demonstração [Hot R.O.D.](https://github.com/jaegertracing/jaeger/tree/main/examples/hotrod) e utilize comandos efêmeros (`kubectl run`) ou acesse a interface web da aplicação para gerar tráfego de rede e observar os *traces* sendo capturados em tempo real.
 
-**Solução:** A solução para este desafio está [aqui](desafios/module-05/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](content/labs/module-05/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.

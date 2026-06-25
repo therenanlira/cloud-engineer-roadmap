@@ -29,7 +29,7 @@ A maioria dos ambientes de estudo utiliza distribuições Linux/Unix. Use o Sist
 
 ### Preparação do Ambiente
 
-Para fazer os laboratórios e desafios, prepare o seu ambiente.
+Para fazer os laboratórios e content/labs, prepare o seu ambiente.
 
 > Caso ainda não tenha familiaridade com o terminal, faça o primeiro treinamento de Linux Fundamentals e depois volte aqui.
 

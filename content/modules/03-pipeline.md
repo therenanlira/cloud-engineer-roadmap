@@ -39,6 +39,6 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
    * Execute o comando `terraform validate` (para garantir que a sintaxe está correta).
 6. Faça o *commit* propositalmente mal formatado para ver o pipeline falhar, corrija-o e veja o pipeline ficar verde (sucesso)!
 
-**Solução:** A solução para este desafio está [aqui](desafios/module-03/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](content/labs/module-03/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.

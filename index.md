@@ -8,21 +8,11 @@ Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) com c
 
 Este projeto nasceu com o propósito de ser um **guia prático e acessível para a comunidade brasileira**. Sabendo que o ecossistema de DevOps pode parecer intimidador para iniciantes devido à quantidade de ferramentas complexas, o objetivo é facilitar esse caminho, provando que é possível aprender de forma prática, sequencial e, acima de tudo, gratuita.
 
-Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **desafios**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
+Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **content/labs**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
 
 Se você está começando na área, saiba que a consistência é a sua maior aliada. Não tente aprender tudo de uma vez, vá no seu ritmo. Se necessário, revise e busque outros materiais. Quando menos esperar, você estará dominando ferramentas que antes pareciam muito difíceis.
 
 > *Não tenho nenhuma afiliação com os criadores sugeridos neste roadmap. Todos os créditos pelos materiais pertencem aos seus respectivos autores que contribuem para a comunidade.*
-
-## Navegação Rápida
-
-* [Acesse o Módulo 0. Introdução](./modules/00-introducao.md)
-* [Acesse o Módulo 1. Fundamentos](./modules/01-fundamentos.md)
-* [Acesse o Módulo 2. Cloud](./modules/02-cloud.md)
-* [Acesse o Módulo 3. Pipeline](./modules/03-pipeline.md)
-* [Acesse o Módulo 4. Orquestração](./modules/04-orquestracao.md)
-* [Acesse o Módulo 5. Observabilidade](./modules/05-observabilidade.md)
-* [Acesse o Módulo 6. Plataforma](./modules/06-plataforma.md)
 
 ## Roadmap (Trilha)
 
@@ -30,7 +20,15 @@ O roadmap é dividido em uma sequência de módulos para você evoluir o seu con
 
 Clique na imagem para ampliar:
 
-[![Cloud Engineer Roadmap](./images/cloud-eng-roadmap.png)](./images/cloud-eng-roadmap.png)
+[![Cloud Engineer Roadmap](.//assets/img/cloud-eng-roadmap.png)](.//assets/img/cloud-eng-roadmap.png)
+
+* [Acesse o Módulo 0. Introdução](./content/modules00-introducao.md)
+* [Acesse o Módulo 1. Fundamentos](./content/modules01-fundamentos.md)
+* [Acesse o Módulo 2. Cloud](./content/modules02-cloud.md)
+* [Acesse o Módulo 3. Pipeline](./content/modules03-pipeline.md)
+* [Acesse o Módulo 4. Orquestração](./content/modules04-orquestracao.md)
+* [Acesse o Módulo 5. Observabilidade](./content/modules05-observabilidade.md)
+* [Acesse o Módulo 6. Plataforma](./content/modules06-plataforma.md)
 
 ---
 

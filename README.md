@@ -4,20 +4,11 @@ Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) com c
 
 Este projeto nasceu com o propósito de ser um **guia prático e acessível para a comunidade brasileira**. Sabendo que o ecossistema de DevOps pode parecer intimidador para iniciantes devido à quantidade de ferramentas complexas, o objetivo é facilitar esse caminho, provando que é possível aprender de forma prática, sequencial e, acima de tudo, gratuita.
 
-Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **desafios**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
+Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **content/labs**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
 
 Se você está começando na área, saiba que a consistência é a sua maior aliada. Não tente aprender tudo de uma vez, vá no seu ritmo. Se necessário, revise e busque outros materiais. Quando menos esperar, você estará dominando ferramentas que antes pareciam muito difíceis.
 
 > *Não tenho nenhuma afiliação com os criadores sugeridos neste roadmap. Todos os créditos pelos materiais pertencem aos seus respectivos autores que contribuem para a comunidade.*
-
-## Navegação Rápida
-
-* [1. Fundamentos](#1-fundamentos)
-* [2. Cloud](#2-cloud)
-* [3. Pipeline](#3-pipeline)
-* [4. Orquestração](#4-orquestração)
-* [5. Observabilidade](#5-observabilidade)
-* [6. Plataforma](#6-plataforma-platform-engineering)
 
 ## Roadmap (Trilha)
 
@@ -25,7 +16,14 @@ O roadmap é dividido em uma sequência de módulos para você evoluir o seu con
 
 Clique na imagem para ampliar:
 
-[![Cloud Engineer Roadmap](./images/cloud-eng-roadmap.png)](./images/cloud-eng-roadmap.png)
+[![Cloud Engineer Roadmap](.//assets/img/cloud-eng-roadmap.png)](.//assets/img/cloud-eng-roadmap.png)
+
+* [1. Fundamentos](#1-fundamentos)
+* [2. Cloud](#2-cloud)
+* [3. Pipeline](#3-pipeline)
+* [4. Orquestração](#4-orquestração)
+* [5. Observabilidade](#5-observabilidade)
+* [6. Plataforma](#6-plataforma-platform-engineering)
 
 ## Introdução
 
@@ -56,7 +54,7 @@ A maioria dos ambientes de estudo utiliza distribuições Linux/Unix. Use o Sist
 
 ### Preparação do Ambiente
 
-Para fazer os laboratórios e desafios, prepare o seu ambiente.
+Para fazer os laboratórios e content/labs, prepare o seu ambiente.
 
 > Caso ainda não tenha familiaridade com o terminal, faça o primeiro treinamento de Linux Fundamentals e depois volte aqui.
 
@@ -103,7 +101,7 @@ Essas ferramentas são essenciais para testar conexões, mapear portas, configur
 * `ufw` / `firewalld` - Interfaces amigáveis para gerenciamento de Firewall no Linux (Ubuntu/Debian e CentOS/RHEL, respectivamente).
 * `iptables` e `nftables` - Ferramenta de baixo nível para filtragem de pacotes e regras de firewall do próprio kernel Linux.
 
-> **Dica:** Use os comandos [`man`](guias/man-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](guias/man-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
+> **Dica:** Use os comandos [`man`](content/guidesman-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](content/guidesman-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
 
 **Laboratórios:**
 
@@ -195,7 +193,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 * **Validação:** Abra o seu navegador e acesse <http://localhost:8080/status.txt> (ou use o comando `curl localhost:8080/status.txt` no terminal) para ver o relatório de conectividade gerado pelo seu script.
 * **Bash**: Crie um único script chamado `deploy.sh` que executa o `monitor.py`, faz o `docker build` e o `docker run` de forma sequencial.
 
-**Solução:** A solução para este desafio está [aqui](desafios/module-01/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](content/labs/module-01/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -315,7 +313,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
    * Execute o comando `terraform validate` (para garantir que a sintaxe está correta).
 6. Faça o *commit* propositalmente mal formatado para ver o pipeline falhar, corrija-o e veja o pipeline ficar verde (sucesso)!
 
-**Solução:** A solução para este desafio está [aqui](desafios/module-03/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](content/labs/module-03/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -354,7 +352,7 @@ Kubernetes é a plataforma padrão de mercado para orquestrar microsserviços em
 ArgoCD é a ferramenta de GitOps mais popular. GitOps é o modelo de implantação contínua baseado no Git como única fonte de verdade. Com esse modelo, as mudanças em infraestrutura, como em Kubernetes, ocorrem via Git.
 Por exemplo, mesmo que seja feita uma alteração manual no Kubernetes, o que chamamos de *drift* (desvio de configuração em comparação com o código da infraestrutra), as ferramentas de GitOps forçam a correção.
 
-> Para os estudos e desafios, **não crie um cluster na nuvem** (como EKS). Utilize ferramentas como **Minikube**. Elas rodam um cluster Kubernetes completo localmente na sua máquina, permitindo que você estude e erre de graça.
+> Para os estudos e content/labs, **não crie um cluster na nuvem** (como EKS). Utilize ferramentas como **Minikube**. Elas rodam um cluster Kubernetes completo localmente na sua máquina, permitindo que você estude e erre de graça.
 
 **Trilha de Estudo:**
 
@@ -369,7 +367,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 
 **Objetivo**: Juntar os seus conhecimentos de Kubernetes, ArgoCD e GitOps e aplicá-los num ambiente controlado (local), sem custos.
 
-**Cenário**: O Nginx que criamos no Módulo 1 cresceu e agora precisa de alta disponibilidade. A sua missão é usar o **Minikube** (ferramenta usada para criar e testar os desafios) para rodar um cluster local, instalar o **ArgoCD** nele e fazer com que o ArgoCD leia um repositório no GitHub para fazer o deploy automático do seu site Nginx com 3 réplicas!
+**Cenário**: O Nginx que criamos no Módulo 1 cresceu e agora precisa de alta disponibilidade. A sua missão é usar o **Minikube** (ferramenta usada para criar e testar os content/labs) para rodar um cluster local, instalar o **ArgoCD** nele e fazer com que o ArgoCD leia um repositório no GitHub para fazer o deploy automático do seu site Nginx com 3 réplicas!
 
 **Passo a passo do desafio:**
 
@@ -382,7 +380,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 7. Clique em *Sync* e veja que o ArgoCD vai ler os seus arquivos `.yaml` do GitHub e criar os Pods no seu computador!
 8. Teste a resiliência criando um "drift" (desvio) ao apagar o Deployment manualmente usando o comando `kubectl delete deployment <nome-do-deployment>` e veja que o ArgoCD irá recriá-lo automaticamente (certifique-se de habilitar as configurações corretas para isso acontecer).
 
-**Solução:** A solução para este desafio está [aqui](desafios/module-04/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](content/labs/module-04/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -446,7 +444,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 3. **Integração:** Configure os *Data Sources* no Grafana para conectar as três fontes de dados em um único painel centralizado.
 4. **Instrumentação e Tracing:** Faça o deploy da aplicação de demonstração [Hot R.O.D.](https://github.com/jaegertracing/jaeger/tree/main/examples/hotrod) e utilize comandos efêmeros (`kubectl run`) ou acesse a interface web da aplicação para gerar tráfego de rede e observar os *traces* sendo capturados em tempo real.
 
-**Solução:** A solução para este desafio está [aqui](desafios/module-05/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](content/labs/module-05/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -473,11 +471,11 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 
 #### 1. Instalação do Backstage
 
-Siga os passos de [Instalação do Backstage](desafios/module-06/installation/README.md) para ter a sua própria instância de Backstage localmente. Este guia de instalação é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/).
+Siga os passos de [Instalação do Backstage](content/labs/module-06/installation/README.md) para ter a sua própria instância de Backstage localmente. Este guia de instalação é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/).
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
-> **Novidades:** Mais treinametos e desafios para Backstage estão sendo construídos. Fique atento às novidades.
+> **Novidades:** Mais treinametos e content/labs para Backstage estão sendo construídos. Fique atento às novidades.
 
 ---
 
