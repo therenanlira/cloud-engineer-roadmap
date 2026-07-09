@@ -1,4 +1,4 @@
 title: Cloud Engineer Roadmap
-description: Guia prático de estudos para a comunidade.
-theme: jekyll-theme-minimal
-show_downloads: false
+description: Guia de estudos gratuito e em português para iniciantes.
+theme: minima
+sass_dir: assets/css

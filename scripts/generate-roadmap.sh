@@ -1,11 +1,17 @@
 #!/bin/bash
+set -e
 
-virtualenv venv
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
+python3 -m venv venv
 source venv/bin/activate
 
-python3 -m pip show Pillow >> /dev/null
-test "$?" = 0 || pip install Pillow
+if ! python3 -m pip show Pillow >> /dev/null 2>&1; then
+  pip install Pillow
+fi
 
 python3 generate-roadmap.py
+python3 generate-cards.py
 
 deactivate

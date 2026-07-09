@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset='utf-8'>
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  </head>
+
+  <body>
+    <div style="background: #060d19; border-bottom: 1px solid #1e293b; padding: 5px 0; width: 100%;">
+      <div style="max-width: 850px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center;">
+
+        <a href="/" style="color: #38bdf8; font-size: 0.85em; font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-home"></i> Cloud Engineer Roadmap (DevOps/SRE/Platform)
+        </a>
+
+        <div style="display: flex; gap: 20px; align-items: center;">
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-size: 0.85em; font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap/stargazers" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center;">
+            <img src="https://img.shields.io/github/stars/therenanlira/cloud-engineer-roadmap?style=social" alt="GitHub stars" style="display: block; height: 20px;">
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container" style="flex: 1;">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

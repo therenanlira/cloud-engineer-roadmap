@@ -4,3 +4,7 @@
 status.txt
 .secrets*
 .DS_Store
+.bundle
+vendor
+_site
+.jekyll-cache

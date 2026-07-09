@@ -1,26 +1,14 @@
 # Cloud Engineer Roadmap (DevOps/SRE/Platform)
 
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) com conteúdos **gratuitos** e em **português**.
-
-[![Cloud Engineer Roadmap](.//assets/img/cloud-eng-roadmap.png)](.//assets/img/cloud-eng-roadmap.png)
+Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
 
 ---
 
-## Sobre o projeto
-
-Este projeto nasceu com o propósito de ser um **guia prático e acessível para a comunidade brasileira**. Sabendo que o ecossistema de DevOps pode parecer intimidador para iniciantes devido à quantidade de ferramentas complexas, o objetivo é facilitar esse caminho, provando que é possível aprender de forma prática, sequencial e, acima de tudo, gratuita.
-
-Os materiais estão em formatos de vídeos, cursos, documentações, além de **laboratórios** e **desafios**. O objetivo é seguir um caminho de aprendizagem e praticando para evoluir a cada etapa.
-
-Se você está começando na área, saiba que a consistência é a sua maior aliada. Não tente aprender tudo de uma vez, vá no seu ritmo. Se necessário, revise e busque outros materiais. Quando menos esperar, você estará dominando ferramentas que antes pareciam muito difíceis.
-
-> *Não tenho nenhuma afiliação com os criadores sugeridos neste roadmap. Todos os créditos pelos materiais pertencem aos seus respectivos autores que contribuem para a comunidade.*
-
----
-
-## Roadmap (Trilha de estudos)
+## Roadmap
 
 O roadmap é dividido em uma sequência de módulos para você evoluir o seu conhecimento.
+
+[![Cloud Engineer Roadmap](.//assets/img/cloud-eng-roadmap.png)](.//assets/img/cloud-eng-roadmap.png)
 
 * [1. Fundamentos](#1-fundamentos)
 * [2. Cloud](#2-cloud)
@@ -33,7 +21,7 @@ O roadmap é dividido em uma sequência de módulos para você evoluir o seu con
 
 ## Introdução
 
-Antes de iniciar a estudar as ferramentas, entenda o que é a cultura DevOps e a CNCF:
+Antes de iniciar os estudos das ferramentas, entenda o que é a cultura DevOps e a CNCF:
 
 ### Cultura DevOps
 
@@ -49,16 +37,7 @@ A Cloud Native Computing Foundation (CNCF) é uma organização sem fins lucrati
 * **Site oficial:** [Cloud Native Computing Foundation](https://www.cncf.io/)
 * **Vídeo explicativo:** [O que é Cloud Native, o LinuxFoundation e a CNCF](https://youtu.be/z2q0gKL9nQg) - Ative a legenda em Português
 
-### Configuração do terminal
-
-A maioria dos ambientes de estudo utiliza distribuições Linux/Unix. Use o Sistema Operacional que preferir e adapte-o para tirar melhor proveito dos treinamentos.
-
-* **Windows:** [Aprenda a usar o WSL no Windows (Diolinux)](https://youtu.be/o1_E4PBl30s)
-* **(Opcional) MacOS:** [Altere o Shell padrão no Terminal do Mac](https://support.apple.com/pt-br/guide/terminal/trml113/mac)
-
-> **Dica:** para quem gosta de personalizar o terminal, experimente: [bash-it](https://github.com/bash-it/bash-it) ou [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
-
-### Preparação do Ambiente
+### Preparação do ambiente
 
 Para fazer os laboratórios e desafios, prepare o seu ambiente.
 
@@ -67,6 +46,15 @@ Para fazer os laboratórios e desafios, prepare o seu ambiente.
 1. Acesse [Girus LinuxTips](https://girus.io/#instalacao)
 1. Siga os passos de instalação
 1. Siga as instruções do terminal
+
+#### Configuração do terminal
+
+A maioria dos ambientes de estudo utiliza distribuições Linux/Unix. Use o Sistema Operacional que preferir e adapte-o para tirar melhor proveito dos treinamentos.
+
+* **Windows:** [Aprenda a usar o WSL no Windows (Diolinux)](https://youtu.be/o1_E4PBl30s)
+* **(Opcional) MacOS:** [Altere o Shell padrão no Terminal do Mac](https://support.apple.com/pt-br/guide/terminal/trml113/mac)
+
+> **Dica:** Quem gosta de personalizar o terminal, experimente: [bash-it](https://github.com/bash-it/bash-it) ou [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
 
 ---
 
@@ -78,7 +66,7 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 
 Linux é a base de tudo, é o Sistema Operacional mais utilizado em servidores, por conta disso, deve ser aprendido em primeiro lugar.
 
-Redes é a disciplica que trata de como os computadores se comunicam, sendo a base para o funcionamento de sistemas web.
+Redes é a disciplina que trata de como os computadores se comunicam, sendo a base para o funcionamento de sistemas web.
 
 **Trilha de Estudo:**
 
@@ -201,7 +189,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 * **Validação:** Abra o seu navegador e acesse <http://localhost:8080/status.txt> (ou use o comando `curl localhost:8080/status.txt` no terminal) para ver o relatório de conectividade gerado pelo seu script.
 * **Bash**: Crie um único script chamado `deploy.sh` que executa o `monitor.py`, faz o `docker build` e o `docker run` de forma sequencial.
 
-**Solução:** A solução para este desafio está [aqui](content/labs/module-01/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](content/modules/fundamentos/lab/solucao/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -321,7 +309,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
    * Execute o comando `terraform validate` (para garantir que a sintaxe está correta).
 6. Faça o *commit* propositalmente mal formatado para ver o pipeline falhar, corrija-o e veja o pipeline ficar verde (sucesso)!
 
-**Solução:** A solução para este desafio está [aqui](content/labs/module-03/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](/content/modules/pipeline/lab/solucao/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -388,7 +376,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 7. Clique em *Sync* e veja que o ArgoCD vai ler os seus arquivos `.yaml` do GitHub e criar os Pods no seu computador!
 8. Teste a resiliência criando um "drift" (desvio) ao apagar o Deployment manualmente usando o comando `kubectl delete deployment <nome-do-deployment>` e veja que o ArgoCD irá recriá-lo automaticamente (certifique-se de habilitar as configurações corretas para isso acontecer).
 
-**Solução:** A solução para este desafio está [aqui](content/labs/module-04/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](/content/modules/orquestracao/lab/solucao/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -452,7 +440,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 3. **Integração:** Configure os *Data Sources* no Grafana para conectar as três fontes de dados em um único painel centralizado.
 4. **Instrumentação e Tracing:** Faça o deploy da aplicação de demonstração [Hot R.O.D.](https://github.com/jaegertracing/jaeger/tree/main/examples/hotrod) e utilize comandos efêmeros (`kubectl run`) ou acesse a interface web da aplicação para gerar tráfego de rede e observar os *traces* sendo capturados em tempo real.
 
-**Solução:** A solução para este desafio está [aqui](content/labs/module-05/README.md), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](/content/modules/observabilidade/lab/solucao/README.md), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -479,7 +467,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o re
 
 #### 1. Instalação do Backstage
 
-Siga os passos de [Instalação do Backstage](content/labs/module-06/installation/README.md) para ter a sua própria instância de Backstage localmente. Este guia de instalação é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/).
+Siga os passos de [Instalação do Backstage](/content/modules/plataforma/lab/solucao/installation/README.md) para ter a sua própria instância de Backstage localmente. Este guia de instalação é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/).
 
 1. > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
@@ -488,6 +476,10 @@ Siga os passos de [Instalação do Backstage](content/labs/module-06/installatio
 ---
 
 ## Considerações Finais
+
+Se você está começando na área, saiba que a consistência é a sua maior aliada. Não tente aprender tudo de uma vez, vá no seu ritmo. Se necessário, revise e busque outros materiais. Quando menos esperar, você estará dominando ferramentas que antes pareciam muito difíceis.
+
+> *Não tenho nenhuma afiliação com os criadores sugeridos neste roadmap. Todos os créditos pelos materiais pertencem aos seus respectivos autores que contribuem para a comunidade.*
 
 ### Agradecimentos
 
