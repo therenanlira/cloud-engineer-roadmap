@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /
 ---
 
 # Cloud Engineer Roadmap (DevOps/SRE/Platform)

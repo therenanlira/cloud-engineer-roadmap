@@ -2,3 +2,7 @@ title: Cloud Engineer Roadmap
 description: Guia de estudos gratuito e em português para iniciantes.
 theme: minima
 sass_dir: assets/css
+
+exclude:
+  - content/Gemfile
+  - content/Gemfile.lock
