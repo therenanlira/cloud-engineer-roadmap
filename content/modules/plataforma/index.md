@@ -15,7 +15,7 @@ A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs 
 
 ## O que você vai aprender?
 
-* <i class="fas fa-layer-group fa-fw"></i>&nbsp; [Backstage](/content/modules/plataforma/backstage/)
+* <img src="/assets/img/backstage-32x32.png" class="icon-fix" alt="Backstage" />[Backstage](/content/modules/plataforma/backstage/)
 * <i class="fas fa-bullseye fa-fw"></i>&nbsp; [Desafio (Plataforma)](/content/modules/plataforma/lab/)
 
 Mais desafios para Backstage estão sendo construídos. Fique atento às novidades.

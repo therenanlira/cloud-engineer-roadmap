@@ -13,8 +13,8 @@ Orquestração de contêiner é o termo utilizado para o gerenciamento automatiz
 
 ## O que você vai aprender?
 
-* <i class="fas fa-dharmachakra fa-fw"></i>&nbsp; [Kubernetes & Helm](/content/modules/orquestracao/kubernetes/)
-* <i class="fas fa-sync-alt fa-fw"></i>&nbsp; [ArgoCD](/content/modules/orquestracao/argocd/)
+* <img src="/assets/img/kubernetes-32x32.png" class="icon-fix" alt="Kubernetes" />[Kubernetes & Helm](/content/modules/orquestracao/kubernetes/)
+* <img src="/assets/img/argo-32x32.png" class="icon-fix" alt="ArgoCD" />[ArgoCD](/content/modules/orquestracao/argocd/)
 * <i class="fas fa-bullseye fa-fw"></i>&nbsp; [Desafio (Orquestração)](/content/modules/orquestracao/lab/)
 
 {% include next-steps.html

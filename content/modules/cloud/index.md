@@ -16,8 +16,8 @@ IaC (Infrastructure as Code; Infraestrutura como Código) é o conceito de criar
 
 ## O que você vai aprender?
 
-* <i class="fas fa-cloud fa-fw"></i>&nbsp; [AWS](/content/modules/cloud/aws/)
-* <i class="fas fa-code fa-fw"></i>&nbsp; [Terraform](/content/modules/cloud/terraform/)
+* <i class="fab fa-aws fa-fw"></i>&nbsp; [AWS](/content/modules/cloud/aws/)
+* <img src="/assets/img/terraform-32x32.png" class="icon-fix" alt="Terraform" />[Terraform](/content/modules/cloud/terraform/)
 * <i class="fas fa-bullseye fa-fw"></i>&nbsp; [Desafio (Cloud)](/content/modules/cloud/lab/)
 
 {% include next-steps.html

@@ -13,10 +13,10 @@ Observabilidade é a capacidade de entender o estado do sistema (aplicações e 
 
 ## O que você vai aprender?
 
-* <i class="fas fa-chart-line fa-fw"></i>&nbsp; [Grafana](/content/modules/observabilidade/grafana/)
-* <i class="fas fa-microchip fa-fw"></i>&nbsp; [Prometheus](/content/modules/observabilidade/prometheus/)
-* <i class="fas fa-search fa-fw"></i>&nbsp; [Loki](/content/modules/observabilidade/loki/)
-* <i class="fas fa-project-diagram fa-fw"></i>&nbsp; [Jaeger](/content/modules/observabilidade/jaeger/)
+* <img src="/assets/img/grafana-32x32.png" class="icon-fix" alt="Grafana" />[Grafana](/content/modules/observabilidade/grafana/)
+* <img src="/assets/img/prometheus-32x32.png" class="icon-fix" alt="Prometheus" />[Prometheus](/content/modules/observabilidade/prometheus/)
+* <img src="/assets/img/loki-32x32.png" class="icon-fix" alt="Loki" />[Loki](/content/modules/observabilidade/loki/)
+* <img src="/assets/img/jaeger-32x32.png" class="icon-fix" alt="Jaeger" />[Jaeger](/content/modules/observabilidade/jaeger/)
 * <i class="fas fa-bullseye fa-fw"></i>&nbsp; [Desafio (Observabilidade)](/content/modules/observabilidade/lab/)
 
 {% include next-steps.html

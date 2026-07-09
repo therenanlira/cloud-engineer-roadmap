@@ -13,7 +13,7 @@ Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gra
 Entenda o que é a cultura DevOps e prepare o seu computador para os treinamentos e laboratórios.
 
 * <i class="fas fa-infinity fa-fw"></i>&nbsp; [Cultura DevOps](/content/modules/introducao/cultura-devops/)
-* <i class="fas fa-landmark fa-fw"></i>&nbsp; [Cloud Native Computing Foundation (CNCF)](/content/modules/introducao/cncf/)
+* <img src="/assets/img/cncf-32x32.png" class="icon-fix" alt="CNCF" />[Cloud Native Computing Foundation (CNCF)](/content/modules/introducao/cncf/)
 * <i class="fas fa-tools fa-fw"></i>&nbsp; [Preparação do ambiente](/content/modules/introducao/preparacao-ambiente/)
 
 ## Roadmap

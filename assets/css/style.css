@@ -84,9 +84,10 @@ a:hover {
     width: 1em !important;
     height: 1em !important;
     vertical-align: middle !important;
-    margin-right: 10px !important;
+    margin: 0 10px 0 0 !important;
     display: inline-block !important;
-    filter: invert(66%) sepia(85%) saturate(1487%) hue-rotate(176deg) brightness(101%) contrast(94%) !important;
+    border-radius: 0 !important;
+    max-width: none !important;
 }
 
 /* 4. Componentes */
