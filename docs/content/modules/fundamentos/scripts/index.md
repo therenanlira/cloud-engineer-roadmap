@@ -15,14 +15,9 @@ Arquivos com conjuntos de códigos para automatizar a execução de comandos.
 
 Bash é um dos interpretadores de comandos do Linux, com ele conseguimos criar arquivos com comandos (Shell Scripts) para automatizar tarefas repetitivas.
 
-**Laboratórios:**
+**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Linux*. Faça o seguinte treinamento:
 
-* Laboratório Girus:
-  * Acesse o seu ambiente Girus
-  * Vá em Laboratórios
-  * Filtre por *Linux*
-  * Faça os treinamentos:
-    * Introdução ao Shell Script Bash
+* Introdução ao Shell Script Bash
 
 #### Scripts (Python)
 
@@ -32,6 +27,8 @@ Python é uma das linguagens de programação mais usada em infraestrutura para 
 
 * **Curso introdutório:** [[Diego Mariano] Introdução à linguagem Python](https://www.udemy.com/course/intro_python/)
 * **Maior aprofundamento:** [[LinuxTips] Python Essentials](https://linuxtips.io/treinamento/python-essentials/)
+
+Com Bash e Python na bagagem, você já consegue automatizar boa parte das tarefas repetitivas de infraestrutura.
 
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/redes/"

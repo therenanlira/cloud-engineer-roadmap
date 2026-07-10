@@ -16,6 +16,8 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 * <i class="fab fa-docker"></i>[Containers]({{ '/content/modules/fundamentos/containers/' | relative_url }})
 * <i class="fas fa-bullseye"></i>[Desafio (Fundamentos)]({{ '/content/modules/fundamentos/lab/' | relative_url }})
 
+Siga a ordem acima para evoluir progressivamente pelo módulo.
+
 {% include next-steps.html
    prev_url="/content/modules/introducao/preparacao-ambiente/"
    prev_title="Preparação do ambiente"

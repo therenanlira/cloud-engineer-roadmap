@@ -19,6 +19,8 @@ Por exemplo, mesmo que seja feita uma alteração manual no Kubernetes, o que ch
 * **Vídeo introdutório:** [[LinuxTips] Descomplicando o ArgoCD e o GitOps](https://youtu.be/TDvA2vAQCF8)
 * **Maior aprofundamento:** [[Fabricio Veronez] GitOps com ArgoCD na Prática: Do Zero ao Primeiro Deploy](https://youtu.be/NP0tWJh1XoE)
 
+Com Kubernetes e ArgoCD, você já tem tudo que precisa para o desafio prático deste módulo.
+
 {% include next-steps.html
    prev_url="/content/modules/orquestracao/kubernetes/"
    prev_title="Kubernetes & Helm"

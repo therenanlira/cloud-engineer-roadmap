@@ -15,6 +15,8 @@ IaC (Infrastructure as Code; Infraestrutura como Código) é o conceito de criar
 * <i class="fas fa-coins"></i>[FinOps]({{ '/content/modules/cloud/finops/' | relative_url }})
 * <i class="fas fa-bullseye"></i>[Desafio (Cloud)]({{ '/content/modules/cloud/lab/' | relative_url }})
 
+Siga a ordem acima para evoluir progressivamente pelo módulo.
+
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/lab/"
    prev_title="Desafio (Fundamentos)"

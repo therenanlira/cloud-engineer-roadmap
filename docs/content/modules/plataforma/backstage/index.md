@@ -16,6 +16,8 @@ O Backstage, criado pelo Spotify, é o padrão de mercado para IDPs. O Backstage
 * **Site Oficial**: [Documentação do Backstage](https://backstage.io/docs/getting-started/)
 * **Vídeo introdutório:** [[Iêso Dias] Introdução ao Backstage: O Guia de Engenharia de Plataforma (IDP)](https://youtu.be/zDLUDtFrqoU)
 
+Depois de entender o conceito, coloque a mão na massa e instale sua própria instância no desafio prático deste módulo.
+
 {% include next-steps.html
    prev_url="/content/modules/plataforma/"
    prev_title="Plataforma"

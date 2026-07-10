@@ -16,20 +16,17 @@ Kubernetes é a plataforma padrão de mercado para orquestrar microsserviços em
 * **Kubernetes para iniciantes:** [[LinuxTips] Kubernetes Essentials](https://linuxtips.io/treinamento/kubernetes-essentials/)
 * **Helm - Gerenciador de pacotes para Kubernetes:** [[Fabricio Veronez] Guia Helm: Como simplificar o deploy no Kubernetes](https://youtu.be/VTQpe-ZRgsk)
 
-**Laboratórios:**
+**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Kubernetes*. Faça os seguintes treinamentos:
 
-* Laboratório Girus:
-  * Acesse o seu ambiente Girus
-  * Vá em Laboratórios
-  * Filtre por *Kubernetes*
-  * Faça os treinamentos:
-    * Introdução ao Kubernetes-lab
-    * Kubernetes: Gerenciando Aplicações com Deployments
-    * Serviços e Redes no Kubernetes
-    * ConfigMaps e Secrets no Kubernetes
-    * Kubernetes: Automatizando Tarefas com CronJobs
-    * Desafio: Deployments no Kubernetes
-    * Desafio: Explorando Recursos do Kubernetes com kubectl
+* Introdução ao Kubernetes-lab
+* Kubernetes: Gerenciando Aplicações com Deployments
+* Serviços e Redes no Kubernetes
+* ConfigMaps e Secrets no Kubernetes
+* Kubernetes: Automatizando Tarefas com CronJobs
+* Desafio: Deployments no Kubernetes
+* Desafio: Explorando Recursos do Kubernetes com kubectl
+
+Pratique cada um desses laboratórios antes de seguir para o próximo tópico.
 
 {% include next-steps.html
    prev_url="/content/modules/orquestracao/"

@@ -15,18 +15,15 @@ Linux é a base de tudo: é o Sistema Operacional mais utilizado em servidores e
 
 * **Linux para iniciantes:** [[LinuxTips] Linux Essentials](https://linuxtips.io/treinamento/linux-essentials/)
 
-**Laboratórios:**
+**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Linux*. Faça os seguintes treinamentos:
 
-* Laboratório Girus:
-  * Acesse o seu ambiente Girus
-  * Vá em Laboratórios
-  * Filtre por *Linux*
-  * Faça os treinamentos:
-    * Processamento de Texto no Linux: grep, sed, awk
-    * Monitoramento Básico do Sistema Linux
-    * Gerenciamento e Monitoramento de Processos no Linux
-    * Administração de Usuários e Grupos no Linux
-    * Permissões de Arquivos no Linux
+* Processamento de Texto no Linux: grep, sed, awk
+* Monitoramento Básico do Sistema Linux
+* Gerenciamento e Monitoramento de Processos no Linux
+* Administração de Usuários e Grupos no Linux
+* Permissões de Arquivos no Linux
+
+Pratique cada um desses laboratórios antes de seguir para o próximo tópico.
 
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/"

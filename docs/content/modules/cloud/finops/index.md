@@ -17,6 +17,8 @@ Saber provisionar infraestrutura é o básico esperado; saber **quanto ela custa
 * **Arquitetura:** Entenda como os diferentes tipos de arquitetura de processadores (x64, ARM) podem impactar os custos. Entenda como cada serviços do Cloud Provider funciona para escolher o melhor recurso para a sua aplicação (EC2 vs Lambda, por exemplo).
 * **Ferramentas da Comunidade:** Procure projetos abertos focados em gestão de custos da AWS, como o [InfraCost](https://github.com/infracost/infracost) e o [Amazon EC2 Instances Comparison](https://instances.vantage.sh).
 
+Transforme esses hábitos em rotina desde já: eles fazem toda a diferença quando você começar a operar contas cloud reais.
+
 {% include next-steps.html
    prev_url="/content/modules/cloud/terraform/"
    prev_title="Terraform"

@@ -20,6 +20,8 @@ GitHub é a plataforma de hospedagem de código mais popular, baseada em Git.
 
 * **GitHub para iniciantes:** [[LinuxTips] GitHub Essentials](https://linuxtips.io/treinamento/github-essentials/)
 
+Versionar código é um hábito que você vai usar em todos os próximos módulos, então vale a pena praticar bastante.
+
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/scripts/"
    prev_title="Scripts"

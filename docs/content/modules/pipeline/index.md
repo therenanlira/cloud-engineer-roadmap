@@ -12,6 +12,8 @@ Pipelines são fluxos automatizados de integração (build) e entrega (deploy) c
 * <i class="fab fa-github"></i>[GitHub Actions]({{ '/content/modules/pipeline/github-actions/' | relative_url }})
 * <i class="fas fa-bullseye"></i>[Desafio (Pipeline)]({{ '/content/modules/pipeline/lab/' | relative_url }})
 
+Siga a ordem acima para evoluir progressivamente pelo módulo.
+
 {% include next-steps.html
    prev_url="/content/modules/cloud/lab/"
    prev_title="Desafio (Cloud)"

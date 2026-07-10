@@ -16,15 +16,12 @@ Terraform é uma ferramenta de IaC open-source para provisionamento de infraestu
 
 * **Terraform para iniciantes:** [[LinuxTips] Terraform Essentials](https://linuxtips.io/treinamento/terraform-essentials/)
 
-**Laboratórios:**
+**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Terraform*. Faça os seguintes treinamentos:
 
-* Laboratório Girus:
-  * Acesse o seu ambiente Girus
-  * Vá em Laboratórios
-  * Filtre por *Terraform*
-  * Faça os treinamentos:
-    * Terraform: Fundamentos de Infraestrutura como Código
-    * Terraform: Provisioners e Módulos
+* Terraform: Fundamentos de Infraestrutura como Código
+* Terraform: Provisioners e Módulos
+
+Pratique cada um desses laboratórios antes de seguir para o próximo tópico.
 
 {% include next-steps.html
    prev_url="/content/modules/cloud/aws/"
