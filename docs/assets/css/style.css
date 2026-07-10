@@ -22,6 +22,7 @@
   --shell-max-width: clamp(1140px, 82vw, 1400px);
   --sidebar-width: 260px;
   --sidebar-active-color: #e879f9;
+  --selection-bg: rgba(232, 121, 249, 0.2);
   --module-color-1: #38bdf8;
   --module-color-2: #4bafF5;
   --module-color-3: #5fa0f0;
@@ -48,6 +49,7 @@
   --card-gradient: linear-gradient(160deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0));
   --mark-all-color: #64748b;
   --sidebar-active-color: #a21caf;
+  --selection-bg: rgba(232, 121, 249, 0.25);
   --module-color-1: #0369a1;
   --module-color-2: #185cac;
   --module-color-3: #2d4fb7;
@@ -69,6 +71,10 @@ body {
   color: var(--text-color) !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
   line-height: 1.6;
+}
+
+::selection {
+  background: var(--selection-bg);
 }
 
 /* 2. Layout Base */
@@ -306,8 +312,8 @@ code {
 }
 
 p code, li code {
-  background: rgba(56, 189, 248, 0.1) !important;
-  color: var(--accent-blue) !important;
+  background: rgba(148, 163, 184, 0.12) !important;
+  color: var(--muted-text) !important;
   padding: 2px 6px !important;
   border-radius: 4px !important;
 }
@@ -315,7 +321,7 @@ p code, li code {
 /* 4.1a Blocos de nota (blockquote) */
 blockquote {
   background: var(--code-bg);
-  border-left: 4px solid var(--accent-blue);
+  border-left: 4px solid var(--link-color);
   border-radius: 8px;
   margin: 20px 0;
   padding: 12px 16px;
