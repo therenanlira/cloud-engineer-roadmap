@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hotrod
+  namespace: monitoring
   labels:
     app: hotrod
 spec:
@@ -21,15 +22,9 @@ spec:
         args: ["all"]
         env:
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
-          value: "http://jaeger.observability:4318"
+          value: "http://jaeger.monitoring:4318"
         - name: OTEL_TRACES_EXPORTER
           value: "otlp"
-        - name: JAEGER_AGENT_HOST
-          value: ""
-        - name: JAEGER_ENDPOINT
-          value: ""
-        - name: JAEGER_AGENT_HOST
-          value: "jaeger"
         ports:
         - containerPort: 8080
         resources:
@@ -44,6 +39,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hotrod
+  namespace: monitoring
 spec:
   type: ClusterIP
   selector:

@@ -18,8 +18,8 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para refo
 **Passo a passo do desafio:**
 
 1. Inicie um cluster local usando o **Minikube**.
-2. Crie um repositório público no GitHub (ex: `meu-deploy-gitops`).
-3. Dentro do repositório, crie os manifestos do Kubernetes: um `deployment.yaml` (usando a imagem `nginx:alpine` com 3 réplicas) e um `service.yaml` (do tipo NodePort).
+2. Crie um repositório público no GitHub (ex: `meu-deploy-gitops`) com um diretório `kubernetes/app`.
+3. Dentro desse diretório, crie os manifestos do Kubernetes: um `namespace.yaml`, um `deployment.yaml` (usando a imagem `nginx:alpine` com 3 réplicas) e um `service.yaml` (do tipo NodePort).
 4. Instale o ArgoCD no seu cluster local seguindo a [documentação oficial](https://argo-cd.readthedocs.io/en/stable/#quick-start).
 5. Descubra a senha padrão do ArgoCD e faça um `port-forward` para acessar o painel dele no seu navegador (localhost).
 6. No painel do ArgoCD, crie uma "New App" apontando para o seu repositório do GitHub.

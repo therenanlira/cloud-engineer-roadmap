@@ -18,16 +18,14 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para refo
 **Passo a passo do desafio:**
 
 1. Crie um repositório no seu GitHub.
-2. Crie um arquivo `main.tf` simples na raiz do repositório contendo apenas a declaração do *provider* da AWS e um recurso básico (como uma VPC).
+2. Crie um diretório chamado `terraform` e, dentro dele, um arquivo `main.tf` simples contendo apenas a declaração do *provider* da AWS e um recurso básico (como uma VPC).
 3. Crie a estrutura de diretórios obrigatória do GitHub Actions: `.github/workflows/`.
 4. Dentro dessa pasta, crie um arquivo chamado `ci-terraform.yml`.
 5. Escreva um workflow que:
    * Seja acionado em eventos de `push` e `pull_request` para a branch `main`.
    * Faça o *checkout* do seu código.
    * Configure o ambiente do Terraform (**Dica:** pesquise pela *Action* oficial `hashicorp/setup-terraform`).
-   * Execute o comando `terraform init`.
-   * Execute o comando `terraform fmt -check` (para garantir que o código segue o padrão de estilo).
-   * Execute o comando `terraform validate` (para garantir que a sintaxe está correta).
+   * Execute os comandos `terraform init`, `terraform fmt -check` e `terraform validate` **dentro do diretório `terraform/`** (**Dica:** use `working-directory` no step ou `defaults.run.working-directory` no job, senão o workflow vai rodar na raiz do repositório e não vai encontrar o `main.tf`).
 6. Faça o *commit* propositalmente mal formatado para ver o pipeline falhar, corrija-o e veja o pipeline ficar verde (sucesso)!
 
 **Solução:** A solução para este desafio está [aqui](./solution/), mas consulte somente se não conseguir resolver por si só.

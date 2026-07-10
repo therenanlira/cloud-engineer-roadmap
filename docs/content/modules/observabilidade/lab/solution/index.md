@@ -13,12 +13,23 @@ O objetivo deste desafio é instalar e configurar a stack padrão de mercado (Pr
 
 ### 1. Inicie o cluster local
 
+Escolha a sua ferramenta (sugestão: use Minikube):
+
+Minikube:
+
 ```bash
-# Escolha a sua ferramenta:
 minikube start
-# ou
+```
+
+Kind:
+
+```bash
 kind create cluster
-# ou
+```
+
+k3d:
+
+```bash
 k3d cluster create "my-cluster-name"
 ```
 
@@ -35,7 +46,13 @@ helm repo update
 
 ### 3. Configure os Data Sources do Grafana
 
-Crie o arquivo `grafana-values.yaml`. Ele já vem com o Prometheus, o Loki e o Jaeger pré-configurados como fontes de dados, além de um dashboard padrão de métricas do Kubernetes.
+Crie a estrutura de diretórios `kubernetes/monitoring`
+
+```bash
+mkdir -p kubernetes/monitoring
+```
+
+Dentro do diretório `kubernetes/monitoring`, crie o arquivo `grafana-values.yaml`. Ele já vem com o Prometheus, o Loki e o Jaeger pré-configurados como fontes de dados, além de um dashboard padrão de métricas do Kubernetes.
 
 ```yaml
 {% include_relative grafana-values.yaml %}
@@ -43,28 +60,28 @@ Crie o arquivo `grafana-values.yaml`. Ele já vem com o Prometheus, o Loki e o J
 
 ### 4. Instale a stack de observabilidade
 
-Vamos instalar todas as ferramentas em um namespace separado chamado `observability`.
+Vamos instalar todas as ferramentas em um namespace separado chamado `monitoring`.
 
 ```bash
 # Cria o namespace
-kubectl create namespace observability
+kubectl create namespace monitoring
 
 # Instala o Prometheus (Metrics)
-helm install prometheus prometheus-community/prometheus --namespace observability
+helm install prometheus prometheus-community/prometheus --namespace monitoring
 
 # Instala o Loki e o Promtail (Logs)
-helm install loki grafana/loki-stack --namespace observability
+helm install loki grafana/loki-stack --namespace monitoring
 
 # Instala o Jaeger versão all-in-one em memória (Tracing)
-helm install jaeger jaegertracing/jaeger --namespace observability --set provisionDataStore.cassandra=false --set allInOne.enabled=true --set storage.type=memory
+helm install jaeger jaegertracing/jaeger --namespace monitoring --set provisionDataStore.cassandra=false --set allInOne.enabled=true --set storage.type=memory
 
 # Instala o Grafana (Dashboards), usando o arquivo criado no passo anterior
-helm install grafana grafana/grafana --namespace observability -f grafana-values.yaml
+helm install grafana grafana/grafana --namespace monitoring -f kubernetes/monitoring/grafana-values.yaml
 ```
 
 ### 5. Faça o deploy da aplicação de teste
 
-Crie o arquivo `hotrod.yaml`. Ele cria uma aplicação de demonstração oficial do Jaeger (chamada Hot R.O.D.), já instrumentada com OpenTelemetry para gerar *traces* simulando chamadas a múltiplos microsserviços de um aplicativo de corridas.
+Dentro do diretório `kubernetes/monitoring`, crie o arquivo `hotrod.yaml`. Ele cria uma aplicação de demonstração oficial do Jaeger (chamada Hot R.O.D.), já instrumentada com OpenTelemetry para gerar *traces* simulando chamadas a múltiplos microsserviços de um aplicativo de corridas.
 
 ```yaml
 {% include_relative hotrod.yaml %}
@@ -73,7 +90,7 @@ Crie o arquivo `hotrod.yaml`. Ele cria uma aplicação de demonstração oficial
 Aplique o manifesto para termos dados reais passando pelas nossas ferramentas.
 
 ```bash
-kubectl apply -f hotrod.yaml -n observability
+kubectl apply -f kubernetes/monitoring/hotrod.yaml -n monitoring
 ```
 
 ### 6. Acesse e verifique o resultado
@@ -86,13 +103,13 @@ Abra uma aba no seu terminal e execute:
 
 ```bash
 # Redireciona a porta 3000
-kubectl port-forward svc/grafana -n observability 3000:80
+kubectl port-forward svc/grafana -n monitoring 3000:80
 ```
 
 Descubra a senha:
 
 ```bash
-kubectl get secret grafana -n observability -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+kubectl get secret grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
 
 * Acesse [http://localhost:3000](http://localhost:3000) no navegador.
@@ -103,12 +120,12 @@ Visualize os dados:
 
 * **Métricas:** vá em **Dashboards** e acesse o **Kubernetes resources usage monitoring (via Prometheus)**.
 * **Logs:** vá no menu **Explore**, selecione o **Loki** no topo, clique em **Label Filters** (ex: `app=hotrod`) e clique em **Run query** para ver os logs em tempo real.
-* **Tracing:** vá no menu **Explore**, selecione o **Jaeger** no topo, em **Query type** clique em **Search**, em **Service name** escolha **jaeger** e clique em **Run query** para ver a lista de traces.
+* **Tracing:** vá no menu **Explore**, selecione o **Jaeger** no topo, em **Query type** clique em **Search**, em **Service name** escolha **frontend** e clique em **Run query** para ver a lista de traces.
 
-O Prometheus também tem uma interface web própria, sem precisar do Grafana. Abra outra aba no terminal e execute:
+O Prometheus também tem uma interface web própria, sem precisar do Grafana. Para visualizar, abra outra aba no terminal e execute:
 
 ```bash
-kubectl port-forward svc/prometheus-server -n observability 9090:80
+kubectl port-forward svc/prometheus-server -n monitoring 9090:80
 ```
 
 #### Jaeger (tracing)
@@ -116,13 +133,13 @@ kubectl port-forward svc/prometheus-server -n observability 9090:80
 Gere alguns traces manualmente:
 
 ```bash
-kubectl run curl-test --rm -i --tty --image=curlimages/curl -n observability -- curl -s "http://hotrod:8080/dispatch?customer=123&nonse=1"
+kubectl run curl-test --rm -i --tty --image=curlimages/curl -n monitoring -- curl -s "http://hotrod:8080/dispatch?customer=123&nonse=1"
 ```
 
 Abra outra aba no terminal e execute:
 
 ```bash
-kubectl port-forward svc/jaeger -n observability 16686:16686
+kubectl port-forward svc/jaeger -n monitoring 16686:16686
 ```
 
 1. Acesse [http://localhost:16686](http://localhost:16686).
@@ -133,10 +150,22 @@ kubectl port-forward svc/jaeger -n observability 16686:16686
 
 Ferramentas de observabilidade consomem bastante memória, pois estão constantemente coletando dados. Após finalizar os seus estudos, delete o cluster local:
 
+Minikube:
+
 ```bash
 minikube delete
-# ou
+```
+
+Kind:
+
+```bash
 kind delete cluster
+```
+
+k3d:
+
+```bash
+k3d cluster delete
 ```
 
 ## Resumo do Aprendizado

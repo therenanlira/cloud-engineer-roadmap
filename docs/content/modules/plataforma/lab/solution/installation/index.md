@@ -11,21 +11,27 @@ A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs 
 
 Este guia de instalação é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/).
 
+Antes de iniciar, crie um repositório no seu GitHub (ex: `meu-backstage`), e crie a estrutura de diretórios `kubernetes/backstage`.
+
+```bash
+mkdir -p kubernetes/backstage
+```
+
 ### 1. Criar o namespace
 
-Usaremos esse namespace para isolar o Backstage no nosso cluster Kubernetes. Crie o arquivo `namespace.yaml`.
+Dentro do diretório `kubernetes/backstage`, crie o arquivo `namespace.yaml`. Usaremos esse namespace para isolar o Backstage no nosso cluster Kubernetes.
 
 ```yaml
 {% include_relative namespace.yaml %}
 ```
 
 ```bash
-kubectl apply -f namespace.yaml -n backstage
+kubectl apply -f kubernetes/backstage/namespace.yaml -n backstage
 ```
 
 ### 2. Instalar o PostgreSQL
 
-Crie o arquivo `postgres.yaml`, que define a secret com as credenciais, o armazenamento persistente e o deployment do PostgreSQL.
+Dentro do diretório `kubernetes/backstage`, crie o arquivo `postgres.yaml`. Este define a secret com as credenciais, o armazenamento persistente e o deployment do PostgreSQL.
 
 > Os valores de `POSTGRES_USER` e `POSTGRES_PASSWORD` do `Secret` precisam estar em base64 (é assim que o campo `data` do Kubernetes funciona). Escolha o seu usuário e senha e gere as versões codificadas:
 >
@@ -41,7 +47,7 @@ Crie o arquivo `postgres.yaml`, que define a secret com as credenciais, o armaze
 ```
 
 ```bash
-kubectl apply -f postgres.yaml -n backstage
+kubectl apply -f kubernetes/backstage/postgres.yaml -n backstage
 ```
 
 #### Verifique a conectividade do Pod
@@ -49,7 +55,7 @@ kubectl apply -f postgres.yaml -n backstage
 Verifique se o Pod do PostgreSQL está funcionando corretamente antes de seguir.
 
 ```bash
-POSTGRESQL_PODNAME=$(kubectl get pods -l app=postgres -o jsonpath='{.items[0].metadata.name}')
+POSTGRESQL_PODNAME=$(kubectl get pods -n backstage -l app=postgres -o jsonpath='{.items[0].metadata.name}')
 kubectl exec -it --namespace=backstage $POSTGRESQL_PODNAME -- /bin/bash
 ```
 
@@ -63,14 +69,14 @@ Se o terminal abrir a linha de comando do PostgreSQL, quer dizer que funcionou. 
 
 #### Instalar o Service do PostgreSQL
 
-Crie o arquivo `postgres-service.yaml`.
+Dentro do diretório `kubernetes/backstage`, crie o arquivo `postgres-service.yaml`.
 
 ```yaml
 {% include_relative postgres-service.yaml %}
 ```
 
 ```bash
-kubectl apply -f postgres-service.yaml
+kubectl apply -f kubernetes/backstage/postgres-service.yaml
 ```
 
 ### 3. Instalar o Backstage
@@ -84,32 +90,34 @@ Crie um PAT (Personal Access Token) no GitHub para o Backstage ter acesso aos se
 3. **Scopes (permissões):** marque `repo` (para ler e escrever repositórios) e `workflow` (para configurar as ações de CI automaticamente).
 4. Copie o valor gerado (ex: `ghp_xxxxxxxxxxxxxxxxxxxxxxx`). Este é o seu `GITHUB_TOKEN`.
 
-Crie o arquivo `backstage-secrets.yaml`. O valor de `GITHUB_TOKEN` também precisa estar em base64. Gere a versão codificada do seu token:
-
-```bash
-echo -n "ghp_xxxxxxxxxxxxxxxxxxxxxxx" | base64
-```
-
-Substitua o valor de `GITHUB_TOKEN` abaixo pelo resultado do comando.
+Dentro do diretório `kubernetes/backstage`, crie o arquivo `backstage-secrets.yaml`.
 
 ```yaml
 {% include_relative backstage-secrets.yaml %}
 ```
 
+Substitua o valor de `GITHUB_TOKEN` pelo resultado do comando abaixo. Este comando gera um valor codificado do seu token:
+
 ```bash
-kubectl apply -f backstage-secrets.yaml
+echo -n "ghp_xxxxxxxxxxxxxxxxxxxxxxx" | base64
+```
+
+Em seguida, aplique o manifesto:
+
+```bash
+kubectl apply -f kubernetes/backstage/backstage-secrets.yaml
 ```
 
 #### Criar o Deployment e o Service do Backstage
 
-Crie o arquivo `backstage.yaml`.
+Dentro do diretório `kubernetes/backstage`, crie o arquivo `backstage.yaml`.
 
 ```yaml
 {% include_relative backstage.yaml %}
 ```
 
 ```bash
-kubectl apply -f backstage.yaml
+kubectl apply -f kubernetes/backstage/backstage.yaml
 ```
 
 ### 4. Acessar o painel

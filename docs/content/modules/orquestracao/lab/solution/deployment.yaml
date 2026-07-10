@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: meu-site-nginx
+  namespace: app
   labels:
     app: web
 spec:

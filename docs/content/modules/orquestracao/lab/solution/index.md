@@ -13,15 +13,33 @@ O objetivo deste desafio é montar o seu primeiro fluxo **GitOps** utilizando um
 
 ### 1. Manifestos do Kubernetes
 
-Crie um repositório público no seu GitHub (ex: `meu-deploy-gitops`) e, na raiz dele, crie os dois manifestos abaixo.
+Crie um repositório público no seu GitHub (ex: `meu-deploy-gitops`), e crie a estrutura de diretórios `kubernetes/app`.
 
-Crie o arquivo `deployment.yaml`, que instrui o Kubernetes a criar 3 réplicas (Pods) da nossa aplicação Nginx.
+```bash
+mkdir -p kubernetes/app
+```
+
+Dentro do diretório `kubernetes/app`, crie os três manifestos abaixo.
+
+#### `namespace.yaml`
+
+Dentro do diretório `kubernetes/app`, crie o arquivo `namespace.yaml`, que instrui o Kubernetes a criar a namespace da nossa aplicação Nginx.
+
+```yaml
+{% include_relative namespace.yaml %}
+```
+
+#### `deployment.yaml`
+
+Dentro do diretório `kubernetes/app`, crie o arquivo `deployment.yaml`, que instrui o Kubernetes a criar 3 réplicas (Pods) da nossa aplicação Nginx.
 
 ```yaml
 {% include_relative deployment.yaml %}
 ```
 
-Crie o arquivo `service.yaml`, que cria um Serviço do tipo NodePort para podermos acessar o Nginx no navegador.
+#### `service.yaml`
+
+Dentro do diretório `kubernetes/app`, crie o arquivo `service.yaml`, que cria um Serviço do tipo NodePort para podermos acessar o Nginx no navegador.
 
 ```yaml
 {% include_relative service.yaml %}
@@ -39,15 +57,22 @@ git push origin main
 
 Escolha a sua ferramenta de preferência para subir o cluster:
 
+Minikube:
+
 ```bash
-# Opção A: Minikube
 minikube start
+```
 
-# Opção B: Kind
+Kind:
+
+```bash
 kind create cluster
+```
 
-# Opção C: k3d
-k3d cluster create
+k3d:
+
+```bash
+k3d cluster create "my-cluster-name"
 ```
 
 ### 3. Instale o ArgoCD
@@ -80,17 +105,18 @@ No painel do ArgoCD, clique em **+ NEW APP** e preencha com os dados do seu repo
 * **Application Name:** `meu-site-gitops`
 * **Project:** `default`
 * **Sync Policy:** `Automatic` (essencial para o ArgoCD corrigir problemas sozinho)
-* **Sync Policy - Self-Heal:** ativado (essencial para se recuperar de drifts)
+* **Sync Policy - Self Heal:** ativado (essencial para se recuperar de drifts)
+* **Sync Policy - Prune Resources:** ativado (essencial para deletar recursos quando os manifestos forem deletados)
 * **Repository URL:** o link do seu repositório do GitHub contendo os YAMLs
-* **Path:** `.` (ponto, para a raiz do repositório)
+* **Path:** `kubernetes/app`
 * **Cluster URL:** `https://kubernetes.default.svc`
-* **Namespace:** `default`
+* **Namespace:** `app`
 
 Clique em **CREATE**.
 
 ### 6. Valide o resultado (teste de resiliência)
 
-Para ver a verdadeira mágica do GitOps, vamos simular um desastre. Vá ao seu terminal e delete o Deployment inteiro:
+Para ver o GitOps em ação, vamos simular um desastre. Vá ao seu terminal e delete o Deployment inteiro:
 
 ```bash
 kubectl delete deployment meu-site-nginx
@@ -102,14 +128,21 @@ Olhe rapidamente para o painel do ArgoCD. Você verá que ele detectou que o clu
 
 Para liberar a memória e os recursos da sua máquina, delete o cluster após terminar os testes:
 
+Minikube:
+
 ```bash
-# Minikube:
 minikube delete
+```
 
-# Kind:
+Kind:
+
+```bash
 kind delete cluster
+```
 
-# k3d:
+k3d:
+
+```bash
 k3d cluster delete
 ```
 

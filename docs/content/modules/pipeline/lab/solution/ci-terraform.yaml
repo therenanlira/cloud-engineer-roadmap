@@ -14,6 +14,9 @@ jobs:
   validate-infrastructure:
     name: Validar Terraform
     runs-on: ubuntu-latest # A máquina virtual onde os testes vão rodar
+    defaults:
+      run:
+        working-directory: ./terraform # O main.tf está dentro dessa pasta, não na raiz
 
     steps:
       # Passo 1: Baixa o código do seu repositório para a máquina virtual

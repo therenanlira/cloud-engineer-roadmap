@@ -332,6 +332,19 @@ blockquote p {
   font-style: normal;
 }
 
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(160, 115, 225, 0.12);
+  color: var(--accent-purple);
+  border: 1px solid var(--accent-purple);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
 div.highlighter-rouge {
   position: relative;
   margin: 20px 0;

@@ -13,7 +13,13 @@ O objetivo deste desafio é unir **Terraform e GitHub Actions** em um fluxo simp
 
 ### 1. Código Terraform
 
-Crie um novo repositório no GitHub e, na raiz dele, crie o arquivo `main.tf`.
+Crie um repositório no seu GitHub (ex: `minha-pipeline`), e crie um diretório chamado `terraform`.
+
+```bash
+mkdir terraform
+```
+
+Dentro do diretório `terraform`, crie o arquivo `main.tf`.
 
 ```hcl
 {% include_relative main.tf %}
@@ -21,7 +27,13 @@ Crie um novo repositório no GitHub e, na raiz dele, crie o arquivo `main.tf`.
 
 ### 2. Workflow do GitHub Actions
 
-Crie a estrutura de diretórios `.github/workflows/` e, dentro dela, o arquivo `ci-terraform.yml`. É ele que instrui o GitHub a preparar uma máquina virtual, instalar o Terraform e rodar as validações automaticamente.
+Crie a estrutura de diretórios `.github/workflows/`.
+
+```bash
+mkdir -p .github/workflows/
+```
+
+Dentro desta estrutura de diretórios, crie o arquivo `ci-terraform.yml`. É ele que instrui o GitHub a preparar uma máquina virtual, instalar o Terraform e rodar as validações automaticamente.
 
 ```yaml
 {% include_relative ci-terraform.yaml %}
