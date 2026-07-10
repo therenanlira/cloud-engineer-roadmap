@@ -13,7 +13,7 @@ Linux é a base de tudo: é o Sistema Operacional mais utilizado em servidores e
 
 **Trilha de Estudo:**
 
-* **Linux para iniciantes:** [[LinuxTips] Linux Essentials](https://linuxtips.io/treinamento/linux-essentials/)
+* <i class="fas fa-graduation-cap"></i> **Linux para iniciantes:** [[LinuxTips] Linux Essentials](https://linuxtips.io/treinamento/linux-essentials/)
 
 **Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Linux*. Faça os seguintes treinamentos:
 

@@ -7,8 +7,8 @@ title: Introdução (Cultura DevOps)
 
 A cultura DevOps une desenvolvimento de software (Dev) e operações (Ops), focando em automação, entrega contínua, testes rápidos e colaboração entre os times.
 
-* [[LinuxTips] DevOps Essentials](https://linuxtips.io/treinamento/devops-essentials/)
-* [[LinuxTips] Agile Essentials](https://linuxtips.io/treinamento/agile-essentials/)
+* <i class="fas fa-graduation-cap"></i> [[LinuxTips] DevOps Essentials](https://linuxtips.io/treinamento/devops-essentials/)
+* <i class="fas fa-graduation-cap"></i> [[LinuxTips] Agile Essentials](https://linuxtips.io/treinamento/agile-essentials/)
 
 Esses conceitos podem aparecer novamente ao longo do roadmap, então vale a pena revisitá-los sempre que precisar.
 
