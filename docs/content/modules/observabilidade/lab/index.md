@@ -9,14 +9,14 @@ Observabilidade é a capacidade de entender o estado do sistema (aplicações e 
 
 ### Desafio Prático (Observabilidade)
 
-Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o reforçar o conhecimento.
+Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para reforçar o conhecimento.
 
 **Objetivo:** Obter visibilidade completa do seu cluster local implementando os três pilares da observabilidade (Metrics, Logs e Tracing) num ambiente controlado (local) e sem custos.
 
 **Passo a passo do desafio:**
 
 1. **Setup:** Suba o seu cluster local e garanta que o [Helm](https://helm.sh/pt/docs/intro/install) esteja instalado no seu ambiente local.
-2. **Infraestrutura:** Utilize o Helm para provisionar a "Santíssima Trindade" da Observabilidade:
+2. **Infraestrutura:** Utilize o Helm para provisionar a stack de Observabilidade:
    * **Métricas:** Prometheus.
    * **Logs:** Loki (com Promtail).
    * **Tracing:** Jaeger (versão `all-in-one`).

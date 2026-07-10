@@ -115,7 +115,7 @@ k3d cluster delete
 
 ## Resumo do Aprendizado
 
-Neste desafio, você testou o ápice da orquestração moderna. Em vez de aplicar arquivos manualmente (`kubectl apply`), delegou essa função ao ArgoCD. Ao tentar deletar o Deployment, você viu que não é mais possível alterar a infraestrutura permanentemente pelo terminal, pois o "desejo" da sua aplicação está protegido e versionado no GitHub. Isso é GitOps!
+Neste desafio, você testou GitOps na prática. Em vez de aplicar arquivos manualmente (`kubectl apply`), delegou essa função ao ArgoCD. Ao tentar deletar o Deployment, você viu que não é mais possível alterar a infraestrutura permanentemente pelo terminal, pois o estado desejado da sua aplicação está protegido e versionado no GitHub.
 
 {% include next-steps.html
    prev_url="/content/modules/orquestracao/lab/"

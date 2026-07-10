@@ -6,7 +6,7 @@ Quando trabalhamos no terminal, frequentemente esquecemos as opções (flags) e 
 
 ## 1. O Comando `man` (Manual Oficial)
 
-O `man` (abreviação de *manual*) exibe a documentação de referência oficial de praticamente qualquer comando instalado no seu sistema Unix/Linux. Ele é extremamente completo e detalhado.
+O `man` (abreviação de *manual*) exibe a documentação de referência oficial de praticamente qualquer comando instalado no seu sistema Unix/Linux.
 
 ### Como usar:
 

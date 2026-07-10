@@ -6,7 +6,7 @@ Este diretório contém a solução do primeiro desafio prático. O objetivo é 
 
 - **`monitor.py`**: Script em Python que testa a conectividade dos sites e gera o arquivo `status.txt`.
 - **`Dockerfile`**: Define a imagem Nginx, instala as dependências necessárias (Python/Pip) e gera o arquivo de status durante a construção da imagem.
-- **`deploy.sh`**: O "maestro" que automatiza a geração do arquivo, o build da imagem e o levantamento do contêiner.
+- **`deploy.sh`**: Automatiza a geração do arquivo, o build da imagem e o levantamento do contêiner.
 
 ## 🚀 Como executar esta solução
 

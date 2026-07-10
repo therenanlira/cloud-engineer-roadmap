@@ -5,7 +5,7 @@ Este diretório contém a solução do desafio prático do módulo Pipeline. O o
 ## Arquivos do Projeto
 
 - **`main.tf`**: O código de infraestrutura básico contendo a declaração de recursos da AWS, criado especificamente para ser testado.
-- **`.github/workflows/ci-terraform.yml`**: O arquivo do workflow do GitHub Actions. É ele que atua como o "maestro", instruindo o GitHub a preparar uma máquina virtual, instalar o Terraform e rodar as validações automaticamente.
+- **`.github/workflows/ci-terraform.yml`**: O arquivo do workflow do GitHub Actions. É ele que instrui o GitHub a preparar uma máquina virtual, instalar o Terraform e rodar as validações automaticamente.
 
 ## Como executar esta solução
 
@@ -50,4 +50,4 @@ git push origin main
 
 ### Resumo do Aprendizado
 
-Neste desafio, você praticou a base da cultura DevOps aplicada à infraestrutura (Shift-Left): automatizou a esteira de validação usando o GitHub Actions para garantir que nenhum código fora do padrão visual da equipe ou com erros estruturais do Terraform chegue ao ambiente de produção.
+Neste desafio, você praticou a base da cultura DevOps aplicada à infraestrutura (Shift-Left): automatizou a esteira de validação usando o GitHub Actions para garantir que nenhum código fora do padrão da equipe ou com erros estruturais do Terraform chegue ao ambiente de produção.

@@ -141,7 +141,7 @@ kind delete cluster
 
 ## Resumo do Aprendizado
 
-Neste desafio, você instalou a "Santíssima Trindade" da Observabilidade Cloud Native. Agora você sabe como usar o Helm para provisionar infraestrutura complexa rapidamente e aprendeu a correlacionar os gráficos de consumo (Prometheus/Grafana) com os logs da aplicação (Loki) e o fluxo de requisições (Jaeger).
+Neste desafio, você instalou os três pilares da Observabilidade Cloud Native. Agora você sabe como usar o Helm para provisionar infraestrutura complexa rapidamente e aprendeu a correlacionar os gráficos de consumo (Prometheus/Grafana) com os logs da aplicação (Loki) e o fluxo de requisições (Jaeger).
 
 {% include next-steps.html
    prev_url="/content/modules/observabilidade/lab/"

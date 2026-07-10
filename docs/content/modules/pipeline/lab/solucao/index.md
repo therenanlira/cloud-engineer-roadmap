@@ -21,7 +21,7 @@ Crie um novo repositório no GitHub e, na raiz dele, crie o arquivo `main.tf`.
 
 ### 2. Workflow do GitHub Actions
 
-Crie a estrutura de diretórios `.github/workflows/` e, dentro dela, o arquivo `ci-terraform.yml`. É ele que atua como o "maestro", instruindo o GitHub a preparar uma máquina virtual, instalar o Terraform e rodar as validações automaticamente.
+Crie a estrutura de diretórios `.github/workflows/` e, dentro dela, o arquivo `ci-terraform.yml`. É ele que instrui o GitHub a preparar uma máquina virtual, instalar o Terraform e rodar as validações automaticamente.
 
 ```yaml
 {% include_relative ci-terraform.yaml %}

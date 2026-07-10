@@ -9,7 +9,7 @@ Orquestração de contêiner é o termo utilizado para o gerenciamento automatiz
 
 ### Desafio Prático (Orquestração)
 
-Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o reforçar o conhecimento.
+Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para reforçar o conhecimento.
 
 **Objetivo**: Juntar os seus conhecimentos de Kubernetes, ArgoCD e GitOps e aplicá-los num ambiente controlado (local), sem custos.
 

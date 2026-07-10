@@ -166,8 +166,20 @@
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
+            var target = entry.target;
+            target.classList.add("is-visible");
+            observer.unobserve(target);
+            // Remove as classes de animação ao fim da transição: sem isso,
+            // o transform: translateY(0) do fade-in empata em especificidade
+            // com o transform do :hover e, por ordem no CSS, vence — travando
+            // o hover dos cards que foram revelados por scroll.
+            target.addEventListener(
+              "transitionend",
+              function () {
+                target.classList.remove("fade-in-el", "is-visible");
+              },
+              { once: true }
+            );
           }
         });
       },
@@ -181,6 +193,27 @@
       if (el.getBoundingClientRect().top > viewportHeight) {
         el.classList.add("fade-in-el");
         observer.observe(el);
+      }
+    });
+  }
+
+  function initThemeToggle() {
+    var THEME_KEY = "cloud-engineer-roadmap:theme";
+    var button = document.getElementById("theme-toggle");
+    if (!button) return;
+
+    button.addEventListener("click", function () {
+      var isLight = document.documentElement.getAttribute("data-theme") === "light";
+      var next = isLight ? "dark" : "light";
+      if (isLight) {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+      try {
+        localStorage.setItem(THEME_KEY, next);
+      } catch (e) {
+        /* localStorage indisponível (ex: modo privado) - preferência não será salva */
       }
     });
   }
@@ -202,5 +235,6 @@
     initReadingProgress();
     initFadeIn();
     initExternalLinks();
+    initThemeToggle();
   });
 })();

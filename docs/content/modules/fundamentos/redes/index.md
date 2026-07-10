@@ -9,7 +9,7 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 
 ## Redes
 
-Redes é a disciplina que trata de como os computadores se comunicam, sendo a base para o funcionamento de sistemas web.
+Redes é a disciplina que trata de como os computadores se comunicam, base para o funcionamento de qualquer sistema web.
 
 **Trilha de Estudo:**
 

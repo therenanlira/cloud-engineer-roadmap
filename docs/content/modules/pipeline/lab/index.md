@@ -9,7 +9,7 @@ Pipelines são fluxos automatizados de integração (build) e entrega (deploy) c
 
 ### Desafio Prático (Pipeline)
 
-Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o reforçar o conhecimento.
+Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para reforçar o conhecimento.
 
 **Objetivo:** Criar a sua primeiro pipeline de Integração Contínua (CI) usando GitHub Actions para validar a sua infraestrutura como código (Terraform) e garantir que ela não contenha erros de sintaxe ou formatação.
 

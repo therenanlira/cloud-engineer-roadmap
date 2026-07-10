@@ -5,14 +5,55 @@
 :root {
   --bg-color: #0b1525;
   --text-color: #e2e8f0;
+  --body-text-color: #cbd5e1;
+  --muted-text: #94a3b8;
   --accent-blue: #38bdf8;
   --accent-purple: #a073e1;
   --link-color: #0ea5e9;
+  --header-bg: #060d19;
+  --border-color: #1e293b;
+  --code-bg: #0f1c30;
+  --code-text: #e2e8f0;
+  --track-bg: rgba(148, 163, 184, 0.15);
+  --backdrop-bg: rgba(2, 6, 15, 0.6);
+  --card-gradient: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+  --mark-all-color: #64748b;
   --max-width: 850px;
   --shell-max-width: 1140px;
   --sidebar-width: 260px;
   --sidebar-active-color: #e879f9;
+  --module-color-1: #38bdf8;
+  --module-color-2: #4bafF5;
+  --module-color-3: #5fa0f0;
+  --module-color-4: #7391eb;
+  --module-color-5: #8782e6;
+  --module-color-6: #a073e1;
   --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+[data-theme="light"] {
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+  --body-text-color: #334155;
+  --muted-text: #475569;
+  --accent-blue: #0369a1;
+  --accent-purple: #6d28d9;
+  --link-color: #1d4ed8;
+  --header-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --code-bg: #eef2f7;
+  --code-text: #1e293b;
+  --track-bg: rgba(51, 65, 85, 0.12);
+  --backdrop-bg: rgba(15, 23, 42, 0.4);
+  --card-gradient: linear-gradient(160deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0));
+  --mark-all-color: #64748b;
+  --sidebar-active-color: #a21caf;
+  --module-color-1: #0369a1;
+  --module-color-2: #185cac;
+  --module-color-3: #2d4fb7;
+  --module-color-4: #4342c3;
+  --module-color-5: #5835ce;
+  --module-color-6: #6d28d9;
 }
 
 html, body {
@@ -41,8 +82,8 @@ body {
 }
 
 .site-header {
-  background: #060d19;
-  border-bottom: 1px solid #1e293b;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
   width: 100%;
   height: 52px;
   flex: 0 0 auto;
@@ -100,6 +141,39 @@ body {
   flex: 0 0 auto;
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--accent-blue);
+  font-size: 0.95em;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-purple);
+  border-color: var(--accent-purple);
+}
+
+.theme-toggle .theme-icon-dark {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle .theme-icon-light {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle .theme-icon-dark {
+  display: inline-block;
+}
+
 .page-shell {
   display: flex;
   align-items: flex-start;
@@ -146,7 +220,7 @@ h1, h2, h3, h4 {
 }
 
 p, li {
-  color: #cbd5e1 !important;
+  color: var(--body-text-color) !important;
   letter-spacing: 0.2px;
 }
 
@@ -235,8 +309,8 @@ p code, li code {
 }
 
 .highlight {
-  background: #0f1c30;
-  border: 1px solid #1e293b;
+  background: var(--code-bg);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow-x: auto;
 }
@@ -248,7 +322,7 @@ p code, li code {
 
 .highlight code {
   background: none !important;
-  color: #e2e8f0 !important;
+  color: var(--code-text) !important;
   padding: 0 !important;
   border-radius: 0 !important;
 }
@@ -270,7 +344,7 @@ p code, li code {
   width: 100%;
   height: 6px;
   border-radius: 999px;
-  background: rgba(148, 163, 184, 0.15);
+  background: var(--track-bg);
   overflow: hidden;
 }
 
@@ -291,7 +365,7 @@ p code, li code {
   height: 34px;
   flex: 0 0 auto;
   border-radius: 6px;
-  border: 1px solid #1e293b;
+  border: 1px solid var(--border-color);
   background: transparent;
   color: var(--accent-blue);
   font-size: 1.05em;
@@ -307,7 +381,7 @@ p code, li code {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(2, 6, 15, 0.6);
+  background: var(--backdrop-bg);
   z-index: 40;
 }
 
@@ -324,7 +398,7 @@ p code, li code {
 .sidebar-overall {
   margin-bottom: 20px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .sidebar-overall-label {
@@ -332,13 +406,13 @@ p code, li code {
   justify-content: space-between;
   font-size: 0.78em;
   font-weight: 700;
-  color: #94a3b8 !important;
+  color: var(--muted-text) !important;
   margin-bottom: 8px;
 }
 
 .sidebar-hint {
   font-size: 0.72em;
-  color: #94a3b8 !important;
+  color: var(--muted-text) !important;
   margin: 8px 0 0;
   line-height: 1.4;
 }
@@ -358,7 +432,7 @@ p code, li code {
   padding: 0;
   border: none;
   background: transparent;
-  color: #64748b;
+  color: var(--mark-all-color);
   font-size: 0.68em;
   cursor: pointer;
   border-radius: 4px;
@@ -409,7 +483,7 @@ a.sidebar-module-title:hover {
 
 .sidebar-module-count {
   font-size: 0.72em;
-  color: #94a3b8 !important;
+  color: var(--muted-text) !important;
   white-space: nowrap;
 }
 
@@ -440,7 +514,7 @@ a.sidebar-module-title:hover {
 }
 
 .sidebar-item a {
-  color: #cbd5e1 !important;
+  color: var(--body-text-color) !important;
   font-weight: 500;
   font-size: 0.88em;
   border-bottom: none !important;
@@ -473,11 +547,11 @@ a.sidebar-module-title:hover {
   gap: 8px;
   font-size: 0.82em;
   margin-bottom: 20px;
-  color: #94a3b8 !important;
+  color: var(--muted-text) !important;
 }
 
 .breadcrumb a {
-  color: #94a3b8 !important;
+  color: var(--muted-text) !important;
   font-weight: 500;
   border-bottom: none !important;
 }
@@ -498,7 +572,7 @@ a.sidebar-module-title:hover {
   gap: 6px;
   padding: 22px 24px;
   border-radius: 14px;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+  background: var(--card-gradient);
   border: 1px solid var(--card-color, var(--accent-blue));
   text-decoration: none !important;
   border-bottom: 1px solid var(--card-color, var(--accent-blue)) !important;
@@ -527,7 +601,7 @@ a.sidebar-module-title:hover {
 
 .roadmap-card-subtitle {
   font-size: 0.85em;
-  color: #94a3b8 !important;
+  color: var(--muted-text) !important;
 }
 
 /* 4.7 Fade-in leve ao rolar a página */
@@ -581,7 +655,7 @@ a.sidebar-module-title:hover {
     left: 0;
     bottom: 0;
     background: var(--bg-color);
-    border-right: 1px solid #1e293b;
+    border-right: 1px solid var(--border-color);
     padding: 80px 20px 20px;
     transform: translateX(-100%);
     transition: transform 0.25s ease;
@@ -608,10 +682,10 @@ a.sidebar-module-title:hover {
   width: 100%;
   margin-top: 50px;
   padding: 20px 0;
-  background-color: #060d19;
-  border-top: 1px solid #1e293b;
+  background-color: var(--header-bg);
+  border-top: 1px solid var(--border-color);
   text-align: center;
-  color: #94a3b8;
+  color: var(--muted-text);
 }
 
 .site-footer .wrapper {

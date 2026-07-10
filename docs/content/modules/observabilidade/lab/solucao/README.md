@@ -45,7 +45,7 @@ kubectl create namespace observability
 # Instala o Prometheus (Metrics)
 helm install prometheus prometheus-community/prometheus --namespace observability
 
-# Instala o Loki e o Promptail (Logs)
+# Instala o Loki e o Promtail (Logs)
 helm install loki grafana/loki-stack --namespace observability \
 
 # Instala o Jaeger versão all-in-one em memória (Tracing)
@@ -130,4 +130,4 @@ kind delete cluster
 
 ### Resumo do Aprendizado
 
-Neste desafio, você instalou a "Santíssima Trindade" da Observabilidade Cloud Native. Agora você sabe como usar o Helm para provisionar infraestrutura complexa rapidamente e aprendeu a correlacionar os Gráficos de consumo (Prometheus/Grafana) com os Logs da aplicação (Loki) e o fluxo de requisições (Jaeger).
+Neste desafio, você instalou os três pilares da Observabilidade Cloud Native. Agora você sabe como usar o Helm para provisionar infraestrutura complexa rapidamente e aprendeu a correlacionar os Gráficos de consumo (Prometheus/Grafana) com os Logs da aplicação (Loki) e o fluxo de requisições (Jaeger).

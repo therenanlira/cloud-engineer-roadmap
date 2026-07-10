@@ -9,7 +9,7 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 
 ## Desafio Prático (Fundamentos)
 
-Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o reforçar o conhecimento.
+Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para reforçar o conhecimento.
 
 **Objetivo**: Juntar os seus conhecimentos de Linux, Redes, Scripts e Docker para criar uma página web simples que monitora a conectividade de outros sites.
 

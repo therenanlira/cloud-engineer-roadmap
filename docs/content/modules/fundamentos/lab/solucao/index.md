@@ -29,7 +29,7 @@ Crie o arquivo `Dockerfile`. Ele parte da imagem oficial do `nginx`, instala o P
 
 ### 3. Script de deploy
 
-Crie o script `deploy.sh`. Ele é o "maestro" que automatiza toda a sequência: prepara o ambiente Python, gera o `status.txt`, faz o build da imagem e sobe o contêiner.
+Crie o script `deploy.sh`. Ele automatiza toda a sequência: prepara o ambiente Python, gera o `status.txt`, faz o build da imagem e sobe o contêiner.
 
 ```bash
 {% include_relative deploy.sh %}

@@ -9,7 +9,7 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 
 ## Linux
 
-Linux é a base de tudo, é o Sistema Operacional mais utilizado em servidores, por conta disso, deve ser aprendido em primeiro lugar.
+Linux é a base de tudo: é o Sistema Operacional mais utilizado em servidores e deve ser aprendido em primeiro lugar.
 
 **Trilha de Estudo:**
 

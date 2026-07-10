@@ -9,7 +9,7 @@ A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs 
 
 ### Desafio Prático (Plataforma)
 
-Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o reforçar o conhecimento.
+Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para reforçar o conhecimento.
 
 #### 1. Instalação do Backstage
 
