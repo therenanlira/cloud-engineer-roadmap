@@ -15,7 +15,7 @@ Redes é a disciplina que trata de como os computadores se comunicam, base para 
 
 * **Redes para iniciantes:** Entenda os conceitos dos protocólos de rede e as ferramentas. Guarde bem esse conhecimento, pois serão muito utilizados mais a frente nos laboratórios de Docker em diante.
 
-#### Protocolos de Rede
+### Protocolos de Rede
 
 Esses protocolos são essenciais para a administração de servidores, comunicação entre microsserviços e segurança na nuvem:
 
@@ -26,7 +26,7 @@ Esses protocolos são essenciais para a administração de servidores, comunica�
 * `HTTPS (Hypertext Transfer Protocol Secure)`: É uma extensão segura do HTTP que utiliza criptografia SSL/TLS para proteger os dados transmitidos entre o cliente e o servidor.
 * `SSL (Secure Sockets Layer) / TLS (Transport Layer Security)`: Protocolos de segurança usados para criptografar conexões na internet. O TLS é o sucessor moderno e seguro do antigo SSL (hoje legado).
 
-#### Ferramentas de Rede
+### Ferramentas de Rede
 
 Essas ferramentas são essenciais para testar conexões, mapear portas, configurar firewalls e analisar o tráfego da rede:
 
@@ -39,7 +39,7 @@ Essas ferramentas são essenciais para testar conexões, mapear portas, configur
 * `ufw` / `firewalld` - Interfaces amigáveis para gerenciamento de Firewall no Linux (Ubuntu/Debian e CentOS/RHEL, respectivamente).
 * `iptables` e `nftables` - Ferramenta de baixo nível para filtragem de pacotes e regras de firewall do próprio kernel Linux.
 
-> **Dica:** Use os comandos [`man`](content/guides/man-tldr.md/#-1-o-comando-man-manual-oficial) ou [`tldr`](content/guides/man-tldr.md/#-2-o-comando-tldr-exemplos-práticos-e-rápidos) para conhecer as flags e ver exemplos de uso de cada ferramenta.
+> **Dica:** Use os comandos [`man`]({{ '/content/guides/man-tldr/#1-o-comando-man-manual-oficial' | relative_url }}) ou [`tldr`]({{ '/content/guides/man-tldr/#2-o-comando-tldr-exemplos-práticos-e-rápidos' | relative_url }}) para conhecer as flags e ver exemplos de uso de cada ferramenta.
 
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/linux/"

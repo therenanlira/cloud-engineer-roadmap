@@ -1,3 +1,9 @@
+---
+layout: default
+title: Guia (man & tldr)
+permalink: /content/guides/man-tldr/
+---
+
 # Guia: Como usar os comandos `man` e `tldr`
 
 Quando trabalhamos no terminal, frequentemente esquecemos as opções (flags) e parâmetros de um comando. Para obter ajuda localmente de forma rápida, os comandos `man` e `tldr` são seus melhores amigos.
@@ -8,7 +14,7 @@ Quando trabalhamos no terminal, frequentemente esquecemos as opções (flags) e 
 
 O `man` (abreviação de *manual*) exibe a documentação de referência oficial de praticamente qualquer comando instalado no seu sistema Unix/Linux.
 
-### Como usar:
+### Como usar
 
 Basta digitar `man` seguido do comando que deseja pesquisar:
 
@@ -18,7 +24,7 @@ man ping
 
 *Dica de navegação:* Use as setas do teclado ou as teclas `Page Up` / `Page Down` para rolar o manual. Pressione a tecla **`q`** para sair.
 
-### Exemplo prático:
+### Exemplo prático: `man grep`
 
 Se você rodar `man grep`, o manual detalhará todas as flags do comando `grep`, como:
 
@@ -31,7 +37,7 @@ Se você rodar `man grep`, o manual detalhará todas as flags do comando `grep`,
 
 Embora o `man` seja completo, ele pode ser muito longo e técnico. O **`tldr`** (iniciais de *"Too Long; Didn't Read"* - *Muito Longo; Não Li*) fornece páginas resumidas focadas apenas em **exemplos práticos de uso comum** do comando no dia a dia.
 
-### Exemplo prático:
+### Exemplo prático: `tldr tar`
 
 Ao digitar:
 
@@ -48,7 +54,7 @@ Em vez de um manual de 10 páginas, o `tldr` mostrará diretamente:
 
 O `tldr` não vem instalado por padrão na maioria dos sistemas, mas a instalação é simples:
 
-### No Linux (Ubuntu / Debian / WSL):
+### No Linux (Ubuntu / Debian / WSL)
 
 Você pode instalar o cliente em Python via `apt`:
 
@@ -63,7 +69,7 @@ sudo apt install tldr -y
 tldr --update
 ```
 
-### No macOS:
+### No macOS
 
 Utilizando o gerenciador de pacotes Homebrew:
 
@@ -71,7 +77,7 @@ Utilizando o gerenciador de pacotes Homebrew:
 brew install tldr
 ```
 
-### Alternativa universal (via Node.js/npm):
+### Alternativa universal (via Node.js/npm)
 
 Caso você já possua o Node.js instalado, pode rodar:
 
