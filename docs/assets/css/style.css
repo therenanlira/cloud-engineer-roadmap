@@ -182,7 +182,7 @@ body {
   box-sizing: border-box;
   max-width: var(--shell-max-width);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 20px 40px 0;
 }
 
 .page-shell .container.main-content {
@@ -659,7 +659,7 @@ a.sidebar-module-title:hover {
   }
 
   .page-shell {
-    padding: 0 20px;
+    padding: 20px 20px 0;
   }
 
   .site-header-inner {
