@@ -260,12 +260,12 @@ li > i {
   margin-right: 10px;
 }
 
-/* Ícones de tipo de recurso (Trilha de Estudo) recebem a cor de destaque;
+/* Ícones de tipo de recurso (Trilha de Estudo) recebem a cor do link que acompanham;
    ícones de marca nas páginas hub mantêm a cor do texto. */
 li > i.fa-video,
 li > i.fa-graduation-cap,
 li > i.fa-file-alt {
-  color: var(--accent-blue);
+  color: var(--link-color);
 }
 
 /* 4. Componentes */
