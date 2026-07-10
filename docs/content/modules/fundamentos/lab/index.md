@@ -24,7 +24,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para refo
 * **Validação:** Abra o seu navegador e acesse [http://localhost:8080/status.txt](http://localhost:8080/status.txt) (ou use o comando `curl localhost:8080/status.txt` no terminal) para ver o relatório de conectividade gerado pelo seu script.
 * **Bash**: Crie um único script chamado `deploy.sh` que executa o `monitor.py`, faz o `docker build` e o `docker run` de forma sequencial.
 
-**Solução:** A solução para este desafio está [aqui](./solucao/), mas consulte somente se não conseguir resolver por si só.
+**Solução:** A solução para este desafio está [aqui](./solution/), mas consulte somente se não conseguir resolver por si só.
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 

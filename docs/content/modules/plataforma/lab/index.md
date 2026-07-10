@@ -7,13 +7,13 @@ title: Plataforma (Desafio)
 
 A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs (Internal Developer Portals) que oferecem autonomia, autoatendimento e padronização para desenvolvedores, reduzindo a carga cognitiva e acelerando o *time-to-market*.
 
-### Desafio Prático (Plataforma)
+## Desafio Prático (Plataforma)
 
 Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para reforçar o conhecimento.
 
-#### 1. Instalação do Backstage
+### 1. Instalação do Backstage
 
-Siga os passos de [Instalação do Backstage](./solucao/installation/) para ter a sua própria instância de Backstage localmente. Este guia de instalação é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/).
+Siga os passos de [Instalação do Backstage](./solution/installation/) para ter a sua própria instância de Backstage localmente. Este guia de instalação é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/).
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 

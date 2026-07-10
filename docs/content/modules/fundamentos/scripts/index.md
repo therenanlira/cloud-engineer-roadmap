@@ -11,7 +11,7 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 
 Arquivos com conjuntos de códigos para automatizar a execução de comandos.
 
-#### Scripts (Bash)
+### Scripts (Bash)
 
 Bash é um dos interpretadores de comandos do Linux, com ele conseguimos criar arquivos com comandos (Shell Scripts) para automatizar tarefas repetitivas.
 
@@ -19,7 +19,7 @@ Bash é um dos interpretadores de comandos do Linux, com ele conseguimos criar a
 
 * Introdução ao Shell Script Bash
 
-#### Scripts (Python)
+### Scripts (Python)
 
 Python é uma das linguagens de programação mais usada em infraestrutura para automações por conta da sua sintaxe simples.
 
