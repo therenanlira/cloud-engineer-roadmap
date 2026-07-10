@@ -332,8 +332,49 @@ blockquote p {
   font-style: normal;
 }
 
-.highlighter-rouge {
+div.highlighter-rouge {
+  position: relative;
   margin: 20px 0;
+}
+
+.code-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--header-bg);
+  border: 1px solid var(--border-color);
+  color: var(--muted-text);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+div.highlighter-rouge:hover .code-copy-btn,
+.code-copy-btn:focus-visible {
+  opacity: 1;
+}
+
+.code-copy-btn:hover {
+  color: var(--link-color);
+  border-color: var(--link-color);
+}
+
+.code-copy-btn.copied {
+  color: #22c55e;
+  border-color: #22c55e;
+  opacity: 1;
+}
+
+.code-copy-btn.copy-failed {
+  color: #ef4444;
+  border-color: #ef4444;
+  opacity: 1;
 }
 
 .highlight {

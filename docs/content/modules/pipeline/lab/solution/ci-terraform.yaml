@@ -1,4 +1,3 @@
-# Arquivo: .github/workflows/ci-terraform.yml
 name: Terraform CI (Validação)
 
 # Define QUANDO o pipeline vai rodar

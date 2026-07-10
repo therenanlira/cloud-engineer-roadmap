@@ -218,6 +218,46 @@
     });
   }
 
+  function initCodeCopyButtons() {
+    document.querySelectorAll("div.highlighter-rouge").forEach(function (block) {
+      var codeEl = block.querySelector("pre.highlight");
+      if (!codeEl || !navigator.clipboard) return;
+
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "code-copy-btn";
+      button.setAttribute("aria-label", "Copiar código");
+      button.innerHTML = '<i class="fas fa-copy"></i><span>Copiar</span>';
+
+      var resetTimeout;
+      button.addEventListener("click", function () {
+        navigator.clipboard.writeText(codeEl.innerText).then(
+          function () {
+            clearTimeout(resetTimeout);
+            button.classList.remove("copy-failed");
+            button.classList.add("copied");
+            button.innerHTML = '<i class="fas fa-check"></i><span>Copiado!</span>';
+            resetTimeout = setTimeout(function () {
+              button.classList.remove("copied");
+              button.innerHTML = '<i class="fas fa-copy"></i><span>Copiar</span>';
+            }, 1500);
+          },
+          function () {
+            clearTimeout(resetTimeout);
+            button.classList.add("copy-failed");
+            button.innerHTML = '<i class="fas fa-triangle-exclamation"></i><span>Falhou</span>';
+            resetTimeout = setTimeout(function () {
+              button.classList.remove("copy-failed");
+              button.innerHTML = '<i class="fas fa-copy"></i><span>Copiar</span>';
+            }, 1500);
+          }
+        );
+      });
+
+      block.appendChild(button);
+    });
+  }
+
   function initExternalLinks() {
     var host = window.location.hostname;
     document.querySelectorAll('a[href^="http"]').forEach(function (link) {
@@ -234,6 +274,7 @@
     initMobileSidebar();
     initReadingProgress();
     initFadeIn();
+    initCodeCopyButtons();
     initExternalLinks();
     initThemeToggle();
   });
