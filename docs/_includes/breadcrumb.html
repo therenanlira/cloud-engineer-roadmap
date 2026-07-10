@@ -26,11 +26,10 @@
 
 {% if crumb_module %}
 <nav class="breadcrumb" aria-label="breadcrumb">
-  {% if page.url == crumb_module.url %}
-  {% comment %} Páginas-hub: mostra Início / Módulo, mantendo a altura do
-     breadcrumb consistente com as demais páginas. {% endcomment %}
   <a href="{{ '/' | relative_url }}">Início</a>
   <span class="breadcrumb-sep">/</span>
+  {% if page.url == crumb_module.url %}
+  {% comment %} Páginas-hub: mostra Início / Módulo. {% endcomment %}
   <span class="breadcrumb-current">{{ crumb_module.title }}</span>
   {% else %}
   {% if crumb_module.url %}
