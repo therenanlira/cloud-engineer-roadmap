@@ -12,6 +12,5 @@ if ! python3 -m pip show Pillow >> /dev/null 2>&1; then
 fi
 
 python3 generate-roadmap.py
-python3 generate-cards.py
 
 deactivate

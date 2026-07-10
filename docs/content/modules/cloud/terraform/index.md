@@ -3,18 +3,12 @@ layout: default
 title: Cloud (Terraform)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
----
-
-## 2. Cloud
+# 2. Cloud
 
 Cloud é o conceito de infraestrutura sob demanda, onde você contrata recursos de infraestrutura para executar suas aplicações, banco de dados, entre outros.
 IaC (Infrastructure as Code; Infraestrutura como Código) é o conceito de criar esses recursos de infraestrutura em Cloud usando código, assim acelerando a replicação das configurações, padronizando e reduzindo erros humanos.
 
-### 2.2. Terraform (IaC)
+## Terraform (IaC)
 
 Terraform é uma ferramenta de IaC open-source para provisionamento de infraesturura.
 

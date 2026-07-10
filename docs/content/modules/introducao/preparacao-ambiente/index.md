@@ -3,13 +3,7 @@ layout: default
 title: Introdução (Preparação de ambiente)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
----
-
-## Preparação do ambiente
+# Preparação do ambiente
 
 Para fazer os laboratórios e desafios, prepare o seu ambiente.
 

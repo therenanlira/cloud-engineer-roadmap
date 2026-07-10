@@ -1,0 +1,39 @@
+{% assign crumb_module = nil %}
+{% assign crumb_item_title = nil %}
+
+{% for module in site.data.nav %}
+  {% if module.url and page.url == module.url %}
+    {% assign crumb_module = module %}
+  {% endif %}
+  {% unless crumb_module %}
+    {% for item in module.items %}
+      {% if page.url == item.url %}
+        {% assign crumb_module = module %}
+        {% assign crumb_item_title = item.title %}
+      {% endif %}
+    {% endfor %}
+  {% endunless %}
+{% endfor %}
+
+{% comment %} fallback for pages not listed in nav.yml, e.g. lab/solucao/* {% endcomment %}
+{% unless crumb_module %}
+  {% for module in site.data.nav %}
+    {% if module.url and page.url contains module.url %}
+      {% assign crumb_module = module %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
+
+{% comment %} Nas páginas-hub (page.url == crumb_module.url) o breadcrumb só repetiria
+   o próprio título da página (agora em H1), então é omitido. {% endcomment %}
+{% if crumb_module and page.url != crumb_module.url %}
+<nav class="breadcrumb" aria-label="breadcrumb">
+  {% if crumb_module.url %}
+  <a href="{{ crumb_module.url | relative_url }}">{{ crumb_module.title }}</a>
+  {% else %}
+  <span>{{ crumb_module.title }}</span>
+  {% endif %}
+  <span class="breadcrumb-sep">/</span>
+  <span class="breadcrumb-current">{{ crumb_item_title | default: page.title }}</span>
+</nav>
+{% endif %}

@@ -3,13 +3,7 @@ layout: default
 title: Fundamentos (Desafio - Solução)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
----
-
-## 1. Fundamentos
+# 1. Fundamentos
 
 A base técnica indispensável: sistemas operacionais, redes, automação e contêineres.
 

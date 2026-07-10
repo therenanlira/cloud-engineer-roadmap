@@ -3,13 +3,7 @@ layout: default
 title: Plataforma (Desafio - Instalação do Backstage)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
----
-
-## 6. Plataforma (Platform Engineering)
+# 6. Plataforma (Platform Engineering)
 
 A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs (Internal Developer Portals) que oferecem autonomia, autoatendimento e padronização para desenvolvedores, reduzindo a carga cognitiva e acelerando o *time-to-market*.
 

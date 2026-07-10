@@ -1,0 +1,77 @@
+- title: Introdução
+  url: /content/modules/introducao/
+  items:
+    - title: Cultura DevOps
+      url: /content/modules/introducao/cultura-devops/
+    - title: CNCF
+      url: /content/modules/introducao/cncf/
+    - title: Preparação do ambiente
+      url: /content/modules/introducao/preparacao-ambiente/
+
+- title: "1. Fundamentos"
+  url: /content/modules/fundamentos/
+  items:
+    - title: Linux
+      url: /content/modules/fundamentos/linux/
+    - title: Redes
+      url: /content/modules/fundamentos/redes/
+    - title: Scripts
+      url: /content/modules/fundamentos/scripts/
+    - title: Git
+      url: /content/modules/fundamentos/git/
+    - title: Containers
+      url: /content/modules/fundamentos/containers/
+    - title: Desafio
+      url: /content/modules/fundamentos/lab/
+
+- title: "2. Cloud"
+  url: /content/modules/cloud/
+  items:
+    - title: AWS
+      url: /content/modules/cloud/aws/
+    - title: Terraform
+      url: /content/modules/cloud/terraform/
+    - title: FinOps
+      url: /content/modules/cloud/finops/
+    - title: Desafio
+      url: /content/modules/cloud/lab/
+
+- title: "3. Pipeline"
+  url: /content/modules/pipeline/
+  items:
+    - title: GitHub Actions
+      url: /content/modules/pipeline/github-actions/
+    - title: Desafio
+      url: /content/modules/pipeline/lab/
+
+- title: "4. Orquestração"
+  url: /content/modules/orquestracao/
+  items:
+    - title: Kubernetes & Helm
+      url: /content/modules/orquestracao/kubernetes/
+    - title: ArgoCD
+      url: /content/modules/orquestracao/argocd/
+    - title: Desafio
+      url: /content/modules/orquestracao/lab/
+
+- title: "5. Observabilidade"
+  url: /content/modules/observabilidade/
+  items:
+    - title: Grafana
+      url: /content/modules/observabilidade/grafana/
+    - title: Prometheus
+      url: /content/modules/observabilidade/prometheus/
+    - title: Loki
+      url: /content/modules/observabilidade/loki/
+    - title: Jaeger
+      url: /content/modules/observabilidade/jaeger/
+    - title: Desafio
+      url: /content/modules/observabilidade/lab/
+
+- title: "6. Plataforma"
+  url: /content/modules/plataforma/
+  items:
+    - title: Backstage
+      url: /content/modules/plataforma/backstage/
+    - title: Desafio
+      url: /content/modules/plataforma/lab/

@@ -3,17 +3,11 @@ layout: default
 title: Fundamentos (Scripts)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
----
-
-## 1. Fundamentos
+# 1. Fundamentos
 
 A base técnica indispensável: sistemas operacionais, redes, automação e contêineres.
 
-### 1.3. Scripts
+## Scripts
 
 Arquivos com conjuntos de códigos para automatizar a execução de comandos.
 

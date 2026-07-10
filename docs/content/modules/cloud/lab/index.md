@@ -3,13 +3,7 @@ layout: default
 title: Cloud (Desafio)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
----
-
-## Desafio Prático (Cloud)
+# Desafio Prático (Cloud)
 
 Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para o reforçar o conhecimento.
 

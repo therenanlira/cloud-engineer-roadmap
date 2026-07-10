@@ -1,19 +1,13 @@
 ---
 layout: default
-title: Fundamentos (Git)
+title: Fundamentos (Containers)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
----
-
-## 1. Fundamentos
+# 1. Fundamentos
 
 A base técnica indispensável: sistemas operacionais, redes, automação e contêineres.
 
-### 1.5. Containers
+## Containers
 
 Contêiner é uma forma de isolar um ambiente para executar códigos, aplicações e asim por diante.
 Docker é a ferramenta de criação e execução de contêineres.

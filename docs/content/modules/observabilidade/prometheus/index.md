@@ -3,15 +3,11 @@ layout: default
 title: Observabilidade (Prometheus)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
-## 5. Observabilidade
+# 5. Observabilidade
 
 Observabilidade é a capacidade de entender o estado do sistema (aplicações e infraestrutura), seja por **logs**, **métricas** ou **tracing**.
 
-### 5.2. Prometheus (Metrics)
+## Prometheus (Metrics)
 
 Métricas são dados quantitativos (CPU, memória, taxa de erro) que mostram a saúde do seu sistema.
 Prometheus é a ferramenta open-source mais usada em Kubernetes.

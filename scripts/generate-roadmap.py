@@ -31,7 +31,7 @@ def load_font(candidates, size):
         return ImageFont.load_default()
 
 
-width, height = 800, 900
+width, height = 800, 975
 bg_color = (11, 21, 37)
 img = Image.new('RGB', (width, height), bg_color)
 draw = ImageDraw.Draw(img)
@@ -41,39 +41,41 @@ colors = [
     (115, 145, 235), (135, 130, 230), (160, 115, 225)
 ]
 
-font_title = load_font(BOLD_FONT_CANDIDATES, 35)
+font_title = load_font(BOLD_FONT_CANDIDATES, 38)
 font_sub = load_font(REGULAR_FONT_CANDIDATES, 18)
-font_mod_title = load_font(BOLD_FONT_CANDIDATES, 22)
-font_mod_text = load_font(REGULAR_FONT_CANDIDATES, 16)
+font_mod_index = load_font(BOLD_FONT_CANDIDATES, 14)
+font_mod_title = load_font(BOLD_FONT_CANDIDATES, 24)
+font_mod_text = load_font(REGULAR_FONT_CANDIDATES, 15)
 
-draw.text((400, 40), "Cloud Engineer Roadmap", fill="white", font=font_title, anchor="mm")
-draw.text((400, 80), "(DevOps / SRE / Platform)", fill="white", font=font_title, anchor="mm")
-draw.text((400, 120), "Roadmap de Aprendizado Prático e Evolutivo", fill="white", font=font_sub, anchor="mm")
-draw.line([75, 150, 700, 150], fill=(50, 50, 60), width=2)
+draw.text((400, 45), "Cloud Engineer Roadmap", fill="white", font=font_title, anchor="mm")
+draw.text((400, 85), "Guia de estudos gratuito e em português", fill=(200, 200, 200), font=font_sub, anchor="mm")
+draw.line([75, 115, 700, 115], fill=(50, 50, 60), width=2)
 
-def draw_rounded_box(draw, x, y, w, h, radius, border_color, title, text):
-    draw.rounded_rectangle([x, y, x+w, y+h], radius=radius, fill=(20, 25, 40), outline=border_color, width=2)
+def draw_rounded_box(draw, x, y, w, h, radius, border_color, index_label, title, text):
+    draw.rounded_rectangle([x, y, x+w, y+h], radius=radius, fill=(20, 25, 40), outline=border_color, width=3)
 
-    draw.text((x + w/2, y + 25), title, fill=border_color, font=font_mod_title, anchor="mm")
+    draw.text((x + w/2, y + 26), index_label, fill=border_color, font=font_mod_index, anchor="mm")
 
-    draw.text((x + w/2, y + 55), text, fill=(200, 200, 200), font=font_mod_text, anchor="mm")
+    draw.text((x + w/2, y + 57), title, fill="white", font=font_mod_title, anchor="mm")
+
+    draw.text((x + w/2, y + 87), text, fill=(180, 185, 195), font=font_mod_text, anchor="mm")
 
 modules = [
-    ("1. FUNDAMENTOS", "Linux & Redes • Scripts & Git • Containers"),
-    ("2. CLOUD", "AWS • Terraform"),
-    ("3. PIPELINE", "GitHub Actions"),
-    ("4. ORQUESTRAÇÃO", "Kubernetes & Helm • ArgoCD"),
-    ("5. OBSERVABILIDADE", "Grafana • Prometheus • Loki • Jaeger"),
-    ("6. PLATAFORMA", "Backstage")
+    ("Módulo 1", "Fundamentos", "Linux, Redes, Git, Containers"),
+    ("Módulo 2", "Cloud", "AWS, Terraform, FinOps"),
+    ("Módulo 3", "Pipeline", "GitHub Actions"),
+    ("Módulo 4", "Orquestração", "Kubernetes, Helm, ArgoCD"),
+    ("Módulo 5", "Observabilidade", "Grafana, Prometheus, Loki, Jaeger"),
+    ("Módulo 6", "Plataforma", "Backstage")
 ]
 
-y_pos = 200
-for i, (title, content) in enumerate(modules):
-    draw_rounded_box(draw, 150, y_pos, 500, 80, 15, colors[i], title, content)
+y_pos = 160
+for i, (index_label, title, content) in enumerate(modules):
+    draw_rounded_box(draw, 150, y_pos, 500, 114, 15, colors[i], index_label, title, content)
 
     if i < len(modules) - 1:
-        draw.line([400, y_pos+80, 400, y_pos+110], fill=colors[i], width=3)
-    y_pos += 110
+        draw.line([400, y_pos+114, 400, y_pos+134], fill=colors[i], width=3)
+    y_pos += 134
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 img.save(os.path.join(OUTPUT_DIR, "cloud-eng-roadmap.png"))

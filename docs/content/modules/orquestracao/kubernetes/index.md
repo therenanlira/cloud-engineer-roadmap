@@ -3,15 +3,11 @@ layout: default
 title: Orquestração (Kubernetes)
 ---
 
-# Cloud Engineer Roadmap (DevOps/SRE/Platform)
-
-Um guia de estudos para iniciantes de Cloud Engineer (DevOps/SRE/Platform) **gratuitos** e em **português**, com **laboratórios** e **desafios** para você evoluir a cada etapa.
-
-## 4. Orquestração
+# 4. Orquestração
 
 Orquestração de contêiner é o termo utilizado para o gerenciamento automatizado do ciclo de vida, escalabilidade e resiliência de dezenas ou milhares de contêineres.
 
-### 4.1. Kubernetes & Helm
+## Kubernetes & Helm
 
 Kubernetes é a plataforma padrão de mercado para orquestrar microsserviços em contêineres.
 
