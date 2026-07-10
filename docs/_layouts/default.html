@@ -48,9 +48,17 @@
     <div class="page-shell">
       {% include sidebar.html %}
       <div class="container main-content" style="flex: 1;">
-        {% unless page.url == "/" %}
+        {% if page.url == "/" %}
+        {% comment %} A home é a raiz e não tem "caminho" para mostrar, mas reserva
+           a mesma altura do breadcrumb para o título não deslocar entre páginas. {% endcomment %}
+        <nav class="breadcrumb" aria-label="breadcrumb" aria-hidden="true" style="visibility: hidden;">
+          <a href="{{ '/' | relative_url }}">Início</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Início</span>
+        </nav>
+        {% else %}
         {% include breadcrumb.html %}
-        {% endunless %}
+        {% endif %}
         {{ content }}
       </div>
     </div>
