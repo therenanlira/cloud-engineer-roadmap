@@ -21,8 +21,6 @@ git commit -m "feat: adiciona pipeline de CI do terraform"
 git push origin main
 ```
 
-Como o GitHub Actions roda na nuvem, você não executará um script localmente. Siga os passos abaixo:
-
 ### 2. Acompanhe a execução
 
 Acesse o seu repositório no site do GitHub e clique na aba "**Actions**" no menu superior. Você verá o seu workflow (Terraform CI) listado e rodando automaticamente.

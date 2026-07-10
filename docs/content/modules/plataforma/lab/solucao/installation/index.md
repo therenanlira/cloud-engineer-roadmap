@@ -27,6 +27,15 @@ kubectl apply -f namespace.yaml -n backstage
 
 Crie o arquivo `postgres.yaml`, que define a secret com as credenciais, o armazenamento persistente e o deployment do PostgreSQL.
 
+> Os valores de `POSTGRES_USER` e `POSTGRES_PASSWORD` do `Secret` precisam estar em base64 (é assim que o campo `data` do Kubernetes funciona). Escolha o seu usuário e senha e gere as versões codificadas:
+>
+> ```bash
+> echo -n "seu_usuario" | base64
+> echo -n "sua_senha" | base64
+> ```
+>
+> Substitua os valores de `POSTGRES_USER` e `POSTGRES_PASSWORD` abaixo pelo resultado dos comandos.
+
 ```yaml
 {% include_relative postgres.yaml %}
 ```
@@ -75,7 +84,13 @@ Crie um PAT (Personal Access Token) no GitHub para o Backstage ter acesso aos se
 3. **Scopes (permissões):** marque `repo` (para ler e escrever repositórios) e `workflow` (para configurar as ações de CI automaticamente).
 4. Copie o valor gerado (ex: `ghp_xxxxxxxxxxxxxxxxxxxxxxx`). Este é o seu `GITHUB_TOKEN`.
 
-Crie o arquivo `backstage-secrets.yaml` e substitua o valor de `GITHUB_TOKEN` pelo token gerado.
+Crie o arquivo `backstage-secrets.yaml`. O valor de `GITHUB_TOKEN` também precisa estar em base64. Gere a versão codificada do seu token:
+
+```bash
+echo -n "ghp_xxxxxxxxxxxxxxxxxxxxxxx" | base64
+```
+
+Substitua o valor de `GITHUB_TOKEN` abaixo pelo resultado do comando.
 
 ```yaml
 {% include_relative backstage-secrets.yaml %}

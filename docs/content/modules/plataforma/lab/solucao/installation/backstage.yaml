@@ -39,6 +39,11 @@ spec:
                 secretKeyRef:
                   name: postgres-secrets
                   key: POSTGRES_PASSWORD
+            - name: GITHUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: GITHUB_TOKEN
           resources:
             requests:
               memory: "256Mi"

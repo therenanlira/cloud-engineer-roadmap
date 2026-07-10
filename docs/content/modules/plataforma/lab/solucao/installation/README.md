@@ -12,6 +12,13 @@ kubectl apply -f namespace.yaml -n backstage
 
 Instalar as secrets, storage e o deployment do PostgreSQL.
 
+Antes de aplicar, edite `postgres.yaml` e substitua `POSTGRES_USER` e `POSTGRES_PASSWORD` pelas versões em base64 do seu usuário e senha (o campo `data` do Kubernetes exige valores em base64):
+
+```bash
+echo -n "seu_usuario" | base64
+echo -n "sua_senha" | base64
+```
+
 ```bash
 kubectl apply -f postgres.yaml -n backstage
 ```
@@ -41,7 +48,7 @@ Use `CTRL + D` ou digite `exit` para sair do PostgreSQL e do container.
 kubectl apply -f postgres-service.yaml
 ```
 
-## 2. Instalar o Backstage
+## 3. Instalar o Backstage
 
 ### 1. Criar o GITHUB_TOKEN
 
@@ -54,21 +61,25 @@ Acesse sua conta do Github e siga os passos:
 3. **Scopes (Permissões):** Marque as permissões de repo (para ler e escrever repositórios) e workflow (para configurar as ações de CI automaticamente).
 4. Copie o valor gerado (ex: ghp_xxxxxxxxxxxxxxxxxxxxxxx). Este é o seu **GITHUB_TOKEN**.
 
-Edite o arquivo `backstage.yaml` e adicione o valor de `GITHUB_TOKEN`.
+Edite o arquivo `backstage-secrets.yaml` e substitua `GITHUB_TOKEN` pela versão em base64 do token gerado:
+
+```bash
+echo -n "ghp_xxxxxxxxxxxxxxxxxxxxxxx" | base64
+```
 
 ```bash
 kubectl apply -f backstage-secrets.yaml
 ```
 
-### 6. Instalar o Backstage
+### 2. Instalar o Backstage
 
 ```bash
 kubectl apply -f backstage.yaml
 ```
 
-### 7. Acessar o Painel
+### 3. Acessar o Painel
 
-Como o Helm cria um serviço, basta redirecionar a porta para acessar no seu navegador:
+Como o Kubernetes já expõe um Service para o Backstage, basta redirecionar a porta para acessar no seu navegador:
 
 ```bash
 kubectl port-forward svc/backstage 7000:80 -n backstage

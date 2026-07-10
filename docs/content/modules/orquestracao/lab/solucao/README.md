@@ -36,7 +36,7 @@ Execute os comandos da documentação oficial para criar o namespace e instalar 
 
 ```bash
 kubectl create namespace argocd
-kubectl apply -n argocd -f [https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml](https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml)
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
 ### 3. Acesse a interface do ArgoCD
