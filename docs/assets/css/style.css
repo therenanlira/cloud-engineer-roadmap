@@ -18,8 +18,8 @@
   --backdrop-bg: rgba(2, 6, 15, 0.6);
   --card-gradient: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
   --mark-all-color: #64748b;
-  --max-width: 850px;
-  --shell-max-width: 1140px;
+  --max-width: clamp(850px, 60vw, 1000px);
+  --shell-max-width: clamp(1140px, 82vw, 1400px);
   --sidebar-width: 260px;
   --sidebar-active-color: #e879f9;
   --module-color-1: #38bdf8;
