@@ -5,7 +5,7 @@ title: Introdução (CNCF)
 
 # CNCF (Cloud Native Computing Foundation)
 
-A CNCF (Cloud Native Computing Foundation) é uma organização sem fins lucrativos com o objetivo de impulsionar e padronizar o desenvolvimento e a adoção de tecnologias open-source (código aberto) voltadas para cloud computing (computação em nuvem).
+A CNCF (Cloud Native Computing Foundation) é uma organização sem fins lucrativos com o objetivo de impulsionar e padronizar o desenvolvimento e a adoção de tecnologias open-source (código aberto) voltadas para cloud native computing (computação nativa em nuvem).
 
 * <i class="fas fa-file-alt"></i> **Site oficial:** [Cloud Native Computing Foundation](https://www.cncf.io/)
 * <i class="fas fa-video"></i> **Vídeo explicativo:** [O que é Cloud Native, o LinuxFoundation e a CNCF](https://youtu.be/z2q0gKL9nQg) (ative a legenda em Português)
