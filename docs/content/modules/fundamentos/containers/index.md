@@ -10,7 +10,7 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 ## Containers
 
 Contêiner é uma forma de isolar um ambiente para executar códigos, aplicações e assim por diante.
-Docker é a ferramenta de criação e execução de contêineres.
+Docker é a ferramenta mais popular para criação e execução de contêineres.
 
 **Trilha de Estudo:**
 

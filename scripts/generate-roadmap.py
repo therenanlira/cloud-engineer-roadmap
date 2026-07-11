@@ -31,6 +31,9 @@ def load_font(candidates, size):
         return ImageFont.load_default()
 
 
+RESAMPLE = getattr(Image, "Resampling", Image).LANCZOS
+
+
 width, height = 800, 975
 bg_color = (11, 21, 37)
 img = Image.new('RGB', (width, height), bg_color)
@@ -76,6 +79,23 @@ for i, (index_label, title, content) in enumerate(modules):
     if i < len(modules) - 1:
         draw.line([400, y_pos+114, 400, y_pos+134], fill=colors[i], width=3)
     y_pos += 134
+
+# Arredonda os quatro cantos externos da imagem inteira (mesma identidade do
+# cta-banner.png), deixando-os transparentes. A máscara é desenhada em escala
+# maior e reduzida com LANCZOS só para suavizar o corte; o conteúdo interno
+# (título, caixas dos módulos, linhas) permanece exatamente como já era.
+mask_scale = 4
+outer_radius = 40
+big_mask = Image.new("L", (width * mask_scale, height * mask_scale), 0)
+ImageDraw.Draw(big_mask).rounded_rectangle(
+    [0, 0, width * mask_scale, height * mask_scale],
+    radius=outer_radius * mask_scale,
+    fill=255,
+)
+mask = big_mask.resize((width, height), RESAMPLE)
+
+img = img.convert("RGBA")
+img.putalpha(mask)
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 img.save(os.path.join(OUTPUT_DIR, "cloud-eng-roadmap.png"))

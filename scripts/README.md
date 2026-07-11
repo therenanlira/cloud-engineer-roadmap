@@ -29,24 +29,28 @@ Acesse `http://127.0.0.1:4000` (ou a porta escolhida) para ver o site.
 
 **Requisitos:** Ruby + [Bundler](https://bundler.io/) instalados.
 
-## `generate-roadmap.py` / `generate-roadmap.sh`
+## `generate-roadmap.py` / `generate-cta-banner.py` / `generate-roadmap.sh`
 
-Gera a imagem `docs/assets/img/cloud-eng-roadmap.png` (o diagrama do roadmap
-usado no `README.md`) a partir da lista de módulos definida no próprio
-`generate-roadmap.py`.
+Geram as imagens do `README.md`, ambas com a mesma paleta de cores do site
+(`docs/assets/css/style.css`):
+
+* `generate-roadmap.py` gera `docs/assets/img/cloud-eng-roadmap.png`, o
+  diagrama com a lista de módulos.
+* `generate-cta-banner.py` gera `docs/assets/img/cta-banner.png`, o banner
+  de chamada para o site, linkado logo no topo do `README.md`.
 
 ```bash
 ./scripts/generate-roadmap.sh
 ```
 
 O script `.sh` cria uma virtualenv Python temporária em `scripts/venv`, instala o [Pillow](https://python-pillow.org/) se
-necessário e executa o `generate-roadmap.py`. O `.py` procura uma fonte
+necessário e executa os dois `.py` acima. Cada um procura uma fonte
 Arial/Liberation/DejaVu típica de macOS, Linux ou Windows e cai para a fonte
 padrão do Pillow se nenhuma for encontrada; não precisa ajustar nada por SO.
 
 Rode este script sempre que a lista de módulos do roadmap mudar (novo módulo,
-título ou reordenação) para manter a imagem em `README.md` e na home do site
-sincronizada com o conteúdo real.
+título ou reordenação) para manter as imagens do `README.md` e da home do site
+sincronizadas com o conteúdo real.
 
 **Requisitos:** Python 3.
 

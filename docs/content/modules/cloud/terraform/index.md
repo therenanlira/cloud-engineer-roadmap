@@ -10,7 +10,7 @@ IaC (Infrastructure as Code; Infraestrutura como Código) é o conceito de criar
 
 ## Terraform (IaC)
 
-Terraform é uma ferramenta de IaC open-source para provisionamento de infraestrutura.
+Terraform é a ferramenta de IaC mais usada do mercado para provisionamento de infraestrutura.
 
 **Trilha de Estudo:**
 
