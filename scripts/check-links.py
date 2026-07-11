@@ -1,6 +1,8 @@
 """Checa links internos (href/src) e âncoras (#) de um site já buildado.
 
-Uso: python3 scripts/check-links.py <diretorio-do-site>
+Uso: python3 scripts/check-links.py <diretorio-do-site> [baseurl]
+O baseurl (ex: /cloud-engineer-roadmap) deve ser informado quando o site foi
+buildado com esse prefixo, para os links absolutos resolverem corretamente.
 Sai com código 1 se encontrar qualquer link ou âncora quebrada.
 """
 
@@ -12,9 +14,13 @@ import urllib.parse
 LINK_RE = re.compile(r'(?:href|src)="([^"]+)"')
 ID_RE = re.compile(r'id="([^"]+)"')
 
+BASEURL = ""
+
 
 def resolve(site, page_dir, url):
     path = urllib.parse.unquote(url)
+    if BASEURL and (path == BASEURL or path.startswith(BASEURL + "/")):
+        path = path[len(BASEURL):] or "/"
     if path.startswith("/"):
         fs = os.path.join(site, path.lstrip("/"))
     else:
@@ -77,7 +83,9 @@ def main(site):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    if len(sys.argv) not in (2, 3):
         print(__doc__)
         sys.exit(2)
+    if len(sys.argv) == 3:
+        BASEURL = sys.argv[2].rstrip("/")
     sys.exit(main(sys.argv[1]))

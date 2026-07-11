@@ -1,4 +1,4 @@
-name: CI
+name: CI e Deploy
 
 on:
   push:
@@ -7,6 +7,14 @@ on:
   pull_request:
     branches:
       - main
+
+permissions:
+  contents: read
+
+# Evita deploys concorrentes; não cancela um deploy já em andamento
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -24,8 +32,35 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      - name: Configurar GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build do Jekyll
-        run: bundle exec jekyll build --source docs --destination _site
+        run: bundle exec jekyll build --source docs --destination _site --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
 
       - name: Checar links internos e âncoras
-        run: python3 scripts/check-links.py _site
+        run: python3 scripts/check-links.py _site "${{ steps.pages.outputs.base_path }}"
+
+      - name: Upload do artefato do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy no GitHub Pages
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

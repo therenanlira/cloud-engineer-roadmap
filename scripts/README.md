@@ -53,11 +53,15 @@ sincronizada com o conteúdo real.
 ## `check-links.py`
 
 Checa todos os links internos e âncoras de um site já buildado. É o mesmo
-script que o CI (`.github/workflows/ci.yml`) executa a cada push.
+script que o CI (`.github/workflows/ci.yml`) executa antes de fazer o deploy
+do site no GitHub Pages.
 
 ```bash
 bundle exec jekyll build --source docs --destination _site
 python3 scripts/check-links.py _site
 ```
+
+Se o site foi buildado com `--baseurl`, informe o mesmo prefixo como segundo
+argumento (ex: `python3 scripts/check-links.py _site /cloud-engineer-roadmap`).
 
 **Requisitos:** Python 3 (sem dependências externas).
