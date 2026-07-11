@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/therenanlira/cloud-engineer-roadmap?style=social)](https://github.com/therenanlira/cloud-engineer-roadmap/stargazers)
 
-Um guia de estudos **gratuito** e em **português** para quem está começando em Cloud Engineering: a base das disciplinas DevOps, SRE (Site Reliability Engineering) e Platform Engineering. Com **laboratórios** e **exercícios** para você evoluir a cada etapa.
+Um guia de estudos **gratuito** e em **português** para quem está começando em Cloud Engineering: a base técnica para as disciplinas DevOps, SRE (Site Reliability Engineering) e Platform Engineering. Com **laboratórios** e **exercícios** para você evoluir a cada etapa.
 
 O site possui barra lateral por módulo e acompanhamento de progresso salvo no seu navegador.
 
