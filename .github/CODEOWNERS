@@ -1,0 +1,4 @@
+# Exige revisão do mantenedor para qualquer mudança nos workflows de CI/CD,
+# já que este repositório aceita PRs externos e um workflow malicioso
+# poderia vazar segredos ou alterar o comportamento do deploy.
+/.github/workflows/ @therenanlira
