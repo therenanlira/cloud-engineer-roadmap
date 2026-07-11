@@ -5,9 +5,9 @@
 
 Um guia de estudos **gratuito** e em **português** para quem está começando em Cloud Engineering: a base das disciplinas DevOps, SRE (Site Reliability Engineering) e Platform Engineering. Com **laboratórios** e **exercícios** para você evoluir a cada etapa.
 
-O site é navegável, com barra lateral por módulo e acompanhamento de progresso salvo no seu navegador.
+O site possui barra lateral por módulo e acompanhamento de progresso salvo no seu navegador.
 
-**[therenanlira.github.io/cloud-engineer-roadmap](https://therenanlira.github.io/cloud-engineer-roadmap/)**
+[![Acesse o site](docs/assets/img/cta-banner.png)](https://therenanlira.github.io/cloud-engineer-roadmap/)
 
 ## O que você vai encontrar
 
