@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: backstage
-          image: roadiehq/community-backstage-image
+          # Troque pela imagem que você buildou e publicou no Docker Hub (Parte 1)
+          image: docker.io/<seu-usuario-dockerhub>/meu-backstage:latest
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -25,6 +26,14 @@ spec:
               value: "http://localhost:7000"
             - name: APP_CONFIG_backend_baseUrl
               value: "http://localhost:7000"
+            - name: APP_CONFIG_backend_cors_origin
+              value: "http://localhost:7000"
+            - name: APP_CONFIG_backend_listen
+              value: ":7000"
+            # O login "Guest" é bloqueado fora de ambiente de desenvolvimento por padrão;
+            # essa flag libera para fins de estudo (NODE_ENV=production na imagem)
+            - name: APP_CONFIG_auth_providers_guest_dangerouslyAllowOutsideDevelopment
+              value: "true"
             - name: POSTGRES_HOST
               value: "postgres"
             - name: POSTGRES_PORT

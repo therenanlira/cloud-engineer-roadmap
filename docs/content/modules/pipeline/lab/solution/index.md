@@ -13,7 +13,7 @@ O objetivo deste desafio é unir **Terraform e GitHub Actions** em um fluxo simp
 
 ### 1. Código Terraform
 
-Crie um repositório no seu GitHub (ex: `minha-pipeline`), e crie um diretório chamado `terraform`.
+Crie um repositório no seu GitHub (ex: `minha-pipeline`), e crie o diretório `terraform`.
 
 ```bash
 mkdir terraform

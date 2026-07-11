@@ -1,15 +1,4 @@
 apiVersion: v1
-kind: Secret
-metadata:
-  name: postgres-secrets
-  namespace: backstage
-# Valores em base64. Gere os seus com: echo -n "seu_valor" | base64
-type: Opaque
-data:
-  POSTGRES_USER: "c2V1LXVzdWFyaW8tYXF1aQ=="
-  POSTGRES_PASSWORD: "c3VhLXNlbmhhLWFxdWk="
----
-apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: postgres-storage
