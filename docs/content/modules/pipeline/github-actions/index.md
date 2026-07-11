@@ -14,8 +14,8 @@ GitHub Actions é a ferramenta de CI/CD do GitHub.
 **Trilha de Estudo:**
 
 * <i class="fas fa-video"></i> **Vídeo introdutório:** [[dogcode] Github Actions do Zero e na Prática](https://youtu.be/MIVx1qniNKY)
-* <i class="fas fa-video"></i> **Focado em deploy de Terraform:** [[Fabricio Veronez] Terraform + GitHub Actions: Pipeline do Zero a Produção na Prática](https://youtu.be/SvkW81-Sa9g)
-* <i class="fas fa-video"></i> **Focado em deploy de aplicação:** [[Fernanda Kipper • Dev] Tutorial Pipeline de CI/CD com GitHub Actions • Automatize seus deploys](https://youtu.be/df_WMXk7JxE)
+* <i class="fas fa-video"></i> **Vídeo focado em Terraform:** [[Fabricio Veronez] Terraform + GitHub Actions: Pipeline do Zero a Produção na Prática](https://youtu.be/SvkW81-Sa9g)
+* <i class="fas fa-video"></i> **Vídeo focado em Aplicação:** [[Fernanda Kipper • Dev] Tutorial Pipeline de CI/CD com GitHub Actions • Automatize seus deploys](https://youtu.be/df_WMXk7JxE)
 
 Após assistir aos vídeos, siga para o desafio prático deste módulo.
 

@@ -11,7 +11,7 @@ Observabilidade é a capacidade de entender o estado do sistema (aplicações e 
 
 Grafana é a ferramenta open-source de visualização de gráficos mais popular.
 
-* <i class="fas fa-video"></i> **Introdução ao Grafana:** [[Estudando DevOps] Introdução ao Grafana • Ferramenta de Observabilidade • Monitoramento](https://youtu.be/RDIax5pDmCc)
+* <i class="fas fa-video"></i> **Vídeo:** [[Estudando DevOps] Introdução ao Grafana • Ferramenta de Observabilidade • Monitoramento](https://youtu.be/RDIax5pDmCc)
 
 Nos próximos tópicos você vai conectar métricas, logs e traces ao Grafana para centralizar tudo em um único painel.
 

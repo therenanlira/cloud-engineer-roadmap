@@ -14,7 +14,7 @@ Loki é uma ferramenta open-source de gerenciamento de logs da mesma empresa do 
 
 **Trilha de Estudo:**
 
-* <i class="fas fa-video"></i> **Vídeo introdução com práticas de Grafana Loki:** [[Fabricio Veronez] Logs na Prática: Implementação com Grafana Loki](https://youtu.be/aDKixwnEz-A)
+* <i class="fas fa-video"></i> **Vídeo:** [[Fabricio Veronez] Logs na Prática: Implementação com Grafana Loki](https://youtu.be/aDKixwnEz-A)
 
 Com métricas e logs cobertos, falta apenas o tracing para fechar os três pilares da observabilidade.
 

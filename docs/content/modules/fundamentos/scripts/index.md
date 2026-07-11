@@ -25,8 +25,8 @@ Python é uma das linguagens de programação mais usadas em infraestrutura para
 
 **Trilha de Estudo:**
 
-* <i class="fas fa-graduation-cap"></i> **Curso introdutório:** [[Diego Mariano] Introdução à linguagem Python](https://www.udemy.com/course/intro_python/)
-* <i class="fas fa-graduation-cap"></i> **Maior aprofundamento:** [[LinuxTips] Python Essentials](https://linuxtips.io/treinamento/python-essentials/)
+* <i class="fas fa-graduation-cap"></i> **Treinamento introdutório:** [[Diego Mariano] Introdução à linguagem Python](https://www.udemy.com/course/intro_python/)
+* <i class="fas fa-graduation-cap"></i> **Treinamento aprofundado:** [[LinuxTips] Python Essentials](https://linuxtips.io/treinamento/python-essentials/)
 
 Com Bash e Python na bagagem, você já consegue automatizar boa parte das tarefas repetitivas de infraestrutura.
 
