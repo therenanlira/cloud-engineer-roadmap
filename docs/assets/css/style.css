@@ -340,6 +340,18 @@ blockquote p {
   font-style: normal;
 }
 
+/* Notas com vários blocos (parágrafos, listas) mantêm um respiro entre eles.
+   O :not(:first-child) garante especificidade maior que o margin: 0 acima. */
+blockquote > :not(:first-child) {
+  margin-top: 10px;
+}
+
+blockquote ul,
+blockquote ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
 .coming-soon-badge {
   display: inline-flex;
   align-items: center;
