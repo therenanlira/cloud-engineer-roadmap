@@ -21,6 +21,6 @@ Depois de entender o conceito, coloque a mão na massa e instale sua própria in
 {% include next-steps.html
    prev_url="/content/modules/plataforma/"
    prev_title="Plataforma"
-   next_url="/content/modules/plataforma/lab/"
+   next_url="/content/modules/plataforma/exercise/"
    next_title="Exercícios (Plataforma)"
 %}

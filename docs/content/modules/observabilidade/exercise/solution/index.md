@@ -173,7 +173,7 @@ k3d cluster delete
 Neste exercício, você instalou os três pilares da Observabilidade Cloud Native. Agora você sabe como usar o Helm para provisionar infraestrutura complexa rapidamente e aprendeu a correlacionar os gráficos de consumo (Prometheus/Grafana) com os logs da aplicação (Loki) e o fluxo de requisições (Jaeger).
 
 {% include next-steps.html
-   prev_url="/content/modules/observabilidade/lab/"
+   prev_url="/content/modules/observabilidade/exercise/"
    prev_title="Exercícios (Observabilidade)"
    next_url="/content/modules/plataforma/"
    next_title="Plataforma"

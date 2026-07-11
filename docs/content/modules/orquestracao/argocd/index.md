@@ -24,6 +24,6 @@ Com Kubernetes e ArgoCD, você já tem tudo que precisa para o exercício práti
 {% include next-steps.html
    prev_url="/content/modules/orquestracao/kubernetes/"
    prev_title="Kubernetes & Helm"
-   next_url="/content/modules/orquestracao/lab/"
+   next_url="/content/modules/orquestracao/exercise/"
    next_title="Exercícios (Orquestração)"
 %}

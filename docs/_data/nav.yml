@@ -22,7 +22,7 @@
     - title: Containers
       url: /content/modules/fundamentos/containers/
     - title: Exercícios
-      url: /content/modules/fundamentos/lab/
+      url: /content/modules/fundamentos/exercise/
 
 - title: "2. Cloud"
   url: /content/modules/cloud/
@@ -34,7 +34,7 @@
     - title: FinOps
       url: /content/modules/cloud/finops/
     - title: Exercícios
-      url: /content/modules/cloud/lab/
+      url: /content/modules/cloud/exercise/
 
 - title: "3. Pipeline"
   url: /content/modules/pipeline/
@@ -42,7 +42,7 @@
     - title: GitHub Actions
       url: /content/modules/pipeline/github-actions/
     - title: Exercícios
-      url: /content/modules/pipeline/lab/
+      url: /content/modules/pipeline/exercise/
 
 - title: "4. Orquestração"
   url: /content/modules/orquestracao/
@@ -52,7 +52,7 @@
     - title: ArgoCD
       url: /content/modules/orquestracao/argocd/
     - title: Exercícios
-      url: /content/modules/orquestracao/lab/
+      url: /content/modules/orquestracao/exercise/
 
 - title: "5. Observabilidade"
   url: /content/modules/observabilidade/
@@ -66,7 +66,7 @@
     - title: Jaeger
       url: /content/modules/observabilidade/jaeger/
     - title: Exercícios
-      url: /content/modules/observabilidade/lab/
+      url: /content/modules/observabilidade/exercise/
 
 - title: "6. Plataforma"
   url: /content/modules/plataforma/
@@ -74,4 +74,4 @@
     - title: Backstage
       url: /content/modules/plataforma/backstage/
     - title: Exercícios
-      url: /content/modules/plataforma/lab/
+      url: /content/modules/plataforma/exercise/

@@ -68,7 +68,7 @@ Neste exercício, você praticou a base da engenharia de nuvem:
 1. Shell Script: Orquestração de todo o fluxo de trabalho.
 
 {% include next-steps.html
-   prev_url="/content/modules/fundamentos/lab/"
+   prev_url="/content/modules/fundamentos/exercise/"
    prev_title="Exercícios (Fundamentos)"
    next_url="/content/modules/cloud/"
    next_title="Cloud"

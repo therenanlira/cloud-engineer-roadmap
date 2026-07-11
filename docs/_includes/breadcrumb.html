@@ -15,7 +15,7 @@
   {% endunless %}
 {% endfor %}
 
-{% comment %} fallback for pages not listed in nav.yml, e.g. lab/solution/* {% endcomment %}
+{% comment %} fallback for pages not listed in nav.yml, e.g. exercise/solution/* {% endcomment %}
 {% unless crumb_module %}
   {% for module in site.data.nav %}
     {% if module.url and page.url contains module.url %}

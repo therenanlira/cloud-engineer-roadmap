@@ -22,6 +22,6 @@ Após assistir aos vídeos, siga para o exercício prático deste módulo.
 {% include next-steps.html
    prev_url="/content/modules/pipeline/"
    prev_title="Pipeline"
-   next_url="/content/modules/pipeline/lab/"
+   next_url="/content/modules/pipeline/exercise/"
    next_title="Exercícios (Pipeline)"
 %}

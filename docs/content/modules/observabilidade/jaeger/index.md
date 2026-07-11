@@ -22,6 +22,6 @@ Agora que você já conhece métricas, logs e tracing, é hora de juntar tudo no
 {% include next-steps.html
    prev_url="/content/modules/observabilidade/loki/"
    prev_title="Loki"
-   next_url="/content/modules/observabilidade/lab/"
+   next_url="/content/modules/observabilidade/exercise/"
    next_title="Exercícios (Observabilidade)"
 %}

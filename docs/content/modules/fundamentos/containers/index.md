@@ -30,6 +30,6 @@ Pratique cada um desses laboratórios antes de seguir para o próximo tópico.
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/git/"
    prev_title="Git"
-   next_url="/content/modules/fundamentos/lab/"
+   next_url="/content/modules/fundamentos/exercise/"
    next_title="Exercícios (Fundamentos)"
 %}

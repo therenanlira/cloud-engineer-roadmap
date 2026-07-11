@@ -480,6 +480,6 @@ k3d cluster delete
 Neste exercício, você foi além de só instalar uma imagem pronta: construiu a sua própria imagem do Backstage a partir do zero, publicou num registry, orquestrou múltiplos componentes no Kubernetes (banco de dados, secrets, storage e a aplicação), teve o primeiro contato com o catálogo de software registrando um componente e, por ter o controle do código-fonte, conseguiu configurar um provider de autenticação real via GitHub.
 
 {% include next-steps.html
-   prev_url="/content/modules/plataforma/lab/"
+   prev_url="/content/modules/plataforma/exercise/"
    prev_title="Exercícios (Plataforma)"
 %}

@@ -22,6 +22,6 @@ Transforme esses hábitos em rotina desde já: eles fazem toda a diferença quan
 {% include next-steps.html
    prev_url="/content/modules/cloud/terraform/"
    prev_title="Terraform"
-   next_url="/content/modules/cloud/lab/"
+   next_url="/content/modules/cloud/exercise/"
    next_title="Exercícios (Cloud)"
 %}

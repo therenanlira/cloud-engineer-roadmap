@@ -77,7 +77,7 @@ Como este pipeline executa apenas etapas de validação e verificação (`terraf
 Neste exercício, você praticou a base da cultura DevOps aplicada à infraestrutura (Shift-Left): automatizou a esteira de validação usando o GitHub Actions para garantir que nenhum código fora do padrão da equipe ou com erros estruturais do Terraform chegue ao ambiente de produção.
 
 {% include next-steps.html
-   prev_url="/content/modules/pipeline/lab/"
+   prev_url="/content/modules/pipeline/exercise/"
    prev_title="Exercícios (Pipeline)"
    next_url="/content/modules/orquestracao/"
    next_title="Orquestração"
