@@ -1,0 +1,30 @@
+---
+layout: default
+title: Fundamentos (Git)
+---
+
+# 1. Fundamentos
+
+A base técnica indispensável: sistemas operacionais, redes, automação e contêineres.
+
+## Git
+
+Ferramenta para controle de versionamento de código.
+
+### Git & GitHub
+
+Git é um sistema de versionamento de código, muito útil para criar versões do seu código e "voltar no tempo" quando alguma alteração não funcionar como esperada.
+GitHub é a plataforma de hospedagem de código mais popular, baseada em Git.
+
+**Trilha de Estudo:**
+
+* <i class="fas fa-graduation-cap"></i> **Treinamento:** [[LinuxTips] GitHub Essentials](https://linuxtips.io/treinamento/github-essentials/)
+
+Versionar código é um hábito que você vai usar em todos os próximos módulos, então vale a pena praticar bastante.
+
+{% include next-steps.html
+   prev_url="/content/modules/fundamentos/scripts/"
+   prev_title="Scripts"
+   next_url="/content/modules/fundamentos/containers/"
+   next_title="Containers"
+%}

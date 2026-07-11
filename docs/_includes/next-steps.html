@@ -1,0 +1,23 @@
+<div class="next-steps">
+
+  {% if include.prev_url %}
+  <div class="next-steps-col next-steps-prev">
+    <span class="next-steps-label">Passo anterior: {{ include.prev_title }}</span>
+    <a href="{{ include.prev_url | relative_url }}" class="next-steps-btn next-steps-btn-outline">
+      Etapa anterior
+    </a>
+  </div>
+  {% else %}
+  <div class="next-steps-col"></div>
+  {% endif %}
+
+  {% if include.next_url %}
+  <div class="next-steps-col next-steps-next">
+    <span class="next-steps-label">Próximo passo: {{ include.next_title }}</span>
+    <a href="{{ include.next_url | relative_url }}" class="next-steps-btn next-steps-btn-solid">
+      Próxima etapa
+    </a>
+  </div>
+  {% endif %}
+
+</div>

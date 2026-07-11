@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    {% comment %} O nome site.css evita colisão com o assets/css/style.css que o tema
+       Primer (injetado pelo build clássico do GitHub Pages) gera por cima do nosso. {% endcomment %}
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      (function () {
+        // Escolha explícita do usuário tem prioridade; sem ela, segue o tema do sistema.
+        var saved = localStorage.getItem("cloud-engineer-roadmap:theme");
+        var light = saved
+          ? saved === "light"
+          : window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <div class="site-header">
+      <div class="site-header-inner">
+
+        <div class="site-header-left">
+          <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a href="{{ '/' | relative_url }}" class="site-logo"><i class="fas fa-home fa-fw"></i><span>Início</span></a>
+        </div>
+
+        <div class="site-header-right">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+            <i class="fas fa-sun theme-icon-light"></i>
+            <i class="fas fa-moon theme-icon-dark"></i>
+          </button>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap" target="_blank" rel="noopener noreferrer" class="site-github-link"><i class="fab fa-github fa-fw"></i><span class="site-link-text">GitHub</span></a>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap/stargazers" target="_blank" rel="noopener noreferrer" class="site-stars-link">
+            <img src="https://img.shields.io/github/stars/therenanlira/cloud-engineer-roadmap?style=social" alt="GitHub stars">
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="page-shell">
+      {% include sidebar.html %}
+      <div class="container main-content">
+        {% if page.url == "/" %}
+        {% comment %} A home é a raiz e não tem "caminho" para mostrar, mas reserva
+           a mesma altura do breadcrumb para o título não deslocar entre páginas. {% endcomment %}
+        <nav class="breadcrumb" aria-label="breadcrumb" aria-hidden="true" style="visibility: hidden;">
+          <a href="{{ '/' | relative_url }}">Início</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Início</span>
+        </nav>
+        {% else %}
+        {% include breadcrumb.html %}
+        {% endif %}
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+    <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  </body>
+</html>

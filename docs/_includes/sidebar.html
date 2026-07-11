@@ -1,0 +1,48 @@
+<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+<nav class="sidebar" id="sidebar" aria-label="Navegação do roadmap">
+  <div class="sidebar-overall">
+    <div class="sidebar-overall-label">
+      <span>Seu progresso</span>
+      <span class="sidebar-count-group">
+        <span data-overall-count>0/0</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="global" aria-label="Marcar ou desmarcar todos os tópicos" title="Marcar/desmarcar tudo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" data-overall-fill></div>
+    </div>
+    <p class="sidebar-hint">Marque os tópicos concluídos. Fica salvo neste navegador.</p>
+  </div>
+
+  {% for module in site.data.nav %}
+  <div class="sidebar-module">
+    <div class="sidebar-module-header{% if module.url and page.url == module.url %} active{% endif %}">
+      {% if module.url %}
+      <a href="{{ module.url | relative_url }}" class="sidebar-module-title">{{ module.title }}</a>
+      {% else %}
+      <span class="sidebar-module-title">{{ module.title }}</span>
+      {% endif %}
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/{{ module.items.size }}</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de {{ module.title }}" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      {% for item in module.items %}
+      <li class="sidebar-item{% if page.url == item.url %} active{% endif %}">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="{{ item.url }}" aria-label="Marcar '{{ item.title }}' como concluído">
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</nav>

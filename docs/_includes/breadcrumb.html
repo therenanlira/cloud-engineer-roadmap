@@ -1,0 +1,44 @@
+{% assign crumb_module = nil %}
+{% assign crumb_item_title = nil %}
+
+{% for module in site.data.nav %}
+  {% if module.url and page.url == module.url %}
+    {% assign crumb_module = module %}
+  {% endif %}
+  {% unless crumb_module %}
+    {% for item in module.items %}
+      {% if page.url == item.url %}
+        {% assign crumb_module = module %}
+        {% assign crumb_item_title = item.title %}
+      {% endif %}
+    {% endfor %}
+  {% endunless %}
+{% endfor %}
+
+{% comment %} fallback for pages not listed in nav.yml, e.g. exercise/solution/* {% endcomment %}
+{% unless crumb_module %}
+  {% for module in site.data.nav %}
+    {% if module.url and page.url contains module.url %}
+      {% assign crumb_module = module %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
+
+{% if crumb_module %}
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Início</a>
+  <span class="breadcrumb-sep">/</span>
+  {% if page.url == crumb_module.url %}
+  {% comment %} Páginas-hub: mostra Início / Módulo. {% endcomment %}
+  <span class="breadcrumb-current">{{ crumb_module.title }}</span>
+  {% else %}
+  {% if crumb_module.url %}
+  <a href="{{ crumb_module.url | relative_url }}">{{ crumb_module.title }}</a>
+  {% else %}
+  <span>{{ crumb_module.title }}</span>
+  {% endif %}
+  <span class="breadcrumb-sep">/</span>
+  <span class="breadcrumb-current">{{ crumb_item_title | default: page.title }}</span>
+  {% endif %}
+</nav>
+{% endif %}
