@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
       (function () {
+        // Escolha explícita do usuário tem prioridade; sem ela, segue o tema do sistema.
         var saved = localStorage.getItem("cloud-engineer-roadmap:theme");
-        if (saved === "light") document.documentElement.setAttribute("data-theme", "light");
+        var light = saved
+          ? saved === "light"
+          : window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (light) document.documentElement.setAttribute("data-theme", "light");
       })();
     </script>
   </head>

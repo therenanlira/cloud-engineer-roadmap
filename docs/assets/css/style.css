@@ -176,16 +176,17 @@ body {
   border-color: var(--accent-purple);
 }
 
-.theme-toggle .theme-icon-dark {
+/* O ícone reflete o modo atual: lua no tema escuro, sol no tema claro */
+.theme-toggle .theme-icon-light {
   display: none;
 }
 
 [data-theme="light"] .theme-toggle .theme-icon-light {
-  display: none;
+  display: inline-block;
 }
 
 [data-theme="light"] .theme-toggle .theme-icon-dark {
-  display: inline-block;
+  display: none;
 }
 
 .page-shell {

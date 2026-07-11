@@ -202,20 +202,37 @@
     var button = document.getElementById("theme-toggle");
     if (!button) return;
 
+    function applyLight(isLight) {
+      if (isLight) {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.removeAttribute("data-theme");
+      }
+    }
+
     button.addEventListener("click", function () {
       var isLight = document.documentElement.getAttribute("data-theme") === "light";
-      var next = isLight ? "dark" : "light";
-      if (isLight) {
-        document.documentElement.removeAttribute("data-theme");
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
-      }
+      applyLight(!isLight);
       try {
-        localStorage.setItem(THEME_KEY, next);
+        localStorage.setItem(THEME_KEY, isLight ? "dark" : "light");
       } catch (e) {
         /* localStorage indisponível (ex: modo privado) - preferência não será salva */
       }
     });
+
+    // Enquanto o usuário não escolher manualmente, acompanha mudanças do tema do sistema
+    var systemLight = window.matchMedia("(prefers-color-scheme: light)");
+    if (systemLight.addEventListener) {
+      systemLight.addEventListener("change", function (event) {
+        var saved = null;
+        try {
+          saved = localStorage.getItem(THEME_KEY);
+        } catch (e) {
+          /* sem localStorage, trata como sem preferência salva */
+        }
+        if (!saved) applyLight(event.matches);
+      });
+    }
   }
 
   function initCodeCopyButtons() {
