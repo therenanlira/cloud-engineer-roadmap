@@ -2,3 +2,7 @@
 # já que este repositório aceita PRs externos e um workflow malicioso
 # poderia vazar segredos ou alterar o comportamento do deploy.
 /.github/workflows/ @therenanlira
+
+# Este próprio arquivo também é protegido: sem essa linha, uma PR poderia
+# remover a regra acima (ou trocar o owner) sem precisar de aprovação.
+/.github/CODEOWNERS @therenanlira
