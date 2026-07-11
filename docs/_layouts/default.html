@@ -3,13 +3,12 @@
   <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
     <script>
       (function () {
         var saved = localStorage.getItem("cloud-engineer-roadmap:theme");
@@ -47,7 +46,7 @@
 
     <div class="page-shell">
       {% include sidebar.html %}
-      <div class="container main-content" style="flex: 1;">
+      <div class="container main-content">
         {% if page.url == "/" %}
         {% comment %} A home é a raiz e não tem "caminho" para mostrar, mas reserva
            a mesma altura do breadcrumb para o título não deslocar entre páginas. {% endcomment %}

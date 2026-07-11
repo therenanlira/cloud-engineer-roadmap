@@ -13,7 +13,7 @@ Redes é a disciplina que trata de como os computadores se comunicam, base para 
 
 **Trilha de Estudo:**
 
-* **Redes para iniciantes:** Entenda os conceitos dos protocólos de rede e as ferramentas. Guarde bem esse conhecimento, pois serão muito utilizados mais a frente nos laboratórios de Docker em diante.
+* **Redes para iniciantes:** Entenda os conceitos dos protocolos de rede e as ferramentas. Guarde bem esse conhecimento, pois serão muito utilizados mais à frente nos laboratórios de Docker em diante.
 
 ### Protocolos de Rede
 
@@ -39,7 +39,7 @@ Essas ferramentas são essenciais para testar conexões, mapear portas, configur
 * `ufw` / `firewalld` - Interfaces amigáveis para gerenciamento de Firewall no Linux (Ubuntu/Debian e CentOS/RHEL, respectivamente).
 * `iptables` e `nftables` - Ferramenta de baixo nível para filtragem de pacotes e regras de firewall do próprio kernel Linux.
 
-> **Dica:** Use os comandos [`man`]({{ '/content/guides/man-tldr/#1-o-comando-man-manual-oficial' | relative_url }}) ou [`tldr`]({{ '/content/guides/man-tldr/#2-o-comando-tldr-exemplos-práticos-e-rápidos' | relative_url }}) para conhecer as flags e ver exemplos de uso de cada ferramenta.
+> **Dica:** Use os comandos [`man`]({{ '/content/guides/man-tldr/#1-o-comando-man-manual-oficial' | relative_url }}) ou [`tldr`]({{ '/content/guides/man-tldr/#3-o-comando-tldr-exemplos-práticos-e-rápidos' | relative_url }}) para conhecer as flags e ver exemplos de uso de cada ferramenta.
 
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/linux/"

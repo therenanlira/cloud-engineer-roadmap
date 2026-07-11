@@ -5,7 +5,7 @@ title: Pipeline
 
 # 3. Pipeline
 
-Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecido como CI/CD (Continuous Integration / Continuou Deployment).
+Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecidos como CI/CD (Continuous Integration / Continuous Deployment).
 
 ## O que você vai aprender?
 

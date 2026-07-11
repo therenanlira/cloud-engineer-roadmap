@@ -60,16 +60,16 @@
 
 html, body {
   height: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-color) !important;
-  color: var(--text-color) !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
 
@@ -82,9 +82,9 @@ body {
   flex: 1; /* Empurra o footer para o fim */
   width: 100%;
   box-sizing: border-box;
-  max-width: var(--max-width) !important;
-  margin: 0 auto !important;
-  padding: 0 40px !important;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .site-header {
@@ -125,16 +125,24 @@ body {
 
 .site-logo,
 .site-github-link {
-  color: var(--accent-blue) !important;
+  color: var(--accent-blue);
   font-size: 0.85em;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: none !important;
+  border-bottom: none;
   display: flex;
   align-items: center;
   gap: 6px;
   white-space: nowrap;
   flex: 0 0 auto;
+}
+
+/* Mantém a cor e a ausência de sublinhado também no hover
+   (senão o a:hover global pinta os links do header de roxo) */
+.site-logo:hover,
+.site-github-link:hover {
+  color: var(--accent-blue);
+  border-bottom-color: transparent;
 }
 
 .site-github-link .fab {
@@ -192,9 +200,9 @@ body {
 }
 
 .page-shell .container.main-content {
-  margin: 0 !important;
-  padding: 0 !important;
-  max-width: var(--max-width) !important;
+  margin: 0;
+  padding: 0;
+  max-width: var(--max-width);
   min-width: 0;
 }
 
@@ -218,20 +226,20 @@ i.fab {
 
 /* 3. Tipografia e Links */
 h1, h2, h3, h4 {
-  color: var(--accent-blue) !important;
-  font-weight: 700 !important;
-  font-family: var(--font-display) !important;
+  color: var(--accent-blue);
+  font-weight: 700;
+  font-family: var(--font-display);
   letter-spacing: 0.2px;
   overflow-wrap: break-word;
 }
 
 p, li {
-  color: var(--body-text-color) !important;
+  color: var(--body-text-color);
   letter-spacing: 0.2px;
 }
 
 a {
-  color: var(--link-color) !important;
+  color: var(--link-color);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
@@ -239,7 +247,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent-purple) !important;
+  color: var(--accent-purple);
   border-bottom: 1px solid var(--accent-purple);
 }
 
@@ -249,17 +257,20 @@ a:hover {
 }
 
 .icon-fix {
-    width: 1em !important;
-    height: 1em !important;
-    vertical-align: middle !important;
-    margin: 0 10px 0 0 !important;
-    display: inline-block !important;
-    border-radius: 0 !important;
-    max-width: none !important;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    border-radius: 0;
+    max-width: none;
 }
 
-/* Ícones de lista (fab/fas) devem ter a mesma caixa (1em) e espaçamento que .icon-fix */
-li > i {
+/* Ícones de lista (fab/fas) devem ter a mesma caixa (1em) e espaçamento que .icon-fix.
+   A variante `li > p > i` cobre listas com linha em branco entre os itens ("loose lists"),
+   nas quais o Markdown embrulha o conteúdo de cada <li> num <p>. */
+li > i,
+li > p > i {
   display: inline-block;
   width: 1em;
   text-align: center;
@@ -270,7 +281,10 @@ li > i {
    ícones de marca nas páginas hub mantêm a cor do texto. */
 li > i.fa-video,
 li > i.fa-graduation-cap,
-li > i.fa-file-alt {
+li > i.fa-file-alt,
+li > p > i.fa-video,
+li > p > i.fa-graduation-cap,
+li > p > i.fa-file-alt {
   color: var(--link-color);
 }
 
@@ -283,8 +297,8 @@ img {
 }
 
 .site-header-inner img {
-  margin: 0 !important;
-  border-radius: 4px !important;
+  margin: 0;
+  border-radius: 4px;
   height: 20px;
   width: auto;
   max-width: none;
@@ -299,12 +313,6 @@ img {
   margin-top: 30px;
 }
 
-#main_content ul li a {
-  background: rgba(56, 189, 248, 0.05);
-  padding: 4px 8px !important;
-  border-radius: 4px;
-}
-
 /* 4.1 Blocos de código */
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -312,10 +320,10 @@ code {
 }
 
 p code, li code {
-  background: rgba(148, 163, 184, 0.12) !important;
-  color: var(--muted-text) !important;
-  padding: 2px 6px !important;
-  border-radius: 4px !important;
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--muted-text);
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 /* 4.1a Blocos de nota (blockquote) */
@@ -398,16 +406,36 @@ div.highlighter-rouge:hover .code-copy-btn,
 }
 
 .highlight pre {
-  margin: 0 !important;
-  padding: 16px !important;
+  margin: 0;
+  padding: 16px;
 }
 
 .highlight code {
-  background: none !important;
-  color: var(--code-text) !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
+  background: none;
+  color: var(--code-text);
+  padding: 0;
+  border-radius: 0;
 }
+
+/* 4.1b Cores de sintaxe (classes geradas pelo Rouge) */
+.highlight .c, .highlight .c1, .highlight .cm { color: #64748b; font-style: italic; } /* comentários */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kr { color: #c084fc; }     /* palavras-chave */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb { color: #86efac; }     /* strings */
+.highlight .m, .highlight .mi, .highlight .mf { color: #fbbf24; }                     /* números */
+.highlight .na { color: #7dd3fc; }                                                    /* atributos (yaml/html) */
+.highlight .nt { color: #7dd3fc; }                                                    /* tags */
+.highlight .nb, .highlight .nf, .highlight .nx { color: #93c5fd; }                    /* builtins e funções */
+.highlight .nv { color: #f0abfc; }                                                    /* variáveis */
+.highlight .o, .highlight .pi { color: #94a3b8; }                                     /* operadores e pontuação */
+
+[data-theme="light"] .highlight .c, [data-theme="light"] .highlight .c1, [data-theme="light"] .highlight .cm { color: #64748b; }
+[data-theme="light"] .highlight .k, [data-theme="light"] .highlight .kd, [data-theme="light"] .highlight .kn, [data-theme="light"] .highlight .kr { color: #7c3aed; }
+[data-theme="light"] .highlight .s, [data-theme="light"] .highlight .s1, [data-theme="light"] .highlight .s2, [data-theme="light"] .highlight .sb { color: #15803d; }
+[data-theme="light"] .highlight .m, [data-theme="light"] .highlight .mi, [data-theme="light"] .highlight .mf { color: #b45309; }
+[data-theme="light"] .highlight .na, [data-theme="light"] .highlight .nt { color: #0369a1; }
+[data-theme="light"] .highlight .nb, [data-theme="light"] .highlight .nf, [data-theme="light"] .highlight .nx { color: #1d4ed8; }
+[data-theme="light"] .highlight .nv { color: #a21caf; }
+[data-theme="light"] .highlight .o, [data-theme="light"] .highlight .pi { color: #475569; }
 
 /* 4.2 Barra de progresso de leitura */
 .reading-progress {
@@ -455,7 +483,7 @@ div.highlighter-rouge:hover .code-copy-btn,
 }
 
 .sidebar-toggle:hover {
-  color: var(--accent-purple) !important;
+  color: var(--accent-purple);
   border-color: var(--accent-purple);
 }
 
@@ -488,13 +516,13 @@ div.highlighter-rouge:hover .code-copy-btn,
   justify-content: space-between;
   font-size: 0.78em;
   font-weight: 700;
-  color: var(--muted-text) !important;
+  color: var(--muted-text);
   margin-bottom: 8px;
 }
 
 .sidebar-hint {
   font-size: 0.72em;
-  color: var(--muted-text) !important;
+  color: var(--muted-text);
   margin: 8px 0 0;
   line-height: 1.4;
 }
@@ -547,25 +575,25 @@ div.highlighter-rouge:hover .code-copy-btn,
 }
 
 .sidebar-module-header.active .sidebar-module-title {
-  color: var(--sidebar-active-color) !important;
+  color: var(--sidebar-active-color);
 }
 
 .sidebar-module-title {
   font-family: var(--font-display);
   font-size: 0.82em;
   font-weight: 700;
-  color: var(--text-color) !important;
+  color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 0.4px;
 }
 
 a.sidebar-module-title:hover {
-  color: var(--accent-blue) !important;
+  color: var(--accent-blue);
 }
 
 .sidebar-module-count {
   font-size: 0.72em;
-  color: var(--muted-text) !important;
+  color: var(--muted-text);
   white-space: nowrap;
 }
 
@@ -596,22 +624,22 @@ a.sidebar-module-title:hover {
 }
 
 .sidebar-item a {
-  color: var(--body-text-color) !important;
+  color: var(--body-text-color);
   font-weight: 500;
   font-size: 0.88em;
-  border-bottom: none !important;
+  border-bottom: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .sidebar-item.active a {
-  color: var(--sidebar-active-color) !important;
+  color: var(--sidebar-active-color);
   font-weight: 700;
 }
 
 .sidebar-item a:hover {
-  color: var(--accent-purple) !important;
+  color: var(--accent-purple);
 }
 
 .progress-checkbox {
@@ -629,21 +657,21 @@ a.sidebar-module-title:hover {
   gap: 8px;
   font-size: 0.82em;
   margin-bottom: 20px;
-  color: var(--muted-text) !important;
+  color: var(--muted-text);
 }
 
 .breadcrumb a {
-  color: var(--muted-text) !important;
+  color: var(--muted-text);
   font-weight: 500;
-  border-bottom: none !important;
+  border-bottom: none;
 }
 
 .breadcrumb a:hover {
-  color: var(--accent-blue) !important;
+  color: var(--accent-blue);
 }
 
 .breadcrumb-current {
-  color: var(--text-color) !important;
+  color: var(--text-color);
   font-weight: 600;
 }
 
@@ -656,21 +684,23 @@ a.sidebar-module-title:hover {
   border-radius: 14px;
   background: var(--card-gradient);
   border: 1px solid var(--card-color, var(--accent-blue));
-  text-decoration: none !important;
-  border-bottom: 1px solid var(--card-color, var(--accent-blue)) !important;
+  text-decoration: none;
+  border-bottom: 1px solid var(--card-color, var(--accent-blue));
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .roadmap-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 28px -14px var(--card-color, var(--accent-blue));
+  /* impede o a:hover global de trocar a borda inferior do card para roxo */
+  border-bottom: 1px solid var(--card-color, var(--accent-blue));
 }
 
 .roadmap-card-index {
   font-family: var(--font-display);
   font-size: 0.75em;
   font-weight: 700;
-  color: var(--card-color, var(--accent-blue)) !important;
+  color: var(--card-color, var(--accent-blue));
   letter-spacing: 0.5px;
 }
 
@@ -678,12 +708,12 @@ a.sidebar-module-title:hover {
   font-family: var(--font-display);
   font-size: 1.3em;
   font-weight: 700;
-  color: var(--text-color) !important;
+  color: var(--text-color);
 }
 
 .roadmap-card-subtitle {
   font-size: 0.85em;
-  color: var(--muted-text) !important;
+  color: var(--muted-text);
 }
 
 /* 4.7 Fade-in leve ao rolar a página */
@@ -715,7 +745,7 @@ a.sidebar-module-title:hover {
   }
 
   .container {
-    padding: 0 20px !important;
+    padding: 0 20px;
   }
 
   .page-shell {
@@ -723,7 +753,7 @@ a.sidebar-module-title:hover {
   }
 
   .site-header-inner {
-    padding: 0 16px !important;
+    padding: 0 16px;
     gap: 8px;
   }
 
@@ -759,6 +789,72 @@ a.sidebar-module-title:hover {
   }
 }
 
+/* 4.9 Navegação entre etapas (next-steps) */
+.next-steps {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.next-steps-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.next-steps-next {
+  align-items: flex-end;
+}
+
+.next-steps-label {
+  color: var(--muted-text);
+  font-size: 0.8em;
+  font-weight: bold;
+  min-height: 2.4em;
+}
+
+.next-steps-next .next-steps-label {
+  text-align: right;
+}
+
+.next-steps-btn {
+  width: 100%;
+  max-width: 180px;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.next-steps-btn:hover {
+  border-bottom: none;
+}
+
+.next-steps-btn-outline {
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.next-steps-btn-outline:hover {
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+}
+
+.next-steps-btn-solid {
+  background: var(--accent-blue);
+  color: var(--bg-color);
+}
+
+.next-steps-btn-solid:hover {
+  background: var(--accent-purple);
+  color: var(--bg-color);
+}
+
 /* 5. Footer */
 .site-footer {
   width: 100%;
@@ -774,4 +870,15 @@ a.sidebar-module-title:hover {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.site-footer-divider {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.site-footer-note {
+  color: var(--muted-text);
+  font-size: 0.85em;
 }

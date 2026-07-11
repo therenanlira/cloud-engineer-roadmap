@@ -33,26 +33,9 @@ Se você rodar `man grep`, o manual detalhará todas as flags do comando `grep`,
 
 ---
 
-## 2. O Comando `tldr` (Exemplos Práticos e Rápidos)
+## 2. Como instalar o `tldr`
 
-Embora o `man` seja completo, ele pode ser muito longo e técnico. O **`tldr`** (iniciais de *"Too Long; Didn't Read"* - *Muito Longo; Não Li*) fornece páginas resumidas focadas apenas em **exemplos práticos de uso comum** do comando no dia a dia.
-
-### Exemplo prático: `tldr tar`
-
-Ao digitar:
-
-```bash
-tldr tar
-```
-
-Em vez de um manual de 10 páginas, o `tldr` mostrará diretamente:
-
-- Como compactar uma pasta: `tar -czf arquivo.tar.gz pasta/`
-- Como extrair um arquivo: `tar -xzf arquivo.tar.gz`
-
-## 3. Como instalar o `tldr`
-
-O `tldr` não vem instalado por padrão na maioria dos sistemas, mas a instalação é simples:
+Diferente do `man`, o `tldr` não vem instalado por padrão na maioria dos sistemas, mas a instalação é simples:
 
 ### No Linux (Ubuntu / Debian / WSL)
 
@@ -84,3 +67,22 @@ Caso você já possua o Node.js instalado, pode rodar:
 ```bash
 npm install -g tldr
 ```
+
+---
+
+## 3. O Comando `tldr` (Exemplos Práticos e Rápidos)
+
+Embora o `man` seja completo, ele pode ser muito longo e técnico. O **`tldr`** (iniciais de *"Too Long; Didn't Read"* - *Muito Longo; Não Li*) fornece páginas resumidas focadas apenas em **exemplos práticos de uso comum** do comando no dia a dia.
+
+### Exemplo prático: `tldr tar`
+
+Ao digitar:
+
+```bash
+tldr tar
+```
+
+Em vez de um manual de 10 páginas, o `tldr` mostrará diretamente:
+
+- Como compactar uma pasta: `tar -czf arquivo.tar.gz pasta/`
+- Como extrair um arquivo: `tar -xzf arquivo.tar.gz`

@@ -13,16 +13,16 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para refo
 
 **Objetivo**: Juntar os seus conhecimentos de Linux, Redes, Scripts e Docker para criar uma página web simples que monitora a conectividade de outros sites.
 
-**Cenário**: Você precisa subir um contêiner Nginx que sirva um arquivo de texto simples contendo o status de conectividade de alguns sites, gerado automaticamente por um script Bash.
+**Cenário**: Você precisa subir um contêiner Nginx que sirva um arquivo de texto simples contendo o status de conectividade de alguns sites, gerado automaticamente por um script Python.
 
 **Passo a passo do desafio**:
 
 * **Python:** Crie um script em Python (`monitor.py`) utilizando a biblioteca `requests` para testar os sites. O desafio aqui é entender como gerenciar dependências de bibliotecas externas dentro de um container Docker (usando `pip install`).
-* **Processamento de texto:** O script deve salvar o resultado desses testes formatado dentro de um arquivo chamado `status.txt` (ex: `Google: Online`, `SiteFalso: Offline`). Lembre-se de dar as permissões de execução (`chmod +x`) ao seu script.
-* **Docker:** Crie um `Dockerfile` utilizando a imagem oficial do `nginx`. O seu Dockerfile deve copiar o arquivo `status.txt` para a pasta padrão que o Nginx usa (`/usr/share/nginx/html`).
+* **Processamento de texto:** O script deve salvar o resultado desses testes formatado dentro de um arquivo chamado `status.txt` (ex: `Google: Online`, `SiteFalso: Offline`).
+* **Docker:** Crie um `Dockerfile` utilizando a imagem oficial do `nginx`. O seu Dockerfile deve instalar o Python, copiar o `monitor.py` e executá-lo durante o build, deixando o `status.txt` na pasta padrão que o Nginx usa (`/usr/share/nginx/html`).
 * **Redes:** Faça o build da sua imagem (`docker build -t monitor-site .`) e rode o contêiner mapeando a porta `8080` do seu computador para a porta `80` do contêiner (`docker run -p 8080:80 monitor-site`).
 * **Validação:** Abra o seu navegador e acesse [http://localhost:8080/status.txt](http://localhost:8080/status.txt) (ou use o comando `curl localhost:8080/status.txt` no terminal) para ver o relatório de conectividade gerado pelo seu script.
-* **Bash**: Crie um único script chamado `deploy.sh` que executa o `monitor.py`, faz o `docker build` e o `docker run` de forma sequencial.
+* **Bash**: Crie um único script chamado `deploy.sh` que faz o `docker build` (que já executa o `monitor.py`) e o `docker run` de forma sequencial. Lembre-se de dar a permissão de execução (`chmod +x`) a esse script.
 
 **Solução:** A solução para este desafio está [aqui](./solution/), mas consulte somente se não conseguir resolver por si só.
 

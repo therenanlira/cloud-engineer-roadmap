@@ -11,7 +11,7 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 
 Ferramenta para controle de versionamento de código.
 
-#### Git & GitHub
+### Git & GitHub
 
 Git é um sistema de versionamento de código, muito útil para criar versões do seu código e "voltar no tempo" quando alguma alteração não funcionar como esperada.
 GitHub é a plataforma de hospedagem de código mais popular, baseada em Git.

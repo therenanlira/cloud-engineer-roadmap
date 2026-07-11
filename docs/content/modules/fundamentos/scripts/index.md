@@ -21,7 +21,7 @@ Bash é um dos interpretadores de comandos do Linux, com ele conseguimos criar a
 
 ### Scripts (Python)
 
-Python é uma das linguagens de programação mais usada em infraestrutura para automações por conta da sua sintaxe simples.
+Python é uma das linguagens de programação mais usadas em infraestrutura para automações por conta da sua sintaxe simples.
 
 **Trilha de Estudo:**
 

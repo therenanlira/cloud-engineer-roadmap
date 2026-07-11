@@ -12,7 +12,7 @@ A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs 
 * <img src="{{ '/assets/img/backstage-32x32.png' | relative_url }}" class="icon-fix" alt="Backstage" />[Backstage]({{ '/content/modules/plataforma/backstage/' | relative_url }})
 * <i class="fas fa-bullseye"></i>[Desafio (Plataforma)]({{ '/content/modules/plataforma/lab/' | relative_url }})
 
-Mais desafios para Backstage estão sendo construídos. Fique atento às novidades.
+Siga a ordem acima para evoluir progressivamente pelo módulo.
 
 {% include next-steps.html
    prev_url="/content/modules/observabilidade/lab/"

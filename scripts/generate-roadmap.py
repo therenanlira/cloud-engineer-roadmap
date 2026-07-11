@@ -61,7 +61,7 @@ def draw_rounded_box(draw, x, y, w, h, radius, border_color, index_label, title,
     draw.text((x + w/2, y + 87), text, fill=(180, 185, 195), font=font_mod_text, anchor="mm")
 
 modules = [
-    ("Módulo 1", "Fundamentos", "Linux, Redes, Git, Containers"),
+    ("Módulo 1", "Fundamentos", "Linux, Redes, Scripts, Git, Containers"),
     ("Módulo 2", "Cloud", "AWS, Terraform, FinOps"),
     ("Módulo 3", "Pipeline", "GitHub Actions"),
     ("Módulo 4", "Orquestração", "Kubernetes, Helm, ArgoCD"),

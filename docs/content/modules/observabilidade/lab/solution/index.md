@@ -30,7 +30,7 @@ kind create cluster
 k3d:
 
 ```bash
-k3d cluster create "my-cluster-name"
+k3d cluster create
 ```
 
 ### 2. Adicione os repositórios do Helm

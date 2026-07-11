@@ -28,7 +28,7 @@ Seis módulos em sequência, dos fundamentos às ferramentas mais usadas no merc
   <a class="roadmap-card" style="--card-color: var(--module-color-1);" href="{{ '/content/modules/fundamentos/' | relative_url }}">
     <span class="roadmap-card-index">Módulo 1</span>
     <span class="roadmap-card-title">Fundamentos</span>
-    <span class="roadmap-card-subtitle">Linux, Redes, Git, Containers</span>
+    <span class="roadmap-card-subtitle">Linux, Redes, Scripts, Git, Containers</span>
   </a>
   <a class="roadmap-card" style="--card-color: var(--module-color-2);" href="{{ '/content/modules/cloud/' | relative_url }}">
     <span class="roadmap-card-index">Módulo 2</span>

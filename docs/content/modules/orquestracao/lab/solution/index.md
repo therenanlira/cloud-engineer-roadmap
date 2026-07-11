@@ -45,7 +45,7 @@ Dentro do diretório `kubernetes/app`, crie o arquivo `service.yaml`, que cria u
 {% include_relative service.yaml %}
 ```
 
-Faça o commit e o push destes dois arquivos para a branch principal do seu repositório:
+Faça o commit e o push destes três arquivos para a branch principal do seu repositório:
 
 ```bash
 git add .
@@ -72,7 +72,7 @@ kind create cluster
 k3d:
 
 ```bash
-k3d cluster create "my-cluster-name"
+k3d cluster create
 ```
 
 ### 3. Instale o ArgoCD
@@ -114,12 +114,20 @@ No painel do ArgoCD, clique em **+ NEW APP** e preencha com os dados do seu repo
 
 Clique em **CREATE**.
 
-### 6. Valide o resultado (teste de resiliência)
+### 6. Acesse o site
+
+Após a sincronização, os Pods do Nginx estarão rodando no namespace `app`. Abra uma nova aba no terminal, redirecione a porta do Service e acesse [http://localhost:8081](http://localhost:8081) para ver a página de boas-vindas do Nginx:
+
+```bash
+kubectl port-forward svc/servico-nginx -n app 8081:80
+```
+
+### 7. Valide o resultado (teste de resiliência)
 
 Para ver o GitOps em ação, vamos simular um desastre. Vá ao seu terminal e delete o Deployment inteiro:
 
 ```bash
-kubectl delete deployment meu-site-nginx
+kubectl delete deployment meu-site-nginx -n app
 ```
 
 Olhe rapidamente para o painel do ArgoCD. Você verá que ele detectou que o cluster local está diferente do que está no GitHub (`OutOfSync`) e, como a política está automática, ele recriará o Deployment imediatamente!

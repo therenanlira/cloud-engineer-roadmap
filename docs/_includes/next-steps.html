@@ -1,22 +1,20 @@
-<div style="margin-top: 60px; display: flex; justify-content: space-between; align-items: stretch; gap: 20px;">
-  
-  <!-- Coluna da Esquerda: Anterior -->
+<div class="next-steps">
+
   {% if include.prev_url %}
-  <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; align-items: flex-start;">
-    <span style="color: #94a3b8; font-size: 0.8em; font-weight: bold; min-height: 2.4em;">Passo anterior: {{ include.prev_title }}</span>
-    <a href="{{ include.prev_url | relative_url }}" style="width: 100%; max-width: 180px; padding: 10px 0; border: 1px solid #38bdf8; color: #38bdf8 !important; border-radius: 6px; font-weight: bold; text-decoration: none; text-align: center; box-sizing: border-box;">
+  <div class="next-steps-col next-steps-prev">
+    <span class="next-steps-label">Passo anterior: {{ include.prev_title }}</span>
+    <a href="{{ include.prev_url | relative_url }}" class="next-steps-btn next-steps-btn-outline">
       Etapa anterior
     </a>
   </div>
   {% else %}
-  <div style="flex: 1;"></div>
+  <div class="next-steps-col"></div>
   {% endif %}
 
-  <!-- Coluna da Direita: Próximo -->
   {% if include.next_url %}
-  <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
-    <span style="color: #94a3b8; font-size: 0.8em; font-weight: bold; text-align: right; min-height: 2.4em;">Próximo passo: {{ include.next_title }}</span>
-    <a href="{{ include.next_url | relative_url }}" style="width: 100%; max-width: 180px; padding: 10px 0; background: #38bdf8; color: #0b1525 !important; border-radius: 6px; font-weight: bold; text-decoration: none; text-align: center; box-sizing: border-box;">
+  <div class="next-steps-col next-steps-next">
+    <span class="next-steps-label">Próximo passo: {{ include.next_title }}</span>
+    <a href="{{ include.next_url | relative_url }}" class="next-steps-btn next-steps-btn-solid">
       Próxima etapa
     </a>
   </div>

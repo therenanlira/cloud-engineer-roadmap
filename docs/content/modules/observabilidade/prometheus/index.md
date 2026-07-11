@@ -7,7 +7,7 @@ title: Observabilidade (Prometheus)
 
 Observabilidade é a capacidade de entender o estado do sistema (aplicações e infraestrutura), seja por **logs**, **métricas** ou **tracing**.
 
-## Prometheus (Metrics)
+## Prometheus (Métricas)
 
 Métricas são dados quantitativos (CPU, memória, taxa de erro) que mostram a saúde do seu sistema.
 Prometheus é a ferramenta open-source mais usada em Kubernetes.

@@ -5,7 +5,7 @@ title: Pipeline (Desafio - Solução)
 
 # 3. Pipeline
 
-Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecido como CI/CD (Continuous Integration / Continuou Deployment).
+Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecidos como CI/CD (Continuous Integration / Continuous Deployment).
 
 ## Solução para o desafio prático (Pipeline)
 
@@ -33,7 +33,7 @@ Crie a estrutura de diretórios `.github/workflows/`.
 mkdir -p .github/workflows/
 ```
 
-Dentro desta estrutura de diretórios, crie o arquivo `ci-terraform.yml`. É ele que instrui o GitHub a preparar uma máquina virtual, instalar o Terraform e rodar as validações automaticamente.
+Dentro desta estrutura de diretórios, crie o arquivo `ci-terraform.yaml`. É ele que instrui o GitHub a preparar uma máquina virtual, instalar o Terraform e rodar as validações automaticamente.
 
 ```yaml
 {% include_relative ci-terraform.yaml %}

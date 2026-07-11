@@ -24,7 +24,7 @@ Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para refo
 5. Descubra a senha padrão do ArgoCD e faça um `port-forward` para acessar o painel dele no seu navegador (localhost).
 6. No painel do ArgoCD, crie uma "New App" apontando para o seu repositório do GitHub.
 7. Clique em *Sync* e veja que o ArgoCD vai ler os seus arquivos `.yaml` do GitHub e criar os Pods no seu computador!
-8. Teste a resiliência criando um "drift" (desvio) ao apagar o Deployment manualmente usando o comando `kubectl delete deployment <nome-do-deployment>` e veja que o ArgoCD irá recriá-lo automaticamente (certifique-se de habilitar as configurações corretas para isso acontecer).
+8. Teste a resiliência criando um "drift" (desvio) ao apagar o Deployment manualmente usando o comando `kubectl delete deployment <nome-do-deployment> -n <namespace>` e veja que o ArgoCD irá recriá-lo automaticamente (certifique-se de habilitar as configurações corretas para isso acontecer).
 
 **Solução:** A solução para este desafio está [aqui](./solution/), mas consulte somente se não conseguir resolver por si só.
 

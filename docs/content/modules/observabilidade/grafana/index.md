@@ -7,7 +7,7 @@ title: Observabilidade (Grafana)
 
 Observabilidade é a capacidade de entender o estado do sistema (aplicações e infraestrutura), seja por **logs**, **métricas** ou **tracing**.
 
-## Grafana (Gráficos)
+## Grafana (Visualização)
 
 Grafana é a ferramenta open-source de visualização de gráficos mais popular.
 

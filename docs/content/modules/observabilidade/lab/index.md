@@ -7,7 +7,7 @@ title: Observabilidade (Desafio)
 
 Observabilidade é a capacidade de entender o estado do sistema (aplicações e infraestrutura), seja por **logs**, **métricas** ou **tracing**.
 
-### Desafio Prático (Observabilidade)
+## Desafio Prático (Observabilidade)
 
 Antes de avançar, aplique o que aprendeu. Este desafio é fundamental para reforçar o conhecimento.
 
