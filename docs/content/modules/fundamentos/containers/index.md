@@ -31,5 +31,5 @@ Pratique cada um desses laboratórios antes de seguir para o próximo tópico.
    prev_url="/content/modules/fundamentos/git/"
    prev_title="Git"
    next_url="/content/modules/fundamentos/lab/"
-   next_title="Desafio (Fundamentos)"
+   next_title="Exercício (Fundamentos)"
 %}

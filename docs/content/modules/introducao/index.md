@@ -5,7 +5,7 @@ title: Introdução
 
 # Introdução
 
-Antes da prática, entenda a filosofia por trás do DevOps e deixe seu ambiente pronto para os laboratórios e desafios.
+Antes da prática, entenda a filosofia por trás do DevOps e deixe seu ambiente pronto para os laboratórios e exercícios.
 
 ## O que você vai aprender?
 

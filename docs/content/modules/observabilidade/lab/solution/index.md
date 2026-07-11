@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Observabilidade (Desafio - Solução)
+title: Observabilidade (Exercício - Solução)
 ---
 
 # 5. Observabilidade
 
 Observabilidade é a capacidade de entender o estado do sistema (aplicações e infraestrutura), seja por **logs**, **métricas** ou **tracing**.
 
-## Solução para o desafio prático (Observabilidade)
+## Solução para o exercício prático (Observabilidade)
 
-O objetivo deste desafio é instalar e configurar a stack padrão de mercado (Prometheus, Grafana, Loki e Jaeger) utilizando o Helm, proporcionando visibilidade completa sobre o que acontece dentro do seu cluster Kubernetes.
+O objetivo deste exercício é instalar e configurar a stack padrão de mercado (Prometheus, Grafana, Loki e Jaeger) utilizando o Helm, proporcionando visibilidade completa sobre o que acontece dentro do seu cluster Kubernetes.
 
 ### 1. Inicie o cluster local
 
@@ -170,11 +170,11 @@ k3d cluster delete
 
 ## Resumo do Aprendizado
 
-Neste desafio, você instalou os três pilares da Observabilidade Cloud Native. Agora você sabe como usar o Helm para provisionar infraestrutura complexa rapidamente e aprendeu a correlacionar os gráficos de consumo (Prometheus/Grafana) com os logs da aplicação (Loki) e o fluxo de requisições (Jaeger).
+Neste exercício, você instalou os três pilares da Observabilidade Cloud Native. Agora você sabe como usar o Helm para provisionar infraestrutura complexa rapidamente e aprendeu a correlacionar os gráficos de consumo (Prometheus/Grafana) com os logs da aplicação (Loki) e o fluxo de requisições (Jaeger).
 
 {% include next-steps.html
    prev_url="/content/modules/observabilidade/lab/"
-   prev_title="Desafio (Observabilidade)"
+   prev_title="Exercício (Observabilidade)"
    next_url="/content/modules/plataforma/"
    next_title="Plataforma"
 %}

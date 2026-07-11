@@ -1,6 +1,6 @@
 # Cloud Engineer Roadmap
 
-Um guia de estudos **gratuito** e em **português** para quem está começando em Cloud Engineering: a base das disciplinas DevOps, SRE (Site Reliability Engineering) e Platform Engineering. Com **laboratórios** e **desafios** para você evoluir a cada etapa.
+Um guia de estudos **gratuito** e em **português** para quem está começando em Cloud Engineering: a base das disciplinas DevOps, SRE (Site Reliability Engineering) e Platform Engineering. Com **laboratórios** e **exercícios** para você evoluir a cada etapa.
 
 O site é navegável, com barra lateral por módulo e acompanhamento de progresso salvo no seu navegador.
 
@@ -10,7 +10,7 @@ O site é navegável, com barra lateral por módulo e acompanhamento de progress
 
 ## O que você vai encontrar
 
-Uma introdução (cultura DevOps, CNCF, preparação de ambiente) seguida de seis módulos, cada um com trilha de estudo, laboratórios práticos e um desafio para fixar o conteúdo:
+Uma introdução (cultura DevOps, CNCF, preparação de ambiente) seguida de seis módulos, cada um com trilha de estudo, laboratórios práticos e um exercício para fixar o conteúdo:
 
 1. **Fundamentos**: Linux, Redes, Scripts, Git, Containers
 2. **Cloud**: AWS, Terraform, FinOps

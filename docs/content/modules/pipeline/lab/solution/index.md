@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Pipeline (Desafio - Solução)
+title: Pipeline (Exercício - Solução)
 ---
 
 # 3. Pipeline
 
 Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecidos como CI/CD (Continuous Integration / Continuous Deployment).
 
-## Solução para o desafio prático (Pipeline)
+## Solução para o exercício prático (Pipeline)
 
-O objetivo deste desafio é unir **Terraform e GitHub Actions** em um fluxo simples que simula um processo real de Integração Contínua (CI) e validação de qualidade de código.
+O objetivo deste exercício é unir **Terraform e GitHub Actions** em um fluxo simples que simula um processo real de Integração Contínua (CI) e validação de qualidade de código.
 
 ### 1. Código Terraform
 
@@ -74,11 +74,11 @@ Como este pipeline executa apenas etapas de validação e verificação (`terraf
 
 ## Resumo do Aprendizado
 
-Neste desafio, você praticou a base da cultura DevOps aplicada à infraestrutura (Shift-Left): automatizou a esteira de validação usando o GitHub Actions para garantir que nenhum código fora do padrão da equipe ou com erros estruturais do Terraform chegue ao ambiente de produção.
+Neste exercício, você praticou a base da cultura DevOps aplicada à infraestrutura (Shift-Left): automatizou a esteira de validação usando o GitHub Actions para garantir que nenhum código fora do padrão da equipe ou com erros estruturais do Terraform chegue ao ambiente de produção.
 
 {% include next-steps.html
    prev_url="/content/modules/pipeline/lab/"
-   prev_title="Desafio (Pipeline)"
+   prev_title="Exercício (Pipeline)"
    next_url="/content/modules/orquestracao/"
    next_title="Orquestração"
 %}

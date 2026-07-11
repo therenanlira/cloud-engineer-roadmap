@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Plataforma (Desafio - Solução)
+title: Plataforma (Exercício - Solução)
 ---
 
 # 6. Plataforma (Platform Engineering)
 
 A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs (Internal Developer Portals) que oferecem autonomia, autoatendimento e padronização para desenvolvedores, reduzindo a carga cognitiva e acelerando o *time-to-market*.
 
-## Solução para o desafio prático (Plataforma)
+## Solução para o exercício prático (Plataforma)
 
-Este guia é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/), e constrói a sua própria imagem do Backstage, o que permite completar as 3 partes do desafio (instalar, criar catálogo e configurar SSO).
+Este guia é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/), e constrói a sua própria imagem do Backstage, o que permite completar as 3 partes do exercício (instalar, criar catálogo e configurar SSO).
 
 ## Parte 1 - Build e instalação
 
@@ -35,7 +35,7 @@ O `app-config.yaml` gerado já vem com a integração do GitHub configurada por 
 
 ### 3. Ajuste o `app-config.yaml`
 
-O `app-config.yaml` precisa de dois ajustes antes do build. O primeiro é na seção `backend.csp`: a diretiva `upgrade-insecure-requests`, ativa por padrão, instrui o navegador a forçar conexões HTTPS, e como este desafio roda tudo em `http://localhost`, sem TLS, navegadores mais rigorosos (como o Safari) não conseguem carregar a página. Desative a diretiva:
+O `app-config.yaml` precisa de dois ajustes antes do build. O primeiro é na seção `backend.csp`: a diretiva `upgrade-insecure-requests`, ativa por padrão, instrui o navegador a forçar conexões HTTPS, e como este exercício roda tudo em `http://localhost`, sem TLS, navegadores mais rigorosos (como o Safari) não conseguem carregar a página. Desative a diretiva:
 
 ```yaml
 backend:
@@ -198,7 +198,7 @@ Se tudo correu bem, o Backstage vai encontrar o componente `meu-backstage` e per
 
 ### Modele o catálogo: Component, System, Resource, Domain, Group e User
 
-Um catálogo de software raramente descreve componentes isolados. Ele organiza componentes relacionados sob um **System**, agrupa Systems relacionados sob um **Domain** (uma área de negócio ou produto), modela dependências externas como um **Resource** (ex: um banco de dados), e representa a estrutura organizacional com **Group** e **User**, usados como `owner` das demais entidades. Vamos expandir o `catalog-info.yaml` para refletir o que você de fato provisionou neste desafio, com essas seis entidades.
+Um catálogo de software raramente descreve componentes isolados. Ele organiza componentes relacionados sob um **System**, agrupa Systems relacionados sob um **Domain** (uma área de negócio ou produto), modela dependências externas como um **Resource** (ex: um banco de dados), e representa a estrutura organizacional com **Group** e **User**, usados como `owner` das demais entidades. Vamos expandir o `catalog-info.yaml` para refletir o que você de fato provisionou neste exercício, com essas seis entidades.
 
 Edite o `catalog-info.yaml` na raiz do `meu-backstage` para o seguinte conteúdo (troque `<seu-usuario-github>` pelo seu usuário):
 
@@ -220,7 +220,7 @@ apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   name: plataforma-devops
-  description: Agrupa os componentes provisionados no desafio de Plataforma.
+  description: Agrupa os componentes provisionados no exercício de Plataforma.
 spec:
   owner: group:time-plataforma
   domain: developer-experience
@@ -239,7 +239,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: meu-site-nginx
-  description: Servidor Nginx provisionado no desafio de Orquestração.
+  description: Servidor Nginx provisionado no exercício de Orquestração.
 spec:
   type: service
   owner: group:time-plataforma
@@ -273,7 +273,7 @@ spec:
 
 Um único arquivo pode descrever várias entidades, separadas por `---`; é assim que o próprio Backstage organiza seus dados de exemplo internos. E é para aceitar os tipos `Domain`, `Group` e `User` que ajustamos o `catalog.rules` no passo 3 da Parte 1.
 
-Note que o `meu-site-nginx` não tem código-fonte dentro do repositório `meu-backstage`, ele representa um serviço que já existe no seu cluster (o Nginx provisionado no desafio de Orquestração). Isso é normal: o catálogo modela toda a paisagem de software da empresa, não apenas o conteúdo do repositório atual.
+Note que o `meu-site-nginx` não tem código-fonte dentro do repositório `meu-backstage`, ele representa um serviço que já existe no seu cluster (o Nginx provisionado no exercício de Orquestração). Isso é normal: o catálogo modela toda a paisagem de software da empresa, não apenas o conteúdo do repositório atual.
 
 Faça o commit e o push da mudança:
 
@@ -477,9 +477,9 @@ k3d cluster delete
 
 ## Resumo do Aprendizado
 
-Neste desafio, você foi além de só instalar uma imagem pronta: construiu a sua própria imagem do Backstage a partir do zero, publicou num registry, orquestrou múltiplos componentes no Kubernetes (banco de dados, secrets, storage e a aplicação), teve o primeiro contato com o catálogo de software registrando um componente e, por ter o controle do código-fonte, conseguiu configurar um provider de autenticação real via GitHub.
+Neste exercício, você foi além de só instalar uma imagem pronta: construiu a sua própria imagem do Backstage a partir do zero, publicou num registry, orquestrou múltiplos componentes no Kubernetes (banco de dados, secrets, storage e a aplicação), teve o primeiro contato com o catálogo de software registrando um componente e, por ter o controle do código-fonte, conseguiu configurar um provider de autenticação real via GitHub.
 
 {% include next-steps.html
    prev_url="/content/modules/plataforma/lab/"
-   prev_title="Desafio (Plataforma)"
+   prev_title="Exercício (Plataforma)"
 %}

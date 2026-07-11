@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Orquestração (Desafio - Solução)
+title: Orquestração (Exercício - Solução)
 ---
 
 # 4. Orquestração
 
 Orquestração de contêiner é o termo utilizado para o gerenciamento automatizado do ciclo de vida, escalabilidade e resiliência de dezenas ou milhares de contêineres.
 
-## Solução para o desafio prático (Orquestração)
+## Solução para o exercício prático (Orquestração)
 
-O objetivo deste desafio é montar o seu primeiro fluxo **GitOps** utilizando um cluster local e o **ArgoCD** para fazer o deploy automatizado de uma aplicação Nginx. A grande vantagem desta abordagem é que o estado da sua infraestrutura passa a viver no GitHub: se o seu cluster perder configurações críticas, basta apontar o ArgoCD para o GitHub novamente que ele reconstruirá tudo sozinho!
+O objetivo deste exercício é montar o seu primeiro fluxo **GitOps** utilizando um cluster local e o **ArgoCD** para fazer o deploy automatizado de uma aplicação Nginx. A grande vantagem desta abordagem é que o estado da sua infraestrutura passa a viver no GitHub: se o seu cluster perder configurações críticas, basta apontar o ArgoCD para o GitHub novamente que ele reconstruirá tudo sozinho!
 
 ### 1. Manifestos do Kubernetes
 
@@ -156,11 +156,11 @@ k3d cluster delete
 
 ## Resumo do Aprendizado
 
-Neste desafio, você testou GitOps na prática. Em vez de aplicar arquivos manualmente (`kubectl apply`), delegou essa função ao ArgoCD. Ao tentar deletar o Deployment, você viu que não é mais possível alterar a infraestrutura permanentemente pelo terminal, pois o estado desejado da sua aplicação está protegido e versionado no GitHub.
+Neste exercício, você testou GitOps na prática. Em vez de aplicar arquivos manualmente (`kubectl apply`), delegou essa função ao ArgoCD. Ao tentar deletar o Deployment, você viu que não é mais possível alterar a infraestrutura permanentemente pelo terminal, pois o estado desejado da sua aplicação está protegido e versionado no GitHub.
 
 {% include next-steps.html
    prev_url="/content/modules/orquestracao/lab/"
-   prev_title="Desafio (Orquestração)"
+   prev_title="Exercício (Orquestração)"
    next_url="/content/modules/observabilidade/"
    next_title="Observabilidade"
 %}

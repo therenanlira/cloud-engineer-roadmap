@@ -23,5 +23,5 @@ Transforme esses hábitos em rotina desde já: eles fazem toda a diferença quan
    prev_url="/content/modules/cloud/terraform/"
    prev_title="Terraform"
    next_url="/content/modules/cloud/lab/"
-   next_title="Desafio (Cloud)"
+   next_title="Exercício (Cloud)"
 %}

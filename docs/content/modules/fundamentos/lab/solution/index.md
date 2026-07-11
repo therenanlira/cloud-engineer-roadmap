@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Fundamentos (Desafio - Solução)
+title: Fundamentos (Exercício - Solução)
 ---
 
 # 1. Fundamentos
 
 A base técnica indispensável: sistemas operacionais, redes, automação e contêineres.
 
-## Solução para o desafio prático (Fundamentos)
+## Solução para o exercício prático (Fundamentos)
 
-O objetivo deste desafio é unir **Linux, Redes, Automação em Python e Docker** para criar um monitor de conectividade de sites que entrega o relatório via contêiner Nginx.
+O objetivo deste exercício é unir **Linux, Redes, Automação em Python e Docker** para criar um monitor de conectividade de sites que entrega o relatório via contêiner Nginx.
 
 ### 1. Script Python
 
@@ -60,7 +60,7 @@ docker rm -f monitor-container
 
 ## Resumo do Aprendizado
 
-Neste desafio, você praticou a base da engenharia de nuvem:
+Neste exercício, você praticou a base da engenharia de nuvem:
 
 1. Python: Automação de tarefas e tratamento de erros de rede.
 1. Docker: Criação de imagens, gestão de dependências (pip) e otimização de build.
@@ -69,7 +69,7 @@ Neste desafio, você praticou a base da engenharia de nuvem:
 
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/lab/"
-   prev_title="Desafio (Fundamentos)"
+   prev_title="Exercício (Fundamentos)"
    next_url="/content/modules/cloud/"
    next_title="Cloud"
 %}

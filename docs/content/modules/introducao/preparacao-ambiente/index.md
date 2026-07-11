@@ -5,7 +5,7 @@ title: Introdução (Preparação de ambiente)
 
 # Preparação do ambiente
 
-Para fazer os laboratórios e desafios, prepare o seu ambiente.
+Para fazer os laboratórios e exercícios, prepare o seu ambiente.
 
 > Caso ainda não tenha familiaridade com o terminal, faça o primeiro treinamento de Linux Fundamentals e depois volte aqui.
 
