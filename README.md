@@ -1,5 +1,8 @@
 # Cloud Engineer Roadmap
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/therenanlira/cloud-engineer-roadmap?style=social)](https://github.com/therenanlira/cloud-engineer-roadmap/stargazers)
+
 Um guia de estudos **gratuito** e em **português** para quem está começando em Cloud Engineering: a base das disciplinas DevOps, SRE (Site Reliability Engineering) e Platform Engineering. Com **laboratórios** e **exercícios** para você evoluir a cada etapa.
 
 O site é navegável, com barra lateral por módulo e acompanhamento de progresso salvo no seu navegador.
@@ -25,8 +28,18 @@ Um agradecimento especial a todos os profissionais que dedicam seu tempo criando
 
 > *Não tenho nenhuma afiliação com os criadores sugeridos neste roadmap. Todos os créditos pelos materiais pertencem aos seus respectivos autores que contribuem para a comunidade.*
 
+## Dê uma estrela ⭐
+
+Se este roadmap te ajudou ou você pretende usá-lo para estudar, considere deixar uma estrela no repositório. Isso ajuda outras pessoas a encontrarem o projeto. Obrigado!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=therenanlira/cloud-engineer-roadmap&type=Date)](https://star-history.com/#therenanlira/cloud-engineer-roadmap&Date)
+
 ## Contribuições
 
 Este roadmap é um projeto vivo. Se você encontrou algum erro, quer sugerir um novo treinamento em português ou acredita que algum tópico deve ser adicionado, **sinta-se à vontade para abrir uma Issue ou enviar um *Pull Request***. Vamos fortalecer nossa comunidade!
 
 O site (Jekyll) fica em [`docs/`](docs/). Veja [`scripts/README.md`](scripts/README.md) para instruções de como rodá-lo localmente.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
