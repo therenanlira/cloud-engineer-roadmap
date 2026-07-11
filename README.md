@@ -29,6 +29,4 @@ Um agradecimento especial a todos os profissionais que dedicam seu tempo criando
 
 Este roadmap é um projeto vivo. Se você encontrou algum erro, quer sugerir um novo treinamento em português ou acredita que algum tópico deve ser adicionado, **sinta-se à vontade para abrir uma Issue ou enviar um *Pull Request***. Vamos fortalecer nossa comunidade!
 
-## Desenvolvimento local
-
 O site (Jekyll) fica em [`docs/`](docs/). Veja [`scripts/README.md`](scripts/README.md) para instruções de como rodá-lo localmente.
