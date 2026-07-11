@@ -11,13 +11,13 @@ Orquestração de contêiner é o termo utilizado para o gerenciamento automatiz
 
 * <img src="{{ '/assets/img/kubernetes-32x32.png' | relative_url }}" class="icon-fix" alt="Kubernetes" />[Kubernetes & Helm]({{ '/content/modules/orquestracao/kubernetes/' | relative_url }})
 * <img src="{{ '/assets/img/argo-32x32.png' | relative_url }}" class="icon-fix" alt="ArgoCD" />[ArgoCD]({{ '/content/modules/orquestracao/argocd/' | relative_url }})
-* <i class="fas fa-bullseye"></i>[Exercício (Orquestração)]({{ '/content/modules/orquestracao/lab/' | relative_url }})
+* <i class="fas fa-bullseye"></i>[Exercícios (Orquestração)]({{ '/content/modules/orquestracao/lab/' | relative_url }})
 
 Siga a ordem acima para evoluir progressivamente pelo módulo.
 
 {% include next-steps.html
    prev_url="/content/modules/pipeline/lab/"
-   prev_title="Exercício (Pipeline)"
+   prev_title="Exercícios (Pipeline)"
    next_url="/content/modules/orquestracao/kubernetes/"
    next_title="Kubernetes & Helm"
 %}

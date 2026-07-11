@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Fundamentos (Exercício)
+title: Fundamentos (Exercícios)
 ---
 
 # 1. Fundamentos
 
 A base técnica indispensável: sistemas operacionais, redes, automação e contêineres.
 
-## Exercício Prático (Fundamentos)
+## Exercícios Práticos (Fundamentos)
 
 Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para reforçar o conhecimento.
 

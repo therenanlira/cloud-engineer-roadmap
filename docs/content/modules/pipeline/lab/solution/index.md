@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Pipeline (Exercício - Solução)
+title: Pipeline (Exercícios - Solução)
 ---
 
 # 3. Pipeline
 
 Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecidos como CI/CD (Continuous Integration / Continuous Deployment).
 
-## Solução para o exercício prático (Pipeline)
+## Solução para os exercícios práticos (Pipeline)
 
 O objetivo deste exercício é unir **Terraform e GitHub Actions** em um fluxo simples que simula um processo real de Integração Contínua (CI) e validação de qualidade de código.
 
@@ -78,7 +78,7 @@ Neste exercício, você praticou a base da cultura DevOps aplicada à infraestru
 
 {% include next-steps.html
    prev_url="/content/modules/pipeline/lab/"
-   prev_title="Exercício (Pipeline)"
+   prev_title="Exercícios (Pipeline)"
    next_url="/content/modules/orquestracao/"
    next_title="Orquestração"
 %}

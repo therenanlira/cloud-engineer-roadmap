@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Cloud (Exercício)
+title: Cloud (Exercícios)
 ---
 
-# Exercício Prático (Cloud)
+# Exercícios Práticos (Cloud)
 
 Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para reforçar o conhecimento.
 
@@ -12,7 +12,7 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 **Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Cloud*. Faça os seguintes treinamentos:
 
 * Terraform com AWS: Construindo Infraestrutura em Nuvem
-* Exercício: AWS com Terraform
+* Desafio: AWS com Terraform
 
 > **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 

@@ -14,7 +14,7 @@ A base técnica indispensável: sistemas operacionais, redes, automação e cont
 * <i class="fas fa-terminal"></i>[Scripts]({{ '/content/modules/fundamentos/scripts/' | relative_url }})
 * <i class="fab fa-git-alt"></i>[Git]({{ '/content/modules/fundamentos/git/' | relative_url }})
 * <i class="fab fa-docker"></i>[Containers]({{ '/content/modules/fundamentos/containers/' | relative_url }})
-* <i class="fas fa-bullseye"></i>[Exercício (Fundamentos)]({{ '/content/modules/fundamentos/lab/' | relative_url }})
+* <i class="fas fa-bullseye"></i>[Exercícios (Fundamentos)]({{ '/content/modules/fundamentos/lab/' | relative_url }})
 
 Siga a ordem acima para evoluir progressivamente pelo módulo.
 

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Fundamentos (Exercício - Solução)
+title: Fundamentos (Exercícios - Solução)
 ---
 
 # 1. Fundamentos
 
 A base técnica indispensável: sistemas operacionais, redes, automação e contêineres.
 
-## Solução para o exercício prático (Fundamentos)
+## Solução para os exercícios práticos (Fundamentos)
 
 O objetivo deste exercício é unir **Linux, Redes, Automação em Python e Docker** para criar um monitor de conectividade de sites que entrega o relatório via contêiner Nginx.
 
@@ -69,7 +69,7 @@ Neste exercício, você praticou a base da engenharia de nuvem:
 
 {% include next-steps.html
    prev_url="/content/modules/fundamentos/lab/"
-   prev_title="Exercício (Fundamentos)"
+   prev_title="Exercícios (Fundamentos)"
    next_url="/content/modules/cloud/"
    next_title="Cloud"
 %}

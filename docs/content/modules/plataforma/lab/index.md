@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Plataforma (Exercício)
+title: Plataforma (Exercícios)
 ---
 
 # 6. Plataforma (Platform Engineering)
 
 A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs (Internal Developer Portals) que oferecem autonomia, autoatendimento e padronização para desenvolvedores, reduzindo a carga cognitiva e acelerando o *time-to-market*.
 
-## Exercício Prático (Plataforma)
+## Exercícios Práticos (Plataforma)
 
 Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para reforçar o conhecimento.
 

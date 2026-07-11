@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Pipeline (Exercício)
+title: Pipeline (Exercícios)
 ---
 
 # 3. Pipeline
 
 Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecidos como CI/CD (Continuous Integration / Continuous Deployment).
 
-## Exercício Prático (Pipeline)
+## Exercícios Práticos (Pipeline)
 
 Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para reforçar o conhecimento.
 

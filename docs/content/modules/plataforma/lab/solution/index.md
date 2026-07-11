@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Plataforma (Exercício - Solução)
+title: Plataforma (Exercícios - Solução)
 ---
 
 # 6. Plataforma (Platform Engineering)
 
 A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs (Internal Developer Portals) que oferecem autonomia, autoatendimento e padronização para desenvolvedores, reduzindo a carga cognitiva e acelerando o *time-to-market*.
 
-## Solução para o exercício prático (Plataforma)
+## Solução para os exercícios práticos (Plataforma)
 
 Este guia é baseado no **guia oficial** [Deploying with Kubernetes](https://backstage.io/docs/deployment/k8s/), e constrói a sua própria imagem do Backstage, o que permite completar as 3 partes do exercício (instalar, criar catálogo e configurar SSO).
 
@@ -481,5 +481,5 @@ Neste exercício, você foi além de só instalar uma imagem pronta: construiu a
 
 {% include next-steps.html
    prev_url="/content/modules/plataforma/lab/"
-   prev_title="Exercício (Plataforma)"
+   prev_title="Exercícios (Plataforma)"
 %}

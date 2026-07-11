@@ -23,5 +23,5 @@ Após assistir aos vídeos, siga para o exercício prático deste módulo.
    prev_url="/content/modules/pipeline/"
    prev_title="Pipeline"
    next_url="/content/modules/pipeline/lab/"
-   next_title="Exercício (Pipeline)"
+   next_title="Exercícios (Pipeline)"
 %}

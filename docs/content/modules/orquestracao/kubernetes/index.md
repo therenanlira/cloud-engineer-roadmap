@@ -23,8 +23,8 @@ Kubernetes é a plataforma padrão de mercado para orquestrar microsserviços em
 * Serviços e Redes no Kubernetes
 * ConfigMaps e Secrets no Kubernetes
 * Kubernetes: Automatizando Tarefas com CronJobs
-* Exercício: Deployments no Kubernetes
-* Exercício: Explorando Recursos do Kubernetes com kubectl
+* Desafio: Deployments no Kubernetes
+* Desafio: Explorando Recursos do Kubernetes com kubectl
 
 Pratique cada um desses laboratórios antes de seguir para o próximo tópico.
 

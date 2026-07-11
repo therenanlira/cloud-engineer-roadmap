@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Observabilidade (Exercício)
+title: Observabilidade (Exercícios)
 ---
 
 # 5. Observabilidade
 
 Observabilidade é a capacidade de entender o estado do sistema (aplicações e infraestrutura), seja por **logs**, **métricas** ou **tracing**.
 
-## Exercício Prático (Observabilidade)
+## Exercícios Práticos (Observabilidade)
 
 Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para reforçar o conhecimento.
 

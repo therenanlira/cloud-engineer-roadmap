@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Orquestração (Exercício)
+title: Orquestração (Exercícios)
 ---
 
 # 4. Orquestração
 
 Orquestração de contêiner é o termo utilizado para o gerenciamento automatizado do ciclo de vida, escalabilidade e resiliência de dezenas ou milhares de contêineres.
 
-## Exercício Prático (Orquestração)
+## Exercícios Práticos (Orquestração)
 
 Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para reforçar o conhecimento.
 

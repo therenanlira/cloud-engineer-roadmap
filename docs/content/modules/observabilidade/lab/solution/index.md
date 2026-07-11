@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Observabilidade (Exercício - Solução)
+title: Observabilidade (Exercícios - Solução)
 ---
 
 # 5. Observabilidade
 
 Observabilidade é a capacidade de entender o estado do sistema (aplicações e infraestrutura), seja por **logs**, **métricas** ou **tracing**.
 
-## Solução para o exercício prático (Observabilidade)
+## Solução para os exercícios práticos (Observabilidade)
 
 O objetivo deste exercício é instalar e configurar a stack padrão de mercado (Prometheus, Grafana, Loki e Jaeger) utilizando o Helm, proporcionando visibilidade completa sobre o que acontece dentro do seu cluster Kubernetes.
 
@@ -174,7 +174,7 @@ Neste exercício, você instalou os três pilares da Observabilidade Cloud Nativ
 
 {% include next-steps.html
    prev_url="/content/modules/observabilidade/lab/"
-   prev_title="Exercício (Observabilidade)"
+   prev_title="Exercícios (Observabilidade)"
    next_url="/content/modules/plataforma/"
    next_title="Plataforma"
 %}
