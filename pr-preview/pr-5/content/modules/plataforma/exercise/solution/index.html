@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-preview="pr-5">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plataforma (Exercícios - Solução) | Cloud Engineer Roadmap</title>
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Plataforma (Exercícios - Solução)" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering)." />
+<meta name="twitter:description" property="og:description" content="Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering)." />
+<link rel="canonical" href="https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/plataforma/exercise/solution/" />
+<meta property="og:url" content="https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/plataforma/exercise/solution/" />
+<meta property="og:site_name" content="Cloud Engineer Roadmap" />
+<meta property="og:image" content="https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-5/assets/img/og-image.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-5/assets/img/og-image.png" />
+<meta name="twitter:title" content="Plataforma (Exercícios - Solução)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering).","headline":"Plataforma (Exercícios - Solução)","image":"https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-5/assets/img/og-image.png","url":"https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/plataforma/exercise/solution/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/cloud-engineer-roadmap/pr-preview/pr-5/assets/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      (function () {
+        // Escolha explícita do usuário tem prioridade; sem ela, segue o tema do sistema.
+        var saved = localStorage.getItem("cloud-engineer-roadmap:theme");
+        var light = saved
+          ? saved === "light"
+          : window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="preview-banner" role="note">
+  <i class="fas fa-flask" aria-hidden="true"></i>
+  <span>
+    <strong>Homologação:</strong> prévia do <a href="https://github.com/therenanlira/cloud-engineer-roadmap/pull/5">PR #5</a> · <a href="https://therenanlira.github.io/cloud-engineer-roadmap/">ir para o site oficial</a>
+  </span>
+</div>
+
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <div class="site-header">
+      <div class="site-header-inner">
+
+        <div class="site-header-left">
+          <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a href="/cloud-engineer-roadmap/pr-preview/pr-5/" class="site-logo"><i class="fas fa-home fa-fw"></i><span>Início</span></a>
+        </div>
+
+        <div class="site-header-right">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+            <i class="fas fa-sun theme-icon-light"></i>
+            <i class="fas fa-moon theme-icon-dark"></i>
+          </button>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap" target="_blank" rel="noopener noreferrer" class="site-github-link"><i class="fab fa-github fa-fw"></i><span class="site-link-text">GitHub</span></a>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap/stargazers" target="_blank" rel="noopener noreferrer" class="site-stars-link">
+            <img src="https://img.shields.io/github/stars/therenanlira/cloud-engineer-roadmap?style=social" alt="GitHub stars">
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="page-shell">
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+<nav class="sidebar" id="sidebar" aria-label="Navegação do roadmap">
+  <div class="sidebar-overall">
+    <div class="sidebar-overall-label">
+      <span>Seu progresso</span>
+      <span class="sidebar-count-group">
+        <span data-overall-count>0/0</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="global" aria-label="Marcar ou desmarcar todos os tópicos" title="Marcar/desmarcar tudo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" data-overall-fill></div>
+    </div>
+    <p class="sidebar-hint">Marque os tópicos concluídos. Fica salvo neste navegador.</p>
+  </div>
+
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/introducao/" class="sidebar-module-title">Introdução</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/3</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de Introdução" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/cultura-devops/" aria-label="Marcar 'Cultura DevOps' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/introducao/cultura-devops/">Cultura DevOps</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/cncf/" aria-label="Marcar 'CNCF' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/introducao/cncf/">CNCF</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/preparacao-ambiente/" aria-label="Marcar 'Preparação do ambiente' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/introducao/preparacao-ambiente/">Preparação do ambiente</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/fundamentos/" class="sidebar-module-title">1. Fundamentos</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/6</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 1. Fundamentos" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/linux/" aria-label="Marcar 'Linux' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/fundamentos/linux/">Linux</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/redes/" aria-label="Marcar 'Redes' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/fundamentos/redes/">Redes</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/scripts/" aria-label="Marcar 'Scripts' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/fundamentos/scripts/">Scripts</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/git/" aria-label="Marcar 'Git' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/fundamentos/git/">Git</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/containers/" aria-label="Marcar 'Containers' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/fundamentos/containers/">Containers</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/fundamentos/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/cloud/" class="sidebar-module-title">2. Cloud</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/4</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 2. Cloud" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/aws/" aria-label="Marcar 'AWS' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/cloud/aws/">AWS</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/terraform/" aria-label="Marcar 'Terraform' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/cloud/terraform/">Terraform</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/finops/" aria-label="Marcar 'FinOps' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/cloud/finops/">FinOps</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/cloud/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/pipeline/" class="sidebar-module-title">3. Pipeline</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 3. Pipeline" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/pipeline/github-actions/" aria-label="Marcar 'GitHub Actions' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/pipeline/github-actions/">GitHub Actions</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/pipeline/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/pipeline/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/orquestracao/" class="sidebar-module-title">4. Orquestração</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/3</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 4. Orquestração" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/kubernetes/" aria-label="Marcar 'Kubernetes & Helm' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/orquestracao/kubernetes/">Kubernetes & Helm</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/argocd/" aria-label="Marcar 'ArgoCD' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/orquestracao/argocd/">ArgoCD</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/orquestracao/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/observabilidade/" class="sidebar-module-title">5. Observabilidade</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/5</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 5. Observabilidade" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/grafana/" aria-label="Marcar 'Grafana' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/observabilidade/grafana/">Grafana</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/prometheus/" aria-label="Marcar 'Prometheus' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/observabilidade/prometheus/">Prometheus</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/loki/" aria-label="Marcar 'Loki' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/observabilidade/loki/">Loki</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/jaeger/" aria-label="Marcar 'Jaeger' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/observabilidade/jaeger/">Jaeger</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/observabilidade/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/plataforma/" class="sidebar-module-title">6. Plataforma</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 6. Plataforma" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/plataforma/backstage/" aria-label="Marcar 'Backstage' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/plataforma/backstage/">Backstage</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/plataforma/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/plataforma/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/proximos-passos/" class="sidebar-module-title">Próximos passos</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de Próximos passos" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/proximos-passos/certificacoes/" aria-label="Marcar 'Certificações' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/proximos-passos/certificacoes/">Certificações</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/proximos-passos/portfolio/" aria-label="Marcar 'Projetos para portfólio' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/proximos-passos/portfolio/">Projetos para portfólio</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+</nav>
+
+      <div class="container main-content">
+        
+        
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="/cloud-engineer-roadmap/pr-preview/pr-5/">Início</a>
+  <span class="breadcrumb-sep">/</span>
+  
+  
+  <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/plataforma/">6. Plataforma</a>
+  
+  <span class="breadcrumb-sep">/</span>
+  <span class="breadcrumb-current">Plataforma (Exercícios - Solução)</span>
+  
+</nav>
+
+
+        
+        <h1 id="6-plataforma-platform-engineering">6. Plataforma (Platform Engineering)</h1>
+
+<p>A Engenharia de Plataforma é a evolução do DevOps: construindo produtos IDPs (Internal Developer Portals) que oferecem autonomia, autoatendimento e padronização para desenvolvedores, reduzindo a carga cognitiva e acelerando o <em>time-to-market</em>.</p>
+
+<h2 id="solução-para-os-exercícios-práticos-plataforma">Solução para os exercícios práticos (Plataforma)</h2>
+
+<p>Este guia é baseado no <strong>guia oficial</strong> <a href="https://backstage.io/docs/deployment/k8s/">Deploying with Kubernetes</a>, e constrói a sua própria imagem do Backstage, o que permite completar as 3 partes do exercício (instalar, criar catálogo e configurar SSO).</p>
+
+<h2 id="parte-1---build-e-instalação">Parte 1 - Build e instalação</h2>
+
+<h3 id="1-gere-o-projeto-do-backstage">1. Gere o projeto do Backstage</h3>
+
+<p>Crie um repositório no seu GitHub (ex: <code class="language-plaintext highlighter-rouge">meu-backstage</code>) e, na raiz do repositório, execute o comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx @backstage/create-app@latest
+</code></pre></div></div>
+
+<blockquote>
+  <p>Se ainda não tiver o <code class="language-plaintext highlighter-rouge">npx</code> e o <code class="language-plaintext highlighter-rouge">yarn</code> instalados, siga o <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/guides/npx/">guia de instalação do Node.js, npx e Yarn</a>.</p>
+</blockquote>
+
+<p>Quando for solicitado o nome do app, digite <code class="language-plaintext highlighter-rouge">meu-backstage</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>meu-backstage
+</code></pre></div></div>
+
+<h3 id="2-configure-a-integração-com-github">2. Configure a integração com GitHub</h3>
+
+<p>O <code class="language-plaintext highlighter-rouge">app-config.yaml</code> gerado já vem com a integração do GitHub configurada por padrão (procure por <code class="language-plaintext highlighter-rouge">integrations.github</code>), usando a variável <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code>. Não precisa editar nada aqui, só garantir que essa variável esteja definida quando o Backstage rodar (já cuidamos disso no Deployment mais abaixo).</p>
+
+<h3 id="3-ajuste-o-app-configyaml">3. Ajuste o <code class="language-plaintext highlighter-rouge">app-config.yaml</code></h3>
+
+<p>O <code class="language-plaintext highlighter-rouge">app-config.yaml</code> precisa de dois ajustes antes do build. O primeiro é na seção <code class="language-plaintext highlighter-rouge">backend.csp</code>: a diretiva <code class="language-plaintext highlighter-rouge">upgrade-insecure-requests</code>, ativa por padrão, instrui o navegador a forçar conexões HTTPS, e como este exercício roda tudo em <code class="language-plaintext highlighter-rouge">http://localhost</code>, sem TLS, navegadores mais rigorosos (como o Safari) não conseguem carregar a página. Desative a diretiva:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">backend</span><span class="pi">:</span>
+  <span class="na">csp</span><span class="pi">:</span>
+    <span class="na">connect-src</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">'self'"</span><span class="pi">,</span> <span class="s1">'</span><span class="s">http:'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">https:'</span><span class="pi">]</span>
+    <span class="na">upgrade-insecure-requests</span><span class="pi">:</span> <span class="kc">false</span>
+</code></pre></div></div>
+
+<p>O segundo ajuste é na seção <code class="language-plaintext highlighter-rouge">catalog.rules</code>, que define quais tipos de entidade o catálogo aceita. A lista padrão não inclui <code class="language-plaintext highlighter-rouge">Domain</code>, <code class="language-plaintext highlighter-rouge">Group</code> e <code class="language-plaintext highlighter-rouge">User</code>, que vamos usar na Parte 2, e um arquivo que declare um tipo fora da lista é rejeitado por inteiro. Como qualquer mudança nesse arquivo exige um novo build da imagem, adicione os três tipos desde já:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">catalog</span><span class="pi">:</span>
+  <span class="na">rules</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">allow</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Component</span><span class="pi">,</span> <span class="nv">System</span><span class="pi">,</span> <span class="nv">API</span><span class="pi">,</span> <span class="nv">Resource</span><span class="pi">,</span> <span class="nv">Location</span><span class="pi">,</span> <span class="nv">Domain</span><span class="pi">,</span> <span class="nv">Group</span><span class="pi">,</span> <span class="nv">User</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<h3 id="4-faça-o-build-de-produção">4. Faça o build de produção</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn <span class="nb">install
+</span>yarn tsc
+yarn build:backend
+</code></pre></div></div>
+
+<h3 id="5-construa-a-imagem-docker">5. Construa a imagem Docker</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image build <span class="nb">.</span> <span class="nt">-f</span> packages/backend/Dockerfile <span class="nt">--tag</span> &lt;seu-usuario-dockerhub&gt;/meu-backstage:latest
+</code></pre></div></div>
+
+<h3 id="6-publique-no-docker-hub">6. Publique no Docker Hub</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker login
+docker push &lt;seu-usuario-dockerhub&gt;/meu-backstage:latest
+</code></pre></div></div>
+
+<h3 id="7-crie-a-estrutura-de-diretórios-dos-manifestos">7. Crie a estrutura de diretórios dos manifestos</h3>
+
+<p>Crie um repositório no seu GitHub (ex: <code class="language-plaintext highlighter-rouge">meu-backstage-infra</code>), e a estrutura <code class="language-plaintext highlighter-rouge">kubernetes/backstage</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> kubernetes/backstage
+</code></pre></div></div>
+
+<h3 id="8-criar-o-namespace">8. Criar o namespace</h3>
+
+<p>Dentro do diretório <code class="language-plaintext highlighter-rouge">kubernetes/backstage</code>, crie o arquivo <code class="language-plaintext highlighter-rouge">namespace.yaml</code>. Usaremos esse namespace para isolar o Backstage no nosso cluster Kubernetes.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Namespace</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">backstage</span>
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> kubernetes/backstage/namespace.yaml <span class="nt">-n</span> backstage
+</code></pre></div></div>
+
+<h3 id="9-instalar-o-postgresql">9. Instalar o PostgreSQL</h3>
+
+<p>Escolha um usuário e uma senha para o banco e crie a secret direto via <code class="language-plaintext highlighter-rouge">kubectl</code>, em vez de escrevê-la num arquivo YAML. Assim o valor nunca vai parar num arquivo que possa ser commitado por engano, causando um vazamento de segredo. Informe os valores em texto puro, pois o <code class="language-plaintext highlighter-rouge">--from-literal</code> cuida da codificação em base64:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl create secret generic postgres-secrets <span class="se">\</span>
+  <span class="nt">--namespace</span> backstage <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">POSTGRES_USER</span><span class="o">=</span><span class="s1">'seu_usuario'</span> <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span><span class="s1">'sua_senha'</span>
+</code></pre></div></div>
+
+<p>Dentro do diretório <code class="language-plaintext highlighter-rouge">kubernetes/backstage</code>, crie o arquivo <code class="language-plaintext highlighter-rouge">postgres.yaml</code>. Este define o armazenamento persistente e o deployment do PostgreSQL (que consome a secret criada acima).</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">PersistentVolume</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">postgres-storage</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">backstage</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">local</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">capacity</span><span class="pi">:</span>
+    <span class="na">storage</span><span class="pi">:</span> <span class="s">2G</span>
+  <span class="na">accessModes</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">ReadWriteOnce</span>
+  <span class="na">persistentVolumeReclaimPolicy</span><span class="pi">:</span> <span class="s">Retain</span>
+  <span class="na">hostPath</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/mnt/data'</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">PersistentVolumeClaim</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">postgres-storage-claim</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">backstage</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">accessModes</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">ReadWriteOnce</span>
+  <span class="na">resources</span><span class="pi">:</span>
+    <span class="na">requests</span><span class="pi">:</span>
+      <span class="na">storage</span><span class="pi">:</span> <span class="s">2G</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">postgres</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">backstage</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">postgres</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">postgres</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">postgres</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">postgres:13.2-alpine</span>
+          <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="s1">'</span><span class="s">IfNotPresent'</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">5432</span>
+          <span class="na">envFrom</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">secretRef</span><span class="pi">:</span>
+                <span class="na">name</span><span class="pi">:</span> <span class="s">postgres-secrets</span>
+          <span class="na">env</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">POSTGRES_HOST</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s">postgres.backstage</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">POSTGRES_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">5432'</span>
+          <span class="na">volumeMounts</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/var/lib/postgresql/data</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">postgresdb</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">256Mi"</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">100m"</span>
+            <span class="na">limits</span><span class="pi">:</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">512Mi"</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">500m"</span>
+      <span class="na">volumes</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">postgresdb</span>
+          <span class="na">persistentVolumeClaim</span><span class="pi">:</span>
+            <span class="na">claimName</span><span class="pi">:</span> <span class="s">postgres-storage-claim</span>
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> kubernetes/backstage/postgres.yaml <span class="nt">-n</span> backstage
+</code></pre></div></div>
+
+<h4 id="verifique-a-conectividade-do-pod">Verifique a conectividade do Pod</h4>
+
+<p>Verifique se o Pod do PostgreSQL está funcionando corretamente antes de seguir.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">POSTGRESQL_PODNAME</span><span class="o">=</span><span class="si">$(</span>kubectl get pods <span class="nt">-n</span> backstage <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>postgres <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.items[0].metadata.name}'</span><span class="si">)</span>
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> <span class="nt">--namespace</span><span class="o">=</span>backstage <span class="nv">$POSTGRESQL_PODNAME</span> <span class="nt">--</span> /bin/bash
+</code></pre></div></div>
+
+<p>Dentro do container, execute:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql <span class="nt">-U</span> <span class="nv">$POSTGRES_USER</span>
+</code></pre></div></div>
+
+<p>Se o terminal abrir a linha de comando do PostgreSQL, quer dizer que funcionou. Use <code class="language-plaintext highlighter-rouge">CTRL + D</code> ou digite <code class="language-plaintext highlighter-rouge">exit</code> para sair do PostgreSQL e do container.</p>
+
+<h4 id="instalar-o-service-do-postgresql">Instalar o Service do PostgreSQL</h4>
+
+<p>Dentro do diretório <code class="language-plaintext highlighter-rouge">kubernetes/backstage</code>, crie o arquivo <code class="language-plaintext highlighter-rouge">postgres-service.yaml</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">postgres</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">backstage</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">postgres</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">5432</span>
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> kubernetes/backstage/postgres-service.yaml
+</code></pre></div></div>
+
+<h3 id="10-criar-o-github_token">10. Criar o GITHUB_TOKEN</h3>
+
+<p>Crie um PAT (Personal Access Token) no GitHub. É com ele que o Backstage lê seus repositórios e arquivos <code class="language-plaintext highlighter-rouge">catalog-info.yaml</code> para a integração de catálogo.</p>
+
+<ol>
+  <li>Acesse sua conta do GitHub e vá em <strong>Settings</strong> -&gt; <strong>Developer Settings</strong> -&gt; <strong>Personal access tokens</strong> -&gt; <strong>Tokens (classic)</strong>.</li>
+  <li>Clique em <strong>Generate new token (classic)</strong>.</li>
+  <li><strong>Scopes (permissões):</strong> marque <code class="language-plaintext highlighter-rouge">repo</code> (para ler e escrever repositórios) e <code class="language-plaintext highlighter-rouge">workflow</code> (para configurar as ações de CI automaticamente).</li>
+  <li>Copie o valor gerado (ex: <code class="language-plaintext highlighter-rouge">ghp_xxxxxxxxxxxxxxxxxxxxxxx</code>). Este é o seu <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code>.</li>
+</ol>
+
+<p>Como na secret do banco, crie direto via <code class="language-plaintext highlighter-rouge">kubectl</code>, com o token em texto puro:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl create secret generic backstage-secrets <span class="se">\</span>
+  <span class="nt">--namespace</span> backstage <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="s1">'ghp_xxxxxxxxxxxxxxxxxxxxxxx'</span>
+</code></pre></div></div>
+
+<h3 id="11-criar-o-deployment-e-o-service-do-backstage">11. Criar o Deployment e o Service do Backstage</h3>
+
+<p>Dentro do diretório <code class="language-plaintext highlighter-rouge">kubernetes/backstage</code>, crie o arquivo <code class="language-plaintext highlighter-rouge">backstage.yaml</code>. Troque <code class="language-plaintext highlighter-rouge">&lt;seu-usuario-dockerhub&gt;</code> pela imagem que você publicou no passo 5.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">backstage</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">backstage</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">backstage</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">backstage</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">backstage</span>
+          <span class="c1"># Troque pela imagem que você buildou e publicou no Docker Hub (Parte 1)</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">docker.io/&lt;seu-usuario-dockerhub&gt;/meu-backstage:latest</span>
+          <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="s">IfNotPresent</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+              <span class="na">containerPort</span><span class="pi">:</span> <span class="m">7000</span>
+          <span class="na">env</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">APP_CONFIG_app_baseUrl</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://localhost:7000"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">APP_CONFIG_backend_baseUrl</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://localhost:7000"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">APP_CONFIG_backend_cors_origin</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://localhost:7000"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">APP_CONFIG_backend_listen</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">:7000"</span>
+            <span class="c1"># O login "Guest" é bloqueado fora de ambiente de desenvolvimento por padrão;</span>
+            <span class="c1"># essa flag libera para fins de estudo (NODE_ENV=production na imagem)</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">APP_CONFIG_auth_providers_guest_dangerouslyAllowOutsideDevelopment</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">POSTGRES_HOST</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">postgres"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">POSTGRES_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">5432"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">POSTGRES_USER</span>
+              <span class="na">valueFrom</span><span class="pi">:</span>
+                <span class="na">secretKeyRef</span><span class="pi">:</span>
+                  <span class="na">name</span><span class="pi">:</span> <span class="s">postgres-secrets</span>
+                  <span class="na">key</span><span class="pi">:</span> <span class="s">POSTGRES_USER</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">POSTGRES_PASSWORD</span>
+              <span class="na">valueFrom</span><span class="pi">:</span>
+                <span class="na">secretKeyRef</span><span class="pi">:</span>
+                  <span class="na">name</span><span class="pi">:</span> <span class="s">postgres-secrets</span>
+                  <span class="na">key</span><span class="pi">:</span> <span class="s">POSTGRES_PASSWORD</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">GITHUB_TOKEN</span>
+              <span class="na">valueFrom</span><span class="pi">:</span>
+                <span class="na">secretKeyRef</span><span class="pi">:</span>
+                  <span class="na">name</span><span class="pi">:</span> <span class="s">backstage-secrets</span>
+                  <span class="na">key</span><span class="pi">:</span> <span class="s">GITHUB_TOKEN</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">256Mi"</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">100m"</span>
+            <span class="na">limits</span><span class="pi">:</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">512Mi"</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">500m"</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">backstage</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">backstage</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">backstage</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">80</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="s">http</span>
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> kubernetes/backstage/backstage.yaml
+</code></pre></div></div>
+
+<h3 id="12-acessar-o-painel">12. Acessar o painel</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl port-forward svc/backstage 7000:80 <span class="nt">-n</span> backstage
+</code></pre></div></div>
+
+<blockquote>
+  <p>Acesse <a href="http://localhost:7000">http://localhost:7000</a>. Clique em <strong>Guest</strong> -&gt; <strong>ENTER</strong> para entrar.</p>
+</blockquote>
+
+<h2 id="parte-2---catálogo">Parte 2 - Catálogo</h2>
+
+<p>Após instalar o Backstage, siga para a configuração do catálogo de software. O próprio <code class="language-plaintext highlighter-rouge">create-app</code> já gerou um arquivo <code class="language-plaintext highlighter-rouge">catalog-info.yaml</code> na raiz do seu projeto <code class="language-plaintext highlighter-rouge">meu-backstage</code>, descrevendo a própria aplicação.</p>
+
+<p>Faça o commit e o push desse arquivo (junto com o resto do código do <code class="language-plaintext highlighter-rouge">meu-backstage</code>) para um repositório no seu GitHub:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"feat: cria o app meu-backstage"</span>
+git push <span class="nt">-u</span> origin main
+</code></pre></div></div>
+
+<p>De volta ao painel do Backstage, clique no ícone <strong>+</strong> (<strong>Create</strong>) no menu lateral e depois em <strong>Register Existing Component</strong>. Cole a URL completa do arquivo (ex: <code class="language-plaintext highlighter-rouge">https://github.com/&lt;seu-usuario&gt;/meu-backstage/blob/main/catalog-info.yaml</code>) e clique em <strong>ANALYZE</strong>. Use a URL do arquivo, e não a do repositório: sem o caminho, o assistente entra num modo de varredura que exige o login com GitHub, que só será configurado na Parte 3.</p>
+
+<p>Se tudo correu bem, o Backstage vai encontrar o componente <code class="language-plaintext highlighter-rouge">meu-backstage</code> e permitir importá-lo. Depois de importado, ele aparece na página <strong>Catalog</strong>.</p>
+
+<h3 id="modele-o-catálogo-component-system-resource-domain-group-e-user">Modele o catálogo: Component, System, Resource, Domain, Group e User</h3>
+
+<p>Um catálogo de software raramente descreve componentes isolados. Ele organiza componentes relacionados sob um <strong>System</strong>, agrupa Systems relacionados sob um <strong>Domain</strong> (uma área de negócio ou produto), modela dependências externas como um <strong>Resource</strong> (ex: um banco de dados), e representa a estrutura organizacional com <strong>Group</strong> e <strong>User</strong>, usados como <code class="language-plaintext highlighter-rouge">owner</code> das demais entidades. Vamos expandir o <code class="language-plaintext highlighter-rouge">catalog-info.yaml</code> para refletir o que você de fato provisionou neste exercício, com essas seis entidades.</p>
+
+<p>Edite o <code class="language-plaintext highlighter-rouge">catalog-info.yaml</code> na raiz do <code class="language-plaintext highlighter-rouge">meu-backstage</code> para o seguinte conteúdo (troque <code class="language-plaintext highlighter-rouge">&lt;seu-usuario-github&gt;</code> pelo seu usuário):</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">backstage.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Component</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">meu-backstage</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">An example of a Backstage application.</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">website</span>
+  <span class="na">owner</span><span class="pi">:</span> <span class="s">group:time-plataforma</span>
+  <span class="na">lifecycle</span><span class="pi">:</span> <span class="s">experimental</span>
+  <span class="na">system</span><span class="pi">:</span> <span class="s">plataforma-devops</span>
+  <span class="na">dependsOn</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">resource:postgres</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">backstage.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">System</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">plataforma-devops</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Agrupa os componentes provisionados no exercício de Plataforma.</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">owner</span><span class="pi">:</span> <span class="s">group:time-plataforma</span>
+  <span class="na">domain</span><span class="pi">:</span> <span class="s">developer-experience</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">backstage.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Resource</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">postgres</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Banco de dados PostgreSQL que armazena os dados do catálogo do Backstage.</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">database</span>
+  <span class="na">owner</span><span class="pi">:</span> <span class="s">group:time-plataforma</span>
+  <span class="na">system</span><span class="pi">:</span> <span class="s">plataforma-devops</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">backstage.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Component</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">meu-site-nginx</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Servidor Nginx provisionado no exercício de Orquestração.</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">service</span>
+  <span class="na">owner</span><span class="pi">:</span> <span class="s">group:time-plataforma</span>
+  <span class="na">lifecycle</span><span class="pi">:</span> <span class="s">production</span>
+  <span class="na">system</span><span class="pi">:</span> <span class="s">plataforma-devops</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">backstage.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Domain</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">developer-experience</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Domínio de plataformas internas e ferramentas para desenvolvedores.</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">owner</span><span class="pi">:</span> <span class="s">group:time-plataforma</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">backstage.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Group</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">time-plataforma</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Time responsável por operar o IDP.</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">team</span>
+  <span class="na">children</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">backstage.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">User</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;seu-usuario-github&gt;</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">memberOf</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">time-plataforma</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<p>Um único arquivo pode descrever várias entidades, separadas por <code class="language-plaintext highlighter-rouge">---</code>; é assim que o próprio Backstage organiza seus dados de exemplo internos. E é para aceitar os tipos <code class="language-plaintext highlighter-rouge">Domain</code>, <code class="language-plaintext highlighter-rouge">Group</code> e <code class="language-plaintext highlighter-rouge">User</code> que ajustamos o <code class="language-plaintext highlighter-rouge">catalog.rules</code> no passo 3 da Parte 1.</p>
+
+<p>Note que o <code class="language-plaintext highlighter-rouge">meu-site-nginx</code> não tem código-fonte dentro do repositório <code class="language-plaintext highlighter-rouge">meu-backstage</code>, ele representa um serviço que já existe no seu cluster (o Nginx provisionado no exercício de Orquestração). Isso é normal: o catálogo modela toda a paisagem de software da empresa, não apenas o conteúdo do repositório atual.</p>
+
+<p>Faça o commit e o push da mudança:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add catalog-info.yaml
+git commit <span class="nt">-m</span> <span class="s2">"feat: modela Component, System, Resource, Domain, Group e User no catálogo"</span>
+git push
+</code></pre></div></div>
+
+<p>Como o arquivo já está registrado como <em>location</em> no catálogo, não é preciso repetir o <strong>Register Existing Component</strong>. Abra a página do componente <code class="language-plaintext highlighter-rouge">meu-backstage</code>, e clique no ícone de <strong>Refresh</strong> (ao lado do nome, no topo) para forçar a releitura imediata do arquivo, ou aguarde a atualização automática periódica do Backstage.</p>
+
+<p>Depois do refresh, acesse o menu <strong>Catalog</strong>, filtre por <strong>Kind: System</strong>, e abra o <code class="language-plaintext highlighter-rouge">plataforma-devops</code>: ele deve agrupar os dois componentes e o Resource, e mostrar o <code class="language-plaintext highlighter-rouge">developer-experience</code> como Domain. Na aba <strong>Diagram</strong> dessa página, você vê visualmente a dependência (<code class="language-plaintext highlighter-rouge">dependsOn</code>) do <code class="language-plaintext highlighter-rouge">meu-backstage</code> com o Resource <code class="language-plaintext highlighter-rouge">postgres</code>. Filtrando por <strong>Kind: Group</strong>, o <code class="language-plaintext highlighter-rouge">time-plataforma</code> aparece como owner de todas as entidades que você criou.</p>
+
+<h2 id="parte-3---bônus-avançado-login-via-github-sso">Parte 3 - Bônus (Avançado): Login via GitHub (SSO)</h2>
+
+<p>Por padrão, a tela de login do Backstage só oferece a opção <strong>Guest</strong>. Como agora você tem o código-fonte do próprio app, dá pra adicionar um provider de verdade.</p>
+
+<h3 id="1-crie-um-github-oauth-app">1. Crie um GitHub OAuth App</h3>
+
+<p>Acesse a sua conta do GitHub e vá em <strong>Settings</strong> -&gt; <strong>Developer settings</strong> -&gt; <strong>OAuth Apps</strong> -&gt; <strong>New OAuth App</strong>:</p>
+
+<ul>
+  <li><strong>Homepage URL:</strong> <code class="language-plaintext highlighter-rouge">http://localhost:7000</code></li>
+  <li><strong>Authorization callback URL:</strong> <code class="language-plaintext highlighter-rouge">http://localhost:7000/api/auth/github/handler/frame</code></li>
+</ul>
+
+<p>Isso gera um <strong>Client ID</strong> e um <strong>Client Secret</strong>.</p>
+
+<h3 id="2-configure-o-backend">2. Configure o backend</h3>
+
+<p>Edite <code class="language-plaintext highlighter-rouge">packages/backend/src/index.ts</code> e registre o módulo do provider do GitHub, logo abaixo do <code class="language-plaintext highlighter-rouge">guest-provider</code>:</p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">backend</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">@backstage/plugin-auth-backend-module-guest-provider</span><span class="dl">'</span><span class="p">));</span>
+<span class="nx">backend</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">@backstage/plugin-auth-backend-module-github-provider</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p>Em seguida, configure o provider no <code class="language-plaintext highlighter-rouge">app-config.yaml</code>, na seção <code class="language-plaintext highlighter-rouge">auth.providers</code> (onde já existe o <code class="language-plaintext highlighter-rouge">guest</code>):</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">auth</span><span class="pi">:</span>
+  <span class="na">providers</span><span class="pi">:</span>
+    <span class="na">guest</span><span class="pi">:</span> <span class="pi">{}</span>
+    <span class="na">github</span><span class="pi">:</span>
+      <span class="na">development</span><span class="pi">:</span>
+        <span class="na">clientId</span><span class="pi">:</span> <span class="s">${AUTH_GITHUB_CLIENT_ID}</span>
+        <span class="na">clientSecret</span><span class="pi">:</span> <span class="s">${AUTH_GITHUB_CLIENT_SECRET}</span>
+        <span class="na">signIn</span><span class="pi">:</span>
+          <span class="na">resolvers</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">resolver</span><span class="pi">:</span> <span class="s">usernameMatchingUserEntityName</span>
+</code></pre></div></div>
+
+<p>A parte mais importante aqui é o <code class="language-plaintext highlighter-rouge">signIn.resolvers</code>. Autenticar no GitHub prova quem você é lá, mas o Backstage ainda precisa de uma regra para traduzir esse usuário numa identidade do catálogo, e é isso que o resolver faz: o <code class="language-plaintext highlighter-rouge">usernameMatchingUserEntityName</code> procura uma entidade <code class="language-plaintext highlighter-rouge">User</code> com o mesmo nome do seu username do GitHub, exatamente a que você criou na Parte 2. Sem um resolver, o backend recusa o login mesmo com a autenticação bem-sucedida.</p>
+
+<h3 id="3-adicione-a-tela-de-login-com-o-github">3. Adicione a tela de login com o GitHub</h3>
+
+<p>Crie o arquivo <code class="language-plaintext highlighter-rouge">packages/app/src/modules/sign-in/index.tsx</code>:</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createFrontendModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@backstage/frontend-plugin-api</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">SignInPageBlueprint</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@backstage/plugin-app-react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">SignInPage</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@backstage/core-components</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">githubAuthApiRef</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@backstage/core-plugin-api</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">githubSignInPage</span> <span class="o">=</span> <span class="nx">SignInPageBlueprint</span><span class="p">.</span><span class="nf">make</span><span class="p">({</span>
+  <span class="na">params</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">loader</span><span class="p">:</span> <span class="k">async </span><span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">(</span>
+      <span class="p">&lt;</span><span class="nc">SignInPage</span>
+        <span class="si">{</span><span class="p">...</span><span class="nx">props</span><span class="si">}</span>
+        <span class="na">auto</span>
+        <span class="na">providers</span><span class="p">=</span><span class="si">{</span><span class="p">[</span>
+          <span class="dl">'</span><span class="s1">guest</span><span class="dl">'</span><span class="p">,</span>
+          <span class="p">{</span>
+            <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">github-auth-provider</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GitHub</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Sign in using GitHub</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">apiRef</span><span class="p">:</span> <span class="nx">githubAuthApiRef</span><span class="p">,</span>
+          <span class="p">},</span>
+        <span class="p">]</span><span class="si">}</span>
+      <span class="p">/&gt;</span>
+    <span class="p">),</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">signInModule</span> <span class="o">=</span> <span class="nf">createFrontendModule</span><span class="p">({</span>
+  <span class="na">pluginId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="nx">githubSignInPage</span><span class="p">],</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>O <code class="language-plaintext highlighter-rouge">'guest'</code> continua na lista por enquanto: até você confirmar que o login via GitHub funciona de ponta a ponta, ele é a sua porta de entrada alternativa. A remoção dele fica para o passo 6.</p>
+
+<p>E registre esse módulo em <code class="language-plaintext highlighter-rouge">packages/app/src/App.tsx</code>:</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createApp</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@backstage/frontend-defaults</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">catalogPlugin</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@backstage/plugin-catalog/alpha</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">navModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./modules/nav</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">signInModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./modules/sign-in</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nf">createApp</span><span class="p">({</span>
+  <span class="na">features</span><span class="p">:</span> <span class="p">[</span><span class="nx">catalogPlugin</span><span class="p">,</span> <span class="nx">navModule</span><span class="p">,</span> <span class="nx">signInModule</span><span class="p">],</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="4-adicione-as-credenciais-do-oauth-app">4. Adicione as credenciais do OAuth App</h3>
+
+<p>A secret <code class="language-plaintext highlighter-rouge">backstage-secrets</code> já existe (criada na Parte 1). Para adicionar as novas chaves sem escrever nenhum valor em disco, recrie-a com o Client ID e o Client Secret gerados no passo 1, além do <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> já usado, todos <strong>sem base64</strong>, como da primeira vez:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl delete secret backstage-secrets <span class="nt">-n</span> backstage
+
+kubectl create secret generic backstage-secrets <span class="se">\</span>
+  <span class="nt">--namespace</span> backstage <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="s1">'ghp_xxxxxxxxxxxxxxxxxxxxxxx'</span> <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">AUTH_GITHUB_CLIENT_ID</span><span class="o">=</span><span class="s1">'seu_client_id'</span> <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">AUTH_GITHUB_CLIENT_SECRET</span><span class="o">=</span><span class="s1">'seu_client_secret'</span>
+</code></pre></div></div>
+
+<p>Adicione ao <code class="language-plaintext highlighter-rouge">backstage.yaml</code> as variáveis que apontam para essa secret. Os nomes precisam ser exatamente <code class="language-plaintext highlighter-rouge">AUTH_GITHUB_CLIENT_ID</code> e <code class="language-plaintext highlighter-rouge">AUTH_GITHUB_CLIENT_SECRET</code>, pois são eles que o <code class="language-plaintext highlighter-rouge">app-config.yaml</code> referencia com a sintaxe <code class="language-plaintext highlighter-rouge">${...}</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">AUTH_GITHUB_CLIENT_ID</span>
+  <span class="na">valueFrom</span><span class="pi">:</span>
+    <span class="na">secretKeyRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">backstage-secrets</span>
+      <span class="na">key</span><span class="pi">:</span> <span class="s">AUTH_GITHUB_CLIENT_ID</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">AUTH_GITHUB_CLIENT_SECRET</span>
+  <span class="na">valueFrom</span><span class="pi">:</span>
+    <span class="na">secretKeyRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">backstage-secrets</span>
+      <span class="na">key</span><span class="pi">:</span> <span class="s">AUTH_GITHUB_CLIENT_SECRET</span>
+</code></pre></div></div>
+
+<h3 id="5-rebuild-republique-e-reaplique">5. Rebuild, republique e reaplique</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn build:backend
+docker image build <span class="nb">.</span> <span class="nt">-f</span> packages/backend/Dockerfile <span class="nt">--tag</span> &lt;seu-usuario-dockerhub&gt;/meu-backstage:latest
+docker push &lt;seu-usuario-dockerhub&gt;/meu-backstage:latest
+kubectl rollout restart deployment/backstage <span class="nt">-n</span> backstage
+</code></pre></div></div>
+
+<p>Acesse <code class="language-plaintext highlighter-rouge">http://localhost:7000</code> novamente (numa aba anônima, para não reaproveitar a sessão de Guest) e confirme que agora aparece um card <strong>GitHub</strong> ao lado do <strong>Guest</strong>, com um botão <strong>SIGN IN</strong> que leva você para a tela de login do GitHub de verdade. Após autorizar, você entra no Backstage com a identidade da entidade <code class="language-plaintext highlighter-rouge">User</code> criada na Parte 2. Lembre que o nome dela precisa ser exatamente igual ao seu username do GitHub, pois é assim que o resolver faz a correspondência.</p>
+
+<h3 id="6-remova-o-login-de-guest">6. Remova o login de Guest</h3>
+
+<p>Até aqui, o Guest foi mantido de propósito: se o SSO estivesse mal configurado, ele era a porta de entrada alternativa para você não ficar trancado para fora do painel. Agora que o login via GitHub está funcionando, remova o Guest, pois num ambiente de produção, ninguém deve entrar sem se identificar. O guest está amarrado em <strong>quatro pontos</strong> diferentes, e é preciso remover todos:</p>
+
+<p><strong>1. Na tela de login</strong>: em <code class="language-plaintext highlighter-rouge">packages/app/src/modules/sign-in/index.tsx</code>, remova a string <code class="language-plaintext highlighter-rouge">'guest'</code> da lista <code class="language-plaintext highlighter-rouge">providers</code>, deixando só o GitHub:</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">providers</span><span class="o">=</span><span class="p">{[</span>
+  <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">github-auth-provider</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GitHub</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Sign in using GitHub</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">apiRef</span><span class="p">:</span> <span class="nx">githubAuthApiRef</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">]}</span>
+</code></pre></div></div>
+
+<p><strong>2. No backend</strong>: em <code class="language-plaintext highlighter-rouge">packages/backend/src/index.ts</code>, remova a linha do módulo guest. Só esconder o botão da tela não bastaria, pois a API <code class="language-plaintext highlighter-rouge">/api/auth/guest</code> continuaria aceitando logins; sem o módulo, o endpoint deixa de existir:</p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">backend</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">@backstage/plugin-auth-backend-module-guest-provider</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// remova esta linha</span>
+</code></pre></div></div>
+
+<p><strong>3. Na configuração</strong>: remova a linha <code class="language-plaintext highlighter-rouge">guest: {}</code> de <code class="language-plaintext highlighter-rouge">auth.providers</code> no <code class="language-plaintext highlighter-rouge">app-config.yaml</code> <strong>e também no <code class="language-plaintext highlighter-rouge">app-config.production.yaml</code></strong>. Esse segundo é fácil de esquecer: dentro do container, os dois arquivos são mesclados e o de produção também declara o guest.</p>
+
+<p><strong>4. No Deployment</strong>: em <code class="language-plaintext highlighter-rouge">kubernetes/backstage/backstage.yaml</code>, remova a variável de ambiente <code class="language-plaintext highlighter-rouge">APP_CONFIG_auth_providers_guest_dangerouslyAllowOutsideDevelopment</code>, que só existia para permitir o guest em build de produção.</p>
+
+<p>Depois, repita o ciclo do passo anterior (<code class="language-plaintext highlighter-rouge">yarn build:backend</code>, <code class="language-plaintext highlighter-rouge">docker image build</code>, <code class="language-plaintext highlighter-rouge">docker push</code>) e aplique o Deployment atualizado:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> kubernetes/backstage/backstage.yaml
+kubectl rollout restart deployment/backstage <span class="nt">-n</span> backstage
+</code></pre></div></div>
+
+<p>Acesse <code class="language-plaintext highlighter-rouge">http://localhost:7000</code> numa aba anônima: a tela de login agora deve mostrar apenas o card do GitHub, sem a opção Guest. Vale lembrar que, a partir daqui, se o OAuth App for deletado ou as credenciais na secret ficarem inválidas, não há mais porta alternativa de acesso ao painel. Foi por isso que essa remoção ficou por último.</p>
+
+<h2 id="limpando-o-ambiente">Limpando o ambiente</h2>
+
+<p>Para liberar a memória e os recursos da sua máquina, delete o cluster após terminar os testes:</p>
+
+<p>Minikube:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minikube delete
+</code></pre></div></div>
+
+<p>Kind:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kind delete cluster
+</code></pre></div></div>
+
+<p>k3d:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>k3d cluster delete
+</code></pre></div></div>
+
+<h2 id="resumo-do-aprendizado">Resumo do Aprendizado</h2>
+
+<p>Neste exercício, você foi além de só instalar uma imagem pronta: construiu a sua própria imagem do Backstage a partir do zero, publicou num registry, orquestrou múltiplos componentes no Kubernetes (banco de dados, secrets, storage e a aplicação), teve o primeiro contato com o catálogo de software registrando um componente e, por ter o controle do código-fonte, conseguiu configurar um provider de autenticação real via GitHub.</p>
+
+<div class="next-steps">
+
+  
+  <div class="next-steps-col next-steps-prev">
+    <span class="next-steps-label">Passo anterior: Exercícios (Plataforma)</span>
+    <a href="/cloud-engineer-roadmap/pr-preview/pr-5/content/modules/plataforma/exercise/" class="next-steps-btn next-steps-btn-outline">
+      Etapa anterior
+    </a>
+  </div>
+  
+
+  
+
+</div>
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <hr class="site-footer-divider">
+    <p class="site-footer-note">
+      <i>Todos os direitos e créditos pelos materiais pertencem aos seus respectivos autores.</i>
+    </p>
+  </div>
+</footer>
+
+    <script src="/cloud-engineer-roadmap/pr-preview/pr-5/assets/js/site.js"></script>
+  </body>
+</html>
