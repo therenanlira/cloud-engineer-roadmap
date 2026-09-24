@@ -3,7 +3,26 @@
   <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Guia (npx) | Cloud Engineer Roadmap</title>
+    <title>Guia (Node.js, npx e Yarn) | Cloud Engineer Roadmap</title>
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Guia (Node.js, npx e Yarn)" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering)." />
+<meta name="twitter:description" property="og:description" content="Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering)." />
+<link rel="canonical" href="https://therenanlira.github.io/cloud-engineer-roadmap/content/guides/npx/" />
+<meta property="og:url" content="https://therenanlira.github.io/cloud-engineer-roadmap/content/guides/npx/" />
+<meta property="og:site_name" content="Cloud Engineer Roadmap" />
+<meta property="og:image" content="https://therenanlira.github.io/cloud-engineer-roadmap/assets/img/og-image.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://therenanlira.github.io/cloud-engineer-roadmap/assets/img/og-image.png" />
+<meta name="twitter:title" content="Guia (Node.js, npx e Yarn)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering).","headline":"Guia (Node.js, npx e Yarn)","image":"https://therenanlira.github.io/cloud-engineer-roadmap/assets/img/og-image.png","url":"https://therenanlira.github.io/cloud-engineer-roadmap/content/guides/npx/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -23,6 +42,7 @@
   </head>
 
   <body>
+    
     <div class="reading-progress" id="reading-progress"></div>
 
     <div class="site-header">
@@ -335,6 +355,36 @@
     </ul>
   </div>
   
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/content/modules/proximos-passos/" class="sidebar-module-title">Próximos passos</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de Próximos passos" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/proximos-passos/certificacoes/" aria-label="Marcar 'Certificações' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/proximos-passos/certificacoes/">Certificações</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/proximos-passos/portfolio/" aria-label="Marcar 'Projetos para portfólio' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/proximos-passos/portfolio/">Projetos para portfólio</a>
+      </li>
+      
+    </ul>
+  </div>
+  
 </nav>
 
       <div class="container main-content">
@@ -350,9 +400,9 @@
 
 
         
-        <h1 id="guia-como-instalar-o-npx">Guia: Como instalar o <code class="language-plaintext highlighter-rouge">npx</code></h1>
+        <h1 id="guia-como-instalar-o-nodejs-o-npx-e-o-yarn">Guia: Como instalar o Node.js, o <code class="language-plaintext highlighter-rouge">npx</code> e o Yarn</h1>
 
-<p>Várias ferramentas (como o <code class="language-plaintext highlighter-rouge">@backstage/create-app</code>) são distribuídas como pacotes do npm e executadas via <code class="language-plaintext highlighter-rouge">npx</code>, sem precisar instalar nada globalmente antes. Este guia mostra como deixar o <code class="language-plaintext highlighter-rouge">npx</code> disponível no seu terminal.</p>
+<p>Várias ferramentas (como o <code class="language-plaintext highlighter-rouge">@backstage/create-app</code>) são distribuídas como pacotes do npm e executadas via <code class="language-plaintext highlighter-rouge">npx</code>, sem precisar instalar nada globalmente antes. Este guia mostra como deixar o <code class="language-plaintext highlighter-rouge">npx</code> e o <code class="language-plaintext highlighter-rouge">yarn</code> disponíveis no seu terminal.</p>
 
 <hr />
 
@@ -402,6 +452,23 @@ npx <span class="nt">--version</span>
 </code></pre></div></div>
 
 <p>Se os três comandos retornarem um número de versão (e não um erro de “comando não encontrado”), está tudo pronto para usar o <code class="language-plaintext highlighter-rouge">npx</code>.</p>
+
+<h2 id="4-habilite-o-yarn">4. Habilite o Yarn</h2>
+
+<p>O Yarn é um gerenciador de pacotes alternativo ao <code class="language-plaintext highlighter-rouge">npm</code>, usado por projetos como o Backstage. Ele <strong>não</strong> vem junto com o Node.js: a forma recomendada de instalá-lo é pelo <a href="https://yarnpkg.com/getting-started/install">Corepack</a>, que baixa automaticamente a versão do Yarn que cada projeto pede.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> corepack
+corepack <span class="nb">enable</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Se você instalou o Node.js pelo <code class="language-plaintext highlighter-rouge">apt</code> ou pelo NodeSource (e não pelo nvm), rode esses dois comandos com <code class="language-plaintext highlighter-rouge">sudo</code> na frente.</p>
+</blockquote>
+
+<p>Verifique a instalação:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn <span class="nt">--version</span>
+</code></pre></div></div>
 
       </div>
     </div>

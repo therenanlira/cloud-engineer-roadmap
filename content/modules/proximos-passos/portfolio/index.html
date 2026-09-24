@@ -3,23 +3,23 @@
   <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pipeline | Cloud Engineer Roadmap</title>
+    <title>Próximos passos (Projetos para portfólio) | Cloud Engineer Roadmap</title>
     <!-- Begin Jekyll SEO tag v2.9.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Pipeline" />
+<meta property="og:title" content="Próximos passos (Projetos para portfólio)" />
 <meta property="og:locale" content="pt_BR" />
 <meta name="description" content="Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering)." />
 <meta name="twitter:description" property="og:description" content="Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering)." />
-<link rel="canonical" href="https://therenanlira.github.io/cloud-engineer-roadmap/content/modules/pipeline/" />
-<meta property="og:url" content="https://therenanlira.github.io/cloud-engineer-roadmap/content/modules/pipeline/" />
+<link rel="canonical" href="https://therenanlira.github.io/cloud-engineer-roadmap/content/modules/proximos-passos/portfolio/" />
+<meta property="og:url" content="https://therenanlira.github.io/cloud-engineer-roadmap/content/modules/proximos-passos/portfolio/" />
 <meta property="og:site_name" content="Cloud Engineer Roadmap" />
 <meta property="og:image" content="https://therenanlira.github.io/cloud-engineer-roadmap/assets/img/og-image.png" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://therenanlira.github.io/cloud-engineer-roadmap/assets/img/og-image.png" />
-<meta name="twitter:title" content="Pipeline" />
+<meta name="twitter:title" content="Próximos passos (Projetos para portfólio)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering).","headline":"Pipeline","image":"https://therenanlira.github.io/cloud-engineer-roadmap/assets/img/og-image.png","url":"https://therenanlira.github.io/cloud-engineer-roadmap/content/modules/pipeline/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering).","headline":"Próximos passos (Projetos para portfólio)","image":"https://therenanlira.github.io/cloud-engineer-roadmap/assets/img/og-image.png","url":"https://therenanlira.github.io/cloud-engineer-roadmap/content/modules/proximos-passos/portfolio/"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -216,7 +216,7 @@
   </div>
   
   <div class="sidebar-module">
-    <div class="sidebar-module-header active">
+    <div class="sidebar-module-header">
       
       <a href="/cloud-engineer-roadmap/content/modules/pipeline/" class="sidebar-module-title">3. Pipeline</a>
       
@@ -377,7 +377,7 @@
         <a href="/cloud-engineer-roadmap/content/modules/proximos-passos/certificacoes/">Certificações</a>
       </li>
       
-      <li class="sidebar-item">
+      <li class="sidebar-item active">
         <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/proximos-passos/portfolio/" aria-label="Marcar 'Projetos para portfólio' como concluído">
         <a href="/cloud-engineer-roadmap/content/modules/proximos-passos/portfolio/">Projetos para portfólio</a>
       </li>
@@ -403,43 +403,87 @@
   <span class="breadcrumb-sep">/</span>
   
   
-  <span class="breadcrumb-current">3. Pipeline</span>
+  <a href="/cloud-engineer-roadmap/content/modules/proximos-passos/">Próximos passos</a>
+  
+  <span class="breadcrumb-sep">/</span>
+  <span class="breadcrumb-current">Projetos para portfólio</span>
   
 </nav>
 
 
         
-        <h1 id="3-pipeline">3. Pipeline</h1>
+        <h1 id="próximos-passos">Próximos passos</h1>
 
-<p>Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecidos como CI/CD (Continuous Integration / Continuous Deployment).</p>
+<h2 id="projetos-para-portfólio">Projetos para portfólio</h2>
 
-<h2 id="o-que-você-vai-aprender">O que você vai aprender?</h2>
+<p>Os exercícios do roadmap foram feitos para fixar cada módulo separadamente. Um projeto de portfólio vai além: junta vários módulos em um único repositório público, que qualquer recrutador ou pessoa entrevistadora consegue abrir e entender o que você sabe fazer.</p>
+
+<p>Os projetos abaixo estão em ordem de dificuldade. Não é preciso fazer todos: um projeto bem feito e bem documentado vale mais do que vários incompletos.</p>
+
+<h3 id="projeto-1-aplicação-conteinerizada-com-pipeline-de-cicd">Projeto 1: Aplicação conteinerizada com pipeline de CI/CD</h3>
+
+<p><strong>Módulos:</strong> Fundamentos, Pipeline.</p>
+
+<ol>
+  <li>Escolha (ou escreva) uma aplicação web simples, em qualquer linguagem, e crie um <code class="language-plaintext highlighter-rouge">Dockerfile</code> para ela.</li>
+  <li>Crie um workflow no GitHub Actions que, a cada <em>push</em>, rode os testes, faça o build da imagem e a publique no <a href="https://docs.github.com/pt/packages/working-with-a-github-packages-registry/working-with-the-container-registry">GitHub Container Registry</a>.</li>
+  <li>Adicione um <em>badge</em> de status do pipeline no <code class="language-plaintext highlighter-rouge">README.md</code>.</li>
+</ol>
+
+<p><strong>Diferencial:</strong> use tags de versão (ex: <code class="language-plaintext highlighter-rouge">v1.0.0</code>) para gerar imagens versionadas, e não só <code class="language-plaintext highlighter-rouge">latest</code>.</p>
+
+<h3 id="projeto-2-infraestrutura-na-aws-com-terraform-e-cicd">Projeto 2: Infraestrutura na AWS com Terraform e CI/CD</h3>
+
+<p><strong>Módulos:</strong> Cloud, Pipeline.</p>
+
+<ol>
+  <li>Com Terraform, provisione na AWS uma infraestrutura simples dentro da camada gratuita (ex: um site estático no S3 ou uma função Lambda).</li>
+  <li>Guarde o <em>state</em> do Terraform em um <em>backend</em> remoto (bucket S3).</li>
+  <li>Crie um pipeline que rode <code class="language-plaintext highlighter-rouge">terraform plan</code> a cada <em>Pull Request</em> e <code class="language-plaintext highlighter-rouge">terraform apply</code> somente depois do <em>merge</em> na <code class="language-plaintext highlighter-rouge">main</code>.</li>
+  <li>Use o <a href="https://github.com/infracost/infracost">InfraCost</a> para mostrar no <em>Pull Request</em> quanto a mudança vai custar (FinOps na prática).</li>
+</ol>
+
+<p><strong>Atenção:</strong> crie um alerta de faturamento (<em>Budget</em>) antes de começar e rode <code class="language-plaintext highlighter-rouge">terraform destroy</code> ao terminar os testes para não ter surpresas na fatura.</p>
+
+<h3 id="projeto-3-plataforma-completa-em-um-cluster-local">Projeto 3: Plataforma completa em um cluster local</h3>
+
+<p><strong>Módulos:</strong> Orquestração, Observabilidade, Plataforma.</p>
+
+<ol>
+  <li>Suba um cluster com o <a href="/cloud-engineer-roadmap/content/guides/ferramentas-locais/#minikube">Minikube</a> e instale o ArgoCD.</li>
+  <li>Crie um <em>Helm chart</em> para a aplicação do Projeto 1 e faça o deploy dela pelo ArgoCD (GitOps).</li>
+  <li>Instale a stack de observabilidade (Prometheus, Grafana, Loki e Jaeger) também pelo ArgoCD, e crie um <em>dashboard</em> no Grafana com as métricas da sua aplicação.</li>
+  <li>Configure um alerta no Prometheus (ex: aplicação fora do ar) e veja-o disparar.</li>
+  <li>Registre a aplicação no catálogo do Backstage, com links para o <em>dashboard</em> do Grafana e para a aplicação no ArgoCD.</li>
+</ol>
+
+<p><strong>Diferencial:</strong> use o padrão <em>App of Apps</em> do ArgoCD para que um único <code class="language-plaintext highlighter-rouge">kubectl apply</code> recrie todo o ambiente do zero.</p>
+
+<h3 id="como-apresentar-os-seus-projetos">Como apresentar os seus projetos</h3>
+
+<p>Um projeto só conta no portfólio se outra pessoa conseguir entendê-lo. Capriche no <code class="language-plaintext highlighter-rouge">README.md</code> de cada repositório:</p>
 
 <ul>
-  <li><i class="fab fa-github"></i><a href="/cloud-engineer-roadmap/content/modules/pipeline/github-actions/">GitHub Actions</a></li>
-  <li><i class="fas fa-bullseye"></i><a href="/cloud-engineer-roadmap/content/modules/pipeline/exercise/">Exercícios (Pipeline)</a></li>
+  <li><strong>O que é e por que existe:</strong> um parágrafo explicando o problema que o projeto resolve.</li>
+  <li><strong>Diagrama da arquitetura:</strong> uma imagem simples mostrando como as peças se conectam.</li>
+  <li><strong>Como executar:</strong> o passo a passo para qualquer pessoa rodar o projeto do zero.</li>
+  <li><strong>Decisões e aprendizados:</strong> por que você escolheu cada ferramenta e o que faria diferente.</li>
+  <li><strong>Prints ou vídeo curto:</strong> mostre o pipeline verde, o <em>dashboard</em> e o ArgoCD sincronizado.</li>
 </ul>
 
-<p>Siga a ordem acima para evoluir progressivamente pelo módulo.</p>
+<p>Depois, compartilhe! Um post no LinkedIn contando o que você construiu e aprendeu ajuda outras pessoas e dá visibilidade ao seu trabalho.</p>
 
 <div class="next-steps">
 
   
   <div class="next-steps-col next-steps-prev">
-    <span class="next-steps-label">Passo anterior: Exercícios (Cloud)</span>
-    <a href="/cloud-engineer-roadmap/content/modules/cloud/exercise/" class="next-steps-btn next-steps-btn-outline">
+    <span class="next-steps-label">Passo anterior: Certificações</span>
+    <a href="/cloud-engineer-roadmap/content/modules/proximos-passos/certificacoes/" class="next-steps-btn next-steps-btn-outline">
       Etapa anterior
     </a>
   </div>
   
 
-  
-  <div class="next-steps-col next-steps-next">
-    <span class="next-steps-label">Próximo passo: GitHub Actions</span>
-    <a href="/cloud-engineer-roadmap/content/modules/pipeline/github-actions/" class="next-steps-btn next-steps-btn-solid">
-      Próxima etapa
-    </a>
-  </div>
   
 
 </div>
