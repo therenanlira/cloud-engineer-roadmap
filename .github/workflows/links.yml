@@ -21,18 +21,19 @@ jobs:
   links:
     name: Checar links externos
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      issues: write
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/docs/Gemfile
-      ISSUE_TITLE: Links externos quebrados
+    outputs:
+      exit_code: ${{ steps.lychee.outputs.exit_code }}
     steps:
+      # Este job roda código do PR (Gemfile e plugins do Jekyll): o token não fica salvo no .git
       - name: Checkout do código
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
 
       - name: Configurar Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@762794c140bbeda0f1224786aa33b4b46783a6c1 # v1.326.0
         with:
           ruby-version: "3.3"
           bundler-cache: true
@@ -40,23 +41,47 @@ jobs:
       - name: Build do Jekyll
         run: bundle exec jekyll build --source docs --destination _site
 
-      # Em PRs o check falha para avisar antes do merge; no agendamento, abre (ou atualiza) uma issue
+      # Em PRs o check falha para avisar antes do merge; no agendamento, o job "report" abre (ou atualiza) uma issue
       - name: Checar links
         id: lychee
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
           args: --config lychee.toml --root-dir "${{ github.workspace }}/_site" '_site/**/*.html' README.md
           output: lychee/out.md
           fail: ${{ github.event_name == 'pull_request' }}
 
-      - name: Abrir ou atualizar a issue de links quebrados
+      - name: Upload do relatório
         if: github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != 0
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: lychee-report
+          path: lychee/out.md
+
+  # Separado do job acima para que a permissão de escrever issues nunca fique disponível
+  # enquanto código do repositório (Gemfile, plugins) está rodando
+  report:
+    name: Abrir ou atualizar a issue de links quebrados
+    needs: links
+    if: github.event_name != 'pull_request' && needs.links.outputs.exit_code != '0'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    env:
+      ISSUE_TITLE: Links externos quebrados
+    steps:
+      - name: Download do relatório
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          name: lychee-report
+
+      - name: Abrir ou atualizar a issue
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
           number=$(gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number --jq '.[0].number')
           if [ -n "$number" ]; then
-            gh issue edit "$number" --body-file lychee/out.md
+            gh issue edit "$number" --body-file out.md
           else
-            gh issue create --title "$ISSUE_TITLE" --body-file lychee/out.md
+            gh issue create --title "$ISSUE_TITLE" --body-file out.md
           fi

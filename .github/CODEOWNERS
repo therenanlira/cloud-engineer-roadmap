@@ -6,3 +6,6 @@
 # Este próprio arquivo também é protegido: sem essa linha, uma PR poderia
 # remover a regra acima (ou trocar o owner) sem precisar de aprovação.
 /.github/CODEOWNERS @therenanlira
+
+# Configuração do Dependabot: define quais dependências são atualizadas automaticamente.
+/.github/dependabot.yml @therenanlira

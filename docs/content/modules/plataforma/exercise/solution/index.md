@@ -145,19 +145,21 @@ kubectl apply -f kubernetes/backstage/postgres-service.yaml
 
 ### 10. Criar o GITHUB_TOKEN
 
-Crie um PAT (Personal Access Token) no GitHub. É com ele que o Backstage lê seus repositórios e arquivos `catalog-info.yaml` para a integração de catálogo.
+Crie um PAT (Personal Access Token) no GitHub. É com ele que o Backstage lê o arquivo `catalog-info.yaml` do seu repositório para a integração de catálogo. Como ele só precisa **ler** um repositório, crie um token *fine-grained* com o mínimo de permissões: se ele vazar, o estrago fica limitado a isso.
 
-1. Acesse sua conta do GitHub e vá em **Settings** -> **Developer Settings** -> **Personal access tokens** -> **Tokens (classic)**.
-2. Clique em **Generate new token (classic)**.
-3. **Scopes (permissões):** marque `repo` (para ler e escrever repositórios) e `workflow` (para configurar as ações de CI automaticamente).
-4. Copie o valor gerado (ex: `ghp_xxxxxxxxxxxxxxxxxxxxxxx`). Este é o seu `GITHUB_TOKEN`.
+1. Acesse sua conta do GitHub e vá em **Settings** -> **Developer settings** -> **Personal access tokens** -> **Fine-grained tokens**.
+2. Clique em **Generate new token**, dê um nome (ex: `backstage-local`) e escolha uma **expiração** curta (ex: 30 dias).
+3. Em **Repository access**, escolha **Only select repositories** e selecione o repositório `meu-backstage`.
+4. Em **Permissions** -> **Repository permissions**, defina **Contents** como **Read-only** (o **Metadata** fica como *Read-only* automaticamente).
+5. Clique em **Generate token** e copie o valor gerado (ex: `github_pat_xxxxxxxxxxxxxxxxxxxxxxx`). Este é o seu `GITHUB_TOKEN`.
 
-Como na secret do banco, crie direto via `kubectl`, com o token em texto puro:
+Como na secret do banco, crie direto via `kubectl`. Para o token não aparecer na tela nem ficar salvo no histórico do terminal, leia o valor com `read -rs`: rode a primeira linha, cole o token e aperte Enter (nada aparece enquanto você cola).
 
 ```bash
+read -rs GITHUB_TOKEN
 kubectl create secret generic backstage-secrets \
   --namespace backstage \
-  --from-literal=GITHUB_TOKEN='ghp_xxxxxxxxxxxxxxxxxxxxxxx'
+  --from-literal=GITHUB_TOKEN="$GITHUB_TOKEN"
 ```
 
 ### 11. Criar o Deployment e o Service do Backstage
@@ -379,16 +381,19 @@ export default createApp({
 
 ### 4. Adicione as credenciais do OAuth App
 
-A secret `backstage-secrets` já existe (criada na Parte 1). Para adicionar as novas chaves sem escrever nenhum valor em disco, recrie-a com o Client ID e o Client Secret gerados no passo 1, além do `GITHUB_TOKEN` já usado, todos **sem base64**, como da primeira vez:
+A secret `backstage-secrets` já existe (criada na Parte 1). Para adicionar as novas chaves sem escrever nenhum valor em disco, recrie-a com o Client ID e o Client Secret gerados no passo 1, além do `GITHUB_TOKEN` já usado, todos **sem base64**, como da primeira vez. A primeira linha recupera o `GITHUB_TOKEN` da própria secret atual, e o `read -rs` lê o Client Secret sem exibi-lo (cole e aperte Enter):
 
 ```bash
+GITHUB_TOKEN=$(kubectl get secret backstage-secrets -n backstage -o jsonpath='{.data.GITHUB_TOKEN}' | base64 -d)
+read -rs AUTH_GITHUB_CLIENT_SECRET
+
 kubectl delete secret backstage-secrets -n backstage
 
 kubectl create secret generic backstage-secrets \
   --namespace backstage \
-  --from-literal=GITHUB_TOKEN='ghp_xxxxxxxxxxxxxxxxxxxxxxx' \
+  --from-literal=GITHUB_TOKEN="$GITHUB_TOKEN" \
   --from-literal=AUTH_GITHUB_CLIENT_ID='seu_client_id' \
-  --from-literal=AUTH_GITHUB_CLIENT_SECRET='seu_client_secret'
+  --from-literal=AUTH_GITHUB_CLIENT_SECRET="$AUTH_GITHUB_CLIENT_SECRET"
 ```
 
 Adicione ao `backstage.yaml` as variáveis que apontam para essa secret. Os nomes precisam ser exatamente `AUTH_GITHUB_CLIENT_ID` e `AUTH_GITHUB_CLIENT_SECRET`, pois são eles que o `app-config.yaml` referencia com a sintaxe `${...}`:

@@ -26,7 +26,7 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 3. Publique a imagem num registry (ex: Docker Hub).
 4. Inicie um cluster local (Minikube, Kind ou k3d) e crie um namespace dedicado para isolar o Backstage.
 5. Provisione um PostgreSQL (Secret com as credenciais, armazenamento persistente e Deployment) para servir de banco de dados do Backstage.
-6. Gere um GitHub PAT (Personal Access Token) com os escopos `repo` e `workflow`, para o Backstage acessar seus repositórios.
+6. Gere um GitHub PAT (Personal Access Token) *fine-grained*, com acesso somente de leitura ao conteúdo do repositório do Backstage, para ele ler o seu catálogo.
 7. Crie o Deployment e o Service do Backstage usando a imagem que você publicou, conectando-o ao PostgreSQL e ao GitHub Token via variáveis de ambiente.
 8. Acesse o painel via `port-forward` e confirme que a interface carrega em `http://localhost:7000`.
 

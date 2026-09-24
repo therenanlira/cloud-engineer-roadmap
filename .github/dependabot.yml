@@ -1,0 +1,22 @@
+# Abre PRs mensais com atualizações (incluindo correções de segurança) das Actions
+# usadas nos workflows e das gems do site. As Actions estão fixadas por SHA, e o
+# Dependabot atualiza o SHA e o comentário com a versão.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns:
+          - "*"
+
+  - package-ecosystem: bundler
+    directory: /docs
+    schedule:
+      interval: monthly
+    groups:
+      gems:
+        patterns:
+          - "*"
