@@ -1,0 +1,25 @@
+# Configuração do lychee (checagem de links externos). Os links internos já são
+# checados pelo scripts/check-links.py no CI.
+
+scheme = ["https", "http"]
+
+# Ignora localhost e IPs privados (ex: http://localhost:8080 nos exercícios)
+exclude_all_private = true
+
+# 429 = limite de requisições atingido: o link existe, só não respondeu ao robô agora
+accept = ["200..=299", "429"]
+
+max_retries = 3
+timeout = 30
+
+exclude = [
+  # O próprio site: as URLs canônicas apontam para a produção, onde páginas novas ainda não existem
+  '^https://therenanlira\.github\.io/',
+  # O GitHub responde 404 para quem não está logado
+  '^https://github\.com/therenanlira/cloud-engineer-roadmap/stargazers',
+  # Badges e recursos de CSS/fontes do layout
+  '^https://img\.shields\.io/',
+  '^https://fonts\.(googleapis|gstatic)\.com',
+  # Bloqueiam requisições automáticas (403) mesmo com o link funcionando
+  '^https://www\.udemy\.com/',
+]

@@ -13,9 +13,11 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 
 **Objetivo:** Obter visibilidade completa do seu cluster local implementando os três pilares da observabilidade (Metrics, Logs e Tracing) num ambiente controlado (local) e sem custos.
 
+**Pré-requisitos:** [Docker]({{ '/content/guides/ferramentas-locais/#docker' | relative_url }}), [kubectl]({{ '/content/guides/ferramentas-locais/#kubectl' | relative_url }}), [Minikube]({{ '/content/guides/ferramentas-locais/#minikube' | relative_url }}) e [Helm]({{ '/content/guides/ferramentas-locais/#helm' | relative_url }}) instalados no seu computador. Se ainda não tiver, siga o [guia de ferramentas locais]({{ '/content/guides/ferramentas-locais/' | relative_url }}).
+
 **Passo a passo do exercício:**
 
-1. **Setup:** Suba o seu cluster local e garanta que o [Helm](https://helm.sh/pt/docs/intro/install) esteja instalado no seu ambiente local.
+1. **Setup:** Suba o seu cluster local (ex: `minikube start`) e garanta que o [Helm]({{ '/content/guides/ferramentas-locais/#helm' | relative_url }}) esteja instalado no seu ambiente local.
 2. **Infraestrutura:** Utilize o Helm para provisionar a stack de Observabilidade:
    * **Métricas:** Prometheus.
    * **Logs:** Loki (com Promtail).

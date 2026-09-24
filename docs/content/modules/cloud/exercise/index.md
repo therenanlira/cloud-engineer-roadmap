@@ -3,7 +3,12 @@ layout: default
 title: Cloud (Exercícios)
 ---
 
-# Exercícios Práticos (Cloud)
+# 2. Cloud
+
+Cloud é o conceito de infraestrutura sob demanda, onde você contrata recursos de infraestrutura para executar suas aplicações, banco de dados, entre outros.
+IaC (Infrastructure as Code; Infraestrutura como Código) é o conceito de criar esses recursos de infraestrutura em Cloud usando código, assim acelerando a replicação das configurações, padronizando e reduzindo erros humanos.
+
+## Exercícios Práticos (Cloud)
 
 Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para reforçar o conhecimento.
 

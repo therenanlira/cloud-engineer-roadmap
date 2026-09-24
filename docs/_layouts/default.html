@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"{% if site.preview_pr %} data-preview="pr-{{ site.preview_pr }}"{% endif %}>
   <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    {% seo title=false %}
+    {% if site.preview_pr %}<meta name="robots" content="noindex, nofollow">{% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -24,6 +26,7 @@
   </head>
 
   <body>
+    {% if site.preview_pr %}{% include preview-banner.html %}{% endif %}
     <div class="reading-progress" id="reading-progress"></div>
 
     <div class="site-header">

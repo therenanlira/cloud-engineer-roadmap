@@ -13,6 +13,8 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 
 **Objetivo**: Construir a sua própria imagem do Backstage e instalá-la num cluster Kubernetes local, orquestrando na mão os múltiplos componentes (banco de dados, secrets, storage e a aplicação) que compõem um IDP real, e modelar o catálogo de software com as entidades Component, System, Resource, Domain, Group e User, entendendo como o Backstage representa relações de software e organização.
 
+**Pré-requisitos:** [Git]({{ '/content/guides/ferramentas-locais/#git' | relative_url }}), [Docker]({{ '/content/guides/ferramentas-locais/#docker' | relative_url }}), [kubectl]({{ '/content/guides/ferramentas-locais/#kubectl' | relative_url }}), [Minikube]({{ '/content/guides/ferramentas-locais/#minikube' | relative_url }}) e [Node.js, npx e Yarn]({{ '/content/guides/npx/' | relative_url }}) instalados no seu computador, além de uma conta no [Docker Hub](https://hub.docker.com/) para publicar a imagem. Se ainda não tiver, siga o [guia de ferramentas locais]({{ '/content/guides/ferramentas-locais/' | relative_url }}).
+
 **Cenário**: Sua empresa decidiu adotar o Backstage como plataforma interna para desenvolvedores. Antes de propor a ferramenta em produção, você precisa validar a instalação e entender como as peças se conectam, provisionando um ambiente de testes local com a sua própria imagem, não uma pronta de terceiros, para ter controle total sobre a configuração.
 
 **Passo a passo do exercício:**
@@ -45,4 +47,6 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 {% include next-steps.html
    prev_url="/content/modules/plataforma/backstage/"
    prev_title="Backstage"
+   next_url="/content/modules/proximos-passos/"
+   next_title="Próximos passos"
 %}

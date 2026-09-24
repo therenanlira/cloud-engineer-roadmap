@@ -20,6 +20,8 @@ Uma introdução (cultura DevOps, CNCF, preparação de ambiente) seguida de sei
 5. **Observabilidade**: Grafana, Prometheus, Loki, Jaeger
 6. **Plataforma**: Backstage
 
+No final, a seção **Próximos passos** sugere certificações e projetos para o seu portfólio.
+
 ---
 
 [![Cloud Engineer Roadmap](docs/assets/img/cloud-eng-roadmap.png)](docs/assets/img/cloud-eng-roadmap.png)
@@ -33,6 +35,8 @@ Se este roadmap te ajudou ou você pretende usá-lo para estudar, considere deix
 Este roadmap é um projeto vivo. Se você encontrou algum erro, quer sugerir um novo treinamento em português ou acredita que algum tópico deve ser adicionado, **sinta-se à vontade para abrir uma Issue ou enviar um *Pull Request***. Vamos fortalecer nossa comunidade!
 
 O site (Jekyll) fica em [`docs/`](docs/). Veja [`scripts/README.md`](scripts/README.md) para instruções de como rodá-lo localmente.
+
+Cada *Pull Request* aberto a partir deste repositório ganha uma **prévia de homologação** publicada automaticamente em `https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-<número>/`; o link aparece num comentário no próprio PR e a prévia é removida quando o PR é fechado.
 
 ## Agradecimentos
 

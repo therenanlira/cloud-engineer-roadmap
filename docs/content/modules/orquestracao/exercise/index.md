@@ -13,6 +13,8 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 
 **Objetivo**: Juntar os seus conhecimentos de Kubernetes, ArgoCD e GitOps e aplicá-los num ambiente controlado (local), sem custos.
 
+**Pré-requisitos:** [Git]({{ '/content/guides/ferramentas-locais/#git' | relative_url }}), [Docker]({{ '/content/guides/ferramentas-locais/#docker' | relative_url }}), [kubectl]({{ '/content/guides/ferramentas-locais/#kubectl' | relative_url }}) e [Minikube]({{ '/content/guides/ferramentas-locais/#minikube' | relative_url }}) instalados no seu computador. Se ainda não tiver, siga o [guia de ferramentas locais]({{ '/content/guides/ferramentas-locais/' | relative_url }}).
+
 **Cenário**: O Nginx que criamos no Módulo 1 cresceu e agora precisa de alta disponibilidade. A sua missão é usar o **Minikube** (ferramenta usada para criar e testar os exercícios) para rodar um cluster local, instalar o **ArgoCD** nele e fazer com que o ArgoCD leia um repositório no GitHub para fazer o deploy automático do seu site Nginx com 3 réplicas!
 
 **Passo a passo do exercício:**

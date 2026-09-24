@@ -1,17 +1,25 @@
 ---
 layout: default
-title: Introdução (Preparação de ambiente)
+title: Introdução (Preparação do ambiente)
 ---
 
 # Preparação do ambiente
 
 Para fazer os laboratórios e exercícios, prepare o seu ambiente.
 
-> Caso ainda não tenha familiaridade com o terminal, faça o primeiro treinamento de Linux Fundamentals e depois volte aqui.
+> Caso ainda não tenha familiaridade com o terminal, faça primeiro o treinamento de [Fundamentos > Linux]({{ '/content/modules/fundamentos/linux/' | relative_url }}) e depois volte aqui.
+
+### Laboratórios (Girus)
+
+Os laboratórios deste roadmap usam o Girus, uma plataforma gratuita da LinuxTips com ambientes prontos para praticar.
 
 1. Acesse [Girus LinuxTips](https://girus.io/#instalacao)
 1. Siga os passos de instalação
 1. Siga as instruções do terminal
+
+### Exercícios (ferramentas locais)
+
+Os exercícios práticos de cada módulo rodam direto no seu terminal e usam ferramentas como Git, Docker, kubectl, Minikube e Helm. Você não precisa instalar tudo agora: cada exercício indica o que vai usar, e o [guia de ferramentas locais]({{ '/content/guides/ferramentas-locais/' | relative_url }}) mostra como instalar e testar cada uma delas.
 
 ### Configuração do terminal
 

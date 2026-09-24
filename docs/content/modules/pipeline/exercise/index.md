@@ -13,6 +13,8 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 
 **Objetivo:** Criar o seu primeiro pipeline de Integração Contínua (CI) usando GitHub Actions para validar a sua infraestrutura como código (Terraform) e garantir que ela não contenha erros de sintaxe ou formatação.
 
+**Pré-requisitos:** [Git]({{ '/content/guides/ferramentas-locais/#git' | relative_url }}) instalado no seu computador. Se ainda não tiver, siga o [guia de ferramentas locais]({{ '/content/guides/ferramentas-locais/' | relative_url }}).
+
 **Cenário:** Você precisa garantir que ninguém da equipe envie um código Terraform quebrado para o repositório. Para isso, a pipeline deve rodar automaticamente toda vez que houver um `push` na branch `main`.
 
 **Passo a passo do exercício:**
@@ -29,8 +31,6 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 6. Faça o *commit* propositalmente mal formatado para ver o pipeline falhar, corrija-o e veja o pipeline ficar verde (sucesso)!
 
 **Solução:** A solução para este exercício está [aqui](./solution/), mas consulte somente se não conseguir resolver por si só.
-
-> **Aviso de Recursos:** Este laboratório exige recursos locais (CPU/RAM). Certifique-se de encerrar o ambiente após os testes para liberar espaço.
 
 {% include next-steps.html
    prev_url="/content/modules/pipeline/github-actions/"
