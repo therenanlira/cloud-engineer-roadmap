@@ -33,7 +33,7 @@ def load_font(candidates, size):
         return ImageFont.load_default()
 
 
-# Mesma paleta de --bg-color, --accent-blue e --muted-text do docs/assets/css/style.css.
+# Mesma paleta de --bg-color, --accent-blue e --muted-text do docs/assets/css/site.css.
 # Sem o título "Cloud Engineer Roadmap": ele já aparece no H1 do README logo acima
 # e na imagem do roadmap logo abaixo, então aqui o destaque fica só para o CTA.
 width, height = 1000, 160

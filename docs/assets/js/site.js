@@ -1,7 +1,9 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "cloud-engineer-roadmap:progress";
+  // A homologação fica no mesmo domínio da produção: cada prévia guarda o progresso à parte.
+  var PREVIEW = document.documentElement.getAttribute("data-preview");
+  var STORAGE_KEY = "cloud-engineer-roadmap:progress" + (PREVIEW ? ":" + PREVIEW : "");
 
   function loadProgress() {
     try {

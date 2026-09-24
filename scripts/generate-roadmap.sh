@@ -13,5 +13,6 @@ fi
 
 python3 generate-roadmap.py
 python3 generate-cta-banner.py
+python3 generate-og-image.py
 
 deactivate

@@ -13,6 +13,8 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 
 **Objetivo**: Juntar os seus conhecimentos de Linux, Redes, Scripts e Docker para criar uma página web simples que monitora a conectividade de outros sites.
 
+**Pré-requisitos:** [Docker]({{ '/content/guides/ferramentas-locais/#docker' | relative_url }}) instalado no seu computador. Se ainda não tiver, siga o [guia de ferramentas locais]({{ '/content/guides/ferramentas-locais/' | relative_url }}).
+
 **Cenário**: Você precisa subir um contêiner Nginx que sirva um arquivo de texto simples contendo o status de conectividade de alguns sites, gerado automaticamente por um script Python.
 
 **Passo a passo do exercício**:

@@ -7,21 +7,22 @@ on:
   pull_request:
     branches:
       - main
+    # "closed" é necessário para apagar a homologação quando o PR é fechado ou mergeado
+    types: [opened, reopened, synchronize, closed]
 
 permissions:
   contents: read
 
-# Evita deploys concorrentes; não cancela um deploy já em andamento
-concurrency:
-  group: pages
-  cancel-in-progress: false
+env:
+  BUNDLE_GEMFILE: ${{ github.workspace }}/docs/Gemfile
+  # Produção fica na raiz do site; a homologação de cada PR fica em pr-preview/pr-<número>/
+  BASE_PATH: /${{ github.event.repository.name }}${{ github.event_name == 'pull_request' && format('/pr-preview/pr-{0}', github.event.number) || '' }}
 
 jobs:
   build:
     name: Build do site e checagem de links
+    if: github.event.action != 'closed'
     runs-on: ubuntu-latest
-    env:
-      BUNDLE_GEMFILE: ${{ github.workspace }}/docs/Gemfile
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
@@ -32,35 +33,155 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
-      - name: Configurar GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       - name: Build do Jekyll
-        run: bundle exec jekyll build --source docs --destination _site --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          config=docs/_config.yaml
+          if [ -n "$PR_NUMBER" ]; then
+            {
+              echo "preview_pr: $PR_NUMBER"
+              echo "preview_pr_url: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/pull/$PR_NUMBER"
+              echo "production_url: https://${GITHUB_REPOSITORY_OWNER,,}.github.io/${GITHUB_REPOSITORY#*/}/"
+            } > "$RUNNER_TEMP/_config.preview.yml"
+            config="$config,$RUNNER_TEMP/_config.preview.yml"
+          fi
+          bundle exec jekyll build --source docs --destination _site --baseurl "$BASE_PATH" --config "$config"
 
       - name: Checar links internos e âncoras
-        run: python3 scripts/check-links.py _site "${{ steps.pages.outputs.base_path }}"
+        run: python3 scripts/check-links.py _site "$BASE_PATH"
 
-      - name: Upload do artefato do site
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload do site
+        uses: actions/upload-artifact@v4
         with:
+          name: site
           path: _site
 
   deploy:
-    name: Deploy no GitHub Pages
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    name: Deploy em produção
+    if: github.event_name == 'push'
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      contents: write
+    concurrency:
+      group: deploy-producao
+      cancel-in-progress: false
     steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Download do site
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+
+      # O site já vem pronto do build acima; sem este arquivo o GitHub Pages rodaria o Jekyll de novo
+      - name: Desativar o Jekyll do GitHub Pages
+        run: touch _site/.nojekyll
+
+      - name: Publicar no branch gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+          branch: gh-pages
+          clean-exclude: pr-preview/
+          force: false
+
+  preview:
+    name: Deploy da homologação
+    # PRs vindos de forks não têm permissão de escrita no repositório, então ficam sem homologação
+    if: github.event_name == 'pull_request' && github.event.action != 'closed' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    concurrency:
+      group: preview-${{ github.event.number }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Download do site
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+
+      # Se o branch gh-pages ainda não existe, publica a produção (branch base do PR) antes da
+      # homologação, para que a raiz do site nunca fique vazia ao apontar o GitHub Pages para ele.
+      - name: Verificar se o branch gh-pages já existe
+        id: gh-pages
+        run: |
+          if git ls-remote --exit-code --heads origin gh-pages > /dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout da produção
+        if: steps.gh-pages.outputs.exists == 'false'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          path: producao
+
+      - name: Configurar Ruby para a produção
+        if: steps.gh-pages.outputs.exists == 'false'
+        uses: ruby/setup-ruby@v1
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/producao/docs/Gemfile
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build da produção
+        if: steps.gh-pages.outputs.exists == 'false'
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/producao/docs/Gemfile
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build --source producao/docs --destination _site_producao --baseurl "/${GITHUB_REPOSITORY#*/}"
+          touch _site_producao/.nojekyll
+
+      - name: Publicar a produção no branch gh-pages
+        if: steps.gh-pages.outputs.exists == 'false'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site_producao
+          branch: gh-pages
+          clean-exclude: pr-preview/
+          force: false
+
+      - name: Publicar a homologação
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: _site
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: deploy
+
+  preview-cleanup:
+    name: Remover a homologação
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    concurrency:
+      group: preview-${{ github.event.number }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Remover a homologação
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: remove

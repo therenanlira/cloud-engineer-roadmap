@@ -37,7 +37,7 @@ Essas ferramentas são essenciais para testar conexões, mapear portas, configur
 * `dig` - Utilitário essencial para realizar consultas DNS e diagnosticar problemas de resolução de nomes.
 * `tcpdump` - Captura e analisa pacotes de dados que trafegam na interface de rede em tempo real (packet sniffer).
 * `ufw` / `firewalld` - Interfaces amigáveis para gerenciamento de Firewall no Linux (Ubuntu/Debian e CentOS/RHEL, respectivamente).
-* `iptables` e `nftables` - Ferramenta de baixo nível para filtragem de pacotes e regras de firewall do próprio kernel Linux.
+* `iptables` e `nftables` - Ferramentas de baixo nível para filtragem de pacotes e regras de firewall do próprio kernel Linux.
 
 > **Dica:** Use os comandos [`man`]({{ '/content/guides/man-tldr/#1-o-comando-man-manual-oficial' | relative_url }}) ou [`tldr`]({{ '/content/guides/man-tldr/#3-o-comando-tldr-exemplos-práticos-e-rápidos' | relative_url }}) para conhecer as flags e ver exemplos de uso de cada ferramenta.
 

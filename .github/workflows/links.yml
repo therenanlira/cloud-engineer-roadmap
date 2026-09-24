@@ -1,0 +1,62 @@
+name: Links externos
+
+on:
+  # Toda segunda-feira, às 9h UTC (6h no horário de Brasília)
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "README.md"
+      - "lychee.toml"
+      - ".github/workflows/links.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Checar links externos
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    env:
+      BUNDLE_GEMFILE: ${{ github.workspace }}/docs/Gemfile
+      ISSUE_TITLE: Links externos quebrados
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build do Jekyll
+        run: bundle exec jekyll build --source docs --destination _site
+
+      # Em PRs o check falha para avisar antes do merge; no agendamento, abre (ou atualiza) uma issue
+      - name: Checar links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml --root-dir "${{ github.workspace }}/_site" '_site/**/*.html' README.md
+          output: lychee/out.md
+          fail: ${{ github.event_name == 'pull_request' }}
+
+      - name: Abrir ou atualizar a issue de links quebrados
+        if: github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != 0
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          number=$(gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file lychee/out.md
+          else
+            gh issue create --title "$ISSUE_TITLE" --body-file lychee/out.md
+          fi

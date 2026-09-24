@@ -16,11 +16,7 @@ Seu primeiro contato com a nuvem pública. Use a camada gratuita (*Free Tier*) s
 
 * <i class="fas fa-graduation-cap"></i> **Treinamento Oficial AWS:** [AWS Cloud Quest: Cloud Practitioner](https://explore.skillbuilder.aws/learn/course/external/view/elearning/11458/aws-cloud-quest-cloud-practitioner) - Gamificado, com missões práticas que usa um console AWS real de laboratório gratuito, sem precisar criar conta.
 
-> **Foco em Certificação (curso pago e opcional):**
->
-> Se você tem interesse em tirar uma certificação AWS, o curso do Stephane Maarek é uma excelente sugestão. Esse curso é pago e não é necessário para você seguir o roadmap.
->
-> * <i class="fas fa-graduation-cap"></i> **Treinamento:** [[Stephane Maarek] Ultimate AWS Certified Cloud Practitioner CLF-C02 2026](https://www.udemy.com/course/aws-certified-cloud-practitioner-new).
+> **Pensando em certificação?** Veja as sugestões de provas e cursos na página de [Certificações]({{ '/content/modules/proximos-passos/certificacoes/' | relative_url }}), no fim do roadmap.
 
 **Laboratório Girus:** acesse o seu ambiente [Girus]({{ '/content/modules/introducao/preparacao-ambiente/' | relative_url }}), vá em Laboratórios e filtre por *Cloud*. Faça os seguintes treinamentos:
 

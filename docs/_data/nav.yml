@@ -75,3 +75,11 @@
       url: /content/modules/plataforma/backstage/
     - title: Exercícios
       url: /content/modules/plataforma/exercise/
+
+- title: Próximos passos
+  url: /content/modules/proximos-passos/
+  items:
+    - title: Certificações
+      url: /content/modules/proximos-passos/certificacoes/
+    - title: Projetos para portfólio
+      url: /content/modules/proximos-passos/portfolio/

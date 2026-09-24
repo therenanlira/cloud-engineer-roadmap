@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Guia (npx)
+title: Guia (Node.js, npx e Yarn)
 permalink: /content/guides/npx/
 ---
 
-# Guia: Como instalar o `npx`
+# Guia: Como instalar o Node.js, o `npx` e o Yarn
 
-Várias ferramentas (como o `@backstage/create-app`) são distribuídas como pacotes do npm e executadas via `npx`, sem precisar instalar nada globalmente antes. Este guia mostra como deixar o `npx` disponível no seu terminal.
+Várias ferramentas (como o `@backstage/create-app`) são distribuídas como pacotes do npm e executadas via `npx`, sem precisar instalar nada globalmente antes. Este guia mostra como deixar o `npx` e o `yarn` disponíveis no seu terminal.
 
 ---
 
@@ -61,3 +61,20 @@ npx --version
 ```
 
 Se os três comandos retornarem um número de versão (e não um erro de "comando não encontrado"), está tudo pronto para usar o `npx`.
+
+## 4. Habilite o Yarn
+
+O Yarn é um gerenciador de pacotes alternativo ao `npm`, usado por projetos como o Backstage. Ele **não** vem junto com o Node.js: a forma recomendada de instalá-lo é pelo [Corepack](https://yarnpkg.com/getting-started/install), que baixa automaticamente a versão do Yarn que cada projeto pede.
+
+```bash
+npm install -g corepack
+corepack enable
+```
+
+> Se você instalou o Node.js pelo `apt` ou pelo NodeSource (e não pelo nvm), rode esses dois comandos com `sudo` na frente.
+
+Verifique a instalação:
+
+```bash
+yarn --version
+```

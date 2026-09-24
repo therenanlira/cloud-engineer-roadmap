@@ -56,3 +56,14 @@ Seis módulos em sequência, dos fundamentos às ferramentas mais usadas no merc
     <span class="roadmap-card-subtitle">Backstage</span>
   </a>
 </div>
+
+## Próximos passos
+
+Terminou os módulos? Veja como validar e mostrar o que você aprendeu.
+
+<div class="roadmap-grid intro-grid">
+  <a class="roadmap-card" style="--card-color: var(--module-color-6);" href="{{ '/content/modules/proximos-passos/' | relative_url }}">
+    <span class="roadmap-card-title">Próximos passos</span>
+    <span class="roadmap-card-subtitle">Certificações, Projetos para portfólio</span>
+  </a>
+</div>

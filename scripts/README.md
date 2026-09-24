@@ -29,22 +29,25 @@ Acesse `http://127.0.0.1:4000` (ou a porta escolhida) para ver o site.
 
 **Requisitos:** Ruby + [Bundler](https://bundler.io/) instalados.
 
-## `generate-roadmap.py` / `generate-cta-banner.py` / `generate-roadmap.sh`
+## `generate-roadmap.py` / `generate-cta-banner.py` / `generate-og-image.py` / `generate-roadmap.sh`
 
-Geram as imagens do `README.md`, ambas com a mesma paleta de cores do site
-(`docs/assets/css/style.css`):
+Geram as imagens do projeto, todas com a mesma paleta de cores do site
+(`docs/assets/css/site.css`):
 
 * `generate-roadmap.py` gera `docs/assets/img/cloud-eng-roadmap.png`, o
   diagrama com a lista de módulos.
 * `generate-cta-banner.py` gera `docs/assets/img/cta-banner.png`, o banner
   de chamada para o site, linkado logo no topo do `README.md`.
+* `generate-og-image.py` gera `docs/assets/img/og-image.png`, a imagem de
+  prévia (1200x630) que aparece ao compartilhar o link do site em redes
+  sociais e apps de mensagem.
 
 ```bash
 ./scripts/generate-roadmap.sh
 ```
 
 O script `.sh` cria uma virtualenv Python temporária em `scripts/venv`, instala o [Pillow](https://python-pillow.org/) se
-necessário e executa os dois `.py` acima. Cada um procura uma fonte
+necessário e executa os três `.py` acima. Cada um procura uma fonte
 Arial/Liberation/DejaVu típica de macOS, Linux ou Windows e cai para a fonte
 padrão do Pillow se nenhuma for encontrada; não precisa ajustar nada por SO.
 

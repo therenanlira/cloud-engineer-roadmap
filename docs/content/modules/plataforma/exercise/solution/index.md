@@ -21,7 +21,7 @@ Crie um repositório no seu GitHub (ex: `meu-backstage`) e, na raiz do repositó
 npx @backstage/create-app@latest
 ```
 
-> Se ainda não tiver instalado, siga o [guia de instalação de `npx`]({{ '/content/guides/npx/' | relative_url }}).
+> Se ainda não tiver o `npx` e o `yarn` instalados, siga o [guia de instalação do Node.js, npx e Yarn]({{ '/content/guides/npx/' | relative_url }}).
 
 Quando for solicitado o nome do app, digite `meu-backstage`.
 
