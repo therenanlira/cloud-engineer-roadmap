@@ -9,7 +9,7 @@ Antes de avançar, aplique o que aprendeu. Este exercício é fundamental para r
 
 **Objetivo**: Juntar os seus conhecimentos de AWS e Terraform e aplicá-los num ambiente controlado (local), sem custos.
 
-**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Cloud*. Faça os seguintes treinamentos:
+**Laboratório Girus:** acesse o seu ambiente [Girus]({{ '/content/modules/introducao/preparacao-ambiente/' | relative_url }}), vá em Laboratórios e filtre por *Cloud*. Faça os seguintes treinamentos:
 
 * Terraform com AWS: Construindo Infraestrutura em Nuvem
 * Desafio: AWS com Terraform

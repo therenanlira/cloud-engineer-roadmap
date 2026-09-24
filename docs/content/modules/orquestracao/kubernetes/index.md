@@ -16,7 +16,7 @@ Kubernetes é a plataforma padrão de mercado para orquestrar microsserviços em
 * <i class="fas fa-graduation-cap"></i> **Treinamento de Kubernetes:** [[LinuxTips] Kubernetes Essentials](https://linuxtips.io/treinamento/kubernetes-essentials/)
 * <i class="fas fa-video"></i> **Vídeo focado em Helm:** [[Fabricio Veronez] Guia Helm: Como simplificar o deploy no Kubernetes](https://youtu.be/VTQpe-ZRgsk)
 
-**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Kubernetes*. Faça os seguintes treinamentos:
+**Laboratório Girus:** acesse o seu ambiente [Girus]({{ '/content/modules/introducao/preparacao-ambiente/' | relative_url }}), vá em Laboratórios e filtre por *Kubernetes*. Faça os seguintes treinamentos:
 
 * Introdução ao Kubernetes-lab
 * Kubernetes: Gerenciando Aplicações com Deployments

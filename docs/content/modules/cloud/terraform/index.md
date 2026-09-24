@@ -16,7 +16,7 @@ Terraform é a ferramenta de IaC mais usada do mercado para provisionamento de i
 
 * <i class="fas fa-graduation-cap"></i> **Terraform:** [[LinuxTips] Terraform Essentials](https://linuxtips.io/treinamento/terraform-essentials/)
 
-**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Terraform*. Faça os seguintes treinamentos:
+**Laboratório Girus:** acesse o seu ambiente [Girus]({{ '/content/modules/introducao/preparacao-ambiente/' | relative_url }}), vá em Laboratórios e filtre por *Terraform*. Faça os seguintes treinamentos:
 
 * Terraform: Fundamentos de Infraestrutura como Código
 * Terraform: Provisioners e Módulos

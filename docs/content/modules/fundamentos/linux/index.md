@@ -15,7 +15,7 @@ Linux é a base de tudo: é o Sistema Operacional mais utilizado em servidores e
 
 * <i class="fas fa-graduation-cap"></i> **Treinamento:** [[LinuxTips] Linux Essentials](https://linuxtips.io/treinamento/linux-essentials/)
 
-**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Linux*. Faça os seguintes treinamentos:
+**Laboratório Girus:** acesse o seu ambiente [Girus]({{ '/content/modules/introducao/preparacao-ambiente/' | relative_url }}), vá em Laboratórios e filtre por *Linux*. Faça os seguintes treinamentos:
 
 * Processamento de Texto no Linux: grep, sed, awk
 * Monitoramento Básico do Sistema Linux
