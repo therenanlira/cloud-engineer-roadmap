@@ -22,7 +22,7 @@ Seu primeiro contato com a nuvem pública. Use a camada gratuita (*Free Tier*) s
 >
 > * <i class="fas fa-graduation-cap"></i> **Treinamento:** [[Stephane Maarek] Ultimate AWS Certified Cloud Practitioner CLF-C02 2026](https://www.udemy.com/course/aws-certified-cloud-practitioner-new).
 
-**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Cloud*. Faça os seguintes treinamentos:
+**Laboratório Girus:** acesse o seu ambiente [Girus]({{ '/content/modules/introducao/preparacao-ambiente/' | relative_url }}), vá em Laboratórios e filtre por *Cloud*. Faça os seguintes treinamentos:
 
 * AWS S3: Armazenamento de Objetos na Nuvem
 * AWS Lambda: Computação Serverless

@@ -15,7 +15,7 @@ Arquivos com conjuntos de códigos para automatizar a execução de comandos.
 
 Bash é um dos interpretadores de comandos do Linux, com ele conseguimos criar arquivos com comandos (Shell Scripts) para automatizar tarefas repetitivas.
 
-**Laboratório Girus:** acesse o seu ambiente Girus, vá em Laboratórios e filtre por *Linux*. Faça o seguinte treinamento:
+**Laboratório Girus:** acesse o seu ambiente [Girus]({{ '/content/modules/introducao/preparacao-ambiente/' | relative_url }}), vá em Laboratórios e filtre por *Linux*. Faça o seguinte treinamento:
 
 * Introdução ao Shell Script Bash
 
