@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/cloud-engineer-roadmap/assets/css/site.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script>
       (function () {
         // Escolha explícita do usuário tem prioridade; sem ela, segue o tema do sistema.
@@ -436,7 +436,7 @@
   <li>Publique a imagem num registry (ex: Docker Hub).</li>
   <li>Inicie um cluster local (Minikube, Kind ou k3d) e crie um namespace dedicado para isolar o Backstage.</li>
   <li>Provisione um PostgreSQL (Secret com as credenciais, armazenamento persistente e Deployment) para servir de banco de dados do Backstage.</li>
-  <li>Gere um GitHub PAT (Personal Access Token) com os escopos <code class="language-plaintext highlighter-rouge">repo</code> e <code class="language-plaintext highlighter-rouge">workflow</code>, para o Backstage acessar seus repositórios.</li>
+  <li>Gere um GitHub PAT (Personal Access Token) <em>fine-grained</em>, com acesso somente de leitura ao conteúdo do repositório do Backstage, para ele ler o seu catálogo.</li>
   <li>Crie o Deployment e o Service do Backstage usando a imagem que você publicou, conectando-o ao PostgreSQL e ao GitHub Token via variáveis de ambiente.</li>
   <li>Acesse o painel via <code class="language-plaintext highlighter-rouge">port-forward</code> e confirme que a interface carrega em <code class="language-plaintext highlighter-rouge">http://localhost:7000</code>.</li>
 </ol>

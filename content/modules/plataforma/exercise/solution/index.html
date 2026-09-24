@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/cloud-engineer-roadmap/assets/css/site.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script>
       (function () {
         // Escolha explícita do usuário tem prioridade; sem ela, segue o tema do sistema.
@@ -624,20 +624,22 @@ kubectl <span class="nb">exec</span> <span class="nt">-it</span> <span class="nt
 
 <h3 id="10-criar-o-github_token">10. Criar o GITHUB_TOKEN</h3>
 
-<p>Crie um PAT (Personal Access Token) no GitHub. É com ele que o Backstage lê seus repositórios e arquivos <code class="language-plaintext highlighter-rouge">catalog-info.yaml</code> para a integração de catálogo.</p>
+<p>Crie um PAT (Personal Access Token) no GitHub. É com ele que o Backstage lê o arquivo <code class="language-plaintext highlighter-rouge">catalog-info.yaml</code> do seu repositório para a integração de catálogo. Como ele só precisa <strong>ler</strong> um repositório, crie um token <em>fine-grained</em> com o mínimo de permissões: se ele vazar, o estrago fica limitado a isso.</p>
 
 <ol>
-  <li>Acesse sua conta do GitHub e vá em <strong>Settings</strong> -&gt; <strong>Developer Settings</strong> -&gt; <strong>Personal access tokens</strong> -&gt; <strong>Tokens (classic)</strong>.</li>
-  <li>Clique em <strong>Generate new token (classic)</strong>.</li>
-  <li><strong>Scopes (permissões):</strong> marque <code class="language-plaintext highlighter-rouge">repo</code> (para ler e escrever repositórios) e <code class="language-plaintext highlighter-rouge">workflow</code> (para configurar as ações de CI automaticamente).</li>
-  <li>Copie o valor gerado (ex: <code class="language-plaintext highlighter-rouge">ghp_xxxxxxxxxxxxxxxxxxxxxxx</code>). Este é o seu <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code>.</li>
+  <li>Acesse sua conta do GitHub e vá em <strong>Settings</strong> -&gt; <strong>Developer settings</strong> -&gt; <strong>Personal access tokens</strong> -&gt; <strong>Fine-grained tokens</strong>.</li>
+  <li>Clique em <strong>Generate new token</strong>, dê um nome (ex: <code class="language-plaintext highlighter-rouge">backstage-local</code>) e escolha uma <strong>expiração</strong> curta (ex: 30 dias).</li>
+  <li>Em <strong>Repository access</strong>, escolha <strong>Only select repositories</strong> e selecione o repositório <code class="language-plaintext highlighter-rouge">meu-backstage</code>.</li>
+  <li>Em <strong>Permissions</strong> -&gt; <strong>Repository permissions</strong>, defina <strong>Contents</strong> como <strong>Read-only</strong> (o <strong>Metadata</strong> fica como <em>Read-only</em> automaticamente).</li>
+  <li>Clique em <strong>Generate token</strong> e copie o valor gerado (ex: <code class="language-plaintext highlighter-rouge">github_pat_xxxxxxxxxxxxxxxxxxxxxxx</code>). Este é o seu <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code>.</li>
 </ol>
 
-<p>Como na secret do banco, crie direto via <code class="language-plaintext highlighter-rouge">kubectl</code>, com o token em texto puro:</p>
+<p>Como na secret do banco, crie direto via <code class="language-plaintext highlighter-rouge">kubectl</code>. Para o token não aparecer na tela nem ficar salvo no histórico do terminal, leia o valor com <code class="language-plaintext highlighter-rouge">read -rs</code>: rode a primeira linha, cole o token e aperte Enter (nada aparece enquanto você cola).</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl create secret generic backstage-secrets <span class="se">\</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">read</span> <span class="nt">-rs</span> GITHUB_TOKEN
+kubectl create secret generic backstage-secrets <span class="se">\</span>
   <span class="nt">--namespace</span> backstage <span class="se">\</span>
-  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="s1">'ghp_xxxxxxxxxxxxxxxxxxxxxxx'</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="s2">"</span><span class="nv">$GITHUB_TOKEN</span><span class="s2">"</span>
 </code></pre></div></div>
 
 <h3 id="11-criar-o-deployment-e-o-service-do-backstage">11. Criar o Deployment e o Service do Backstage</h3>
@@ -928,15 +930,18 @@ git push
 
 <h3 id="4-adicione-as-credenciais-do-oauth-app">4. Adicione as credenciais do OAuth App</h3>
 
-<p>A secret <code class="language-plaintext highlighter-rouge">backstage-secrets</code> já existe (criada na Parte 1). Para adicionar as novas chaves sem escrever nenhum valor em disco, recrie-a com o Client ID e o Client Secret gerados no passo 1, além do <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> já usado, todos <strong>sem base64</strong>, como da primeira vez:</p>
+<p>A secret <code class="language-plaintext highlighter-rouge">backstage-secrets</code> já existe (criada na Parte 1). Para adicionar as novas chaves sem escrever nenhum valor em disco, recrie-a com o Client ID e o Client Secret gerados no passo 1, além do <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> já usado, todos <strong>sem base64</strong>, como da primeira vez. A primeira linha recupera o <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> da própria secret atual, e o <code class="language-plaintext highlighter-rouge">read -rs</code> lê o Client Secret sem exibi-lo (cole e aperte Enter):</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl delete secret backstage-secrets <span class="nt">-n</span> backstage
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="si">$(</span>kubectl get secret backstage-secrets <span class="nt">-n</span> backstage <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.GITHUB_TOKEN}'</span> | <span class="nb">base64</span> <span class="nt">-d</span><span class="si">)</span>
+<span class="nb">read</span> <span class="nt">-rs</span> AUTH_GITHUB_CLIENT_SECRET
+
+kubectl delete secret backstage-secrets <span class="nt">-n</span> backstage
 
 kubectl create secret generic backstage-secrets <span class="se">\</span>
   <span class="nt">--namespace</span> backstage <span class="se">\</span>
-  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="s1">'ghp_xxxxxxxxxxxxxxxxxxxxxxx'</span> <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="s2">"</span><span class="nv">$GITHUB_TOKEN</span><span class="s2">"</span> <span class="se">\</span>
   <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">AUTH_GITHUB_CLIENT_ID</span><span class="o">=</span><span class="s1">'seu_client_id'</span> <span class="se">\</span>
-  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">AUTH_GITHUB_CLIENT_SECRET</span><span class="o">=</span><span class="s1">'seu_client_secret'</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">AUTH_GITHUB_CLIENT_SECRET</span><span class="o">=</span><span class="s2">"</span><span class="nv">$AUTH_GITHUB_CLIENT_SECRET</span><span class="s2">"</span>
 </code></pre></div></div>
 
 <p>Adicione ao <code class="language-plaintext highlighter-rouge">backstage.yaml</code> as variáveis que apontam para essa secret. Os nomes precisam ser exatamente <code class="language-plaintext highlighter-rouge">AUTH_GITHUB_CLIENT_ID</code> e <code class="language-plaintext highlighter-rouge">AUTH_GITHUB_CLIENT_SECRET</code>, pois são eles que o <code class="language-plaintext highlighter-rouge">app-config.yaml</code> referencia com a sintaxe <code class="language-plaintext highlighter-rouge">${...}</code>:</p>
