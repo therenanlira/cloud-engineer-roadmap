@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-preview="pr-7">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guia (Node.js, npx e Yarn) | Cloud Engineer Roadmap</title>
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Guia (Node.js, npx e Yarn)" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering)." />
+<meta name="twitter:description" property="og:description" content="Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering)." />
+<link rel="canonical" href="https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-7/content/guides/npx/" />
+<meta property="og:url" content="https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-7/content/guides/npx/" />
+<meta property="og:site_name" content="Cloud Engineer Roadmap" />
+<meta property="og:image" content="https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-7/assets/img/og-image.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-7/assets/img/og-image.png" />
+<meta name="twitter:title" content="Guia (Node.js, npx e Yarn)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Um guia de estudos gratuito e em português para quem está começando em Cloud Engineering (DevOps / SRE / Platform Engineering).","headline":"Guia (Node.js, npx e Yarn)","image":"https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-7/assets/img/og-image.png","url":"https://therenanlira.github.io/cloud-engineer-roadmap/pr-preview/pr-7/content/guides/npx/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/cloud-engineer-roadmap/pr-preview/pr-7/assets/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script>
+      (function () {
+        // Escolha explícita do usuário tem prioridade; sem ela, segue o tema do sistema.
+        var saved = localStorage.getItem("cloud-engineer-roadmap:theme");
+        var light = saved
+          ? saved === "light"
+          : window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="preview-banner" role="note">
+  <i class="fas fa-flask" aria-hidden="true"></i>
+  <span>
+    <strong>Homologação:</strong> prévia do <a href="https://github.com/therenanlira/cloud-engineer-roadmap/pull/7">PR #7</a> · <a href="https://therenanlira.github.io/cloud-engineer-roadmap/">ir para o site oficial</a>
+  </span>
+</div>
+
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <div class="site-header">
+      <div class="site-header-inner">
+
+        <div class="site-header-left">
+          <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a href="/cloud-engineer-roadmap/pr-preview/pr-7/" class="site-logo"><i class="fas fa-home fa-fw"></i><span>Início</span></a>
+        </div>
+
+        <div class="site-header-right">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+            <i class="fas fa-sun theme-icon-light"></i>
+            <i class="fas fa-moon theme-icon-dark"></i>
+          </button>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap" target="_blank" rel="noopener noreferrer" class="site-github-link"><i class="fab fa-github fa-fw"></i><span class="site-link-text">GitHub</span></a>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap/stargazers" target="_blank" rel="noopener noreferrer" class="site-stars-link">
+            <img src="https://img.shields.io/github/stars/therenanlira/cloud-engineer-roadmap?style=social" alt="GitHub stars">
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="page-shell">
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+<nav class="sidebar" id="sidebar" aria-label="Navegação do roadmap">
+  <div class="sidebar-overall">
+    <div class="sidebar-overall-label">
+      <span>Seu progresso</span>
+      <span class="sidebar-count-group">
+        <span data-overall-count>0/0</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="global" aria-label="Marcar ou desmarcar todos os tópicos" title="Marcar/desmarcar tudo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" data-overall-fill></div>
+    </div>
+    <p class="sidebar-hint">Marque os tópicos concluídos. Fica salvo neste navegador.</p>
+  </div>
+
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/introducao/" class="sidebar-module-title">Introdução</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/3</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de Introdução" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/cultura-devops/" aria-label="Marcar 'Cultura DevOps' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/introducao/cultura-devops/">Cultura DevOps</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/cncf/" aria-label="Marcar 'CNCF' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/introducao/cncf/">CNCF</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/preparacao-ambiente/" aria-label="Marcar 'Preparação do ambiente' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/introducao/preparacao-ambiente/">Preparação do ambiente</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/fundamentos/" class="sidebar-module-title">1. Fundamentos</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/6</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 1. Fundamentos" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/linux/" aria-label="Marcar 'Linux' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/fundamentos/linux/">Linux</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/redes/" aria-label="Marcar 'Redes' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/fundamentos/redes/">Redes</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/scripts/" aria-label="Marcar 'Scripts' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/fundamentos/scripts/">Scripts</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/git/" aria-label="Marcar 'Git' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/fundamentos/git/">Git</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/containers/" aria-label="Marcar 'Containers' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/fundamentos/containers/">Containers</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/fundamentos/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/cloud/" class="sidebar-module-title">2. Cloud</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/4</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 2. Cloud" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/aws/" aria-label="Marcar 'AWS' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/cloud/aws/">AWS</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/terraform/" aria-label="Marcar 'Terraform' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/cloud/terraform/">Terraform</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/finops/" aria-label="Marcar 'FinOps' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/cloud/finops/">FinOps</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/cloud/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/pipeline/" class="sidebar-module-title">3. Pipeline</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 3. Pipeline" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/pipeline/github-actions/" aria-label="Marcar 'GitHub Actions' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/pipeline/github-actions/">GitHub Actions</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/pipeline/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/pipeline/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/orquestracao/" class="sidebar-module-title">4. Orquestração</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/3</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 4. Orquestração" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/kubernetes/" aria-label="Marcar 'Kubernetes & Helm' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/orquestracao/kubernetes/">Kubernetes & Helm</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/argocd/" aria-label="Marcar 'ArgoCD' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/orquestracao/argocd/">ArgoCD</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/orquestracao/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/observabilidade/" class="sidebar-module-title">5. Observabilidade</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/5</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 5. Observabilidade" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/grafana/" aria-label="Marcar 'Grafana' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/observabilidade/grafana/">Grafana</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/prometheus/" aria-label="Marcar 'Prometheus' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/observabilidade/prometheus/">Prometheus</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/loki/" aria-label="Marcar 'Loki' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/observabilidade/loki/">Loki</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/jaeger/" aria-label="Marcar 'Jaeger' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/observabilidade/jaeger/">Jaeger</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/observabilidade/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/plataforma/" class="sidebar-module-title">6. Plataforma</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 6. Plataforma" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/plataforma/backstage/" aria-label="Marcar 'Backstage' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/plataforma/backstage/">Backstage</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/plataforma/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/plataforma/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/proximos-passos/" class="sidebar-module-title">Próximos passos</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de Próximos passos" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/proximos-passos/certificacoes/" aria-label="Marcar 'Certificações' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/proximos-passos/certificacoes/">Certificações</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/proximos-passos/portfolio/" aria-label="Marcar 'Projetos para portfólio' como concluído">
+        <a href="/cloud-engineer-roadmap/pr-preview/pr-7/content/modules/proximos-passos/portfolio/">Projetos para portfólio</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+</nav>
+
+      <div class="container main-content">
+        
+        
+
+
+
+
+
+
+
+
+
+        
+        <h1 id="guia-como-instalar-o-nodejs-o-npx-e-o-yarn">Guia: Como instalar o Node.js, o <code class="language-plaintext highlighter-rouge">npx</code> e o Yarn</h1>
+
+<p>Várias ferramentas (como o <code class="language-plaintext highlighter-rouge">@backstage/create-app</code>) são distribuídas como pacotes do npm e executadas via <code class="language-plaintext highlighter-rouge">npx</code>, sem precisar instalar nada globalmente antes. Este guia mostra como deixar o <code class="language-plaintext highlighter-rouge">npx</code> e o <code class="language-plaintext highlighter-rouge">yarn</code> disponíveis no seu terminal.</p>
+
+<hr />
+
+<h2 id="1-o-que-é-o-npx">1. O que é o <code class="language-plaintext highlighter-rouge">npx</code></h2>
+
+<p>O <code class="language-plaintext highlighter-rouge">npx</code> é um executor de pacotes que vem junto com o <code class="language-plaintext highlighter-rouge">npm</code> (desde a versão 5.2). Ele baixa (ou usa uma versão já instalada) e executa um pacote do npm sem exigir uma instalação global permanente, por exemplo:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx @backstage/create-app@latest
+</code></pre></div></div>
+
+<p>Como o <code class="language-plaintext highlighter-rouge">npx</code> vem embutido no <code class="language-plaintext highlighter-rouge">npm</code>, e o <code class="language-plaintext highlighter-rouge">npm</code> vem embutido no Node.js, instalar o <code class="language-plaintext highlighter-rouge">npx</code> na prática significa <strong>instalar o Node.js</strong>.</p>
+
+<h2 id="2-como-instalar">2. Como instalar</h2>
+
+<h3 id="no-macos">No macOS</h3>
+
+<p>Usando o <a href="https://brew.sh">Homebrew</a>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>node
+</code></pre></div></div>
+
+<h3 id="no-linux-ubuntu--debian--wsl">No Linux (Ubuntu / Debian / WSL)</h3>
+
+<p>A versão empacotada pelo <code class="language-plaintext highlighter-rouge">apt</code> costuma ficar desatualizada. Prefira o <a href="https://github.com/nodesource/distributions">NodeSource</a>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> https://deb.nodesource.com/setup_lts.x | <span class="nb">sudo</span> <span class="nt">-E</span> bash -
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> nodejs
+</code></pre></div></div>
+
+<h3 id="no-windows">No Windows</h3>
+
+<p>Baixe o instalador <strong>LTS</strong> direto do <a href="https://nodejs.org">site oficial do Node.js</a> e siga o assistente.</p>
+
+<h3 id="alternativa-multiplataforma-recomendada-nvm">Alternativa multiplataforma (recomendada): nvm</h3>
+
+<p>O <a href="https://github.com/nvm-sh/nvm">nvm</a> (Node Version Manager) permite instalar e alternar entre várias versões do Node sem precisar de <code class="language-plaintext highlighter-rouge">sudo</code>, e funciona igual em macOS e Linux (no Windows, use o <a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a>):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
+nvm <span class="nb">install</span> <span class="nt">--lts</span>
+</code></pre></div></div>
+
+<h2 id="3-verifique-a-instalação">3. Verifique a instalação</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node <span class="nt">--version</span>
+npm <span class="nt">--version</span>
+npx <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>Se os três comandos retornarem um número de versão (e não um erro de “comando não encontrado”), está tudo pronto para usar o <code class="language-plaintext highlighter-rouge">npx</code>.</p>
+
+<h2 id="4-habilite-o-yarn">4. Habilite o Yarn</h2>
+
+<p>O Yarn é um gerenciador de pacotes alternativo ao <code class="language-plaintext highlighter-rouge">npm</code>, usado por projetos como o Backstage. Ele <strong>não</strong> vem junto com o Node.js: a forma recomendada de instalá-lo é pelo <a href="https://yarnpkg.com/getting-started/install">Corepack</a>, que baixa automaticamente a versão do Yarn que cada projeto pede.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> corepack
+corepack <span class="nb">enable</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Se você instalou o Node.js pelo <code class="language-plaintext highlighter-rouge">apt</code> ou pelo NodeSource (e não pelo nvm), rode esses dois comandos com <code class="language-plaintext highlighter-rouge">sudo</code> na frente.</p>
+</blockquote>
+
+<p>Verifique a instalação:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn <span class="nt">--version</span>
+</code></pre></div></div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <hr class="site-footer-divider">
+    <p class="site-footer-note">
+      <i>Todos os direitos e créditos pelos materiais pertencem aos seus respectivos autores.</i>
+    </p>
+  </div>
+</footer>
+
+    <script src="/cloud-engineer-roadmap/pr-preview/pr-7/assets/js/site.js"></script>
+  </body>
+</html>
