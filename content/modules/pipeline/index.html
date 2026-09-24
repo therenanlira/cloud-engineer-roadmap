@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pipeline | Cloud Engineer Roadmap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/cloud-engineer-roadmap/assets/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      (function () {
+        // Escolha explícita do usuário tem prioridade; sem ela, segue o tema do sistema.
+        var saved = localStorage.getItem("cloud-engineer-roadmap:theme");
+        var light = saved
+          ? saved === "light"
+          : window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <div class="site-header">
+      <div class="site-header-inner">
+
+        <div class="site-header-left">
+          <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a href="/cloud-engineer-roadmap/" class="site-logo"><i class="fas fa-home fa-fw"></i><span>Início</span></a>
+        </div>
+
+        <div class="site-header-right">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+            <i class="fas fa-sun theme-icon-light"></i>
+            <i class="fas fa-moon theme-icon-dark"></i>
+          </button>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap" target="_blank" rel="noopener noreferrer" class="site-github-link"><i class="fab fa-github fa-fw"></i><span class="site-link-text">GitHub</span></a>
+          <a href="https://github.com/therenanlira/cloud-engineer-roadmap/stargazers" target="_blank" rel="noopener noreferrer" class="site-stars-link">
+            <img src="https://img.shields.io/github/stars/therenanlira/cloud-engineer-roadmap?style=social" alt="GitHub stars">
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="page-shell">
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+<nav class="sidebar" id="sidebar" aria-label="Navegação do roadmap">
+  <div class="sidebar-overall">
+    <div class="sidebar-overall-label">
+      <span>Seu progresso</span>
+      <span class="sidebar-count-group">
+        <span data-overall-count>0/0</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="global" aria-label="Marcar ou desmarcar todos os tópicos" title="Marcar/desmarcar tudo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" data-overall-fill></div>
+    </div>
+    <p class="sidebar-hint">Marque os tópicos concluídos. Fica salvo neste navegador.</p>
+  </div>
+
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/content/modules/introducao/" class="sidebar-module-title">Introdução</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/3</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de Introdução" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/cultura-devops/" aria-label="Marcar 'Cultura DevOps' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/introducao/cultura-devops/">Cultura DevOps</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/cncf/" aria-label="Marcar 'CNCF' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/introducao/cncf/">CNCF</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/introducao/preparacao-ambiente/" aria-label="Marcar 'Preparação do ambiente' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/introducao/preparacao-ambiente/">Preparação do ambiente</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/content/modules/fundamentos/" class="sidebar-module-title">1. Fundamentos</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/6</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 1. Fundamentos" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/linux/" aria-label="Marcar 'Linux' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/fundamentos/linux/">Linux</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/redes/" aria-label="Marcar 'Redes' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/fundamentos/redes/">Redes</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/scripts/" aria-label="Marcar 'Scripts' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/fundamentos/scripts/">Scripts</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/git/" aria-label="Marcar 'Git' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/fundamentos/git/">Git</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/containers/" aria-label="Marcar 'Containers' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/fundamentos/containers/">Containers</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/fundamentos/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/fundamentos/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/content/modules/cloud/" class="sidebar-module-title">2. Cloud</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/4</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 2. Cloud" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/aws/" aria-label="Marcar 'AWS' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/cloud/aws/">AWS</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/terraform/" aria-label="Marcar 'Terraform' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/cloud/terraform/">Terraform</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/finops/" aria-label="Marcar 'FinOps' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/cloud/finops/">FinOps</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/cloud/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/cloud/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header active">
+      
+      <a href="/cloud-engineer-roadmap/content/modules/pipeline/" class="sidebar-module-title">3. Pipeline</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 3. Pipeline" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/pipeline/github-actions/" aria-label="Marcar 'GitHub Actions' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/pipeline/github-actions/">GitHub Actions</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/pipeline/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/pipeline/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/content/modules/orquestracao/" class="sidebar-module-title">4. Orquestração</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/3</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 4. Orquestração" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/kubernetes/" aria-label="Marcar 'Kubernetes & Helm' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/orquestracao/kubernetes/">Kubernetes & Helm</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/argocd/" aria-label="Marcar 'ArgoCD' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/orquestracao/argocd/">ArgoCD</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/orquestracao/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/orquestracao/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/content/modules/observabilidade/" class="sidebar-module-title">5. Observabilidade</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/5</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 5. Observabilidade" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/grafana/" aria-label="Marcar 'Grafana' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/observabilidade/grafana/">Grafana</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/prometheus/" aria-label="Marcar 'Prometheus' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/observabilidade/prometheus/">Prometheus</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/loki/" aria-label="Marcar 'Loki' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/observabilidade/loki/">Loki</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/jaeger/" aria-label="Marcar 'Jaeger' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/observabilidade/jaeger/">Jaeger</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/observabilidade/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/observabilidade/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  <div class="sidebar-module">
+    <div class="sidebar-module-header">
+      
+      <a href="/cloud-engineer-roadmap/content/modules/plataforma/" class="sidebar-module-title">6. Plataforma</a>
+      
+      <span class="sidebar-count-group">
+        <span class="sidebar-module-count" data-module-count>0/2</span>
+        <button type="button" class="sidebar-mark-all" data-mark-all-scope="module" aria-label="Marcar ou desmarcar os tópicos de 6. Plataforma" title="Marcar/desmarcar módulo">
+          <i class="fas fa-check-double"></i>
+        </button>
+      </span>
+    </div>
+    <div class="progress-bar sidebar-module-bar">
+      <div class="progress-bar-fill" data-module-fill></div>
+    </div>
+    <ul class="sidebar-items">
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/plataforma/backstage/" aria-label="Marcar 'Backstage' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/plataforma/backstage/">Backstage</a>
+      </li>
+      
+      <li class="sidebar-item">
+        <input type="checkbox" class="progress-checkbox" data-progress-key="/content/modules/plataforma/exercise/" aria-label="Marcar 'Exercícios' como concluído">
+        <a href="/cloud-engineer-roadmap/content/modules/plataforma/exercise/">Exercícios</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+</nav>
+
+      <div class="container main-content">
+        
+        
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="/cloud-engineer-roadmap/">Início</a>
+  <span class="breadcrumb-sep">/</span>
+  
+  
+  <span class="breadcrumb-current">3. Pipeline</span>
+  
+</nav>
+
+
+        
+        <h1 id="3-pipeline">3. Pipeline</h1>
+
+<p>Pipelines são fluxos automatizados de integração (build) e entrega (deploy) contínua, também conhecidos como CI/CD (Continuous Integration / Continuous Deployment).</p>
+
+<h2 id="o-que-você-vai-aprender">O que você vai aprender?</h2>
+
+<ul>
+  <li><i class="fab fa-github"></i><a href="/cloud-engineer-roadmap/content/modules/pipeline/github-actions/">GitHub Actions</a></li>
+  <li><i class="fas fa-bullseye"></i><a href="/cloud-engineer-roadmap/content/modules/pipeline/exercise/">Exercícios (Pipeline)</a></li>
+</ul>
+
+<p>Siga a ordem acima para evoluir progressivamente pelo módulo.</p>
+
+<div class="next-steps">
+
+  
+  <div class="next-steps-col next-steps-prev">
+    <span class="next-steps-label">Passo anterior: Exercícios (Cloud)</span>
+    <a href="/cloud-engineer-roadmap/content/modules/cloud/exercise/" class="next-steps-btn next-steps-btn-outline">
+      Etapa anterior
+    </a>
+  </div>
+  
+
+  
+  <div class="next-steps-col next-steps-next">
+    <span class="next-steps-label">Próximo passo: GitHub Actions</span>
+    <a href="/cloud-engineer-roadmap/content/modules/pipeline/github-actions/" class="next-steps-btn next-steps-btn-solid">
+      Próxima etapa
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <hr class="site-footer-divider">
+    <p class="site-footer-note">
+      <i>Todos os direitos e créditos pelos materiais pertencem aos seus respectivos autores.</i>
+    </p>
+  </div>
+</footer>
+
+    <script src="/cloud-engineer-roadmap/assets/js/site.js"></script>
+  </body>
+</html>
