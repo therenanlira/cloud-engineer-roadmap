@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Ruby
         uses: ruby/setup-ruby@v1
@@ -53,7 +53,7 @@ jobs:
         run: python3 scripts/check-links.py _site "$BASE_PATH"
 
       - name: Upload do site
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: site
           path: _site
@@ -70,10 +70,10 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download do site
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: site
           path: _site
@@ -104,10 +104,10 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download do site
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: site
           path: _site
@@ -125,7 +125,7 @@ jobs:
 
       - name: Checkout da produção
         if: steps.gh-pages.outputs.exists == 'false'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.base.ref }}
           path: producao
@@ -177,7 +177,7 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Remover a homologação
         uses: rossjrw/pr-preview-action@v1

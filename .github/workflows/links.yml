@@ -29,7 +29,7 @@ jobs:
       ISSUE_TITLE: Links externos quebrados
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Ruby
         uses: ruby/setup-ruby@v1
