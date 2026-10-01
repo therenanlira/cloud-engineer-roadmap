@@ -67,3 +67,5 @@ Terminou os módulos? Veja como validar e mostrar o que você aprendeu.
     <span class="roadmap-card-subtitle">Certificações, Projetos para portfólio</span>
   </a>
 </div>
+
+<!-- Teste de homologação após a atualização das Actions (PR de teste, não mergear) -->
