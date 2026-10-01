@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backstage
+  namespace: backstage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backstage
+  template:
+    metadata:
+      labels:
+        app: backstage
+    spec:
+      containers:
+        - name: backstage
+          # Troque pela imagem que você buildou e publicou no Docker Hub (Parte 1)
+          image: docker.io/<seu-usuario-dockerhub>/meu-backstage:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 7000
+          env:
+            - name: APP_CONFIG_app_baseUrl
+              value: "http://localhost:7000"
+            - name: APP_CONFIG_backend_baseUrl
+              value: "http://localhost:7000"
+            - name: APP_CONFIG_backend_cors_origin
+              value: "http://localhost:7000"
+            - name: APP_CONFIG_backend_listen
+              value: ":7000"
+            # O login "Guest" é bloqueado fora de ambiente de desenvolvimento por padrão;
+            # essa flag libera para fins de estudo (NODE_ENV=production na imagem)
+            - name: APP_CONFIG_auth_providers_guest_dangerouslyAllowOutsideDevelopment
+              value: "true"
+            - name: POSTGRES_HOST
+              value: "postgres"
+            - name: POSTGRES_PORT
+              value: "5432"
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secrets
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secrets
+                  key: POSTGRES_PASSWORD
+            - name: GITHUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: GITHUB_TOKEN
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backstage
+  namespace: backstage
+spec:
+  selector:
+    app: backstage
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
